@@ -1,25 +1,29 @@
 # Nate's sheet data
 
-The game master edits one file:
+The live source of truth is one Supabase row:
 
-`public/data/nate.json`
+`public.sheet`, `id = 'nate'`, column `data` (jsonb)
 
-Published URL (after Pages is live):
+That `data` value is the same JSON object described below. The app reads it on open and subscribes to changes, so a write shows up on the phone without a refresh. A green dot under Nate's name means the live connection is up. A gray dot means the phone is offline or is showing the backup file.
+
+`public/data/nate.json` is only that backup. The app uses it when Supabase cannot be reached. Keep it in sync when you can, but the phone will not see an edit there until the backup path is used.
+
+Published backup URL:
 
 `https://natemaray.github.io/Character-Sheet/data/nate.json`
 
-The app fetches that file on open, when the player taps **Refresh**, and when the phone shows the app again. Vitals, map, missions, and the rest of the story come from the latest file every time. Equip, loadouts, and pinned tabs stay on the phone.
+Equip, loadouts, and pinned tabs stay on the phone.
 
-Bump `rev` to a new string after every scene, even a small one. The sheet shows the rev under Nate's name, so you can ask him what he sees. Use a date plus a short scene tag, like `2026-11-14-i-nest`. Never reuse an old rev.
+Bump `rev` to a new string after every scene, even a small one. The sheet shows the rev under Nate's name, so you can ask him what he sees. Use a date plus a short scene tag, like `2026-11-14-j-first-kill`. Never reuse an old rev.
 
 ## What `rev` changes
 
 `rev` is the reconcile key for gear only.
 
 - Same `rev`: the phone keeps his equipped items, pocket, and loadouts exactly, including things he moved himself.
-- New `rev`: his arrangement is kept, then the file is merged in.
+- New `rev`: his arrangement is kept, then the new row is merged in.
   - A new owned item (in `gear.pocket`, or worn in `gear.equipped` and not borrowed) appears in his pocket if he does not already have it.
-  - Item notes and quantities refresh from the file.
+  - Item notes and quantities refresh from the row.
   - An owned item removed from both lists disappears, even if he had it equipped.
   - A borrowed item listed on a slot in `gear.equipped` is forced back onto that slot. Anything of his that was in the way goes to his pocket. Borrowed names are `gear.borrowed` (the tanner's lantern, the foreman's lamp). They are never his, so Unequip does not put them in the pocket.
   - His loadout names and which of his items they contain are kept. Notes refresh. A loadout entry whose item no longer exists is cleared. Default Combat and Travel are only used on a phone that has never saved loadouts.
@@ -30,8 +34,8 @@ Pins are not part of `rev`. They live only on the phone (at most 5).
 
 1. Edit the fields that changed (vitals, location, `next`, battle, map, missions, gear).
 2. Set `rev` to a new string.
-3. Commit and push to `main`. Pages rebuilds from that push.
-4. Ask Nate to tap Refresh, or to switch back to the app. He should see the new rev.
+3. Write the whole object into `public.sheet.data` for `id = 'nate'`. The app is listening; Nate does not have to tap anything. The phone still has Refresh, and it reloads the row when he opens the app again.
+4. Copy the same object into `public/data/nate.json` when you can, so the backup matches.
 
 ## Top of the file
 

@@ -321,6 +321,32 @@ button:focus-visible, input:focus-visible {
   font-size: 12px;
   letter-spacing: 0.04em;
   min-height: 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: #6e7f99;
+  flex: 0 0 auto;
+}
+
+.live-dot.on {
+  background: #3ddc84;
+  box-shadow: 0 0 8px #3ddc84;
+}
+
+.vital-pct.pulse,
+.track > span.pulse {
+  animation: vital-flash 800ms ease;
+}
+
+@keyframes vital-flash {
+  0% { filter: brightness(2.4); }
+  100% { filter: brightness(1); }
 }
 
 .vitals { display: flex; flex-direction: column; gap: 12px; }
@@ -641,4 +667,6 @@ td:first-child { color: var(--text); font-weight: 650; }
 
 @media (prefers-reduced-motion: reduce) {
   .track > span { transition: none; }
+  .vital-pct.pulse,
+  .track > span.pulse { animation: none; }
 }

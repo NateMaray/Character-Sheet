@@ -16,6 +16,9 @@ export function Hud({
   syncedAt,
   refreshing,
   flash,
+  connected,
+  fallback,
+  pulsing,
   onRefresh,
 }: {
   identity: Identity;
@@ -27,6 +30,9 @@ export function Hud({
   syncedAt: Date | null;
   refreshing: boolean;
   flash: string;
+  connected: boolean;
+  fallback: boolean;
+  pulsing: string[];
   onRefresh: () => void;
 }) {
   const synced = syncedAt
@@ -56,19 +62,30 @@ export function Hud({
             </button>
           </div>
         </div>
-        <div className="sync">{synced}</div>
+        <div className="sync">
+          <span
+            className={connected ? "live-dot on" : "live-dot"}
+            role="status"
+            aria-label={connected ? "Live" : fallback ? "Backup file" : "Offline"}
+            title={connected ? "Live" : fallback ? "Backup file" : "Offline"}
+          />
+          {synced}
+        </div>
       </section>
       <section className="card vitals">
         {vitals.map((vital) => (
           <div key={vital.label}>
             <div className="vital-row">
               <span className="vital-label">{vital.label}</span>
-              <span className="vital-pct">
+              <span className={pulsing.includes(vital.label) ? "vital-pct pulse" : "vital-pct"}>
                 {vital.pct}%{vital.note ? <span className="vital-note">{"  " + vital.note}</span> : null}
               </span>
             </div>
             <div className="track" aria-hidden="true">
-              <span style={{ width: `${Math.max(0, Math.min(100, vital.pct))}%`, ["--bar" as string]: TONE[vital.tone] || "var(--accent)" }} />
+              <span
+                className={pulsing.includes(vital.label) ? "pulse" : undefined}
+                style={{ width: `${Math.max(0, Math.min(100, vital.pct))}%`, ["--bar" as string]: TONE[vital.tone] || "var(--accent)" }}
+              />
             </div>
           </div>
         ))}
