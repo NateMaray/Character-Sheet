@@ -149,9 +149,13 @@ Top-down, `width` 600 by `height` 420. Y grows downward. In the current culvert,
 | `player` | Nate's dot. |
 | `lantern` | The lantern dot, if he is holding it. |
 | `compass` | Usually `N ↑`. |
-| `enemies` | Every creature on the map, hostile or not. The table is this list. |
+| `enemies` | Creatures on the map. They are the CONTACTS table. |
+| `allies` | Optional friends. Each is `{id, name, x, y, label?, status?}`. Drawn as an accent diamond with the label beside it, and listed under ALLIES, not CONTACTS. |
+| `map.battleArchive` | Optional. Past battles, oldest first. Each item is a full battle object, same fields as `map.battle`. When the list has anything in it, Battle view gets a Past battles menu: pick a title to see that map, its note, and its contacts. Current battle is the way back. Omit the field, or use `[]`, and the menu stays hidden. |
 
 Enemy fields: `id` (unique), `name`, `size`, `rank`, `type`, `status`, `x`, `y`. `tone` is `hostile` (red), `warning` (amber), `neutral` (green), `unknown`, or `dead` (a body, drawn with ×). `marker` is the glyph inside the dot (`!`, `·`, `?`, `×`). `facing` is `"player"` or a number (0 is north, clockwise) and draws a notch. `mapLabel` is the short name on the map; `""` hides it. `labelX` and `labelY` place that name. `r` is the dot radius (default 11, pups use 7).
+
+A neutral enemy whose `id` is `gary` is still treated as an ally, so older rows that parked him in `enemies` keep working. Prefer `allies` for anyone new. If the same id is in both lists, the `allies` entry wins and he is not repeated.
 
 ### Add or move an enemy
 
@@ -159,8 +163,9 @@ Enemy fields: `id` (unique), `name`, `size`, `rank`, `type`, `status`, `x`, `y`.
 2. Set `tone`, `status`, and `marker` from what he can tell. Do not mark a pup hostile unless it is.
 3. Put the dot inside `reveal` or widen the reveal so the ground around it is visible.
 4. Update `note`, and `player` if he moved.
-5. Delete a creature that is gone (the old unseen contact is gone). Do not leave a placeholder dot.
-6. Bump `rev`.
+5. Delete a creature that is gone. Do not leave a placeholder dot.
+6. To file the scene, copy the whole `battle` object onto the end of `map.battleArchive` before you replace `battle` with the new fight.
+7. Bump `rev`.
 
 To move Nate, change `player`, `lantern`, and `lamp` together, and shift `reveal` so he is still in the lit area.
 

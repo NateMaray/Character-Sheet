@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type PointerEvent } from "react";
+import { battleRoster } from "../battle";
 import type { BattleMap, Enemy, MapLabel, Point, SheetData, TownMap, WorldMap } from "../types";
 import { Button, Pill, Segmented } from "./Bits";
 
@@ -283,7 +284,20 @@ function BattleSvg({ map, zoom }: { map: BattleMap; zoom: number }) {
           {map.player.label}
         </text>
       </g>
-      {map.enemies.map((enemy) => {
+      {battleRoster(map).allies.map((ally) => (
+        <g key={ally.id}>
+          <polygon
+            points={`${ally.x},${ally.y - 11} ${ally.x + 9},${ally.y} ${ally.x},${ally.y + 11} ${ally.x - 9},${ally.y}`}
+            fill="var(--accent)"
+            stroke="#07101c"
+            strokeWidth="2"
+          />
+          <text x={ally.x + 16} y={ally.y + 4} textAnchor="start" fontSize="12" fontWeight="700" {...halo("var(--accent)")}>
+            {ally.label || ally.name}
+          </text>
+        </g>
+      ))}
+      {battleRoster(map).contacts.map((enemy) => {
         const radius = enemy.r || 11;
         const face = facingDeg(enemy, map.player);
         const label = enemy.mapLabel === "" ? "" : enemy.mapLabel || enemy.name;
@@ -325,6 +339,11 @@ function BattleSvg({ map, zoom }: { map: BattleMap; zoom: number }) {
 export function MapTab({ map, active }: { map: SheetData["map"]; active: boolean }) {
   const [view, setView] = useState<View>("world");
   const [zoom, setZoom] = useState(1);
+  const [archiveIndex, setArchiveIndex] = useState<number | null>(null);
+  const archive = map.battleArchive ?? [];
+  const archivePick = archiveIndex !== null && archive[archiveIndex] ? archiveIndex : null;
+  const shownBattle = view === "local" && archivePick !== null ? archive[archivePick] : map.battle;
+  const roster = battleRoster(shownBattle);
   const mapBox = useRef<HTMLDivElement>(null);
   const drag = useRef<{ x: number; y: number; l: number; t: number } | null>(null);
   const zoomRef = useRef(zoom);
@@ -334,8 +353,8 @@ export function MapTab({ map, active }: { map: SheetData["map"]; active: boolean
       ? map.world.places.find((place) => place.current)
       : view === "town"
         ? map.town.labels.find((place) => place.current)
-        : map.battle.player;
-  const focus = here ? `${view}:${here.x},${here.y}` : view;
+        : shownBattle.player;
+  const focus = here ? `${view}:${archivePick ?? "now"}:${here.x},${here.y}` : view;
 
   useEffect(() => {
     const box = mapBox.current;
@@ -384,8 +403,8 @@ export function MapTab({ map, active }: { map: SheetData["map"]; active: boolean
     drag.current = null;
   };
 
-  const title = view === "world" ? "World map" : view === "town" ? "Greenstone" : map.battle.title;
-  const caption = view === "world" ? map.world.caption : view === "town" ? map.town.caption : map.battle.note;
+  const title = view === "world" ? "World map" : view === "town" ? "Greenstone" : shownBattle.title;
+  const caption = view === "world" ? map.world.caption : view === "town" ? map.town.caption : shownBattle.note;
 
   return (
     <section className="card panel" hidden={!active} aria-hidden={!active}>
@@ -415,6 +434,27 @@ export function MapTab({ map, active }: { map: SheetData["map"]; active: boolean
         <Button label="Zoom out" onClick={() => zoomTo(zoom - 0.5)} disabled={zoom <= 1} />
         <Button label="Reset" onClick={() => zoomTo(1)} disabled={zoom === 1} />
         <span className="zoom-readout">{Math.round(zoom * 100)}% · drag or scroll to move around</span>
+        {view === "local" && archive.length > 0 ? (
+          <label className="archive-pick">
+            <span>Past battles</span>
+            <select
+              aria-label="Past battles"
+              value={archivePick === null ? "current" : String(archivePick)}
+              onChange={(event) => {
+                const next = event.target.value;
+                setArchiveIndex(next === "current" ? null : Number(next));
+                setZoom(1);
+              }}
+            >
+              <option value="current">Current battle</option>
+              {archive.map((battle, index) => (
+                <option key={`${battle.title}-${index}`} value={index}>
+                  {battle.title}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : null}
       </div>
       <div
         ref={mapBox}
@@ -424,12 +464,35 @@ export function MapTab({ map, active }: { map: SheetData["map"]; active: boolean
         onPointerUp={onUp}
         onPointerCancel={onUp}
       >
-        {view === "world" ? <WorldSvg map={map.world} zoom={zoom} /> : view === "town" ? <TownSvg map={map.town} zoom={zoom} /> : <BattleSvg map={map.battle} zoom={zoom} />}
+        {view === "world" ? <WorldSvg map={map.world} zoom={zoom} /> : view === "town" ? <TownSvg map={map.town} zoom={zoom} /> : <BattleSvg map={shownBattle} zoom={zoom} />}
       </div>
       <p className="body">{caption}</p>
-      {view === "local" && map.battle.enemies.length > 0 ? (
+      {view === "local" && roster.allies.length > 0 ? (
         <div style={{ marginTop: 16 }}>
-          <div className="section-label">CONTACTS · {map.battle.enemies.length}</div>
+          <div className="section-label">ALLIES · {roster.allies.length}</div>
+          <div className="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">NAME</th>
+                  <th scope="col">STATUS</th>
+                </tr>
+              </thead>
+              <tbody>
+                {roster.allies.map((ally) => (
+                  <tr key={ally.id}>
+                    <td className="tone-ally">{ally.name}</td>
+                    <td>{ally.status || ""}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ) : null}
+      {view === "local" && roster.contacts.length > 0 ? (
+        <div style={{ marginTop: 16 }}>
+          <div className="section-label">CONTACTS · {roster.contacts.length}</div>
           <div className="table-wrap">
             <table>
               <thead>
@@ -442,7 +505,7 @@ export function MapTab({ map, active }: { map: SheetData["map"]; active: boolean
                 </tr>
               </thead>
               <tbody>
-                {map.battle.enemies.map((enemy) => (
+                {roster.contacts.map((enemy) => (
                   <tr key={enemy.id}>
                     <td className={`tone-${enemy.tone}`}>{enemy.name}</td>
                     <td>{enemy.size}</td>

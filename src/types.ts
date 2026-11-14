@@ -161,6 +161,15 @@ export type RevealShape =
   | { type: "ellipse"; cx: number; cy: number; rx: number; ry: number }
   | { type: "stroke"; d: string; width: number };
 
+export type Ally = {
+  id: string;
+  name: string;
+  x: number;
+  y: number;
+  label?: string;
+  status?: string;
+};
+
 export type BattleMap = {
   title: string;
   note: string;
@@ -180,6 +189,7 @@ export type BattleMap = {
   lantern?: { x: number; y: number; label: string };
   compass?: string;
   enemies: Enemy[];
+  allies?: Ally[];
 };
 
 export type ChartedPlace = {
@@ -211,6 +221,7 @@ export type SheetData = {
     world: WorldMap;
     town: TownMap;
     battle: BattleMap;
+    battleArchive?: BattleMap[];
     charted: ChartedPlace[];
   };
 };
