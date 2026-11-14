@@ -1,4 +1,4 @@
-import type { SheetData } from "./types";
+import type { SheetData, Vital } from "./types";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -8,7 +8,7 @@ function need(ok: boolean, message: string): string | null {
   return ok ? null : message;
 }
 
-/** Returns an error string when the campaign file is missing a piece the sheet renders. */
+/** Returns an error string when the campaign object is missing a piece the sheet renders. */
 export function validateSheet(value: unknown): string | null {
   if (!isRecord(value)) return "Sheet data is not an object.";
   const problems = [
@@ -35,6 +35,20 @@ export function validateSheet(value: unknown): string | null {
   return problems.find((problem) => problem) || null;
 }
 
+export function parseSheet(value: unknown): SheetData {
+  const problem = validateSheet(value);
+  if (problem) throw new Error(problem);
+  return value as SheetData;
+}
+
+/** Labels whose percent changed. The first payload does not flash. */
+export function changedVitalLabels(previous: Pick<Vital, "label" | "pct">[] | null, next: Pick<Vital, "label" | "pct">[]): string[] {
+  if (!previous) return [];
+  const before = new Map(previous.map((vital) => [vital.label, vital.pct]));
+  return next.filter((vital) => before.has(vital.label) && before.get(vital.label) !== vital.pct).map((vital) => vital.label);
+}
+
+/** Backup copy used only when Supabase cannot be reached. */
 export async function fetchSheet(signal?: AbortSignal): Promise<SheetData> {
   const url = `${import.meta.env.BASE_URL}data/nate.json?t=${Date.now()}`;
   const response = await fetch(url, {
@@ -43,8 +57,5 @@ export async function fetchSheet(signal?: AbortSignal): Promise<SheetData> {
     headers: { "Cache-Control": "no-cache" },
   });
   if (!response.ok) throw new Error(`Could not load sheet data (${response.status}).`);
-  const json: unknown = await response.json();
-  const problem = validateSheet(json);
-  if (problem) throw new Error(problem);
-  return json as SheetData;
+  return parseSheet(await response.json());
 }
