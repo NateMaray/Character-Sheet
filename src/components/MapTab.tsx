@@ -158,6 +158,7 @@ function markerGlyph(enemy: Enemy): string {
   if (enemy.marker) return enemy.marker;
   if (enemy.tone === "hostile" || enemy.tone === "warning") return "!";
   if (enemy.tone === "unknown") return "?";
+  if (enemy.tone === "dead") return "×";
   return "·";
 }
 
@@ -165,6 +166,7 @@ function markerColor(enemy: Enemy): string {
   if (enemy.tone === "hostile") return "var(--hostile)";
   if (enemy.tone === "warning") return "var(--warning)";
   if (enemy.tone === "unknown") return "var(--unknown)";
+  if (enemy.tone === "dead") return "var(--muted)";
   return "var(--neutral)";
 }
 

@@ -1,5 +1,5 @@
 {
-  "rev": "2026-11-14-i-nest",
+  "rev": "2026-11-14-j-first-kill",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "identity": {
     "kicker": "AETHER SYSTEM · OUTWORLDER",
@@ -334,7 +334,7 @@
     },
     "battle": {
       "title": "Nest chamber, tannery culvert",
-      "note": "Past the bend, in a low nest chamber. A nest of shredded hides and bones holds three blind, mewling pups. Four gray-brown pipe beasts stand between you and the culvert mouth: the leader turned toward you, a second adult, an injured adult limping in, and a young one.",
+      "note": "Past the bend, in the nest chamber. The injured adult is dead at your feet, skull crushed by the hammer. The leader and a second adult are charging side by side down the tunnel. The young one hangs back at the bend, hissing. Three blind pups wail in the nest.",
       "width": 600,
       "height": 420,
       "tunnel": {
@@ -376,14 +376,15 @@
           "size": "Smaller than the adults, long and low",
           "rank": "Unknown",
           "type": "Beast. Young. Long and low, pointed snout, gray-brown fur.",
-          "status": "With the adults, between Nate and the daylight.",
-          "x": 368,
-          "y": 58,
-          "tone": "neutral",
-          "marker": "·",
+          "status": "Hanging back at the bend, hissing.",
+          "x": 338,
+          "y": 162,
+          "tone": "warning",
+          "marker": "!",
+          "facing": "player",
           "mapLabel": "Young",
-          "labelX": 300,
-          "labelY": 50
+          "labelX": 400,
+          "labelY": 150
         },
         {
           "id": "injured",
@@ -391,15 +392,14 @@
           "size": "Big-dog sized, long and low",
           "rank": "Unknown",
           "type": "Beast. Long and low, pointed snout, gray-brown fur.",
-          "status": "Limping toward Nate and the nest, frantic.",
-          "x": 366,
-          "y": 120,
-          "tone": "warning",
-          "marker": "!",
-          "facing": "player",
-          "mapLabel": "Injured",
-          "labelX": 292,
-          "labelY": 124
+          "status": "Dead. Hammer blow to the skull.",
+          "x": 188,
+          "y": 274,
+          "tone": "dead",
+          "marker": "×",
+          "mapLabel": "Dead",
+          "labelX": 214,
+          "labelY": 262
         },
         {
           "id": "adult",
@@ -407,15 +407,15 @@
           "size": "Big-dog sized, long and low",
           "rank": "Unknown",
           "type": "Beast. Long and low, pointed snout, gray-brown fur.",
-          "status": "Hostile.",
-          "x": 318,
-          "y": 188,
+          "status": "Hostile. Charging side by side with the leader.",
+          "x": 286,
+          "y": 208,
           "tone": "hostile",
           "marker": "!",
           "facing": "player",
           "mapLabel": "Adult",
-          "labelX": 400,
-          "labelY": 180
+          "labelX": 340,
+          "labelY": 196
         },
         {
           "id": "leader",
@@ -423,15 +423,15 @@
           "size": "Big-dog sized, long and low",
           "rank": "Unknown",
           "type": "Beast. Long body, pointed snout, torn ears, four clawed toes, gray-brown fur.",
-          "status": "Hostile. Turned toward Nate.",
-          "x": 228,
-          "y": 242,
+          "status": "Hostile. Charging side by side with the other adult.",
+          "x": 236,
+          "y": 224,
           "tone": "hostile",
           "marker": "!",
           "facing": "player",
           "mapLabel": "Leader",
-          "labelX": 160,
-          "labelY": 226
+          "labelX": 176,
+          "labelY": 210
         },
         {
           "id": "pup-1",
@@ -439,7 +439,7 @@
           "size": "Small, newborn",
           "rank": "Unknown",
           "type": "Beast pup. Blind, mewling, in a nest of shredded hides and bones.",
-          "status": "Non-hostile. In the nest.",
+          "status": "Non-hostile. Wailing in the nest.",
           "x": 128,
           "y": 348,
           "r": 7,
@@ -453,7 +453,7 @@
           "size": "Small, newborn",
           "rank": "Unknown",
           "type": "Beast pup. Blind, mewling, in a nest of shredded hides and bones.",
-          "status": "Non-hostile. In the nest.",
+          "status": "Non-hostile. Wailing in the nest.",
           "x": 160,
           "y": 368,
           "r": 7,
@@ -467,7 +467,7 @@
           "size": "Small, newborn",
           "rank": "Unknown",
           "type": "Beast pup. Blind, mewling, in a nest of shredded hides and bones.",
-          "status": "Non-hostile. In the nest.",
+          "status": "Non-hostile. Wailing in the nest.",
           "x": 190,
           "y": 344,
           "r": 7,
@@ -493,7 +493,7 @@
       { "region": "Greenstone", "place": "Wet Barrel tavern", "seen": "Taproom and the cellar from Cellar Dwellers (burrow now bricked up)." },
       { "region": "Greenstone", "place": "Forge district", "seen": "The street of smithy storefronts and the crossed-blades weapon shop." },
       { "region": "Greenstone", "place": "Warehouse district cellar", "seen": "Stairs, the front rows of chewed sacks, and most of the back under the lamp. Three ratlings at the back wall." },
-      { "region": "Greenstone", "place": "Tannery culvert", "seen": "The drainage ditch, the culvert past the bend, and a low nest chamber. A nest of shredded hides and bones holds three blind pups. Four pipe beasts are between you and the daylight at the mouth.", "current": true }
+      { "region": "Greenstone", "place": "Tannery culvert", "seen": "Past the bend in a low nest chamber. The injured adult is dead at Nate's feet. The leader and a second adult are charging down the tunnel. A young one hisses at the bend. Three blind pups wail in the nest.", "current": true }
     ]
   }
 }

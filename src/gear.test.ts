@@ -37,7 +37,7 @@ function fresh(): GearState {
 describe("nate.json", () => {
   it("validates and matches the nest-chamber scene", () => {
     expect(validateSheet(sheet)).toBeNull();
-    expect(sheet.rev).toBe("2026-11-14-i-nest");
+    expect(sheet.rev).toBe("2026-11-14-j-first-kill");
     const mana = sheet.vitals.find((vital) => vital.label === "MANA");
     const health = sheet.vitals.find((vital) => vital.label === "HEALTH");
     const stamina = sheet.vitals.find((vital) => vital.label === "STAMINA");
@@ -49,8 +49,12 @@ describe("nate.json", () => {
     expect(names).not.toContain("Unseen contact");
     expect(names.filter((name) => name.startsWith("Pipe beast"))).toHaveLength(4);
     expect(names.filter((name) => name === "Blind pup")).toHaveLength(3);
-    expect(sheet.map.battle.note).toMatch(/past the bend/i);
-    expect(sheet.map.battle.enemies.some((enemy) => enemy.status.toLowerCase().includes("hostile"))).toBe(true);
+    expect(sheet.map.battle.note).toMatch(/skull crushed/i);
+    const dead = sheet.map.battle.enemies.find((enemy) => enemy.id === "injured");
+    expect(dead?.tone).toBe("dead");
+    expect(dead?.status.toLowerCase()).toContain("dead");
+    expect(dead && dead.x < 220 && dead.y > 250).toBe(true);
+    expect(sheet.map.battle.enemies.some((enemy) => enemy.status.toLowerCase().includes("charging"))).toBe(true);
   });
 });
 

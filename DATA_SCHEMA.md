@@ -147,7 +147,7 @@ Top-down, `width` 600 by `height` 420. Y grows downward. In the current culvert,
 | `compass` | Usually `N ↑`. |
 | `enemies` | Every creature on the map, hostile or not. The table is this list. |
 
-Enemy fields: `id` (unique), `name`, `size`, `rank`, `type`, `status`, `x`, `y`. `tone` is `hostile` (red), `warning` (amber), `neutral` (green), or `unknown`. `marker` is the glyph inside the dot (`!`, `·`, `?`). `facing` is `"player"` or a number (0 is north, clockwise) and draws a notch. `mapLabel` is the short name on the map; `""` hides it. `labelX` and `labelY` place that name. `r` is the dot radius (default 11, pups use 7).
+Enemy fields: `id` (unique), `name`, `size`, `rank`, `type`, `status`, `x`, `y`. `tone` is `hostile` (red), `warning` (amber), `neutral` (green), `unknown`, or `dead` (a body, drawn with ×). `marker` is the glyph inside the dot (`!`, `·`, `?`, `×`). `facing` is `"player"` or a number (0 is north, clockwise) and draws a notch. `mapLabel` is the short name on the map; `""` hides it. `labelX` and `labelY` place that name. `r` is the dot radius (default 11, pups use 7).
 
 ### Add or move an enemy
 

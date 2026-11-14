@@ -137,7 +137,7 @@ export type BattleExtra =
   | { type: "ellipse"; cx: number; cy: number; rx: number; ry: number; fill: string; opacity?: number }
   | { type: "path"; d: string; fill?: string; stroke?: string; sw?: number; opacity?: number };
 
-export type EnemyTone = "hostile" | "warning" | "neutral" | "unknown";
+export type EnemyTone = "hostile" | "warning" | "neutral" | "unknown" | "dead";
 
 export type Enemy = {
   id: string;
