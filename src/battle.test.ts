@@ -1,6 +1,6 @@
 import sheet from "../public/data/nate.json";
 import { describe, expect, it } from "vitest";
-import { battleRoster, isStandInAlly } from "./battle";
+import { battleRoster, estimateLabelBox, isStandInAlly, placeAllyLabel } from "./battle";
 import { parseSheet, validateSheet } from "./sheet";
 import type { BattleMap, Enemy, SheetData } from "./types";
 
@@ -66,6 +66,30 @@ describe("allies", () => {
     });
     expect(roster.allies).toEqual([{ id: "gary", name: "Gary", x: 8, y: 9, status: "At the mouth" }]);
     expect(roster.contacts.map((entry) => entry.id)).toEqual(["leader"]);
+  });
+
+  it("puts an ally name below the marker when that spot is clear", () => {
+    const spot = placeAllyLabel("Gary", { x: 372, y: 240 }, []);
+    expect(spot).toEqual({ x: 372, y: 268, anchor: "middle" });
+  });
+
+  it("moves an ally name off Nate and the lantern", () => {
+    const nate = estimateLabelBox("Nate", 13, 400 - 18, 192 + 4, "end");
+    const lanterns = estimateLabelBox("Lanterns", 11, 440 - 14, 250 + 4, "end");
+    const nateDot = { x: 386, y: 178, w: 28, h: 28 };
+    const lanternDot = { x: 430, y: 240, w: 20, h: 20 };
+    const obstacles = [nate, lanterns, nateDot, lanternDot];
+    const spot = placeAllyLabel("Gary", { x: 372, y: 240 }, obstacles);
+    const box = estimateLabelBox("Gary", 12, spot.x, spot.y, spot.anchor);
+    for (const obstacle of obstacles) {
+      const pad = 6;
+      const hits =
+        box.x < obstacle.x + obstacle.w + pad &&
+        box.x + box.w + pad > obstacle.x &&
+        box.y < obstacle.y + obstacle.h + pad &&
+        box.y + box.h + pad > obstacle.y;
+      expect(hits).toBe(false);
+    }
   });
 
   it("accepts allies on the sheet and rejects a bad list", () => {

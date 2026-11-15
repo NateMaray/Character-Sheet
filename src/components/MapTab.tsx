@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type PointerEvent } from "react";
-import { battleRoster } from "../battle";
+import { battleRoster, estimateLabelBox, placeAllyLabel, type LabelBox } from "../battle";
 import type { BattleMap, Enemy, MapLabel, Point, SheetData, TownMap, WorldMap } from "../types";
 import { Button, Pill, Segmented } from "./Bits";
 
@@ -284,19 +284,32 @@ function BattleSvg({ map, zoom }: { map: BattleMap; zoom: number }) {
           {map.player.label}
         </text>
       </g>
-      {battleRoster(map).allies.map((ally) => (
-        <g key={ally.id}>
-          <polygon
-            points={`${ally.x},${ally.y - 11} ${ally.x + 9},${ally.y} ${ally.x},${ally.y + 11} ${ally.x - 9},${ally.y}`}
-            fill="var(--accent)"
-            stroke="#07101c"
-            strokeWidth="2"
-          />
-          <text x={ally.x + 16} y={ally.y + 4} textAnchor="start" fontSize="12" fontWeight="700" {...halo("var(--accent)")}>
-            {ally.label || ally.name}
-          </text>
-        </g>
-      ))}
+      {(() => {
+        const roster = battleRoster(map);
+        const obstacles: LabelBox[] = [estimateLabelBox(map.player.label, 13, map.player.x - 18, map.player.y + 4, "end"), { x: map.player.x - 14, y: map.player.y - 14, w: 28, h: 28 }];
+        if (map.lantern) {
+          obstacles.push(estimateLabelBox(map.lantern.label, 11, map.lantern.x - 14, map.lantern.y + 4, "end"));
+          obstacles.push({ x: map.lantern.x - 10, y: map.lantern.y - 10, w: 20, h: 20 });
+        }
+        return roster.allies.map((ally) => {
+          const text = ally.label || ally.name;
+          const spot = placeAllyLabel(text, ally, obstacles);
+          obstacles.push(estimateLabelBox(text, 12, spot.x, spot.y, spot.anchor));
+          return (
+            <g key={ally.id}>
+              <polygon
+                points={`${ally.x},${ally.y - 11} ${ally.x + 9},${ally.y} ${ally.x},${ally.y + 11} ${ally.x - 9},${ally.y}`}
+                fill="var(--accent)"
+                stroke="#07101c"
+                strokeWidth="2"
+              />
+              <text x={spot.x} y={spot.y} textAnchor={spot.anchor} fontSize="12" fontWeight="700" {...halo("var(--accent)")}>
+                {text}
+              </text>
+            </g>
+          );
+        });
+      })()}
       {battleRoster(map).contacts.map((enemy) => {
         const radius = enemy.r || 11;
         const face = facingDeg(enemy, map.player);
@@ -470,53 +483,39 @@ export function MapTab({ map, active }: { map: SheetData["map"]; active: boolean
       {view === "local" && roster.allies.length > 0 ? (
         <div style={{ marginTop: 16 }}>
           <div className="section-label">ALLIES · {roster.allies.length}</div>
-          <div className="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">NAME</th>
-                  <th scope="col">STATUS</th>
-                </tr>
-              </thead>
-              <tbody>
-                {roster.allies.map((ally) => (
-                  <tr key={ally.id}>
-                    <td className="tone-ally">{ally.name}</td>
-                    <td>{ally.status || ""}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <ul className="roster">
+            {roster.allies.map((ally) => (
+              <li key={ally.id} className="roster-card">
+                <div className="roster-name tone-ally">{ally.name}</div>
+                {ally.status ? <div className="roster-status">{ally.status}</div> : null}
+              </li>
+            ))}
+          </ul>
         </div>
       ) : null}
       {view === "local" && roster.contacts.length > 0 ? (
         <div style={{ marginTop: 16 }}>
           <div className="section-label">CONTACTS · {roster.contacts.length}</div>
-          <div className="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  {["Name", "Size", "Rank", "Type", "Status"].map((heading) => (
-                    <th key={heading} scope="col">
-                      {heading.toUpperCase()}
-                    </th>
+          <ul className="roster">
+            {roster.contacts.map((enemy) => (
+              <li key={enemy.id} className="roster-card">
+                <div className={`roster-name tone-${enemy.tone}`}>{enemy.name}</div>
+                <dl>
+                  {[
+                    ["Size", enemy.size],
+                    ["Rank", enemy.rank],
+                    ["Type", enemy.type],
+                    ["Status", enemy.status],
+                  ].map(([label, value]) => (
+                    <div key={label}>
+                      <dt>{label}</dt>
+                      <dd>{value}</dd>
+                    </div>
                   ))}
-                </tr>
-              </thead>
-              <tbody>
-                {roster.contacts.map((enemy) => (
-                  <tr key={enemy.id}>
-                    <td className={`tone-${enemy.tone}`}>{enemy.name}</td>
-                    <td>{enemy.size}</td>
-                    <td>{enemy.rank}</td>
-                    <td>{enemy.type}</td>
-                    <td>{enemy.status}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </dl>
+              </li>
+            ))}
+          </ul>
         </div>
       ) : null}
       {view === "world" && map.charted.length > 0 ? (
