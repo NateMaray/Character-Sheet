@@ -630,6 +630,47 @@ td:first-child { color: var(--text); font-weight: 650; }
 .tone-dead { color: var(--text-faint); }
 .tone-ally { color: var(--accent); }
 
+.roster {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.roster-card {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.22);
+}
+.roster-name { font-weight: 650; overflow-wrap: anywhere; }
+.roster-status {
+  margin-top: 4px;
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.roster-card dl { margin: 8px 0 0; display: grid; gap: 6px; }
+.roster-card dl div { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 8px; align-items: start; }
+.roster-card dt {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  font-weight: 700;
+}
+.roster-card dd {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
 .archive-pick {
   display: inline-flex;
   align-items: center;
