@@ -1,6 +1,6 @@
 import { createClient, type RealtimeChannel, type RealtimePostgresChangesPayload } from "@supabase/supabase-js";
 import { parseSheet } from "./sheet";
-import type { SheetData } from "./types";
+import type { PocketAction, SheetData } from "./types";
 
 /** Publishable key. Safe to ship; row writes are blocked for this role. */
 export const SUPABASE_URL = "https://lnbmhrfzilqzttjxvzak.supabase.co";
@@ -26,6 +26,47 @@ export function sheetFromChange(payload: RealtimePostgresChangesPayload<SheetRow
   const row = payload.new as Partial<SheetRow> | null;
   if (!row || !("data" in row)) return null;
   return parseSheet(row.data);
+}
+
+type RpcError = { code?: string; message?: string; status?: number };
+
+export function pocketActionRpcMissing(error: RpcError): boolean {
+  const code = `${error.code || ""}`;
+  const message = error.message || "";
+  if (code === "PGRST202" || code === "404") return true;
+  if (error.status === 404) return true;
+  if (message.includes("PGRST202") || /\b404\b/.test(message)) return true;
+  return /could not find the function/i.test(message) && /log_pocket_action/i.test(message);
+}
+
+let pocketRpcMissing = false;
+
+/** Fire-and-forget log. A missing RPC stays on the phone; no DM write key is used. */
+export async function pushPocketAction(action: PocketAction): Promise<"ok" | "missing" | "error"> {
+  if (pocketRpcMissing) return "missing";
+  try {
+    const { error } = await supabase.rpc("log_pocket_action", {
+      p_action_id: action.id,
+      p_kind: action.kind,
+      p_item: action.item,
+      p_qty: action.qty,
+      p_chest: action.chest,
+      p_base_rev: action.baseRev,
+    });
+    if (!error) return "ok";
+    if (pocketActionRpcMissing(error)) {
+      pocketRpcMissing = true;
+      return "missing";
+    }
+    return "error";
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "";
+    if (pocketActionRpcMissing({ message })) {
+      pocketRpcMissing = true;
+      return "missing";
+    }
+    return "error";
+  }
 }
 
 export function openSheetChannel(

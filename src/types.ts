@@ -1,4 +1,25 @@
-export type GearItem = { name: string; qty: string; note: string };
+export type GearItem = {
+  name: string;
+  qty: string;
+  note: string;
+  /** Present (even as []) when this item is a container. Contents use no pocket slots. */
+  contents?: GearItem[];
+};
+
+export type PocketActionKind = "discard" | "to_chest" | "from_chest";
+
+/** One pocket move waiting on the phone until the DM folds it into the sheet. */
+export type PocketAction = {
+  id: string;
+  kind: PocketActionKind;
+  item: string;
+  qty: string;
+  chest: string;
+  at: string;
+  baseRev: string;
+  /** True once log_pocket_action accepted it. Still pending until appliedActions lists the id. */
+  synced?: boolean;
+};
 
 export type EquipSlot = {
   slot: string;
@@ -19,6 +40,8 @@ export type GearSource = {
   pocket: GearItem[];
   equipped: EquipSlot[];
   defaultLoadouts?: GearLoadout[];
+  /** Action ids already folded into this row. */
+  appliedActions?: string[];
 };
 
 export type GearState = {
