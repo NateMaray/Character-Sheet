@@ -24,6 +24,8 @@ Bump `rev` to a new string after every scene, even a small one. The sheet shows 
 - New `rev`: his arrangement is kept, then the new row is merged in.
   - A new owned item (in `gear.pocket`, or worn in `gear.equipped` and not borrowed) appears in his pocket if he does not already have it.
   - Item notes and quantities refresh from the row.
+  - An item listed only inside a chest's `contents` stays in that chest. It is not also added as its own pocket row.
+  - Moves still waiting on the phone are played again after that merge, so a discarded item does not come back and a chest he filled does not come back empty. See "Pocket changes from Nate".
   - An owned item removed from both lists disappears, even if he had it equipped.
   - A borrowed item listed on a slot in `gear.equipped` is forced back onto that slot. Anything of his that was in the way goes to his pocket. Borrowed names are `gear.borrowed` (the tanner's lantern, the foreman's lamp). They are never his, so Unequip does not put them in the pocket.
   - His loadout names and which of his items they contain are kept. Notes refresh. A loadout entry whose item no longer exists is cleared. Default Combat and Travel are only used on a phone that has never saved loadouts.
@@ -73,9 +75,13 @@ Owned items that are worn (travel clothes, the hammer) do not also need a `pocke
 
 `gear.defaultLoadouts` is Combat and Travel for a phone that has no saved loadouts yet. Combat is the story kit without borrowed gear. Travel clears Main hand and Off hand.
 
-`gear.pocketSlots` is the pocket grid size (40).
+`gear.pocketSlots` is the pocket grid size (40). Only top-level pocket rows use a slot. A chest is one row, so it uses one slot.
 
 `gear.borrowed` is the list of items that are not his.
+
+`gear.pocket[].contents`, when present, makes that row a container (a chest). Use an array of `{name, qty, note}`, or `[]` for an empty chest. Leave `contents` off a normal item. Do not put a chest inside `contents`. On his phone the chest shows its name, its note, and how many things are in it. He can open the list. Things inside a chest are not offered when he equips.
+
+`gear.appliedActions` is an optional list of action ids you have already folded into this row. Leave it off until he has thrown something away or moved something into a chest.
 
 ### Add an item
 
@@ -85,9 +91,39 @@ Owned items that are worn (travel clothes, the hammer) do not also need a `pocke
 4. If it is borrowed, add the name to `gear.borrowed`, put it on the slot, and do not put it in `pocket`.
 5. Bump `rev`.
 
+To give him a chest, add a pocket object with `contents`. Put anything that starts inside it in that array, not as its own pocket row.
+
 ### Take an item away
 
-Remove it from `pocket` and from every `equipped` slot. On the next rev it leaves his phone, including loadouts.
+Remove it from `pocket` and from every `equipped` slot. On the next rev it leaves his phone, including loadouts. If it was only inside a chest, remove it from that chest's `contents`.
+
+## Pocket changes from Nate
+
+He can discard pocket items, put them in a chest, and take them back out. Equipped items stay on the paper doll until he unequips them, so they are not in the pocket to discard or chest. Each move stays on the phone (`hwfwm-nate-maray-gear-v1:actions`) until that move's id is in `gear.appliedActions`.
+
+A move is one object:
+
+| Field | What it does |
+| --- | --- |
+| `id` | Stable id. Copy this into `appliedActions` once the row matches the move. |
+| `kind` | `discard`, `to_chest`, or `from_chest`. |
+| `item` | The item name. |
+| `qty` | The quantity text at the time, such as `x2` or `""`. |
+| `chest` | The chest name. `""` when he discards something that is not inside a chest. |
+| `at` | When he did it, ISO time. |
+| `baseRev` | The `rev` he was looking at. |
+
+Discarding a chest discards what is inside it too. That is one `discard`, on the chest. Putting an item in a chest does not spend another slot. Taking an item out does, and the phone refuses when every top-level slot is full. A chest cannot go inside itself or another chest.
+
+The pocket tab shows how many moves are still waiting and can copy them as a JSON array. The phone also sends each move to the database function `log_pocket_action` (`p_action_id`, `p_kind`, `p_item`, `p_qty`, `p_chest`, `p_base_rev`) when that function exists. There is no write key in the app. If the function is missing, the move stays on the phone only.
+
+When you accept a move:
+
+1. Change `gear.pocket` so the row matches (delete a discard, or move the object into or out of `contents`).
+2. Append that move's `id` to `gear.appliedActions`.
+3. Bump `rev`.
+
+If you bump `rev` before the row matches, the phone keeps his move. After the merge it plays every waiting move whose id is not in `appliedActions`, in order, and skips a move whose item or chest is no longer in the row.
 
 ## Map
 

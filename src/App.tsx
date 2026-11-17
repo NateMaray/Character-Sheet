@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { RealtimeChannel } from "@supabase/supabase-js";
-import { readGearStore, readPins, resolveGear, sanitizePins, togglePin, writeGearStore, writePins, type GearState, type TabId } from "./gear";
+import { readGearStore, readPins, readPocketActions, resolveGear, samePocketActions, sanitizePins, togglePin, writeGearStore, writePins, writePocketActions, type GearState, type TabId } from "./gear";
 import { changedVitalLabels, fetchSheet } from "./sheet";
-import { fetchRemoteSheet, openSheetChannel, supabase } from "./supabase";
-import type { SheetData } from "./types";
+import { fetchRemoteSheet, openSheetChannel, pushPocketAction, supabase } from "./supabase";
+import type { PocketAction, SheetData } from "./types";
 import { EquipmentTab } from "./components/EquipmentTab";
 import { Hud } from "./components/Hud";
 import { MapTab } from "./components/MapTab";
@@ -22,7 +22,11 @@ export function App() {
   const [connected, setConnected] = useState(false);
   const [fallback, setFallback] = useState(false);
   const [pulsing, setPulsing] = useState<string[]>([]);
+  const [actions, setActions] = useState<PocketAction[]>(() => readPocketActions());
   const gearRef = useRef<GearState | null>(null);
+  const actionsRef = useRef<PocketAction[]>(actions);
+  const syncing = useRef(false);
+  const syncQueued = useRef(false);
   const sheetRef = useRef<SheetData | null>(null);
   const firstLoad = useRef(true);
   const pullId = useRef(0);
@@ -33,17 +37,53 @@ export function App() {
   const alive = useRef(true);
   const pulledAt = useRef(0);
 
-  const commitGear = useCallback((next: GearState) => {
+  const rememberActions = useCallback((next: PocketAction[]) => {
+    actionsRef.current = next;
+    writePocketActions(next);
+    setActions(next);
+  }, []);
+
+  const syncActions = useCallback(async () => {
+    if (syncing.current) {
+      syncQueued.current = true;
+      return;
+    }
+    syncing.current = true;
+    try {
+      do {
+        syncQueued.current = false;
+        for (;;) {
+          const action = actionsRef.current.find((entry) => !entry.synced);
+          if (!action) break;
+          const result = await pushPocketAction(action);
+          if (!alive.current || result !== "ok") return;
+          if (!actionsRef.current.some((entry) => entry.id === action.id && !entry.synced)) continue;
+          const next = actionsRef.current.map((entry) => (entry.id === action.id ? { ...entry, synced: true } : entry));
+          actionsRef.current = next;
+          writePocketActions(next);
+          setActions(next);
+        }
+      } while (syncQueued.current && alive.current);
+    } finally {
+      syncing.current = false;
+    }
+  }, []);
+
+  const commitGear = useCallback((next: GearState, nextActions?: PocketAction[]) => {
     gearRef.current = next;
     writeGearStore(next);
     setGear(next);
-  }, []);
+    if (!nextActions) return;
+    rememberActions(nextActions);
+    void syncActions();
+  }, [rememberActions, syncActions]);
 
   const applySheet = useCallback((data: SheetData) => {
-    const resolved = resolveGear(data.rev, data.gear, readGearStore(), gearRef.current);
+    const resolved = resolveGear(data.rev, data.gear, readGearStore(), gearRef.current, actionsRef.current);
     if (resolved.dirty) writeGearStore(resolved.state);
     gearRef.current = resolved.state;
     setGear(resolved.state);
+    if (!samePocketActions(resolved.actions, actionsRef.current)) rememberActions(resolved.actions);
     const moved = changedVitalLabels(sheetRef.current?.vitals ?? null, data.vitals);
     sheetRef.current = data;
     setSheet(data);
@@ -54,7 +94,7 @@ export function App() {
       if (pulseTimer.current) window.clearTimeout(pulseTimer.current);
       pulseTimer.current = window.setTimeout(() => setPulsing([]), 900);
     }
-  }, []);
+  }, [rememberActions]);
 
   const pull = useCallback(async (manual = false): Promise<"live" | "fallback" | "error"> => {
     const id = ++pullId.current;
@@ -121,6 +161,12 @@ export function App() {
     await pull(true);
     listen();
   }, [pull, listen]);
+
+  useEffect(() => {
+    void syncActions();
+    const timer = window.setInterval(() => void syncActions(), 15000);
+    return () => window.clearInterval(timer);
+  }, [syncActions]);
 
   useEffect(() => {
     alive.current = true;
@@ -208,7 +254,7 @@ export function App() {
           <MapTab map={sheet.map} active={tab === "map"} />
           <StatusTab sheet={sheet} active={tab === "status"} />
           <AbilitiesTab sheet={sheet} active={tab === "abilities"} />
-          <PocketTab gear={gear} source={sheet.gear} active={tab === "pocket"} onChange={commitGear} />
+          <PocketTab gear={gear} source={sheet.gear} actions={actions} active={tab === "pocket"} onChange={commitGear} />
           <EquipmentTab gear={gear} source={sheet.gear} active={tab === "equipment"} onChange={commitGear} />
           <MissionsTab sheet={sheet} active={tab === "missions"} />
           <EssencesTab sheet={sheet} active={tab === "essences"} />

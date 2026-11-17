@@ -28,6 +28,8 @@ export function validateSheet(value: unknown): string | null {
     need(Array.isArray(value.profile), "profile must be an array."),
     need(isRecord(value.gear) && Array.isArray(value.gear.equipped) && Array.isArray(value.gear.pocket), "gear.equipped and gear.pocket are required."),
     need(isRecord(value.gear) && Array.isArray(value.gear.borrowed) && isRecord(value.gear.equipTargets), "gear.borrowed and gear.equipTargets are required."),
+    need(pocketContentsOk(value.gear), "gear.pocket contents, when present, must be an array of {name}."),
+    need(appliedActionsOk(value.gear), "gear.appliedActions, when present, must be an array of strings."),
     need(isRecord(value.map) && isRecord(value.map.world) && isRecord(value.map.town) && isRecord(value.map.battle), "map.world, map.town, and map.battle are required."),
     need(isRecord(value.map) && isRecord(value.map.battle) && Array.isArray(value.map.battle.enemies), "map.battle.enemies must be an array."),
     need(isRecord(value.map) && alliesAreValid(value.map.battle), "map.battle.allies must be an array of {id, name, x, y} when present."),
@@ -35,6 +37,20 @@ export function validateSheet(value: unknown): string | null {
     need(isRecord(value.map) && Array.isArray(value.map.charted), "map.charted must be an array."),
   ];
   return problems.find((problem) => problem) || null;
+}
+
+function pocketContentsOk(gear: unknown): boolean {
+  if (!isRecord(gear) || !Array.isArray(gear.pocket)) return true;
+  return gear.pocket.every((item) => {
+    if (!isRecord(item) || item.contents === undefined) return true;
+    if (!Array.isArray(item.contents)) return false;
+    return item.contents.every((entry) => isRecord(entry) && typeof entry.name === "string");
+  });
+}
+
+function appliedActionsOk(gear: unknown): boolean {
+  if (!isRecord(gear) || gear.appliedActions === undefined) return true;
+  return Array.isArray(gear.appliedActions) && gear.appliedActions.every((id) => typeof id === "string");
 }
 
 function alliesAreValid(battle: unknown): boolean {

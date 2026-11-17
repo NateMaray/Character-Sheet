@@ -509,6 +509,65 @@ button:focus-visible, input:focus-visible {
 .map-svg { display: block; }
 .map-svg text { font-family: var(--font); }
 
+.pocket-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.pocket-actions { margin: 8px 0 12px; }
+.pocket-note { margin: 0 0 12px; color: #ffd0d8; font-size: 14px; line-height: 1.4; }
+.pocket-confirm { margin-bottom: 12px; }
+.confirm-list { margin: 8px 0 0; padding-left: 18px; color: var(--text); }
+.chest-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+.card.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(103, 231, 255, 0.35), 0 12px 32px rgba(0, 0, 0, 0.22);
+}
+.chest-select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+.chest-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.chest-row.selected { box-shadow: inset 3px 0 0 var(--accent); }
+.chest-item {
+  flex: 1;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+}
+button.chest-item { cursor: pointer; min-height: 44px; }
+.pocket-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
 .pocket-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
@@ -521,9 +580,28 @@ button:focus-visible, input:focus-visible {
   padding: 10px;
   background: transparent;
 }
+button.slot-cell {
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+}
 .slot-cell.filled {
   border-color: var(--line-strong);
   background: rgba(16, 24, 40, 0.85);
+}
+.slot-cell.selected {
+  border-color: var(--accent);
+  background: rgba(103, 231, 255, 0.1);
+  box-shadow: 0 0 0 2px rgba(103, 231, 255, 0.35), 0 0 18px rgba(103, 231, 255, 0.15);
+}
+.slot-cell .hint, .chest-select .hint {
+  margin-top: 8px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  font-weight: 700;
 }
 .slot-name {
   display: flex;
