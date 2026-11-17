@@ -6,7 +6,7 @@ The live source of truth is one Supabase row:
 
 That `data` value is the same JSON object described below. The app reads it on open and subscribes to changes, so a write shows up on the phone without a refresh. A green dot under Nate's name means the live connection is up. A gray dot means the phone is offline or is showing the backup file.
 
-`public/data/nate.json` is only that backup. The app uses it when Supabase cannot be reached. Keep it in sync when you can, but the phone will not see an edit there until the backup path is used.
+`public/data/nate.json` is only that backup. The app uses it when Supabase cannot be reached. A GitHub Action rewrites it from the live row every 30 minutes, and again when someone runs "Sync sheet backup" by hand, then starts the Pages deploy if the rev changed. A gray dot with "Backup file" can be tapped for the error that made the phone give up on Supabase, and for this file's rev.
 
 Published backup URL:
 

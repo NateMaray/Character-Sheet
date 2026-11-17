@@ -32,7 +32,7 @@ export function validateSheet(value: unknown): string | null {
     need(appliedActionsOk(value.gear), "gear.appliedActions, when present, must be an array of strings."),
     need(isRecord(value.map) && isRecord(value.map.world) && isRecord(value.map.town) && isRecord(value.map.battle), "map.world, map.town, and map.battle are required."),
     need(isRecord(value.map) && isRecord(value.map.battle) && Array.isArray(value.map.battle.enemies), "map.battle.enemies must be an array."),
-    need(isRecord(value.map) && alliesAreValid(value.map.battle), "map.battle.allies must be an array of {id, name, x, y} when present."),
+    need(isRecord(value.map) && alliesAreValid(value.map.battle), "map.battle.allies must be an array of {name} when present."),
     need(isRecord(value.map) && archiveIsValid(value.map.battleArchive), "map.battleArchive must be an array of battle maps when present."),
     need(isRecord(value.map) && Array.isArray(value.map.charted), "map.charted must be an array."),
   ];
@@ -56,9 +56,13 @@ function appliedActionsOk(gear: unknown): boolean {
 function alliesAreValid(battle: unknown): boolean {
   if (!isRecord(battle) || battle.allies === undefined) return true;
   if (!Array.isArray(battle.allies)) return false;
-  return battle.allies.every(
-    (ally) => isRecord(ally) && typeof ally.id === "string" && typeof ally.name === "string" && typeof ally.x === "number" && typeof ally.y === "number",
-  );
+  return battle.allies.every((ally) => {
+    if (!isRecord(ally) || typeof ally.name !== "string") return false;
+    if (ally.id !== undefined && typeof ally.id !== "string") return false;
+    if (ally.x !== undefined && typeof ally.x !== "number") return false;
+    if (ally.y !== undefined && typeof ally.y !== "number") return false;
+    return true;
+  });
 }
 
 function archiveIsValid(archive: unknown): boolean {

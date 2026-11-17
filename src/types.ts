@@ -185,10 +185,10 @@ export type RevealShape =
   | { type: "stroke"; d: string; width: number };
 
 export type Ally = {
-  id: string;
+  id?: string;
   name: string;
-  x: number;
-  y: number;
+  x?: number;
+  y?: number;
   label?: string;
   status?: string;
 };

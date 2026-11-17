@@ -14,11 +14,52 @@ export const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
 
 type SheetRow = { id: string; data: unknown };
 
+/** Each try waits this long. There was no client timeout before this. */
+export const SHEET_FETCH_TIMEOUT_MS = 10_000;
+export const SHEET_FETCH_ATTEMPTS = 2;
+
+export function describeLoadError(err: unknown): string {
+  if ((err instanceof DOMException || err instanceof Error) && err.name === "AbortError") {
+    return "Supabase timed out after 10 seconds.";
+  }
+  if (err instanceof TypeError) return `Supabase network error: ${err.message}`;
+  if (err instanceof Error && err.message) return err.message;
+  return "Supabase request failed.";
+}
+
+async function fetchRemoteOnce(): Promise<SheetData> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), SHEET_FETCH_TIMEOUT_MS);
+  try {
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/sheet?id=eq.${encodeURIComponent(SHEET_ID)}&select=data`, {
+      signal: controller.signal,
+      cache: "no-store",
+      headers: {
+        apikey: SUPABASE_PUBLISHABLE_KEY,
+        Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}`,
+        Accept: "application/json",
+      },
+    });
+    if (!response.ok) throw new Error(`Supabase HTTP ${response.status}`);
+    const rows: unknown = await response.json();
+    const row = Array.isArray(rows) ? rows[0] : null;
+    if (!row || typeof row !== "object" || !("data" in row)) throw new Error("Sheet row is missing.");
+    return parseSheet((row as { data: unknown }).data);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 export async function fetchRemoteSheet(): Promise<SheetData> {
-  const { data, error } = await supabase.from("sheet").select("data").eq("id", SHEET_ID).maybeSingle();
-  if (error) throw new Error(error.message);
-  if (!data) throw new Error("Sheet row is missing.");
-  return parseSheet((data as { data: unknown }).data);
+  let last: unknown;
+  for (let attempt = 0; attempt < SHEET_FETCH_ATTEMPTS; attempt += 1) {
+    try {
+      return await fetchRemoteOnce();
+    } catch (err) {
+      last = err;
+    }
+  }
+  throw new Error(describeLoadError(last));
 }
 
 export function sheetFromChange(payload: RealtimePostgresChangesPayload<SheetRow>): SheetData | null {

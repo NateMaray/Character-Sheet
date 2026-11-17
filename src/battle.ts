@@ -7,7 +7,7 @@ export function isStandInAlly(enemy: Enemy): boolean {
 
 export function battleRoster(map: BattleMap): { allies: Ally[]; contacts: Enemy[] } {
   const declared = Array.isArray(map.allies) ? map.allies : [];
-  const declaredIds = new Set(declared.map((ally) => ally.id));
+  const declaredIds = new Set(declared.map((ally) => ally.id).filter((id): id is string => Boolean(id)));
   const lifted: Ally[] = [];
   for (const enemy of map.enemies) {
     if (!isStandInAlly(enemy) || declaredIds.has(enemy.id)) continue;

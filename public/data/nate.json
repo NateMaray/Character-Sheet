@@ -1,499 +1,3395 @@
 {
-  "rev": "2026-11-14-j-first-kill",
-  "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "identity": {
-    "kicker": "AETHER SYSTEM · OUTWORLDER",
-    "name": "Nate Maray",
-    "rank": "Normal rank",
-    "essenceLine": "1 of 4 essences",
-    "asOf": "Morning of day 2 in Greenstone",
-    "slots": [
-      { "title": "Lightning", "mark": "ϟ", "filled": true },
-      { "title": "Empty slot", "mark": "", "filled": false },
-      { "title": "Empty slot", "mark": "", "filled": false },
-      { "title": "Empty slot", "mark": "", "filled": false }
+  "map": {
+    "town": {
+      "river": "M1000,430 C940,415 880,430 820,470 C760,510 700,545 620,555",
+      "route": [
+        {
+          "x": 126,
+          "y": 121
+        },
+        {
+          "x": 180,
+          "y": 200
+        },
+        {
+          "x": 250,
+          "y": 268
+        },
+        {
+          "x": 420,
+          "y": 268
+        },
+        {
+          "x": 520,
+          "y": 262
+        },
+        {
+          "x": 600,
+          "y": 268
+        },
+        {
+          "x": 655,
+          "y": 228
+        },
+        {
+          "x": 708,
+          "y": 238
+        },
+        {
+          "x": 790,
+          "y": 300
+        },
+        {
+          "x": 708,
+          "y": 250
+        },
+        {
+          "x": 600,
+          "y": 268
+        },
+        {
+          "x": 520,
+          "y": 262
+        },
+        {
+          "x": 420,
+          "y": 268
+        },
+        {
+          "x": 300,
+          "y": 220
+        },
+        {
+          "x": 278,
+          "y": 214
+        },
+        {
+          "x": 300,
+          "y": 220
+        },
+        {
+          "x": 420,
+          "y": 268
+        },
+        {
+          "x": 520,
+          "y": 262
+        },
+        {
+          "x": 600,
+          "y": 280
+        },
+        {
+          "x": 620,
+          "y": 400
+        },
+        {
+          "x": 640,
+          "y": 500
+        },
+        {
+          "x": 665,
+          "y": 605
+        }
+      ],
+      "blocks": [
+        {
+          "h": 20,
+          "w": 28,
+          "x": 145,
+          "y": 150
+        },
+        {
+          "h": 22,
+          "w": 32,
+          "x": 155,
+          "y": 200
+        },
+        {
+          "h": 24,
+          "w": 30,
+          "x": 280,
+          "y": 120
+        },
+        {
+          "h": 18,
+          "w": 22,
+          "x": 170,
+          "y": 255
+        },
+        {
+          "h": 18,
+          "w": 24,
+          "x": 620,
+          "y": 200
+        },
+        {
+          "h": 20,
+          "w": 30,
+          "x": 690,
+          "y": 200
+        },
+        {
+          "h": 16,
+          "w": 22,
+          "x": 705,
+          "y": 260
+        },
+        {
+          "h": 20,
+          "w": 28,
+          "x": 630,
+          "y": 300
+        },
+        {
+          "h": 18,
+          "w": 26,
+          "x": 660,
+          "y": 340
+        },
+        {
+          "h": 22,
+          "w": 32,
+          "x": 700,
+          "y": 360
+        },
+        {
+          "h": 16,
+          "w": 24,
+          "x": 750,
+          "y": 260
+        },
+        {
+          "h": 20,
+          "w": 28,
+          "x": 820,
+          "y": 270
+        },
+        {
+          "h": 18,
+          "w": 22,
+          "x": 810,
+          "y": 310
+        },
+        {
+          "h": 16,
+          "w": 26,
+          "x": 760,
+          "y": 320
+        }
+      ],
+      "bridge": {
+        "cx": 525,
+        "x1": 428,
+        "x2": 610,
+        "lift": 22
+      },
+      "island": "M70,50 C50,140 55,250 65,360 C70,470 60,560 90,630 C130,690 220,705 310,680 C370,660 410,600 425,520 L435,400 428,280 415,160 390,80 C350,40 220,30 140,40 C100,45 80,45 70,50 Z",
+      "labels": [
+        {
+          "x": 150,
+          "y": 340,
+          "dx": 0,
+          "dy": 0,
+          "name": "The Island",
+          "anchor": "middle"
+        },
+        {
+          "x": 200,
+          "y": 86,
+          "dx": 0,
+          "dy": 0,
+          "name": "Guild district",
+          "anchor": "middle"
+        },
+        {
+          "x": 126,
+          "y": 108,
+          "dx": 22,
+          "dy": -8,
+          "name": "Sailor's Watch",
+          "anchor": "start"
+        },
+        {
+          "x": 235,
+          "y": 155,
+          "dx": 0,
+          "dy": -10,
+          "name": "Adventure Society",
+          "anchor": "middle"
+        },
+        {
+          "x": 205,
+          "y": 244,
+          "dx": 22,
+          "dy": 16,
+          "name": "Weapon shop",
+          "anchor": "start"
+        },
+        {
+          "x": 262,
+          "y": 272,
+          "dx": 28,
+          "dy": 18,
+          "name": "Transit station",
+          "anchor": "start"
+        },
+        {
+          "x": 520,
+          "y": 268,
+          "dx": 0,
+          "dy": -22,
+          "name": "Island bridge",
+          "anchor": "middle"
+        },
+        {
+          "x": 595,
+          "y": 268,
+          "dx": 8,
+          "dy": -16,
+          "name": "Permit booths",
+          "anchor": "start"
+        },
+        {
+          "x": 820,
+          "y": 255,
+          "dx": 0,
+          "dy": 0,
+          "name": "Old City",
+          "anchor": "middle"
+        },
+        {
+          "x": 670,
+          "y": 188,
+          "dx": 0,
+          "dy": -14,
+          "name": "Warehouse district",
+          "anchor": "middle"
+        },
+        {
+          "x": 664,
+          "y": 228,
+          "dx": 30,
+          "dy": -6,
+          "name": "Foreman's warehouse",
+          "anchor": "start"
+        },
+        {
+          "x": 664,
+          "y": 255,
+          "dx": 28,
+          "dy": 12,
+          "name": "Grain cellar",
+          "anchor": "start"
+        },
+        {
+          "x": 708,
+          "y": 238,
+          "dx": 16,
+          "dy": -10,
+          "name": "Alley",
+          "anchor": "start"
+        },
+        {
+          "x": 650,
+          "y": 370,
+          "dx": 24,
+          "dy": 0,
+          "name": "Harbour / docks",
+          "anchor": "start"
+        },
+        {
+          "x": 640,
+          "y": 418,
+          "dx": 24,
+          "dy": 16,
+          "name": "Wet Barrel tavern",
+          "anchor": "start"
+        },
+        {
+          "x": 790,
+          "y": 300,
+          "dx": 0,
+          "dy": -20,
+          "name": "Old City market",
+          "anchor": "middle"
+        },
+        {
+          "x": 790,
+          "y": 300,
+          "dx": 22,
+          "dy": 22,
+          "name": "Hide merchant's stall",
+          "anchor": "start"
+        },
+        {
+          "x": 278,
+          "y": 214,
+          "dx": 18,
+          "dy": 16,
+          "name": "Adventure Society exchange",
+          "anchor": "start"
+        },
+        {
+          "x": 665,
+          "y": 605,
+          "dx": 0,
+          "dy": -18,
+          "name": "Tannery",
+          "anchor": "middle"
+        }
+      ],
+      "reveal": [
+        {
+          "r": 85,
+          "x": 150,
+          "y": 90
+        },
+        {
+          "r": 115,
+          "x": 210,
+          "y": 190
+        },
+        {
+          "r": 55,
+          "x": 250,
+          "y": 270
+        },
+        {
+          "r": 40,
+          "x": 205,
+          "y": 244
+        },
+        {
+          "r": 50,
+          "x": 425,
+          "y": 268
+        },
+        {
+          "r": 85,
+          "x": 520,
+          "y": 260
+        },
+        {
+          "r": 55,
+          "x": 605,
+          "y": 268
+        },
+        {
+          "r": 75,
+          "x": 655,
+          "y": 230
+        },
+        {
+          "r": 40,
+          "x": 710,
+          "y": 240
+        },
+        {
+          "r": 75,
+          "x": 790,
+          "y": 300
+        },
+        {
+          "r": 75,
+          "x": 640,
+          "y": 360
+        },
+        {
+          "r": 45,
+          "x": 640,
+          "y": 418
+        },
+        {
+          "r": 55,
+          "x": 150,
+          "y": 330
+        },
+        {
+          "r": 28,
+          "x": 520,
+          "y": 150
+        },
+        {
+          "r": 28,
+          "x": 520,
+          "y": 400
+        },
+        {
+          "r": 28,
+          "x": 520,
+          "y": 530
+        },
+        {
+          "r": 75,
+          "x": 665,
+          "y": 605
+        }
+      ],
+      "bridges": [
+        {
+          "y": 150,
+          "used": false
+        },
+        {
+          "y": 268,
+          "used": true
+        },
+        {
+          "y": 400,
+          "used": false
+        },
+        {
+          "y": 530,
+          "used": false
+        }
+      ],
+      "caption": "Only districts and buildings you've seen are shown; everything else is fogged. The dashed line is today's route.",
+      "oldCity": "M615,90 C600,150 588,230 585,310 C584,390 590,480 610,560 C630,630 680,685 760,700 C850,715 940,690 970,620 C995,540 990,420 980,300 C970,180 950,100 880,80 C790,60 700,70 615,90 Z",
+      "viewBox": [
+        1000,
+        720
+      ],
+      "buildings": [
+        {
+          "h": 26,
+          "w": 36,
+          "x": 108,
+          "y": 108,
+          "name": "Sailor's Watch"
+        },
+        {
+          "h": 48,
+          "w": 70,
+          "x": 200,
+          "y": 160,
+          "name": "Adventure Society"
+        },
+        {
+          "h": 20,
+          "w": 32,
+          "x": 248,
+          "y": 198,
+          "name": "Adventure Society exchange"
+        },
+        {
+          "h": 24,
+          "w": 34,
+          "x": 188,
+          "y": 232,
+          "name": "Weapon shop"
+        },
+        {
+          "h": 26,
+          "w": 44,
+          "x": 240,
+          "y": 258,
+          "name": "Transit station"
+        },
+        {
+          "h": 18,
+          "w": 14,
+          "x": 438,
+          "y": 256,
+          "name": "Island permit booth"
+        },
+        {
+          "h": 18,
+          "w": 14,
+          "x": 582,
+          "y": 256,
+          "name": "Old City permit booth"
+        },
+        {
+          "h": 34,
+          "w": 52,
+          "x": 638,
+          "y": 210,
+          "name": "Foreman's warehouse"
+        },
+        {
+          "h": 16,
+          "w": 28,
+          "x": 650,
+          "y": 244,
+          "name": "Grain cellar"
+        },
+        {
+          "h": 26,
+          "w": 36,
+          "x": 622,
+          "y": 400,
+          "name": "Wet Barrel tavern"
+        },
+        {
+          "h": 18,
+          "w": 26,
+          "x": 772,
+          "y": 282,
+          "name": "Hide merchant's stall"
+        },
+        {
+          "h": 30,
+          "w": 44,
+          "x": 648,
+          "y": 588,
+          "name": "Tannery"
+        }
+      ],
+      "districts": [
+        {
+          "d": "M95,70 L300,70 L320,160 L310,300 L160,310 L95,240 Z",
+          "name": "Guild district",
+          "tone": "guild"
+        },
+        {
+          "d": "M600,180 L720,175 L735,280 L700,320 L598,310 Z",
+          "name": "Warehouse district",
+          "tone": "work"
+        },
+        {
+          "d": "M590,320 L700,330 L710,470 L600,480 Z",
+          "name": "Harbour / docks",
+          "tone": "work"
+        },
+        {
+          "d": "M740,250 L840,245 L850,340 L745,345 Z",
+          "name": "Old City market",
+          "tone": "market"
+        }
+      ],
+      "hereLabel": "YOU ARE HERE",
+      "fogOverlay": 0.72,
+      "labelsStatic": [
+        {
+          "x": 920,
+          "y": 400,
+          "size": 11,
+          "text": "Mistrun River",
+          "tone": "water",
+          "anchor": "end",
+          "italic": true
+        },
+        {
+          "x": 40,
+          "y": 200,
+          "size": 13,
+          "text": "Ocean",
+          "tone": "water",
+          "italic": true
+        },
+        {
+          "x": 80,
+          "y": 700,
+          "size": 11,
+          "text": "Greenstone · Old City and the Island · N ↑",
+          "tone": "water"
+        }
+      ]
+    },
+    "world": {
+      "fog": {
+        "overlay": 0.72,
+        "riverWidth": 56,
+        "routeWidth": 70,
+        "placeRadius": 54
+      },
+      "land": "M1017.1,-234.2 L1002.4,-204.9 L968.3,-170.7 L963.4,-141.5 L939.0,-92.7 L939.0,-68.3 L948.8,-58.5 L953.7,29.3 L973.2,53.7 L973.2,165.9 L941.5,217.1 L892.7,241.5 L826.8,312.2 L836.6,356.1 L831.7,429.3 L768.3,473.2 L768.3,512.2 L753.7,551.3 L643.9,675.7 L580.5,700.1 L522.0,700.1 L482.9,714.7 L465.9,712.3 L441.5,673.2 L451.2,639.1 L426.8,590.3 L422.0,556.1 L392.7,512.2 L387.8,448.8 L378.0,429.3 L378.0,365.9 L324.4,253.7 L324.4,190.3 L343.9,122.0 L368.3,92.7 L373.2,48.8 L358.5,19.5 L363.4,-19.5 L343.9,-68.3 L343.9,-97.6 L275.6,-190.3 L265.9,-234.2 Z",
+      "river": "M 575 425 C 545 415 520 405 495 400 C 470 396 455 395 430 393 C 415 392 395 390 382 390",
+      "route": [
+        {
+          "x": 505,
+          "y": 270
+        },
+        {
+          "x": 498,
+          "y": 308
+        },
+        {
+          "x": 492,
+          "y": 348
+        },
+        {
+          "x": 488,
+          "y": 375
+        },
+        {
+          "x": 488,
+          "y": 418
+        },
+        {
+          "x": 478,
+          "y": 455
+        },
+        {
+          "x": 498,
+          "y": 438
+        },
+        {
+          "x": 495,
+          "y": 400
+        },
+        {
+          "x": 455,
+          "y": 395
+        },
+        {
+          "x": 415,
+          "y": 392
+        },
+        {
+          "x": 382,
+          "y": 390
+        },
+        {
+          "x": 330,
+          "y": 375
+        },
+        {
+          "x": 382,
+          "y": 390
+        },
+        {
+          "x": 425,
+          "y": 410
+        },
+        {
+          "x": 438,
+          "y": 402
+        },
+        {
+          "x": 452,
+          "y": 420
+        },
+        {
+          "x": 462,
+          "y": 432
+        },
+        {
+          "x": 470,
+          "y": 440
+        },
+        {
+          "x": 382,
+          "y": 390
+        }
+      ],
+      "labels": [
+        {
+          "x": 200,
+          "y": 720,
+          "size": 14,
+          "text": "Ocean",
+          "tone": "water",
+          "italic": true
+        },
+        {
+          "x": 500,
+          "y": 330,
+          "size": 12,
+          "text": "Desert",
+          "tone": "muted",
+          "italic": true
+        },
+        {
+          "x": 430,
+          "y": 376,
+          "size": 12,
+          "text": "Mistrun River",
+          "tone": "muted",
+          "italic": true
+        },
+        {
+          "x": 580,
+          "y": 430,
+          "size": 12,
+          "text": "Upstream, unmapped → the compass points this way",
+          "tone": "water"
+        },
+        {
+          "x": 20,
+          "y": 1028,
+          "size": 11,
+          "text": "Greenstone region of Pallimustus · coast after the world map · N ↑",
+          "tone": "water"
+        }
+      ],
+      "places": [
+        {
+          "x": 505,
+          "y": 270,
+          "dx": -10,
+          "dy": -4,
+          "name": "Vane estate",
+          "anchor": "end",
+          "current": false
+        },
+        {
+          "x": 498,
+          "y": 308,
+          "dx": 12,
+          "dy": 5,
+          "name": "Waterfall",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 492,
+          "y": 348,
+          "dx": 12,
+          "dy": 5,
+          "name": "Quarry village",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 488,
+          "y": 375,
+          "dx": -12,
+          "dy": 4,
+          "name": "South trail",
+          "anchor": "end",
+          "current": false
+        },
+        {
+          "x": 488,
+          "y": 418,
+          "dx": 12,
+          "dy": 16,
+          "name": "Walled marble town",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 478,
+          "y": 455,
+          "dx": 12,
+          "dy": 20,
+          "name": "Rock outcroppings",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 498,
+          "y": 438,
+          "dx": 12,
+          "dy": 5,
+          "name": "Pond-aperture village",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 495,
+          "y": 400,
+          "dx": 12,
+          "dy": -8,
+          "name": "Verdant Fields",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 455,
+          "y": 395,
+          "dx": 0,
+          "dy": -12,
+          "name": "Aqueduct",
+          "anchor": "middle",
+          "current": false
+        },
+        {
+          "x": 415,
+          "y": 392,
+          "dx": 0,
+          "dy": 24,
+          "name": "Mistrun Delta",
+          "anchor": "middle",
+          "current": false
+        },
+        {
+          "x": 382,
+          "y": 390,
+          "dx": 0,
+          "dy": 28,
+          "name": "Greenstone: Old City",
+          "anchor": "middle",
+          "current": false
+        },
+        {
+          "x": 330,
+          "y": 375,
+          "dx": -12,
+          "dy": -6,
+          "name": "The Island",
+          "anchor": "end",
+          "current": false
+        },
+        {
+          "x": 425,
+          "y": 410,
+          "dx": -10,
+          "dy": 12,
+          "name": "Stilt village (rune tortoise)",
+          "anchor": "end",
+          "current": false
+        },
+        {
+          "x": 438,
+          "y": 402,
+          "dx": 10,
+          "dy": 14,
+          "name": "Bridge Road, marker 16",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 452,
+          "y": 420,
+          "dx": 10,
+          "dy": 6,
+          "name": "Pond town lodge",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 462,
+          "y": 432,
+          "dx": 10,
+          "dy": 10,
+          "name": "Frog pond",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 470,
+          "y": 440,
+          "dx": 10,
+          "dy": 12,
+          "name": "Reed marsh (marsh wyrm)",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 382,
+          "y": 360,
+          "dx": 10,
+          "dy": -6,
+          "name": "North road hedgerows",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 410,
+          "y": 365,
+          "dx": 10,
+          "dy": -6,
+          "name": "Eastern farmstead ditches",
+          "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 430,
+          "y": 340,
+          "dx": 6,
+          "dy": -4,
+          "name": "Hule",
+          "anchor": "start",
+          "current": true
+        }
+      ],
+      "region": "M453.7,553.7 L429.3,534.2 L409.8,539.1 L392.7,512.2 L378.0,424.4 L382.9,380.5 L324.4,253.7 L326.8,231.7 L356.1,226.9 L375.6,241.5 L468.3,241.5 L519.5,258.6 L519.5,351.3 L495.1,370.8 L485.4,536.6 L453.7,553.7 Z",
+      "caption": "The coastline and Greenstone region follow the world map of Pallimustus. The dashed line is the route you've travelled. Only places you've been are revealed; everything else is fogged. River stops are a Star Chart sketch, not to scale. Field assessment stops in the delta are a sketch, not to scale.",
+      "viewBox": [
+        1000,
+        1044
+      ],
+      "hereLabel": "YOU ARE HERE",
+      "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
+    },
+    "battle": {
+      "note": "Stilt houses and walkways over mud; cart at hitching post.",
+      "title": "Hule village: arrival",
+      "width": 600,
+      "allies": [
+        {
+          "name": "Jason"
+        },
+        {
+          "name": "Rufus"
+        },
+        {
+          "name": "Farrah"
+        },
+        {
+          "name": "Gary"
+        }
+      ],
+      "extras": [],
+      "height": 420,
+      "labels": [
+        {
+          "x": 300,
+          "y": 60,
+          "size": 11,
+          "text": "Stalls",
+          "tone": "muted"
+        },
+        {
+          "x": 300,
+          "y": 400,
+          "size": 10,
+          "text": "Entrance",
+          "tone": "muted"
+        }
+      ],
+      "player": {
+        "x": 300,
+        "y": 200,
+        "label": "You"
+      },
+      "reveal": [
+        {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190,
+          "type": "ellipse"
+        }
+      ],
+      "chamber": {
+        "x": 300,
+        "y": 210,
+        "rx": 280,
+        "ry": 190
+      },
+      "compass": "N ↑",
+      "enemies": [],
+      "fogOverlay": 0.1
+    },
+    "charted": [
+      {
+        "seen": "Grounds explored for Stranger in a Strange Land; manor rooms and the cellar with the ritual pit.",
+        "place": "Estate grounds and manor",
+        "region": "Vane estate",
+        "current": false
+      },
+      {
+        "seen": "Path down from the estate; the waterfall pool where the first shab was fought.",
+        "place": "Mountain path and waterfall",
+        "region": "The mountain",
+        "current": false
+      },
+      {
+        "seen": "Streets, the inn and its courtyard, and the water channel from the Shell Shock fight.",
+        "place": "Village, inn, and channel",
+        "region": "Quarry village",
+        "current": false
+      },
+      {
+        "seen": "The trail south toward the river, where the fruit wagon threw a wheel.",
+        "place": "South trail",
+        "region": "The road",
+        "current": false
+      },
+      {
+        "seen": "Gate, square, and the free stone cottage.",
+        "place": "Walled marble town",
+        "region": "The road",
+        "current": false
+      },
+      {
+        "seen": "Where Jason fought the desert maw spider.",
+        "place": "Rock outcroppings",
+        "region": "The road",
+        "current": false
+      },
+      {
+        "seen": "The village and its pond aperture; site of the earth elemental fight.",
+        "place": "Pond-aperture village",
+        "region": "The road",
+        "current": false
+      },
+      {
+        "seen": "Docks and the east wharf, Warehouse 9 (Floorboard Feeders), and the teamsters' hostel.",
+        "place": "River town",
+        "region": "Verdant Fields",
+        "current": false
+      },
+      {
+        "seen": "The river west, the aqueduct, and the delta at dawn where Jason left.",
+        "place": "River by barge",
+        "region": "Mistrun River",
+        "current": false
+      },
+      {
+        "seen": "The wharf, Old City streets, and the bridge with its permit booths.",
+        "place": "Old City wharf and bridge",
+        "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": "Sailor's Watch (room 32, kitchen, roof garden) and the transit station.",
+        "place": "The Island",
+        "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": "Administration lobby with the contract board, intake waiting room, and intake room.",
+        "place": "Adventure Society campus",
+        "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": "Taproom and the cellar from Cellar Dwellers (burrow now bricked up).",
+        "place": "Wet Barrel tavern",
+        "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": "The street of smithy storefronts and the crossed-blades weapon shop.",
+        "place": "Forge district",
+        "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": "Stairs, the front rows of chewed sacks, and most of the back under the lamp. Three ratlings at the back wall.",
+        "place": "Warehouse district cellar",
+        "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": "A hoard chamber of stolen hides and bone past the bend. Two pipe beasts dead. The wounded leader and a small one remain.",
+        "place": "Tannery culvert",
+        "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": "The paddies east of the village where Nate killed the rune tortoise, and the dike where he showed the kids Moonwell.",
+        "place": "Stilt village and paddies",
+        "region": "Mistrun Delta",
+        "current": false
+      },
+      {
+        "seen": "Mangroves where Jason killed the bark lurker.",
+        "place": "Bridge Road, marker 16",
+        "region": "Mistrun Delta",
+        "current": false
+      },
+      {
+        "seen": "The adventurer lodge and its terrace over the pond.",
+        "place": "Pond town",
+        "region": "Mistrun Delta",
+        "current": false
+      },
+      {
+        "seen": "A muddy hollow ringed with reeds; a thorny-tongue frog.",
+        "place": "Farmstead drainage pond",
+        "region": "Mistrun Delta",
+        "current": false
+      },
+      {
+        "seen": "Day 5 posting: marsh wyrm.",
+        "place": "Reed marsh by the embankment road",
+        "region": "Mistrun Delta",
+        "current": false
+      },
+      {
+        "seen": "Where the field assessment started and ended.",
+        "place": "Society marshalling yard",
+        "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": "Main hall of iron-rank stalls, the bronze floor, and the 3rd-floor brokerages (Ostrander & Vey).",
+        "place": "Adventure Society trade hall",
+        "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": "Farm road between thick thorny hedgerows; shredded hedge and fans of spines from malicious hedgehogs.",
+        "place": "North road hedgerows",
+        "region": "Greenstone outskirts",
+        "current": false
+      },
+      {
+        "seen": "Cart track east off the north road, past stone walls and fields, to reedy drainage ditches.",
+        "place": "Eastern farmstead ditches",
+        "region": "Greenstone outskirts",
+        "current": false
+      },
+      {
+        "seen": true,
+        "place": "East gate hire yard",
+        "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": true,
+        "place": "Hule village",
+        "region": "Greenstone outskirts",
+        "current": true
+      }
+    ],
+    "battleArchive": [
+      {
+        "note": "Domed bedrock chamber. Glowing blue magic pool in the centre. Iron door open behind the party.",
+        "title": "The Vault: stone centipede dead",
+        "width": 600,
+        "allies": [
+          {
+            "x": 320,
+            "y": 270,
+            "id": "gary",
+            "name": "Gary",
+            "label": "Gary",
+            "status": "Fight over."
+          },
+          {
+            "x": 200,
+            "y": 230,
+            "id": "farrah",
+            "name": "Farrah",
+            "label": "Farrah",
+            "status": "Fight over."
+          },
+          {
+            "x": 270,
+            "y": 180,
+            "id": "rufus",
+            "name": "Rufus",
+            "label": "Rufus",
+            "status": "Fight over."
+          }
+        ],
+        "extras": [
+          {
+            "cx": 330,
+            "cy": 190,
+            "rx": 70,
+            "ry": 45,
+            "fill": "water",
+            "type": "ellipse",
+            "opacity": 0.85
+          },
+          {
+            "h": 60,
+            "w": 40,
+            "x": 20,
+            "y": 180,
+            "fill": "stone",
+            "type": "rect"
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 330,
+            "y": 192,
+            "size": 11,
+            "text": "Glowing pool",
+            "tone": "muted"
+          },
+          {
+            "x": 40,
+            "y": 262,
+            "size": 10,
+            "text": "Iron door",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 470,
+          "y": 110,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 200,
+            "rx": 250,
+            "ry": 170,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 200,
+          "rx": 250,
+          "ry": 170
+        },
+        "compass": "N ↑",
+        "enemies": [
+          {
+            "r": 18,
+            "x": 280,
+            "y": 220,
+            "id": "centipede",
+            "name": "Stone centipede",
+            "rank": "Iron (tough end)",
+            "size": "Horse-sized, very long",
+            "tone": "dead",
+            "type": "Grey stone-plated centipede, eyeless, millstone mandibles, blue light in its cracks. Feeds on the pool.",
+            "facing": "west",
+            "labelX": 440,
+            "labelY": 262,
+            "marker": "×",
+            "status": "Dead. Looted (dissolved into rainbow smoke).",
+            "mapLabel": "Dead"
+          }
+        ],
+        "fogOverlay": 0.35
+      },
+      {
+        "lamp": {
+          "r": 160,
+          "x": 128,
+          "y": 300
+        },
+        "nest": {
+          "x": 158,
+          "y": 356,
+          "label": "hoard of stolen hides and bone"
+        },
+        "note": "Fight over. All three dead beasts were looted and dissolved into rainbow smoke. The small one fled out of the culvert mouth into the drains.",
+        "reeds": [
+          {
+            "x": 300,
+            "y": 34
+          },
+          {
+            "x": 440,
+            "y": 30
+          },
+          {
+            "x": 468,
+            "y": 46
+          },
+          {
+            "x": 276,
+            "y": 48
+          }
+        ],
+        "title": "Tannery culvert, cleared",
+        "width": 600,
+        "extras": [
+          {
+            "cx": 370,
+            "cy": 0,
+            "rx": 170,
+            "ry": 48,
+            "fill": "water",
+            "type": "ellipse",
+            "opacity": 0.4
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 458,
+            "y": 28,
+            "size": 12,
+            "text": "daylight",
+            "tone": "muted"
+          },
+          {
+            "x": 458,
+            "y": 46,
+            "size": 11,
+            "text": "culvert mouth",
+            "tone": "muted"
+          },
+          {
+            "x": 248,
+            "y": 168,
+            "size": 12,
+            "text": "the bend",
+            "tone": "muted"
+          },
+          {
+            "x": 28,
+            "y": 248,
+            "size": 12,
+            "text": "nest chamber",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 370,
+          "y": 20,
+          "label": "Nate"
+        },
+        "reveal": [
+          {
+            "cx": 152,
+            "cy": 318,
+            "rx": 175,
+            "ry": 125,
+            "type": "ellipse"
+          },
+          {
+            "d": "M 370 0 L 370 145 Q 370 205 300 220 Q 220 236 188 275",
+            "type": "stroke",
+            "width": 160
+          }
+        ],
+        "tunnel": {
+          "d": "M 370 8 L 370 145 Q 370 205 300 220 Q 220 236 188 275",
+          "wall": 118,
+          "floor": 74
+        },
+        "chamber": {
+          "x": 152,
+          "y": 318,
+          "rx": 130,
+          "ry": 82
+        },
+        "compass": "N ↑",
+        "enemies": [
+          {
+            "x": 188,
+            "y": 274,
+            "id": "injured",
+            "name": "Pipe beast, injured",
+            "rank": "Unknown",
+            "size": "Big-dog sized, long and low",
+            "tone": "dead",
+            "type": "Beast. Long and low, pointed snout, gray-brown fur.",
+            "labelX": 214,
+            "labelY": 262,
+            "marker": "×",
+            "status": "Dead. Hammer blow to the skull. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "x": 282,
+            "y": 226,
+            "id": "adult",
+            "name": "Pipe beast",
+            "rank": "Unknown",
+            "size": "Big-dog sized, long and low",
+            "tone": "dead",
+            "type": "Beast. Long and low, pointed snout, gray-brown fur.",
+            "labelX": 268,
+            "labelY": 250,
+            "marker": "×",
+            "status": "Dead. Jaw crushed by the hammer. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "x": 248,
+            "y": 232,
+            "id": "leader",
+            "name": "Pipe beast, leader",
+            "rank": "Unknown",
+            "size": "Big-dog sized, long and low",
+            "tone": "hostile",
+            "type": "Beast. Long body, pointed snout, torn ears, four clawed toes, gray-brown fur.",
+            "facing": "player",
+            "labelX": 196,
+            "labelY": 214,
+            "marker": "!",
+            "status": "Hostile. Skull cracked, bloodied, snarling at you. Looted.",
+            "mapLabel": "Leader"
+          }
+        ],
+        "lantern": {
+          "x": 108,
+          "y": 312,
+          "label": "Lantern"
+        },
+        "daylight": {
+          "x": 370,
+          "y": 6
+        },
+        "fogOverlay": 0.62
+      },
+      {
+        "lamp": {
+          "r": 120,
+          "x": 500,
+          "y": 208
+        },
+        "nest": {
+          "x": 225,
+          "y": 102,
+          "label": "junk heap, searched"
+        },
+        "note": "Fight over and loot split. The junk heap had 6 lesser, a copper cup, a bone-handled knife, and a satchel holding a magic ring and an oilcloth packet. Not split with Gary yet.",
+        "title": "Cistern beneath the drains, cleared",
+        "width": 600,
+        "allies": [
+          {
+            "x": 110,
+            "y": 240,
+            "id": "gary",
+            "name": "Gary",
+            "label": "Gary",
+            "status": "Standing over the spined one, grinning."
+          }
+        ],
+        "extras": [
+          {
+            "cx": 275,
+            "cy": 240,
+            "rx": 135,
+            "ry": 90,
+            "fill": "water",
+            "type": "ellipse",
+            "opacity": 0.85
+          },
+          {
+            "d": "M 72 226 L 18 232",
+            "sw": 34,
+            "type": "path",
+            "stroke": "stone"
+          },
+          {
+            "d": "M 72 226 L 30 231",
+            "sw": 18,
+            "type": "path",
+            "stroke": "floor"
+          },
+          {
+            "h": 56,
+            "w": 22,
+            "x": 458,
+            "y": 186,
+            "rx": 4,
+            "fill": "stone",
+            "type": "rect",
+            "opacity": 0.9
+          },
+          {
+            "d": "M 600 214 L 470 214",
+            "sw": 12,
+            "type": "path",
+            "stroke": "water",
+            "opacity": 0.6
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 560,
+            "y": 186,
+            "size": 12,
+            "text": "drain",
+            "tone": "muted"
+          },
+          {
+            "x": 440,
+            "y": 176,
+            "size": 11,
+            "text": "broken wall",
+            "tone": "muted"
+          },
+          {
+            "x": 238,
+            "y": 246,
+            "size": 12,
+            "text": "flooded cistern",
+            "tone": "water"
+          },
+          {
+            "x": 372,
+            "y": 372,
+            "size": 11,
+            "text": "stone shelf",
+            "tone": "muted"
+          },
+          {
+            "x": 22,
+            "y": 208,
+            "size": 11,
+            "text": "new tunnel",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 160,
+          "y": 296,
+          "label": "Nate"
+        },
+        "reveal": [
+          {
+            "cx": 270,
+            "cy": 220,
+            "rx": 225,
+            "ry": 180,
+            "type": "ellipse"
+          },
+          {
+            "d": "M 600 214 L 470 214",
+            "type": "stroke",
+            "width": 110
+          }
+        ],
+        "tunnel": {
+          "d": "M 600 214 L 470 214",
+          "wall": 96,
+          "floor": 60
+        },
+        "chamber": {
+          "x": 270,
+          "y": 220,
+          "rx": 210,
+          "ry": 165
+        },
+        "compass": "N ↑",
+        "enemies": [
+          {
+            "r": 15,
+            "x": 80,
+            "y": 230,
+            "id": "spiny",
+            "name": "Spined pipe beast",
+            "rank": "Iron or higher (Gary's guess)",
+            "size": "Bigger than the others, ridged with spines",
+            "tone": "dead",
+            "type": "Beast. Gnawing a tunnel through the far wall.",
+            "labelX": 112,
+            "labelY": 198,
+            "marker": "×",
+            "status": "Dead. Killed by Gary, looted by you.",
+            "mapLabel": "Dead"
+          },
+          {
+            "x": 172,
+            "y": 96,
+            "id": "adult1",
+            "name": "Pipe beast",
+            "rank": "Unknown",
+            "size": "Big-dog sized, long and low",
+            "tone": "dead",
+            "type": "Beast. Long and low, pointed snout, gray-brown fur.",
+            "labelX": 130,
+            "labelY": 146,
+            "marker": "×",
+            "status": "Dead. Skull crushed. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "x": 236,
+            "y": 78,
+            "id": "adult2",
+            "name": "Pipe beast",
+            "rank": "Unknown",
+            "size": "Big-dog sized, long and low",
+            "tone": "dead",
+            "type": "Beast. Long and low, pointed snout, gray-brown fur.",
+            "labelX": 262,
+            "labelY": 54,
+            "marker": "×",
+            "status": "Dead. Skull crushed by the hammer. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "x": 292,
+            "y": 98,
+            "id": "adult3",
+            "name": "Pipe beast",
+            "rank": "Unknown",
+            "size": "Big-dog sized, long and low",
+            "tone": "dead",
+            "type": "Beast. Long and low, pointed snout, gray-brown fur.",
+            "labelX": 340,
+            "labelY": 104,
+            "marker": "×",
+            "status": "Dead. Knife to the neck. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "r": 8,
+            "x": 150,
+            "y": 300,
+            "id": "runt",
+            "name": "Small pipe beast",
+            "rank": "Unknown",
+            "size": "Smaller than the adults",
+            "tone": "dead",
+            "type": "Beast. The one that fled the culvert.",
+            "labelX": 392,
+            "labelY": 340,
+            "marker": "×",
+            "status": "Dead. Skull crushed after your Arc Step. Looted.",
+            "mapLabel": "Dead"
+          }
+        ],
+        "lantern": {
+          "x": 492,
+          "y": 222,
+          "label": "Lantern (shuttered)"
+        },
+        "fogOverlay": 0.55
+      },
+      {
+        "lamp": {
+          "r": 150,
+          "x": 395,
+          "y": 200
+        },
+        "note": "Eel looted. You waded the flooded stretch to a locked Waterworks iron door.",
+        "title": "Flooded tunnel, eel dead",
+        "width": 600,
+        "allies": [
+          {
+            "x": 372,
+            "y": 240,
+            "id": "gary",
+            "name": "Gary",
+            "label": "Gary",
+            "status": "Fight over. Took his share of the eel loot."
+          }
+        ],
+        "extras": [
+          {
+            "h": 100,
+            "w": 330,
+            "x": 20,
+            "y": 160,
+            "fill": "water",
+            "type": "rect",
+            "opacity": 0.85
+          },
+          {
+            "h": 120,
+            "w": 16,
+            "x": 470,
+            "y": 150,
+            "fill": "stone",
+            "type": "rect"
+          },
+          {
+            "h": 90,
+            "w": 22,
+            "x": 350,
+            "y": 165,
+            "fill": "stone",
+            "type": "rect",
+            "opacity": 0.7
+          },
+          {
+            "h": 90,
+            "w": 22,
+            "x": 372,
+            "y": 165,
+            "fill": "stone",
+            "type": "rect",
+            "opacity": 0.55
+          },
+          {
+            "h": 90,
+            "w": 22,
+            "x": 394,
+            "y": 165,
+            "fill": "stone",
+            "type": "rect",
+            "opacity": 0.4
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 430,
+            "y": 140,
+            "size": 11,
+            "text": "sluice gate (shut)",
+            "tone": "muted"
+          },
+          {
+            "x": 372,
+            "y": 282,
+            "size": 11,
+            "text": "steps",
+            "tone": "muted"
+          },
+          {
+            "x": 120,
+            "y": 150,
+            "size": 12,
+            "text": "flooded, waist-deep",
+            "tone": "water"
+          },
+          {
+            "x": 30,
+            "y": 292,
+            "size": 11,
+            "text": "to the vault",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 400,
+          "y": 192,
+          "label": "Nate"
+        },
+        "reveal": [
+          {
+            "d": "M 600 210 L 160 210",
+            "type": "stroke",
+            "width": 170
+          }
+        ],
+        "tunnel": {
+          "d": "M 600 210 L 20 210",
+          "wall": 150,
+          "floor": 110
+        },
+        "compass": "N ↑",
+        "enemies": [
+          {
+            "r": 13,
+            "x": 360,
+            "y": 206,
+            "id": "eel",
+            "name": "Mist eel",
+            "rank": "Unknown",
+            "size": "Long, body as thick as your thigh",
+            "tone": "dead",
+            "type": "Pale, faintly glowing eel with a round mouth full of needle teeth.",
+            "labelX": 296,
+            "labelY": 186,
+            "marker": "×",
+            "status": "Dead. Head cut off. Looted.",
+            "mapLabel": "Dead"
+          }
+        ],
+        "lantern": {
+          "x": 440,
+          "y": 250,
+          "label": "Lanterns"
+        },
+        "fogOverlay": 0.6
+      },
+      {
+        "note": "Kelp-slick black rock shelf at low tide, the tide turning. Three cave mouths in the cliff to the north; the middle one under a barnacled carved arch is the shrine. Switchback path down from the headland to the south-west.",
+        "title": "Sunken Shrine shelf: rock crabs dead",
+        "width": 600,
+        "allies": [
+          {
+            "x": 170,
+            "y": 260,
+            "id": "gary",
+            "name": "Gary",
+            "label": "Gary ✦",
+            "status": "Fight over."
+          },
+          {
+            "x": 140,
+            "y": 290,
+            "id": "farrah",
+            "name": "Farrah",
+            "label": "Farrah",
+            "status": "Fight over."
+          },
+          {
+            "x": 210,
+            "y": 180,
+            "id": "rufus",
+            "name": "Rufus",
+            "label": "Rufus",
+            "status": "Fight over."
+          }
+        ],
+        "extras": [
+          {
+            "h": 70,
+            "w": 600,
+            "x": 0,
+            "y": 0,
+            "fill": "stone",
+            "type": "rect"
+          },
+          {
+            "cx": 160,
+            "cy": 70,
+            "rx": 30,
+            "ry": 20,
+            "fill": "water",
+            "type": "ellipse",
+            "opacity": 0.6
+          },
+          {
+            "cx": 300,
+            "cy": 70,
+            "rx": 40,
+            "ry": 26,
+            "fill": "water",
+            "type": "ellipse",
+            "opacity": 0.7
+          },
+          {
+            "cx": 440,
+            "cy": 70,
+            "rx": 30,
+            "ry": 20,
+            "fill": "water",
+            "type": "ellipse",
+            "opacity": 0.6
+          },
+          {
+            "h": 350,
+            "w": 80,
+            "x": 520,
+            "y": 70,
+            "fill": "water",
+            "type": "rect",
+            "opacity": 0.5
+          },
+          {
+            "d": "M60 410 L90 330 L70 270",
+            "sw": 6,
+            "type": "path",
+            "stroke": "stone"
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 110,
+            "size": 11,
+            "text": "Shrine (middle cave)",
+            "tone": "muted"
+          },
+          {
+            "x": 560,
+            "y": 250,
+            "size": 10,
+            "text": "Sea (tide turning)",
+            "tone": "muted"
+          },
+          {
+            "x": 90,
+            "y": 400,
+            "size": 10,
+            "text": "Path from headland",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 110,
+          "y": 320,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 220,
+            "rx": 280,
+            "ry": 180,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 220,
+          "rx": 280,
+          "ry": 180
+        },
+        "compass": "N ↑",
+        "enemies": [
+          {
+            "r": 12,
+            "x": 230,
+            "y": 230,
+            "id": "crab1",
+            "name": "Rock crab",
+            "rank": "Iron",
+            "size": "Dog-sized",
+            "tone": "dead",
+            "type": "Barnacle-crusted grey shell, stalk eyes, leg-breaking claws. Slow on land.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "r": 12,
+            "x": 270,
+            "y": 200,
+            "id": "crab2",
+            "name": "Rock crab",
+            "rank": "Iron",
+            "size": "Dog-sized",
+            "tone": "dead",
+            "type": "Rock crab.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "r": 12,
+            "x": 250,
+            "y": 170,
+            "id": "crab3",
+            "name": "Rock crab",
+            "rank": "Iron",
+            "size": "Dog-sized",
+            "tone": "dead",
+            "type": "Rock crab.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "r": 12,
+            "x": 200,
+            "y": 330,
+            "id": "crab4",
+            "name": "Rock crab",
+            "rank": "Iron",
+            "size": "Dog-sized",
+            "tone": "dead",
+            "type": "Rock crab.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "r": 12,
+            "x": 380,
+            "y": 120,
+            "id": "crab5",
+            "name": "Rock crab",
+            "rank": "Iron",
+            "size": "Dog-sized",
+            "tone": "dead",
+            "type": "Rock crab.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          }
+        ],
+        "fogOverlay": 0.2
+      },
+      {
+        "note": "A muddy hollow past a stand of scrubby trees near a farmstead. Brown, still pond ringed with thick reeds; feathers on the bank. Nate is up in a crooked tree leaning over the bank. The wagon waits at the fork to the south-west.",
+        "title": "Drainage pond: thorny-tongue frog dead",
+        "width": 600,
+        "allies": [
+          {
+            "x": 110,
+            "y": 370,
+            "id": "vincent",
+            "name": "Vincent Trenslow",
+            "label": "Vincent (watching)",
+            "status": "Observing. Not fighting."
+          }
+        ],
+        "extras": [
+          {
+            "cx": 330,
+            "cy": 190,
+            "rx": 150,
+            "ry": 95,
+            "fill": "water",
+            "type": "ellipse",
+            "opacity": 0.7
+          },
+          {
+            "cx": 330,
+            "cy": 190,
+            "rx": 175,
+            "ry": 115,
+            "fill": "stone",
+            "type": "ellipse",
+            "opacity": 0.15
+          },
+          {
+            "cx": 170,
+            "cy": 300,
+            "rx": 34,
+            "ry": 24,
+            "fill": "stone",
+            "type": "ellipse",
+            "opacity": 0.5
+          },
+          {
+            "d": "M40 410 L110 360 L150 320",
+            "sw": 5,
+            "type": "path",
+            "stroke": "stone"
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 330,
+            "y": 190,
+            "size": 11,
+            "text": "Drainage pond",
+            "tone": "muted"
+          },
+          {
+            "x": 480,
+            "y": 130,
+            "size": 10,
+            "text": "Reeds",
+            "tone": "muted"
+          },
+          {
+            "x": 170,
+            "y": 335,
+            "size": 10,
+            "text": "Crooked tree",
+            "tone": "muted"
+          },
+          {
+            "x": 60,
+            "y": 400,
+            "size": 10,
+            "text": "To the wagon",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 110,
+          "y": 370,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 220,
+            "rx": 280,
+            "ry": 180,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 220,
+          "rx": 280,
+          "ry": 180
+        },
+        "compass": "N ↑",
+        "enemies": [
+          {
+            "r": 18,
+            "x": 225,
+            "y": 250,
+            "id": "frog",
+            "name": "Thorny-tongue frog",
+            "rank": "Iron",
+            "size": "Heidel-sized",
+            "tone": "dead",
+            "type": "Mottled brown-green monster frog. Fast barbed tongue that drags prey in close.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          }
+        ],
+        "fogOverlay": 0.2
+      },
+      {
+        "note": "Broad reedy marsh beside the embankment road, still water and deep mud, smelling of rot. Late afternoon, day 5. The wyrm moves under the reeds toward Nate.",
+        "title": "Reed marsh: marsh wyrm dead",
+        "width": 600,
+        "allies": [
+          {
+            "x": 250,
+            "y": 385,
+            "id": "vincent",
+            "name": "Vincent Trenslow",
+            "label": "Vincent (grading)",
+            "status": "Observing."
+          }
+        ],
+        "extras": [
+          {
+            "h": 60,
+            "w": 600,
+            "x": 0,
+            "y": 360,
+            "fill": "stone",
+            "type": "rect"
+          },
+          {
+            "cx": 300,
+            "cy": 180,
+            "rx": 260,
+            "ry": 150,
+            "fill": "water",
+            "type": "ellipse",
+            "opacity": 0.45
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 395,
+            "size": 10,
+            "text": "Embankment road (wagon)",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 120,
+            "size": 11,
+            "text": "Reed marsh",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 380,
+          "label": "You (at wagon)"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 220,
+            "rx": 280,
+            "ry": 180,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 220,
+          "rx": 280,
+          "ry": 180
+        },
+        "compass": "N ↑",
+        "enemies": [
+          {
+            "r": 18,
+            "x": 440,
+            "y": 300,
+            "id": "wyrm",
+            "name": "Marsh wyrm",
+            "rank": "Iron (one-star)",
+            "size": "Large, serpentine",
+            "tone": "dead",
+            "type": "Serpentine burrower that hides under the mud and strikes from below.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          }
+        ],
+        "fogOverlay": 0.2
+      },
+      {
+        "note": "Busy main lobby of the Adventure Society, early afternoon, day 8. A long wooden contract board covers one wall; iron-rank contracts at the near end. No threats.",
+        "title": "Adventure Society lobby: contract board",
+        "width": 600,
+        "allies": [
+          {
+            "x": 240,
+            "y": 140,
+            "id": "rufus",
+            "name": "Rufus Remore",
+            "label": "Rufus",
+            "status": "Calm."
+          },
+          {
+            "x": 160,
+            "y": 140,
+            "id": "farrah",
+            "name": "Farrah Hurin",
+            "label": "Farrah",
+            "status": "Calm."
+          },
+          {
+            "x": 200,
+            "y": 160,
+            "id": "gary",
+            "name": "Gary",
+            "label": "Gary",
+            "status": "Calm."
+          },
+          {
+            "x": 270,
+            "y": 110,
+            "id": "jason",
+            "name": "Jason Asano",
+            "label": "Jason",
+            "status": "Calm."
+          }
+        ],
+        "extras": [
+          {
+            "h": 16,
+            "w": 440,
+            "x": 80,
+            "y": 50,
+            "fill": "stone",
+            "type": "rect"
+          },
+          {
+            "h": 120,
+            "w": 20,
+            "x": 500,
+            "y": 150,
+            "fill": "stone",
+            "type": "rect"
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 40,
+            "size": 11,
+            "text": "Contract board",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Main doors",
+            "tone": "muted"
+          },
+          {
+            "x": 540,
+            "y": 210,
+            "size": 10,
+            "text": "Clerk counters",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 200,
+          "y": 110,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
+      },
+      {
+        "note": "North road, day 8. Ten malicious hedgehogs killed and looted (including the 'Volleyball Smash'). Road quiet.",
+        "title": "North road: malicious hedgehogs",
+        "width": 600,
+        "allies": [
+          {
+            "x": 300,
+            "y": 330,
+            "id": "jason",
+            "name": "Jason Asano",
+            "label": "Jason",
+            "status": "Watching."
+          },
+          {
+            "x": 340,
+            "y": 370,
+            "id": "rufus",
+            "name": "Rufus Remore",
+            "label": "Rufus",
+            "status": "Watching."
+          },
+          {
+            "x": 260,
+            "y": 370,
+            "id": "farrah",
+            "name": "Farrah Hurin",
+            "label": "Farrah",
+            "status": "Watching."
+          },
+          {
+            "x": 300,
+            "y": 380,
+            "id": "gary",
+            "name": "Gary",
+            "label": "Gary",
+            "status": "Watching."
+          }
+        ],
+        "extras": [
+          {
+            "h": 420,
+            "w": 120,
+            "x": 20,
+            "y": 0,
+            "fill": "grass",
+            "type": "rect"
+          },
+          {
+            "h": 420,
+            "w": 120,
+            "x": 460,
+            "y": 0,
+            "fill": "grass",
+            "type": "rect"
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "North road",
+            "tone": "muted"
+          },
+          {
+            "x": 90,
+            "y": 60,
+            "size": 10,
+            "text": "Hedgerow (west)",
+            "tone": "muted"
+          },
+          {
+            "x": 510,
+            "y": 60,
+            "size": 10,
+            "text": "Hedgerow (east)",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 30,
+            "size": 10,
+            "text": "More shredded hedge ↑",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You (Veil up, limping)"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [
+          {
+            "r": 8,
+            "x": 300,
+            "y": 120,
+            "id": "hh1",
+            "name": "Malicious hedgehog",
+            "rank": "Lesser",
+            "size": "Small",
+            "tone": "dead",
+            "type": "Shoots spines.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "r": 8,
+            "x": 450,
+            "y": 180,
+            "id": "hh2",
+            "name": "Malicious hedgehog",
+            "rank": "Lesser",
+            "size": "Small",
+            "tone": "dead",
+            "type": "Shoots spines.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "r": 8,
+            "x": 150,
+            "y": 150,
+            "id": "hh3",
+            "name": "Malicious hedgehog",
+            "rank": "Lesser",
+            "size": "Small",
+            "tone": "dead",
+            "type": "Shoots spines.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          },
+          {
+            "r": 8,
+            "x": 260,
+            "y": 210,
+            "id": "hh4",
+            "name": "Malicious hedgehog",
+            "rank": "Lesser",
+            "size": "Small",
+            "tone": "dead",
+            "type": "Shoots spines.",
+            "marker": "×",
+            "status": "Dead. Looted.",
+            "mapLabel": "Dead"
+          }
+        ],
+        "fogOverlay": 0.2
+      },
+      {
+        "note": "Frog pool: all three thorny-tongue frogs dead and looted. Late afternoon, day 8.",
+        "title": "Eastern farmstead ditches: thorny-tongue frogs",
+        "width": 600,
+        "allies": [
+          {
+            "x": 470,
+            "y": 390,
+            "id": "farmer",
+            "name": "Farmer",
+            "label": "Farmer (back at field)",
+            "status": "Relieved."
+          },
+          {
+            "x": 330,
+            "y": 350,
+            "id": "jason",
+            "name": "Jason Asano",
+            "label": "Jason",
+            "status": "With you."
+          },
+          {
+            "x": 360,
+            "y": 380,
+            "id": "rufus",
+            "name": "Rufus Remore",
+            "label": "Rufus",
+            "status": "Watching."
+          },
+          {
+            "x": 260,
+            "y": 380,
+            "id": "farrah",
+            "name": "Farrah Hurin",
+            "label": "Farrah",
+            "status": "Watching."
+          },
+          {
+            "x": 300,
+            "y": 390,
+            "id": "gary",
+            "name": "Gary",
+            "label": "Gary",
+            "status": "Watching."
+          }
+        ],
+        "extras": [
+          {
+            "h": 24,
+            "w": 520,
+            "x": 40,
+            "y": 140,
+            "fill": "water",
+            "type": "rect",
+            "opacity": 0.5
+          },
+          {
+            "h": 260,
+            "w": 22,
+            "x": 200,
+            "y": 60,
+            "fill": "water",
+            "type": "rect",
+            "opacity": 0.5
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Cart track",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 120,
+            "size": 11,
+            "text": "Drainage ditches",
+            "tone": "muted"
+          },
+          {
+            "x": 420,
+            "y": 320,
+            "size": 10,
+            "text": "Fence",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 330,
+          "y": 260,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.25
+      },
+      {
+        "note": "Day 9 morning. Breakfast. No threats.",
+        "title": "The suite: morning",
+        "width": 600,
+        "allies": [
+          {
+            "x": 340,
+            "y": 200,
+            "id": "farrah",
+            "name": "Farrah Hurin",
+            "label": "Farrah",
+            "status": "Advising."
+          },
+          {
+            "x": 260,
+            "y": 230,
+            "id": "jason",
+            "name": "Jason Asano",
+            "label": "Jason",
+            "status": "Calm."
+          },
+          {
+            "x": 330,
+            "y": 250,
+            "id": "rufus",
+            "name": "Rufus Remore",
+            "label": "Rufus",
+            "status": "Calm."
+          },
+          {
+            "x": 280,
+            "y": 260,
+            "id": "gary",
+            "name": "Gary",
+            "label": "Gary",
+            "status": "Calm."
+          }
+        ],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 60,
+            "size": 11,
+            "text": "Stalls",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Entrance",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
+      },
+      {
+        "note": "Cart hitched to Mossback and Pebble; Rufus driving.",
+        "title": "East gate hire yard: morning",
+        "width": 600,
+        "allies": [
+          {
+            "name": "Jason"
+          },
+          {
+            "name": "Rufus"
+          },
+          {
+            "name": "Farrah"
+          },
+          {
+            "name": "Gary"
+          }
+        ],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 60,
+            "size": 11,
+            "text": "Stalls",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Entrance",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
+      }
     ]
   },
-  "vitals": [
-    { "label": "HEALTH", "pct": 92, "note": "Brick to the cheek, scabbed shin", "tone": "health" },
-    { "label": "MANA", "pct": 70, "note": "Arc Step, twice", "tone": "mana" },
-    { "label": "STAMINA", "pct": 78, "note": "Charge and swings", "tone": "stamina" }
-  ],
-  "coins": "4 iron · 195 lesser",
-  "location": "Nest chamber, tannery culvert, Old City",
-  "next": "Tannery pest job",
-  "abilities": [
-    {
-      "name": "Arc Step",
-      "tag": "Lightning · Special · Movement",
-      "rank": "Iron 0",
-      "progress": 3,
-      "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Costs about 40% mana and 20% stamina. Cannot carry passengers."
-    }
-  ],
-  "abilityMeta": {
-    "slotsLabel": "LIGHTNING SLOTS: 1 OF 5 AWAKENED",
-    "racialLabel": "RACIAL (OUTWORLDER)"
-  },
-  "racial": [
-    { "name": "Momentum Affinity", "detail": "Increased resistance to movement-restricting effects. Movement abilities have increased effect. Attacks made while moving deal increased damage. Does not add raw speed." },
-    { "name": "Unknown Variable", "detail": "Language adaptation. Can absorb essences, awakening stones, and skill books. Immune to identification and tracking." },
-    { "name": "Heads-Up Display", "detail": "Floating, thought-controlled screens." },
-    { "name": "Mission Log", "detail": "Receives missions with rewards." },
-    { "name": "Pocket Space", "detail": "40-slot storage plus a coin counter. Only Nate can access it." },
-    { "name": "Star Chart", "detail": "Reveals the area as he explores." }
-  ],
-  "missions": [
-    { "name": "Something in the Pipe", "status": "ACTIVE", "filler": true, "kind": "JOB", "detail": "Track down the creature raiding the tannery's drying racks and deal with it. Reward pending." },
-    { "name": "Beneath the Old City", "status": "ACTIVE", "filler": true, "kind": "SYSTEM", "detail": "Find out what has made a home in the drains under Greenstone and where it nests. Reward pending." },
-    { "name": "Warehouse Pests", "status": "COMPLETE", "filler": true, "kind": "JOB", "detail": "Complete: paid 60 lesser, looted 9 lesser + 1 pelt." },
-    { "name": "Rumour", "status": "RUMOUR", "filler": false, "detail": "Rumour: shimmering scaled creature surfacing near the Island reefs at dusk. Hide merchant pays iron. Gary says no." },
-    { "name": "Cellar Dwellers", "status": "ACTIVE", "filler": true, "detail": "Wet Barrel tavern, Old City docks. One ratling escaped down a burrow, now bricked up. Mags expects you back once you're a real adventurer." },
-    { "name": "Floorboard Feeders", "status": "COMPLETE", "filler": true, "detail": "Warehouse 9, Verdant Fields. Three mist eels cleared." },
-    { "name": "Shell Shock", "status": "COMPLETE", "filler": false, "detail": "Channel fight. Reward: 1 Water Quintessence." },
-    { "name": "Plumbing Problem", "status": "COMPLETE", "filler": false, "detail": "Waterfall shab. Reward: 5 iron spirit coins." },
-    { "name": "The Evil Pit of Evil", "status": "COMPLETE", "filler": false, "detail": "Survive the ritual. Reward: Lightning Essence." },
-    { "name": "Stranger in a Strange Land", "status": "COMPLETE", "filler": false, "detail": "Explore the estate grounds. Reward: Simple Pants." }
-  ],
-  "status": {
-    "missionNames": ["Something in the Pipe", "Beneath the Old City"],
-    "log": [
-      { "title": "Night in Old City", "detail": "Took the Cellar Dwellers job, killed two ratlings, ran home testing momentum, and crashed in room 32." },
-      { "title": "Greenstone", "detail": "1 iron Island permit, tracking stone touched. Room 32 at Sailor's Watch for 2 nights. Registered at the Adventure Society with Albert; intake tomorrow morning. Window-shopped essences." },
-      { "title": "Barge and delta", "detail": "Sailed all night, meditating. Pitched the momentum hammer to Gary. Jason left at the delta; Nate stayed with the team." },
-      { "title": "Verdant Fields", "detail": "Hostel night, Floorboard Feeders filler, compass pointed upstream." },
-      { "title": "The road", "detail": "Fruit wagon, walled town cottage, Cascade rolled, flower brothers, earth elemental lesson." }
-    ]
-  },
-  "essences": [
-    { "name": "Lightning", "state": "Absorbed" },
-    { "name": "Empty", "state": "Tentative: Star" },
-    { "name": "Empty", "state": "Tentative: Spider" },
-    { "name": "Confluence", "state": "Cascade if Lightning + Star + Spider" }
-  ],
-  "essenceNotes": [
-    { "name": "Cascade (invented confluence)", "tag": "NON-CANON", "detail": "Chaining effects that spread from one target to the next. Locked for Lightning + Star + Spider; specific abilities roll on absorption. Only Lightning is locked in; other picks can still change." },
-    { "name": "Still needed", "detail": "A perception power and an aura ability, which every adventurer should have. These can come naturally." }
-  ],
-  "achievements": [
-    { "name": "Guardian Down. Guardian Up.", "detail": "Get struck by lightning from the inside. Voluntarily." },
-    { "name": "Stuck the Landing (Mostly)", "detail": "Use Arc Step for the first time without falling over. Knees don't count." },
-    { "name": "What's in a Name?", "detail": "Name your System. It will remember this kindness. And everything else." },
-    { "name": "Bait and Switch", "detail": "Use yourself as bait to lead a shab into someone else's leeches." }
-  ],
-  "profile": [
-    { "label": "Age", "value": "23" },
-    { "label": "From", "value": "Texas, Earth" },
-    { "label": "Job on Earth", "value": "Behavior therapist" },
-    { "label": "Build", "value": "6'2\", tall and lean, completely hairless" },
-    { "label": "Eyes", "value": "Blue-gray" },
-    { "label": "Gear", "value": "Simple pants, worn boots, linen shirt, hooded gray travel cloak" },
-    { "label": "Allies", "value": "Jason, Rufus, Farrah, Gary" },
-    { "label": "Hostile", "value": "Anisa Lasalle" },
-    { "label": "Role goal", "value": "Mobile heavy hitter with battlefield control" },
-    { "label": "Gary's hammer", "value": "Returning lightning hammer once Nate is iron rank and brings coin plus materials" },
-    { "label": "System", "value": "Aether, a talking interface. Narrates fixed rewards, speaks sparingly, cannot see Jason's interface." }
-  ],
+  "rev": "2026-11-17-t393",
   "gear": {
-    "pocketSlots": 40,
-    "borrowed": ["Foreman's lamp", "Tanner's lantern"],
-    "emptyLabels": {
-      "Head": "empty",
-      "Armour": "none",
-      "Body": "empty",
-      "Back": "empty",
-      "Main hand": "empty",
-      "Off hand": "empty",
-      "Belt / sheath": "empty"
-    },
-    "equipTargets": {
-      "War Hammer": ["Main hand", "Off hand"],
-      "Fighting Knife": ["Belt / sheath", "Off hand", "Main hand"],
-      "Kitchen knife": ["Belt / sheath", "Off hand", "Main hand"],
-      "Leather travel pack": ["Back"],
-      "Travel clothes": ["Body"],
-      "Spare clothes": ["Body"]
-    },
     "doll": [
-      ["", "Head", ""],
-      ["Back", "Body", "Armour"],
-      ["Main hand", "Belt / sheath", "Off hand"]
+      [
+        "",
+        "Head",
+        ""
+      ],
+      [
+        "Back",
+        "Body",
+        "Armour"
+      ],
+      [
+        "Main hand",
+        "Belt / sheath",
+        "Off hand"
+      ]
     ],
     "pocket": [
-      { "name": "Astral Compass Shard", "qty": "", "note": "Transcendent, legendary. Points upstream toward the Mistrun source aperture. Keep hidden." },
-      { "name": "Water Quintessence", "qty": "x10", "note": "" },
-      { "name": "Coin pouch", "qty": "", "note": "4 iron, 195 lesser" },
-      { "name": "Kitchen knife", "qty": "", "note": "Retired from fighting." },
-      { "name": "Vane ledger", "qty": "", "note": "Evidence of cellar deliveries. Gary warned not to sell it; show it to Rufus." },
-      { "name": "Iron blood quintessence", "qty": "", "note": "Leftover from the manor" },
-      { "name": "Waterskins", "qty": "x2", "note": "Full" },
-      { "name": "Spare clothes", "qty": "", "note": "A bit short" }
+      {
+        "qty": "",
+        "name": "Astral Compass Shard",
+        "note": "Transcendent, legendary. Points upstream toward the Mistrun source aperture. Keep hidden."
+      },
+      {
+        "qty": "",
+        "name": "Coin pouch",
+        "note": "146 iron, 507 lesser (10 iron heidel deposit held at east gate hire yard)"
+      },
+      {
+        "qty": "",
+        "name": "Vane ledger",
+        "note": "Evidence of cellar deliveries. Gary warned not to sell it; show it to Rufus."
+      },
+      {
+        "qty": "x2",
+        "name": "Waterskins",
+        "note": "Full"
+      },
+      {
+        "qty": "",
+        "name": "Drowned map",
+        "note": "Hand-drawn map of the drains under the Old City. A tunnel past the cistern is marked Vault. Signed Tomas Reeve, Greenstone Waterworks."
+      },
+      {
+        "qty": "",
+        "name": "Tomas Reeve's note",
+        "note": "If you're reading this and you're not me, I didn't make it back. Whatever's inside, don't let the Waterworks bosses have it. They know. — T.R."
+      },
+      {
+        "qty": "",
+        "name": "Light stone lantern",
+        "note": "Brass; twist the top to brighten or dim. Gift from Rufus."
+      },
+      {
+        "qty": "2",
+        "name": "Bandages",
+        "note": "Gift from Farrah."
+      },
+      {
+        "qty": "1",
+        "name": "Minor healing potion",
+        "note": "Gift from Farrah. Save it for real danger."
+      },
+      {
+        "qty": "",
+        "name": "Farrah's essence shortlist",
+        "note": "Swift, Wind, Hammer, Might, Cage, Spider, Vast (if lucky)."
+      },
+      {
+        "qty": "",
+        "name": "Travel provisions",
+        "note": "Hard bread, dried fish and fruit, salty cheese, waterskins. The team bought them."
+      },
+      {
+        "qty": "1 coil",
+        "name": "Rope",
+        "note": "From Farrah."
+      },
+      {
+        "qty": "several",
+        "name": "Chalk sticks",
+        "note": "For marking cave walls."
+      },
+      {
+        "qty": "2",
+        "name": "Oilcloth wraps",
+        "note": "Waterproof gear wraps from Rufus."
+      },
+      {
+        "qty": "",
+        "name": "Bone-handled knife",
+        "note": "From the cistern junk heap. Gary said keep it as a spare blade."
+      },
+      {
+        "qty": "",
+        "name": "Brass token (circle-and-wave, No. 17)",
+        "note": "From the cistern oilcloth packet. Same mark as the Waterworks bribers. Rufus: a membership token or a key."
+      },
+      {
+        "qty": "",
+        "name": "War Hammer",
+        "note": "One-handed, flat face and spike. Picked by Gary, 12 iron.",
+        "slot": "Main hand",
+        "empty": ""
+      },
+      {
+        "qty": "",
+        "name": "Fighting Knife",
+        "note": "Single-edged, sheathed. For close work and skinning.",
+        "slot": "Belt / sheath",
+        "empty": ""
+      },
+      {
+        "qty": "",
+        "name": "Invictus",
+        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
+      },
+      {
+        "qty": "3",
+        "name": "Water Quintessence",
+        "note": "From the frogs."
+      }
+    ],
+    "borrowed": [
+      "Foreman's lamp",
+      "Tanner's lantern"
     ],
     "equipped": [
-      { "slot": "Head", "name": "", "empty": "empty", "note": "", "qty": "" },
-      { "slot": "Armour", "name": "", "empty": "none", "note": "", "qty": "" },
-      { "slot": "Body", "name": "Travel clothes", "empty": "", "note": "Simple pants, worn boots, linen shirt, hooded gray travel cloak", "qty": "" },
-      { "slot": "Back", "name": "Leather travel pack", "empty": "", "note": "", "qty": "" },
-      { "slot": "Main hand", "name": "War Hammer", "empty": "", "note": "One-handed, flat face and spike. Picked by Gary, 12 iron.", "qty": "" },
-      { "slot": "Off hand", "name": "Tanner's lantern", "empty": "", "note": "Borrowed from the tanner. Not Nate's.", "qty": "" },
-      { "slot": "Belt / sheath", "name": "Fighting Knife", "empty": "", "note": "Single-edged, sheathed. For close work and skinning.", "qty": "" }
+      {
+        "qty": "",
+        "name": "",
+        "note": "",
+        "slot": "Head",
+        "empty": "empty"
+      },
+      {
+        "qty": "",
+        "name": "",
+        "note": "",
+        "slot": "Armour",
+        "empty": "none"
+      },
+      {
+        "qty": "",
+        "name": "Linen shirt and dark trousers",
+        "note": "From Rufus after the purge ruined the old travel clothes.",
+        "slot": "Body",
+        "empty": ""
+      },
+      {
+        "qty": "",
+        "name": "Leather travel pack",
+        "note": "",
+        "slot": "Back",
+        "empty": ""
+      },
+      {
+        "qty": "",
+        "name": "",
+        "note": "",
+        "slot": "Main hand",
+        "empty": "empty"
+      },
+      {
+        "qty": "",
+        "name": "Tanner's lantern",
+        "note": "Borrowed from the tanner. Not Nate's.",
+        "slot": "Off hand",
+        "empty": ""
+      },
+      {
+        "qty": "",
+        "name": "",
+        "note": "",
+        "slot": "Belt / sheath",
+        "empty": "empty"
+      }
+    ],
+    "emptyLabels": {
+      "Back": "empty",
+      "Body": "empty",
+      "Head": "empty",
+      "Armour": "none",
+      "Off hand": "empty",
+      "Main hand": "empty",
+      "Belt / sheath": "empty"
+    },
+    "pocketSlots": 40,
+    "equipTargets": {
+      "War Hammer": [
+        "Main hand",
+        "Off hand"
+      ],
+      "Kitchen knife": [
+        "Belt / sheath",
+        "Off hand",
+        "Main hand"
+      ],
+      "Spare clothes": [
+        "Body"
+      ],
+      "Fighting Knife": [
+        "Belt / sheath",
+        "Off hand",
+        "Main hand"
+      ],
+      "Travel clothes": [
+        "Body"
+      ],
+      "Leather travel pack": [
+        "Back"
+      ]
+    },
+    "appliedActions": [
+      "c7d98a2e-524f-4361-97f5-aefd3173ed7e"
     ],
     "defaultLoadouts": [
       {
         "name": "Combat",
         "equipped": [
-          { "slot": "Head", "name": "", "empty": "empty", "note": "", "qty": "" },
-          { "slot": "Armour", "name": "", "empty": "none", "note": "", "qty": "" },
-          { "slot": "Body", "name": "Travel clothes", "empty": "", "note": "Simple pants, worn boots, linen shirt, hooded gray travel cloak", "qty": "" },
-          { "slot": "Back", "name": "Leather travel pack", "empty": "", "note": "", "qty": "" },
-          { "slot": "Main hand", "name": "War Hammer", "empty": "", "note": "One-handed, flat face and spike. Picked by Gary, 12 iron.", "qty": "" },
-          { "slot": "Off hand", "name": "", "empty": "empty", "note": "", "qty": "" },
-          { "slot": "Belt / sheath", "name": "Fighting Knife", "empty": "", "note": "Single-edged, sheathed. For close work and skinning.", "qty": "" }
+          {
+            "qty": "",
+            "name": "",
+            "note": "",
+            "slot": "Head",
+            "empty": "empty"
+          },
+          {
+            "qty": "",
+            "name": "",
+            "note": "",
+            "slot": "Armour",
+            "empty": "none"
+          },
+          {
+            "qty": "",
+            "name": "Linen shirt and dark trousers",
+            "note": "From Rufus after the purge ruined the old travel clothes.",
+            "slot": "Body",
+            "empty": ""
+          },
+          {
+            "qty": "",
+            "name": "Leather travel pack",
+            "note": "",
+            "slot": "Back",
+            "empty": ""
+          },
+          {
+            "qty": "",
+            "name": "War Hammer",
+            "note": "One-handed, flat face and spike. Picked by Gary, 12 iron.",
+            "slot": "Main hand",
+            "empty": ""
+          },
+          {
+            "qty": "",
+            "name": "",
+            "note": "",
+            "slot": "Off hand",
+            "empty": "empty"
+          },
+          {
+            "qty": "",
+            "name": "Fighting Knife",
+            "note": "Single-edged, sheathed. For close work and skinning.",
+            "slot": "Belt / sheath",
+            "empty": ""
+          }
         ]
       },
       {
         "name": "Travel",
         "equipped": [
-          { "slot": "Head", "name": "", "empty": "empty", "note": "", "qty": "" },
-          { "slot": "Armour", "name": "", "empty": "none", "note": "", "qty": "" },
-          { "slot": "Body", "name": "Travel clothes", "empty": "", "note": "Simple pants, worn boots, linen shirt, hooded gray travel cloak", "qty": "" },
-          { "slot": "Back", "name": "Leather travel pack", "empty": "", "note": "", "qty": "" },
-          { "slot": "Main hand", "name": "", "empty": "empty", "note": "", "qty": "" },
-          { "slot": "Off hand", "name": "", "empty": "empty", "note": "", "qty": "" },
-          { "slot": "Belt / sheath", "name": "Fighting Knife", "empty": "", "note": "Single-edged, sheathed. For close work and skinning.", "qty": "" }
+          {
+            "qty": "",
+            "name": "",
+            "note": "",
+            "slot": "Head",
+            "empty": "empty"
+          },
+          {
+            "qty": "",
+            "name": "",
+            "note": "",
+            "slot": "Armour",
+            "empty": "none"
+          },
+          {
+            "qty": "",
+            "name": "Linen shirt and dark trousers",
+            "note": "From Rufus after the purge ruined the old travel clothes.",
+            "slot": "Body",
+            "empty": ""
+          },
+          {
+            "qty": "",
+            "name": "Leather travel pack",
+            "note": "",
+            "slot": "Back",
+            "empty": ""
+          },
+          {
+            "qty": "",
+            "name": "",
+            "note": "",
+            "slot": "Main hand",
+            "empty": "empty"
+          },
+          {
+            "qty": "",
+            "name": "",
+            "note": "",
+            "slot": "Off hand",
+            "empty": "empty"
+          },
+          {
+            "qty": "",
+            "name": "Fighting Knife",
+            "note": "Single-edged, sheathed. For close work and skinning.",
+            "slot": "Belt / sheath",
+            "empty": ""
+          }
         ]
       }
     ]
   },
-  "map": {
-    "world": {
-      "viewBox": [1000, 1044],
-      "land": "M1017.1,-234.2 L1002.4,-204.9 L968.3,-170.7 L963.4,-141.5 L939.0,-92.7 L939.0,-68.3 L948.8,-58.5 L953.7,29.3 L973.2,53.7 L973.2,165.9 L941.5,217.1 L892.7,241.5 L826.8,312.2 L836.6,356.1 L831.7,429.3 L768.3,473.2 L768.3,512.2 L753.7,551.3 L643.9,675.7 L580.5,700.1 L522.0,700.1 L482.9,714.7 L465.9,712.3 L441.5,673.2 L451.2,639.1 L426.8,590.3 L422.0,556.1 L392.7,512.2 L387.8,448.8 L378.0,429.3 L378.0,365.9 L324.4,253.7 L324.4,190.3 L343.9,122.0 L368.3,92.7 L373.2,48.8 L358.5,19.5 L363.4,-19.5 L343.9,-68.3 L343.9,-97.6 L275.6,-190.3 L265.9,-234.2 Z",
-      "region": "M453.7,553.7 L429.3,534.2 L409.8,539.1 L392.7,512.2 L378.0,424.4 L382.9,380.5 L324.4,253.7 L326.8,231.7 L356.1,226.9 L375.6,241.5 L468.3,241.5 L519.5,258.6 L519.5,351.3 L495.1,370.8 L485.4,536.6 L453.7,553.7 Z",
-      "river": "M 575 425 C 545 415 520 405 495 400 C 470 396 455 395 430 393 C 415 392 395 390 382 390",
-      "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14",
-      "fog": { "placeRadius": 54, "riverWidth": 56, "routeWidth": 70, "overlay": 0.72 },
-      "hereLabel": "YOU ARE HERE",
-      "caption": "The coastline and Greenstone region follow the world map of Pallimustus. The dashed line is the route you've travelled. Only places you've been are revealed; everything else is fogged. River stops are a Star Chart sketch, not to scale.",
-      "places": [
-        { "name": "Vane estate", "x": 505, "y": 270, "anchor": "end", "dx": -10, "dy": -4 },
-        { "name": "Waterfall", "x": 498, "y": 308, "anchor": "start", "dx": 12, "dy": 5 },
-        { "name": "Quarry village", "x": 492, "y": 348, "anchor": "start", "dx": 12, "dy": 5 },
-        { "name": "South trail", "x": 488, "y": 375, "anchor": "end", "dx": -12, "dy": 4 },
-        { "name": "Walled marble town", "x": 488, "y": 418, "anchor": "start", "dx": 12, "dy": 16 },
-        { "name": "Rock outcroppings", "x": 478, "y": 455, "anchor": "start", "dx": 12, "dy": 20 },
-        { "name": "Pond-aperture village", "x": 498, "y": 438, "anchor": "start", "dx": 12, "dy": 5 },
-        { "name": "Verdant Fields", "x": 495, "y": 400, "anchor": "start", "dx": 12, "dy": -8 },
-        { "name": "Aqueduct", "x": 455, "y": 395, "anchor": "middle", "dx": 0, "dy": -12 },
-        { "name": "Mistrun Delta", "x": 415, "y": 392, "anchor": "middle", "dx": 0, "dy": 24 },
-        { "name": "Greenstone: Old City", "x": 382, "y": 390, "anchor": "middle", "dx": 0, "dy": 28, "current": true },
-        { "name": "The Island", "x": 330, "y": 375, "anchor": "end", "dx": -12, "dy": -6 }
-      ],
-      "route": [
-        { "x": 505, "y": 270 },
-        { "x": 498, "y": 308 },
-        { "x": 492, "y": 348 },
-        { "x": 488, "y": 375 },
-        { "x": 488, "y": 418 },
-        { "x": 478, "y": 455 },
-        { "x": 498, "y": 438 },
-        { "x": 495, "y": 400 },
-        { "x": 455, "y": 395 },
-        { "x": 415, "y": 392 },
-        { "x": 382, "y": 390 },
-        { "x": 330, "y": 375 }
-      ],
-      "labels": [
-        { "text": "Ocean", "x": 200, "y": 720, "size": 14, "italic": true, "tone": "water" },
-        { "text": "Desert", "x": 500, "y": 330, "size": 12, "italic": true, "tone": "muted" },
-        { "text": "Mistrun River", "x": 430, "y": 376, "size": 12, "italic": true, "tone": "muted" },
-        { "text": "Upstream, unmapped → the compass points this way", "x": 580, "y": 430, "size": 12, "tone": "water" },
-        { "text": "Greenstone region of Pallimustus · coast after the world map · N ↑", "x": 20, "y": 1028, "size": 11, "tone": "water" }
-      ]
+  "next": "Pick up the adventurer badge at the Society tomorrow. Celebration dinner. Find an aura-power awakening stone (Farrah may help). Gary's lightning hammer.",
+  "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
+  "coins": "146 iron · 507 lesser",
+  "racial": [
+    {
+      "name": "Momentum Affinity",
+      "detail": "Increased resistance to movement-restricting effects. Movement abilities have increased effect. Attacks made while moving deal increased damage. Does not add raw speed."
     },
-    "town": {
-      "viewBox": [1000, 720],
-      "island": "M70,50 C50,140 55,250 65,360 C70,470 60,560 90,630 C130,690 220,705 310,680 C370,660 410,600 425,520 L435,400 428,280 415,160 390,80 C350,40 220,30 140,40 C100,45 80,45 70,50 Z",
-      "oldCity": "M615,90 C600,150 588,230 585,310 C584,390 590,480 610,560 C630,630 680,685 760,700 C850,715 940,690 970,620 C995,540 990,420 980,300 C970,180 950,100 880,80 C790,60 700,70 615,90 Z",
-      "river": "M1000,430 C940,415 880,430 820,470 C760,510 700,545 620,555",
-      "districts": [
-        { "name": "Guild district", "d": "M95,70 L300,70 L320,160 L310,300 L160,310 L95,240 Z", "tone": "guild" },
-        { "name": "Warehouse district", "d": "M600,180 L720,175 L735,280 L700,320 L598,310 Z", "tone": "work" },
-        { "name": "Harbour / docks", "d": "M590,320 L700,330 L710,470 L600,480 Z", "tone": "work" },
-        { "name": "Old City market", "d": "M740,250 L840,245 L850,340 L745,345 Z", "tone": "market" }
-      ],
-      "bridge": { "x1": 428, "x2": 610, "cx": 525, "lift": 22 },
-      "bridges": [
-        { "y": 150, "used": false },
-        { "y": 268, "used": true },
-        { "y": 400, "used": false },
-        { "y": 530, "used": false }
-      ],
-      "blocks": [
-        { "x": 145, "y": 150, "w": 28, "h": 20 },
-        { "x": 155, "y": 200, "w": 32, "h": 22 },
-        { "x": 280, "y": 120, "w": 30, "h": 24 },
-        { "x": 170, "y": 255, "w": 22, "h": 18 },
-        { "x": 620, "y": 200, "w": 24, "h": 18 },
-        { "x": 690, "y": 200, "w": 30, "h": 20 },
-        { "x": 705, "y": 260, "w": 22, "h": 16 },
-        { "x": 630, "y": 300, "w": 28, "h": 20 },
-        { "x": 660, "y": 340, "w": 26, "h": 18 },
-        { "x": 700, "y": 360, "w": 32, "h": 22 },
-        { "x": 750, "y": 260, "w": 24, "h": 16 },
-        { "x": 820, "y": 270, "w": 28, "h": 20 },
-        { "x": 810, "y": 310, "w": 22, "h": 18 },
-        { "x": 760, "y": 320, "w": 26, "h": 16 }
-      ],
-      "buildings": [
-        { "name": "Sailor's Watch", "x": 108, "y": 108, "w": 36, "h": 26 },
-        { "name": "Adventure Society", "x": 200, "y": 160, "w": 70, "h": 48 },
-        { "name": "Adventure Society exchange", "x": 248, "y": 198, "w": 32, "h": 20 },
-        { "name": "Weapon shop", "x": 188, "y": 232, "w": 34, "h": 24 },
-        { "name": "Transit station", "x": 240, "y": 258, "w": 44, "h": 26 },
-        { "name": "Island permit booth", "x": 438, "y": 256, "w": 14, "h": 18 },
-        { "name": "Old City permit booth", "x": 582, "y": 256, "w": 14, "h": 18 },
-        { "name": "Foreman's warehouse", "x": 638, "y": 210, "w": 52, "h": 34 },
-        { "name": "Grain cellar", "x": 650, "y": 244, "w": 28, "h": 16 },
-        { "name": "Wet Barrel tavern", "x": 622, "y": 400, "w": 36, "h": 26 },
-        { "name": "Hide merchant's stall", "x": 772, "y": 282, "w": 26, "h": 18 },
-        { "name": "Tannery", "x": 648, "y": 588, "w": 44, "h": 30 }
-      ],
-      "labels": [
-        { "name": "The Island", "x": 150, "y": 340, "anchor": "middle", "dx": 0, "dy": 0 },
-        { "name": "Guild district", "x": 200, "y": 86, "anchor": "middle", "dx": 0, "dy": 0 },
-        { "name": "Sailor's Watch", "x": 126, "y": 108, "anchor": "start", "dx": 22, "dy": -8 },
-        { "name": "Adventure Society", "x": 235, "y": 155, "anchor": "middle", "dx": 0, "dy": -10 },
-        { "name": "Weapon shop", "x": 205, "y": 244, "anchor": "start", "dx": 22, "dy": 16 },
-        { "name": "Transit station", "x": 262, "y": 272, "anchor": "start", "dx": 28, "dy": 18 },
-        { "name": "Island bridge", "x": 520, "y": 268, "anchor": "middle", "dx": 0, "dy": -22 },
-        { "name": "Permit booths", "x": 595, "y": 268, "anchor": "start", "dx": 8, "dy": -16 },
-        { "name": "Old City", "x": 820, "y": 255, "anchor": "middle", "dx": 0, "dy": 0 },
-        { "name": "Warehouse district", "x": 670, "y": 188, "anchor": "middle", "dx": 0, "dy": -14 },
-        { "name": "Foreman's warehouse", "x": 664, "y": 228, "anchor": "start", "dx": 30, "dy": -6 },
-        { "name": "Grain cellar", "x": 664, "y": 255, "anchor": "start", "dx": 28, "dy": 12 },
-        { "name": "Alley", "x": 708, "y": 238, "anchor": "start", "dx": 16, "dy": -10 },
-        { "name": "Harbour / docks", "x": 650, "y": 370, "anchor": "start", "dx": 24, "dy": 0 },
-        { "name": "Wet Barrel tavern", "x": 640, "y": 418, "anchor": "start", "dx": 24, "dy": 16 },
-        { "name": "Old City market", "x": 790, "y": 300, "anchor": "middle", "dx": 0, "dy": -20 },
-        { "name": "Hide merchant's stall", "x": 790, "y": 300, "anchor": "start", "dx": 22, "dy": 22 },
-        { "name": "Adventure Society exchange", "x": 278, "y": 214, "anchor": "start", "dx": 18, "dy": 16 },
-        { "name": "Tannery", "x": 665, "y": 605, "anchor": "middle", "dx": 0, "dy": -18, "current": true }
-      ],
-      "route": [
-        { "x": 126, "y": 121 },
-        { "x": 180, "y": 200 },
-        { "x": 250, "y": 268 },
-        { "x": 420, "y": 268 },
-        { "x": 520, "y": 262 },
-        { "x": 600, "y": 268 },
-        { "x": 655, "y": 228 },
-        { "x": 708, "y": 238 },
-        { "x": 790, "y": 300 },
-        { "x": 708, "y": 250 },
-        { "x": 600, "y": 268 },
-        { "x": 520, "y": 262 },
-        { "x": 420, "y": 268 },
-        { "x": 300, "y": 220 },
-        { "x": 278, "y": 214 },
-        { "x": 300, "y": 220 },
-        { "x": 420, "y": 268 },
-        { "x": 520, "y": 262 },
-        { "x": 600, "y": 280 },
-        { "x": 620, "y": 400 },
-        { "x": 640, "y": 500 },
-        { "x": 665, "y": 605 }
-      ],
-      "reveal": [
-        { "x": 150, "y": 90, "r": 85 },
-        { "x": 210, "y": 190, "r": 115 },
-        { "x": 250, "y": 270, "r": 55 },
-        { "x": 205, "y": 244, "r": 40 },
-        { "x": 425, "y": 268, "r": 50 },
-        { "x": 520, "y": 260, "r": 85 },
-        { "x": 605, "y": 268, "r": 55 },
-        { "x": 655, "y": 230, "r": 75 },
-        { "x": 710, "y": 240, "r": 40 },
-        { "x": 790, "y": 300, "r": 75 },
-        { "x": 640, "y": 360, "r": 75 },
-        { "x": 640, "y": 418, "r": 45 },
-        { "x": 150, "y": 330, "r": 55 },
-        { "x": 520, "y": 150, "r": 28 },
-        { "x": 520, "y": 400, "r": 28 },
-        { "x": 520, "y": 530, "r": 28 },
-        { "x": 665, "y": 605, "r": 75 }
-      ],
-      "labelsStatic": [
-        { "text": "Mistrun River", "x": 920, "y": 400, "anchor": "end", "size": 11, "italic": true, "tone": "water" },
-        { "text": "Ocean", "x": 40, "y": 200, "size": 13, "italic": true, "tone": "water" },
-        { "text": "Greenstone · Old City and the Island · N ↑", "x": 80, "y": 700, "size": 11, "tone": "water" }
-      ],
-      "hereLabel": "YOU ARE HERE",
-      "caption": "Only districts and buildings you've seen are shown; everything else is fogged. The dashed line is today's route.",
-      "fogOverlay": 0.72
+    {
+      "name": "Unknown Variable",
+      "detail": "Language adaptation. Can absorb essences, awakening stones, and skill books. Immune to identification and tracking."
     },
-    "battle": {
-      "title": "Nest chamber, tannery culvert",
-      "note": "Past the bend, in the nest chamber. The injured adult is dead at your feet, skull crushed by the hammer. The leader and a second adult are charging side by side down the tunnel. The young one hangs back at the bend, hissing. Three blind pups wail in the nest.",
-      "width": 600,
-      "height": 420,
-      "tunnel": {
-        "d": "M 370 8 L 370 145 Q 370 205 300 220 Q 220 236 188 275",
-        "wall": 118,
-        "floor": 74
+    {
+      "name": "Heads-Up Display",
+      "detail": "Floating, thought-controlled screens."
+    },
+    {
+      "name": "Mission Log",
+      "detail": "Receives missions with rewards."
+    },
+    {
+      "name": "Pocket Space",
+      "detail": "40-slot storage plus a coin counter. Only Nate can access it."
+    },
+    {
+      "name": "Star Chart",
+      "detail": "Reveals the area as he explores."
+    }
+  ],
+  "status": {
+    "log": [
+      {
+        "title": "Field assessment",
+        "detail": "Rode out with Vincent Trenslow's group. Killed a rune tortoise with Comet Strike and a knife and passed. Used Moonwell for two village kids. Night watch with Vincent; a village dog gave Nate a fish. Watched Jason kill the bark lurker; volunteered to scout trap weavers but the right answer was no one. Pie with Jason and Humphrey at the pond-town lodge; the stasis breakfast came out still warm."
       },
-      "chamber": { "x": 152, "y": 318, "rx": 130, "ry": 82 },
-      "nest": { "x": 158, "y": 356, "label": "nest of hides and bone" },
-      "daylight": { "x": 370, "y": 6 },
-      "reeds": [
-        { "x": 300, "y": 34 },
-        { "x": 440, "y": 30 },
-        { "x": 468, "y": 46 },
-        { "x": 276, "y": 48 }
-      ],
-      "extras": [
-        { "type": "ellipse", "cx": 370, "cy": 0, "rx": 170, "ry": 48, "fill": "water", "opacity": 0.4 }
-      ],
-      "labels": [
-        { "text": "daylight", "x": 458, "y": 28, "size": 12, "tone": "muted" },
-        { "text": "culvert mouth", "x": 458, "y": 46, "size": 11, "tone": "muted" },
-        { "text": "the bend", "x": 248, "y": 168, "size": 12, "tone": "muted" },
-        { "text": "nest chamber", "x": 28, "y": 248, "size": 12, "tone": "muted" }
-      ],
-      "lamp": { "x": 128, "y": 300, "r": 160 },
-      "reveal": [
-        { "type": "ellipse", "cx": 152, "cy": 318, "rx": 175, "ry": 125 },
-        { "type": "stroke", "d": "M 370 0 L 370 145 Q 370 205 300 220 Q 220 236 188 275", "width": 160 }
-      ],
-      "fogOverlay": 0.62,
-      "player": { "x": 145, "y": 292, "label": "Nate" },
-      "lantern": { "x": 108, "y": 312, "label": "Lantern" },
-      "compass": "N ↑",
-      "enemies": [
-        {
-          "id": "young",
-          "name": "Pipe beast, young",
-          "size": "Smaller than the adults, long and low",
-          "rank": "Unknown",
-          "type": "Beast. Young. Long and low, pointed snout, gray-brown fur.",
-          "status": "Hanging back at the bend, hissing.",
-          "x": 338,
-          "y": 162,
-          "tone": "warning",
-          "marker": "!",
-          "facing": "player",
-          "mapLabel": "Young",
-          "labelX": 400,
-          "labelY": 150
-        },
-        {
-          "id": "injured",
-          "name": "Pipe beast, injured",
-          "size": "Big-dog sized, long and low",
-          "rank": "Unknown",
-          "type": "Beast. Long and low, pointed snout, gray-brown fur.",
-          "status": "Dead. Hammer blow to the skull.",
-          "x": 188,
-          "y": 274,
-          "tone": "dead",
-          "marker": "×",
-          "mapLabel": "Dead",
-          "labelX": 214,
-          "labelY": 262
-        },
-        {
-          "id": "adult",
-          "name": "Pipe beast",
-          "size": "Big-dog sized, long and low",
-          "rank": "Unknown",
-          "type": "Beast. Long and low, pointed snout, gray-brown fur.",
-          "status": "Hostile. Charging side by side with the leader.",
-          "x": 286,
-          "y": 208,
-          "tone": "hostile",
-          "marker": "!",
-          "facing": "player",
-          "mapLabel": "Adult",
-          "labelX": 340,
-          "labelY": 196
-        },
-        {
-          "id": "leader",
-          "name": "Pipe beast, leader",
-          "size": "Big-dog sized, long and low",
-          "rank": "Unknown",
-          "type": "Beast. Long body, pointed snout, torn ears, four clawed toes, gray-brown fur.",
-          "status": "Hostile. Charging side by side with the other adult.",
-          "x": 236,
-          "y": 224,
-          "tone": "hostile",
-          "marker": "!",
-          "facing": "player",
-          "mapLabel": "Leader",
-          "labelX": 176,
-          "labelY": 210
-        },
-        {
-          "id": "pup-1",
-          "name": "Blind pup",
-          "size": "Small, newborn",
-          "rank": "Unknown",
-          "type": "Beast pup. Blind, mewling, in a nest of shredded hides and bones.",
-          "status": "Non-hostile. Wailing in the nest.",
-          "x": 128,
-          "y": 348,
-          "r": 7,
-          "tone": "neutral",
-          "marker": "·",
-          "mapLabel": ""
-        },
-        {
-          "id": "pup-2",
-          "name": "Blind pup",
-          "size": "Small, newborn",
-          "rank": "Unknown",
-          "type": "Beast pup. Blind, mewling, in a nest of shredded hides and bones.",
-          "status": "Non-hostile. Wailing in the nest.",
-          "x": 160,
-          "y": 368,
-          "r": 7,
-          "tone": "neutral",
-          "marker": "·",
-          "mapLabel": ""
-        },
-        {
-          "id": "pup-3",
-          "name": "Blind pup",
-          "size": "Small, newborn",
-          "rank": "Unknown",
-          "type": "Beast pup. Blind, mewling, in a nest of shredded hides and bones.",
-          "status": "Non-hostile. Wailing in the nest.",
-          "x": 190,
-          "y": 344,
-          "r": 7,
-          "tone": "neutral",
-          "marker": "·",
-          "mapLabel": ""
-        }
-      ]
-    },
-    "charted": [
-      { "region": "Vane estate", "place": "Estate grounds and manor", "seen": "Grounds explored for Stranger in a Strange Land; manor rooms and the cellar with the ritual pit." },
-      { "region": "The mountain", "place": "Mountain path and waterfall", "seen": "Path down from the estate; the waterfall pool where the first shab was fought." },
-      { "region": "Quarry village", "place": "Village, inn, and channel", "seen": "Streets, the inn and its courtyard, and the water channel from the Shell Shock fight." },
-      { "region": "The road", "place": "South trail", "seen": "The trail south toward the river, where the fruit wagon threw a wheel." },
-      { "region": "The road", "place": "Walled marble town", "seen": "Gate, square, and the free stone cottage." },
-      { "region": "The road", "place": "Rock outcroppings", "seen": "Where Jason fought the desert maw spider." },
-      { "region": "The road", "place": "Pond-aperture village", "seen": "The village and its pond aperture; site of the earth elemental fight." },
-      { "region": "Verdant Fields", "place": "River town", "seen": "Docks and the east wharf, Warehouse 9 (Floorboard Feeders), and the teamsters' hostel." },
-      { "region": "Mistrun River", "place": "River by barge", "seen": "The river west, the aqueduct, and the delta at dawn where Jason left." },
-      { "region": "Greenstone", "place": "Old City wharf and bridge", "seen": "The wharf, Old City streets, and the bridge with its permit booths." },
-      { "region": "Greenstone", "place": "The Island", "seen": "Sailor's Watch (room 32, kitchen) and the transit station." },
-      { "region": "Greenstone", "place": "Adventure Society campus", "seen": "Administration lobby, intake waiting room, and intake room." },
-      { "region": "Greenstone", "place": "Wet Barrel tavern", "seen": "Taproom and the cellar from Cellar Dwellers (burrow now bricked up)." },
-      { "region": "Greenstone", "place": "Forge district", "seen": "The street of smithy storefronts and the crossed-blades weapon shop." },
-      { "region": "Greenstone", "place": "Warehouse district cellar", "seen": "Stairs, the front rows of chewed sacks, and most of the back under the lamp. Three ratlings at the back wall." },
-      { "region": "Greenstone", "place": "Tannery culvert", "seen": "Past the bend in a low nest chamber. The injured adult is dead at Nate's feet. The leader and a second adult are charging down the tunnel. A young one hisses at the bend. Three blind pups wail in the nest.", "current": true }
+      {
+        "title": "Iron rank",
+        "detail": "Claimed the Comet confluence on the hotel roof garden (Lightning + Star + Wind; bonded to Spirit, awakened Comet Strike) and reached iron rank. Purged and passed out. Used the Awakening Stone of the Undertow (Moonwell, on Star), then tested Moonwell, Comet Strike, and Windward Veil with Rufus, Farrah, and Gary."
+      },
+      {
+        "title": "The Sunken Shrine",
+        "detail": "Two hours south along the coast with Rufus, Farrah, and Gary (Varrow estate contract). Killed the rock crabs on the shelf and cleared the shrine; The Final Piece complete (an essence plus coin). Wind absorbed (bonded to Recovery, awakened Windward Veil)."
+      },
+      {
+        "title": "Under the Old City",
+        "detail": "Tannery culvert pipe beasts, the cistern nest with Gary, the flooded-tunnel eel, and Warehouse Pests. Found Tomas Reeve's drowned map, key, note, and ledger."
+      },
+      {
+        "title": "The Vault",
+        "detail": "With Rufus, Farrah, and Gary: Farrah broke the ward, killed the stone centipede, claimed the Star Essence from the magic pool, and absorbed it back at the suite (bonded to Power, awakened Star Mark)."
+      },
+      {
+        "title": "Night in Old City",
+        "detail": "Took the Cellar Dwellers job, killed two ratlings, ran home testing momentum, and crashed in room 32."
+      },
+      {
+        "title": "Greenstone",
+        "detail": "1 iron Island permit, tracking stone touched. Room 32 at Sailor's Watch for 2 nights. Registered at the Adventure Society with Albert; intake tomorrow morning. Window-shopped essences."
+      },
+      {
+        "title": "Barge and delta",
+        "detail": "Sailed all night, meditating. Pitched the momentum hammer to Gary. Jason left at the delta; Nate stayed with the team."
+      },
+      {
+        "title": "Verdant Fields",
+        "detail": "Hostel night, Floorboard Feeders filler, compass pointed upstream."
+      },
+      {
+        "title": "The road",
+        "detail": "Fruit wagon, walled town cottage, Cascade rolled, flower brothers, earth elemental lesson."
+      }
+    ],
+    "missionNames": [
+      "Cellar Dwellers"
     ]
-  }
+  },
+  "vitals": [
+    {
+      "pct": 100,
+      "note": "Rested",
+      "tone": "health",
+      "label": "HEALTH",
+      "value": 100
+    },
+    {
+      "pct": 100,
+      "note": "Full",
+      "tone": "mana",
+      "label": "MANA",
+      "value": "100%"
+    },
+    {
+      "pct": 100,
+      "note": "Rested",
+      "tone": "stamina",
+      "label": "STAMINA",
+      "value": "100%"
+    }
+  ],
+  "profile": [
+    {
+      "label": "Age",
+      "value": "23"
+    },
+    {
+      "label": "From",
+      "value": "Texas, Earth"
+    },
+    {
+      "label": "Job on Earth",
+      "value": "Behavior therapist"
+    },
+    {
+      "label": "Build",
+      "value": "6'2\", tall and lean, completely hairless"
+    },
+    {
+      "label": "Eyes",
+      "value": "Blue-gray"
+    },
+    {
+      "label": "Gear",
+      "value": "Simple pants, worn boots, linen shirt, hooded gray travel cloak"
+    },
+    {
+      "label": "Allies",
+      "value": "Jason, Rufus, Farrah, Gary, Humphrey"
+    },
+    {
+      "label": "Hostile",
+      "value": "Anisa Lasalle"
+    },
+    {
+      "label": "Role goal",
+      "value": "Mobile heavy hitter with battlefield control"
+    },
+    {
+      "label": "Gary's hammer",
+      "value": "Returning lightning hammer once Nate is iron rank and brings coin plus materials"
+    },
+    {
+      "label": "System",
+      "value": "Aether, a talking interface. Narrates fixed rewards, speaks sparingly, cannot see Jason's interface."
+    }
+  ],
+  "essences": [
+    {
+      "name": "Lightning",
+      "state": "Absorbed (bonded to Speed)"
+    },
+    {
+      "name": "Star",
+      "state": "Absorbed (bonded to Power)"
+    },
+    {
+      "name": "Wind",
+      "state": "Absorbed (bonded to Recovery)"
+    },
+    {
+      "name": "Comet",
+      "state": "Confluence, claimed (bonded to Spirit)"
+    }
+  ],
+  "identity": {
+    "asOf": "Afternoon of field assessment day 5, in the delta",
+    "name": "Nate Maray",
+    "rank": "Iron rank",
+    "slots": [
+      {
+        "mark": "ϟ",
+        "title": "Lightning",
+        "filled": true
+      },
+      {
+        "mark": "✦",
+        "title": "Star",
+        "filled": true
+      },
+      {
+        "mark": "༄",
+        "title": "Wind",
+        "filled": true
+      },
+      {
+        "mark": "☄",
+        "title": "Comet",
+        "filled": true
+      }
+    ],
+    "kicker": "AETHER SYSTEM · OUTWORLDER",
+    "essenceLine": "4 of 4 essences"
+  },
+  "location": "Hule village (wetland hamlet east of Greenstone), morning of day 9. Arrived by hired heidel cart with Jason, Rufus, Farrah, Gary. Bog shambler contract.",
+  "missions": [
+    {
+      "kind": "JOB",
+      "name": "North Road Hedgehogs",
+      "detail": "Open contract: 10 malicious hedgehogs killed, 20 iron paid (spine bundles turned in as proof). Contract stays open.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "JOB",
+      "name": "Thorny-Tongue Frogs",
+      "detail": "Killed and looted 3 thorny-tongue frogs at the east farmstead ditches. Paid 30 iron.",
+      "status": "COMPLETE"
+    },
+    {
+      "kind": "JOB",
+      "name": "Bog Shambler of Hule",
+      "detail": "Closed iron one-star contract: one bog shambler in the wetlands off Hule village's fields (farther out). Reward 25 iron spirit coins.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "The Final Piece",
+      "detail": "Clear the Sunken Shrine (tidal caves, two hours south along the coast; Varrow estate contract, taken by Rufus's team). Reward: 1 unidentified essence plus coin.",
+      "filler": true,
+      "status": "COMPLETE"
+    },
+    {
+      "kind": "JOB",
+      "name": "Something in the Pipe",
+      "detail": "Killed three pipe beasts in the tannery culvert, including the pack leader. One small one escaped into the drains. Paid 50 lesser (40 plus 10 for recovered hides). Looted 14 lesser and 1 iron-rank pipe beast pelt.",
+      "filler": true,
+      "status": "COMPLETE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Beneath the Old City",
+      "detail": "Found the nest in an old cistern beneath the drains. With Gary, killed three adults, the runt that fled the culvert, and a spined iron-rank beast. Reward 10 lesser.",
+      "filler": true,
+      "status": "COMPLETE"
+    },
+    {
+      "kind": "JOB",
+      "name": "Warehouse Pests",
+      "detail": "Complete: paid 60 lesser, looted 9 lesser + 1 pelt.",
+      "filler": true,
+      "status": "COMPLETE"
+    },
+    {
+      "name": "Rumour",
+      "detail": "Rumour: shimmering scaled creature surfacing near the Island reefs at dusk. Hide merchant pays iron. Gary says no.",
+      "filler": false,
+      "status": "RUMOUR"
+    },
+    {
+      "name": "Cellar Dwellers",
+      "detail": "Wet Barrel tavern, Old City docks. One ratling escaped down a burrow, now bricked up. Mags expects you back once you're a real adventurer.",
+      "filler": true,
+      "status": "ACTIVE"
+    },
+    {
+      "name": "Floorboard Feeders",
+      "detail": "Warehouse 9, Verdant Fields. Three mist eels cleared.",
+      "filler": true,
+      "status": "COMPLETE"
+    },
+    {
+      "name": "Shell Shock",
+      "detail": "Channel fight. Reward: 1 Water Quintessence.",
+      "filler": false,
+      "status": "COMPLETE"
+    },
+    {
+      "name": "Plumbing Problem",
+      "detail": "Waterfall shab. Reward: 5 iron spirit coins.",
+      "filler": false,
+      "status": "COMPLETE"
+    },
+    {
+      "name": "The Evil Pit of Evil",
+      "detail": "Survive the ritual. Reward: Lightning Essence.",
+      "filler": false,
+      "status": "COMPLETE"
+    },
+    {
+      "name": "Stranger in a Strange Land",
+      "detail": "Explore the estate grounds. Reward: Simple Pants.",
+      "filler": false,
+      "status": "COMPLETE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "The Drowned Map",
+      "detail": "Reached the Vault beyond Cistern No. 3 with Rufus, Farrah, and Gary. Killed the stone centipede. Reward: Star Essence (claimed).",
+      "filler": true,
+      "status": "COMPLETE"
+    },
+    {
+      "kind": "JOB",
+      "name": "Field Assessment",
+      "detail": "A week of delta postings by wagon with Vincent Trenslow's group of 8. Day 1: rune tortoise in the paddies, PASSED. Day 2: watched Jason's bark lurker; declined the trap weaver notice (correct call: no one). Day 3: thorny-tongue frog (extra, not pass/fail). Day 5: marsh wyrm, graded, complete. Day 7: back in Greenstone; PASSED, badge to be issued at the Society tomorrow.",
+      "status": "COMPLETE"
+    }
+  ],
+  "abilities": [
+    {
+      "tag": "Lightning · Special · Movement",
+      "name": "Arc Step",
+      "rank": "Iron 0",
+      "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Costs 40% mana and 20% stamina per use. Cannot carry passengers.",
+      "progress": 5
+    },
+    {
+      "tag": "Star · Special · Mark",
+      "name": "Star Mark",
+      "rank": "Iron 0",
+      "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 1 km at Normal 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown.",
+      "progress": 0
+    },
+    {
+      "tag": "Wind · Special · Defense",
+      "name": "Windward Veil",
+      "rank": "Iron 0",
+      "detail": "A shell of swirling wind wraps around you, deflecting projectiles and blunting incoming blows. Stronger while you are moving. Cost: 10% mana to raise, then 3% mana per minute while active.",
+      "progress": 0
+    },
+    {
+      "tag": "Comet · Special · Attack",
+      "name": "Comet Strike",
+      "rank": "Iron 0",
+      "detail": "Your weapon or fist ignites with a white-gold comet trail. The strike hits harder the more you moved just before it and leaves a burning wound that deals damage over time. Cost: 15% mana + 5% stamina per strike. Cooldown 10 seconds.",
+      "progress": 0
+    },
+    {
+      "tag": "Star · Spell · Healing, Support",
+      "name": "Moonwell",
+      "rank": "Iron 0",
+      "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow.",
+      "progress": 0
+    }
+  ],
+  "abilityMeta": {
+    "slotsLabel": "LIGHTNING 1/5 · STAR 2/5 · WIND 1/5 · COMET 1/5 AWAKENED",
+    "racialLabel": "RACIAL (OUTWORLDER)"
+  },
+  "achievements": [
+    {
+      "name": "Guardian Down. Guardian Up.",
+      "detail": "Get struck by lightning from the inside. Voluntarily."
+    },
+    {
+      "name": "Stuck the Landing (Mostly)",
+      "detail": "Use Arc Step for the first time without falling over. Knees don't count."
+    },
+    {
+      "name": "What's in a Name?",
+      "detail": "Name your System. It will remember this kindness. And everything else."
+    },
+    {
+      "name": "Bait and Switch",
+      "detail": "Use yourself as bait to lead a shab into someone else's leeches."
+    }
+  ],
+  "essenceNotes": [
+    {
+      "tag": "NON-CANON",
+      "name": "Comet",
+      "detail": "Confluence of Lightning + Star + Wind (invented, non-canon; locked). Streaking high-speed movement, burning trails, impact landings. Claimed on the roof garden; Nate reached iron rank."
+    },
+    {
+      "name": "Still needed",
+      "detail": "A perception power and an aura ability, which every adventurer should have. These can come naturally."
+    }
+  ]
 }

@@ -1,0 +1,499 @@
+{
+  "rev": "2026-11-14-j-first-kill",
+  "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
+  "identity": {
+    "kicker": "AETHER SYSTEM · OUTWORLDER",
+    "name": "Nate Maray",
+    "rank": "Normal rank",
+    "essenceLine": "1 of 4 essences",
+    "asOf": "Morning of day 2 in Greenstone",
+    "slots": [
+      { "title": "Lightning", "mark": "ϟ", "filled": true },
+      { "title": "Empty slot", "mark": "", "filled": false },
+      { "title": "Empty slot", "mark": "", "filled": false },
+      { "title": "Empty slot", "mark": "", "filled": false }
+    ]
+  },
+  "vitals": [
+    { "label": "HEALTH", "pct": 92, "note": "Brick to the cheek, scabbed shin", "tone": "health" },
+    { "label": "MANA", "pct": 70, "note": "Arc Step, twice", "tone": "mana" },
+    { "label": "STAMINA", "pct": 78, "note": "Charge and swings", "tone": "stamina" }
+  ],
+  "coins": "4 iron · 195 lesser",
+  "location": "Nest chamber, tannery culvert, Old City",
+  "next": "Tannery pest job",
+  "abilities": [
+    {
+      "name": "Arc Step",
+      "tag": "Lightning · Special · Movement",
+      "rank": "Iron 0",
+      "progress": 3,
+      "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Costs about 40% mana and 20% stamina. Cannot carry passengers."
+    }
+  ],
+  "abilityMeta": {
+    "slotsLabel": "LIGHTNING SLOTS: 1 OF 5 AWAKENED",
+    "racialLabel": "RACIAL (OUTWORLDER)"
+  },
+  "racial": [
+    { "name": "Momentum Affinity", "detail": "Increased resistance to movement-restricting effects. Movement abilities have increased effect. Attacks made while moving deal increased damage. Does not add raw speed." },
+    { "name": "Unknown Variable", "detail": "Language adaptation. Can absorb essences, awakening stones, and skill books. Immune to identification and tracking." },
+    { "name": "Heads-Up Display", "detail": "Floating, thought-controlled screens." },
+    { "name": "Mission Log", "detail": "Receives missions with rewards." },
+    { "name": "Pocket Space", "detail": "40-slot storage plus a coin counter. Only Nate can access it." },
+    { "name": "Star Chart", "detail": "Reveals the area as he explores." }
+  ],
+  "missions": [
+    { "name": "Something in the Pipe", "status": "ACTIVE", "filler": true, "kind": "JOB", "detail": "Track down the creature raiding the tannery's drying racks and deal with it. Reward pending." },
+    { "name": "Beneath the Old City", "status": "ACTIVE", "filler": true, "kind": "SYSTEM", "detail": "Find out what has made a home in the drains under Greenstone and where it nests. Reward pending." },
+    { "name": "Warehouse Pests", "status": "COMPLETE", "filler": true, "kind": "JOB", "detail": "Complete: paid 60 lesser, looted 9 lesser + 1 pelt." },
+    { "name": "Rumour", "status": "RUMOUR", "filler": false, "detail": "Rumour: shimmering scaled creature surfacing near the Island reefs at dusk. Hide merchant pays iron. Gary says no." },
+    { "name": "Cellar Dwellers", "status": "ACTIVE", "filler": true, "detail": "Wet Barrel tavern, Old City docks. One ratling escaped down a burrow, now bricked up. Mags expects you back once you're a real adventurer." },
+    { "name": "Floorboard Feeders", "status": "COMPLETE", "filler": true, "detail": "Warehouse 9, Verdant Fields. Three mist eels cleared." },
+    { "name": "Shell Shock", "status": "COMPLETE", "filler": false, "detail": "Channel fight. Reward: 1 Water Quintessence." },
+    { "name": "Plumbing Problem", "status": "COMPLETE", "filler": false, "detail": "Waterfall shab. Reward: 5 iron spirit coins." },
+    { "name": "The Evil Pit of Evil", "status": "COMPLETE", "filler": false, "detail": "Survive the ritual. Reward: Lightning Essence." },
+    { "name": "Stranger in a Strange Land", "status": "COMPLETE", "filler": false, "detail": "Explore the estate grounds. Reward: Simple Pants." }
+  ],
+  "status": {
+    "missionNames": ["Something in the Pipe", "Beneath the Old City"],
+    "log": [
+      { "title": "Night in Old City", "detail": "Took the Cellar Dwellers job, killed two ratlings, ran home testing momentum, and crashed in room 32." },
+      { "title": "Greenstone", "detail": "1 iron Island permit, tracking stone touched. Room 32 at Sailor's Watch for 2 nights. Registered at the Adventure Society with Albert; intake tomorrow morning. Window-shopped essences." },
+      { "title": "Barge and delta", "detail": "Sailed all night, meditating. Pitched the momentum hammer to Gary. Jason left at the delta; Nate stayed with the team." },
+      { "title": "Verdant Fields", "detail": "Hostel night, Floorboard Feeders filler, compass pointed upstream." },
+      { "title": "The road", "detail": "Fruit wagon, walled town cottage, Cascade rolled, flower brothers, earth elemental lesson." }
+    ]
+  },
+  "essences": [
+    { "name": "Lightning", "state": "Absorbed" },
+    { "name": "Empty", "state": "Tentative: Star" },
+    { "name": "Empty", "state": "Tentative: Spider" },
+    { "name": "Confluence", "state": "Cascade if Lightning + Star + Spider" }
+  ],
+  "essenceNotes": [
+    { "name": "Cascade (invented confluence)", "tag": "NON-CANON", "detail": "Chaining effects that spread from one target to the next. Locked for Lightning + Star + Spider; specific abilities roll on absorption. Only Lightning is locked in; other picks can still change." },
+    { "name": "Still needed", "detail": "A perception power and an aura ability, which every adventurer should have. These can come naturally." }
+  ],
+  "achievements": [
+    { "name": "Guardian Down. Guardian Up.", "detail": "Get struck by lightning from the inside. Voluntarily." },
+    { "name": "Stuck the Landing (Mostly)", "detail": "Use Arc Step for the first time without falling over. Knees don't count." },
+    { "name": "What's in a Name?", "detail": "Name your System. It will remember this kindness. And everything else." },
+    { "name": "Bait and Switch", "detail": "Use yourself as bait to lead a shab into someone else's leeches." }
+  ],
+  "profile": [
+    { "label": "Age", "value": "23" },
+    { "label": "From", "value": "Texas, Earth" },
+    { "label": "Job on Earth", "value": "Behavior therapist" },
+    { "label": "Build", "value": "6'2\", tall and lean, completely hairless" },
+    { "label": "Eyes", "value": "Blue-gray" },
+    { "label": "Gear", "value": "Simple pants, worn boots, linen shirt, hooded gray travel cloak" },
+    { "label": "Allies", "value": "Jason, Rufus, Farrah, Gary" },
+    { "label": "Hostile", "value": "Anisa Lasalle" },
+    { "label": "Role goal", "value": "Mobile heavy hitter with battlefield control" },
+    { "label": "Gary's hammer", "value": "Returning lightning hammer once Nate is iron rank and brings coin plus materials" },
+    { "label": "System", "value": "Aether, a talking interface. Narrates fixed rewards, speaks sparingly, cannot see Jason's interface." }
+  ],
+  "gear": {
+    "pocketSlots": 40,
+    "borrowed": ["Foreman's lamp", "Tanner's lantern"],
+    "emptyLabels": {
+      "Head": "empty",
+      "Armour": "none",
+      "Body": "empty",
+      "Back": "empty",
+      "Main hand": "empty",
+      "Off hand": "empty",
+      "Belt / sheath": "empty"
+    },
+    "equipTargets": {
+      "War Hammer": ["Main hand", "Off hand"],
+      "Fighting Knife": ["Belt / sheath", "Off hand", "Main hand"],
+      "Kitchen knife": ["Belt / sheath", "Off hand", "Main hand"],
+      "Leather travel pack": ["Back"],
+      "Travel clothes": ["Body"],
+      "Spare clothes": ["Body"]
+    },
+    "doll": [
+      ["", "Head", ""],
+      ["Back", "Body", "Armour"],
+      ["Main hand", "Belt / sheath", "Off hand"]
+    ],
+    "pocket": [
+      { "name": "Astral Compass Shard", "qty": "", "note": "Transcendent, legendary. Points upstream toward the Mistrun source aperture. Keep hidden." },
+      { "name": "Water Quintessence", "qty": "x10", "note": "" },
+      { "name": "Coin pouch", "qty": "", "note": "4 iron, 195 lesser" },
+      { "name": "Kitchen knife", "qty": "", "note": "Retired from fighting." },
+      { "name": "Vane ledger", "qty": "", "note": "Evidence of cellar deliveries. Gary warned not to sell it; show it to Rufus." },
+      { "name": "Iron blood quintessence", "qty": "", "note": "Leftover from the manor" },
+      { "name": "Waterskins", "qty": "x2", "note": "Full" },
+      { "name": "Spare clothes", "qty": "", "note": "A bit short" }
+    ],
+    "equipped": [
+      { "slot": "Head", "name": "", "empty": "empty", "note": "", "qty": "" },
+      { "slot": "Armour", "name": "", "empty": "none", "note": "", "qty": "" },
+      { "slot": "Body", "name": "Travel clothes", "empty": "", "note": "Simple pants, worn boots, linen shirt, hooded gray travel cloak", "qty": "" },
+      { "slot": "Back", "name": "Leather travel pack", "empty": "", "note": "", "qty": "" },
+      { "slot": "Main hand", "name": "War Hammer", "empty": "", "note": "One-handed, flat face and spike. Picked by Gary, 12 iron.", "qty": "" },
+      { "slot": "Off hand", "name": "Tanner's lantern", "empty": "", "note": "Borrowed from the tanner. Not Nate's.", "qty": "" },
+      { "slot": "Belt / sheath", "name": "Fighting Knife", "empty": "", "note": "Single-edged, sheathed. For close work and skinning.", "qty": "" }
+    ],
+    "defaultLoadouts": [
+      {
+        "name": "Combat",
+        "equipped": [
+          { "slot": "Head", "name": "", "empty": "empty", "note": "", "qty": "" },
+          { "slot": "Armour", "name": "", "empty": "none", "note": "", "qty": "" },
+          { "slot": "Body", "name": "Travel clothes", "empty": "", "note": "Simple pants, worn boots, linen shirt, hooded gray travel cloak", "qty": "" },
+          { "slot": "Back", "name": "Leather travel pack", "empty": "", "note": "", "qty": "" },
+          { "slot": "Main hand", "name": "War Hammer", "empty": "", "note": "One-handed, flat face and spike. Picked by Gary, 12 iron.", "qty": "" },
+          { "slot": "Off hand", "name": "", "empty": "empty", "note": "", "qty": "" },
+          { "slot": "Belt / sheath", "name": "Fighting Knife", "empty": "", "note": "Single-edged, sheathed. For close work and skinning.", "qty": "" }
+        ]
+      },
+      {
+        "name": "Travel",
+        "equipped": [
+          { "slot": "Head", "name": "", "empty": "empty", "note": "", "qty": "" },
+          { "slot": "Armour", "name": "", "empty": "none", "note": "", "qty": "" },
+          { "slot": "Body", "name": "Travel clothes", "empty": "", "note": "Simple pants, worn boots, linen shirt, hooded gray travel cloak", "qty": "" },
+          { "slot": "Back", "name": "Leather travel pack", "empty": "", "note": "", "qty": "" },
+          { "slot": "Main hand", "name": "", "empty": "empty", "note": "", "qty": "" },
+          { "slot": "Off hand", "name": "", "empty": "empty", "note": "", "qty": "" },
+          { "slot": "Belt / sheath", "name": "Fighting Knife", "empty": "", "note": "Single-edged, sheathed. For close work and skinning.", "qty": "" }
+        ]
+      }
+    ]
+  },
+  "map": {
+    "world": {
+      "viewBox": [1000, 1044],
+      "land": "M1017.1,-234.2 L1002.4,-204.9 L968.3,-170.7 L963.4,-141.5 L939.0,-92.7 L939.0,-68.3 L948.8,-58.5 L953.7,29.3 L973.2,53.7 L973.2,165.9 L941.5,217.1 L892.7,241.5 L826.8,312.2 L836.6,356.1 L831.7,429.3 L768.3,473.2 L768.3,512.2 L753.7,551.3 L643.9,675.7 L580.5,700.1 L522.0,700.1 L482.9,714.7 L465.9,712.3 L441.5,673.2 L451.2,639.1 L426.8,590.3 L422.0,556.1 L392.7,512.2 L387.8,448.8 L378.0,429.3 L378.0,365.9 L324.4,253.7 L324.4,190.3 L343.9,122.0 L368.3,92.7 L373.2,48.8 L358.5,19.5 L363.4,-19.5 L343.9,-68.3 L343.9,-97.6 L275.6,-190.3 L265.9,-234.2 Z",
+      "region": "M453.7,553.7 L429.3,534.2 L409.8,539.1 L392.7,512.2 L378.0,424.4 L382.9,380.5 L324.4,253.7 L326.8,231.7 L356.1,226.9 L375.6,241.5 L468.3,241.5 L519.5,258.6 L519.5,351.3 L495.1,370.8 L485.4,536.6 L453.7,553.7 Z",
+      "river": "M 575 425 C 545 415 520 405 495 400 C 470 396 455 395 430 393 C 415 392 395 390 382 390",
+      "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14",
+      "fog": { "placeRadius": 54, "riverWidth": 56, "routeWidth": 70, "overlay": 0.72 },
+      "hereLabel": "YOU ARE HERE",
+      "caption": "The coastline and Greenstone region follow the world map of Pallimustus. The dashed line is the route you've travelled. Only places you've been are revealed; everything else is fogged. River stops are a Star Chart sketch, not to scale.",
+      "places": [
+        { "name": "Vane estate", "x": 505, "y": 270, "anchor": "end", "dx": -10, "dy": -4 },
+        { "name": "Waterfall", "x": 498, "y": 308, "anchor": "start", "dx": 12, "dy": 5 },
+        { "name": "Quarry village", "x": 492, "y": 348, "anchor": "start", "dx": 12, "dy": 5 },
+        { "name": "South trail", "x": 488, "y": 375, "anchor": "end", "dx": -12, "dy": 4 },
+        { "name": "Walled marble town", "x": 488, "y": 418, "anchor": "start", "dx": 12, "dy": 16 },
+        { "name": "Rock outcroppings", "x": 478, "y": 455, "anchor": "start", "dx": 12, "dy": 20 },
+        { "name": "Pond-aperture village", "x": 498, "y": 438, "anchor": "start", "dx": 12, "dy": 5 },
+        { "name": "Verdant Fields", "x": 495, "y": 400, "anchor": "start", "dx": 12, "dy": -8 },
+        { "name": "Aqueduct", "x": 455, "y": 395, "anchor": "middle", "dx": 0, "dy": -12 },
+        { "name": "Mistrun Delta", "x": 415, "y": 392, "anchor": "middle", "dx": 0, "dy": 24 },
+        { "name": "Greenstone: Old City", "x": 382, "y": 390, "anchor": "middle", "dx": 0, "dy": 28, "current": true },
+        { "name": "The Island", "x": 330, "y": 375, "anchor": "end", "dx": -12, "dy": -6 }
+      ],
+      "route": [
+        { "x": 505, "y": 270 },
+        { "x": 498, "y": 308 },
+        { "x": 492, "y": 348 },
+        { "x": 488, "y": 375 },
+        { "x": 488, "y": 418 },
+        { "x": 478, "y": 455 },
+        { "x": 498, "y": 438 },
+        { "x": 495, "y": 400 },
+        { "x": 455, "y": 395 },
+        { "x": 415, "y": 392 },
+        { "x": 382, "y": 390 },
+        { "x": 330, "y": 375 }
+      ],
+      "labels": [
+        { "text": "Ocean", "x": 200, "y": 720, "size": 14, "italic": true, "tone": "water" },
+        { "text": "Desert", "x": 500, "y": 330, "size": 12, "italic": true, "tone": "muted" },
+        { "text": "Mistrun River", "x": 430, "y": 376, "size": 12, "italic": true, "tone": "muted" },
+        { "text": "Upstream, unmapped → the compass points this way", "x": 580, "y": 430, "size": 12, "tone": "water" },
+        { "text": "Greenstone region of Pallimustus · coast after the world map · N ↑", "x": 20, "y": 1028, "size": 11, "tone": "water" }
+      ]
+    },
+    "town": {
+      "viewBox": [1000, 720],
+      "island": "M70,50 C50,140 55,250 65,360 C70,470 60,560 90,630 C130,690 220,705 310,680 C370,660 410,600 425,520 L435,400 428,280 415,160 390,80 C350,40 220,30 140,40 C100,45 80,45 70,50 Z",
+      "oldCity": "M615,90 C600,150 588,230 585,310 C584,390 590,480 610,560 C630,630 680,685 760,700 C850,715 940,690 970,620 C995,540 990,420 980,300 C970,180 950,100 880,80 C790,60 700,70 615,90 Z",
+      "river": "M1000,430 C940,415 880,430 820,470 C760,510 700,545 620,555",
+      "districts": [
+        { "name": "Guild district", "d": "M95,70 L300,70 L320,160 L310,300 L160,310 L95,240 Z", "tone": "guild" },
+        { "name": "Warehouse district", "d": "M600,180 L720,175 L735,280 L700,320 L598,310 Z", "tone": "work" },
+        { "name": "Harbour / docks", "d": "M590,320 L700,330 L710,470 L600,480 Z", "tone": "work" },
+        { "name": "Old City market", "d": "M740,250 L840,245 L850,340 L745,345 Z", "tone": "market" }
+      ],
+      "bridge": { "x1": 428, "x2": 610, "cx": 525, "lift": 22 },
+      "bridges": [
+        { "y": 150, "used": false },
+        { "y": 268, "used": true },
+        { "y": 400, "used": false },
+        { "y": 530, "used": false }
+      ],
+      "blocks": [
+        { "x": 145, "y": 150, "w": 28, "h": 20 },
+        { "x": 155, "y": 200, "w": 32, "h": 22 },
+        { "x": 280, "y": 120, "w": 30, "h": 24 },
+        { "x": 170, "y": 255, "w": 22, "h": 18 },
+        { "x": 620, "y": 200, "w": 24, "h": 18 },
+        { "x": 690, "y": 200, "w": 30, "h": 20 },
+        { "x": 705, "y": 260, "w": 22, "h": 16 },
+        { "x": 630, "y": 300, "w": 28, "h": 20 },
+        { "x": 660, "y": 340, "w": 26, "h": 18 },
+        { "x": 700, "y": 360, "w": 32, "h": 22 },
+        { "x": 750, "y": 260, "w": 24, "h": 16 },
+        { "x": 820, "y": 270, "w": 28, "h": 20 },
+        { "x": 810, "y": 310, "w": 22, "h": 18 },
+        { "x": 760, "y": 320, "w": 26, "h": 16 }
+      ],
+      "buildings": [
+        { "name": "Sailor's Watch", "x": 108, "y": 108, "w": 36, "h": 26 },
+        { "name": "Adventure Society", "x": 200, "y": 160, "w": 70, "h": 48 },
+        { "name": "Adventure Society exchange", "x": 248, "y": 198, "w": 32, "h": 20 },
+        { "name": "Weapon shop", "x": 188, "y": 232, "w": 34, "h": 24 },
+        { "name": "Transit station", "x": 240, "y": 258, "w": 44, "h": 26 },
+        { "name": "Island permit booth", "x": 438, "y": 256, "w": 14, "h": 18 },
+        { "name": "Old City permit booth", "x": 582, "y": 256, "w": 14, "h": 18 },
+        { "name": "Foreman's warehouse", "x": 638, "y": 210, "w": 52, "h": 34 },
+        { "name": "Grain cellar", "x": 650, "y": 244, "w": 28, "h": 16 },
+        { "name": "Wet Barrel tavern", "x": 622, "y": 400, "w": 36, "h": 26 },
+        { "name": "Hide merchant's stall", "x": 772, "y": 282, "w": 26, "h": 18 },
+        { "name": "Tannery", "x": 648, "y": 588, "w": 44, "h": 30 }
+      ],
+      "labels": [
+        { "name": "The Island", "x": 150, "y": 340, "anchor": "middle", "dx": 0, "dy": 0 },
+        { "name": "Guild district", "x": 200, "y": 86, "anchor": "middle", "dx": 0, "dy": 0 },
+        { "name": "Sailor's Watch", "x": 126, "y": 108, "anchor": "start", "dx": 22, "dy": -8 },
+        { "name": "Adventure Society", "x": 235, "y": 155, "anchor": "middle", "dx": 0, "dy": -10 },
+        { "name": "Weapon shop", "x": 205, "y": 244, "anchor": "start", "dx": 22, "dy": 16 },
+        { "name": "Transit station", "x": 262, "y": 272, "anchor": "start", "dx": 28, "dy": 18 },
+        { "name": "Island bridge", "x": 520, "y": 268, "anchor": "middle", "dx": 0, "dy": -22 },
+        { "name": "Permit booths", "x": 595, "y": 268, "anchor": "start", "dx": 8, "dy": -16 },
+        { "name": "Old City", "x": 820, "y": 255, "anchor": "middle", "dx": 0, "dy": 0 },
+        { "name": "Warehouse district", "x": 670, "y": 188, "anchor": "middle", "dx": 0, "dy": -14 },
+        { "name": "Foreman's warehouse", "x": 664, "y": 228, "anchor": "start", "dx": 30, "dy": -6 },
+        { "name": "Grain cellar", "x": 664, "y": 255, "anchor": "start", "dx": 28, "dy": 12 },
+        { "name": "Alley", "x": 708, "y": 238, "anchor": "start", "dx": 16, "dy": -10 },
+        { "name": "Harbour / docks", "x": 650, "y": 370, "anchor": "start", "dx": 24, "dy": 0 },
+        { "name": "Wet Barrel tavern", "x": 640, "y": 418, "anchor": "start", "dx": 24, "dy": 16 },
+        { "name": "Old City market", "x": 790, "y": 300, "anchor": "middle", "dx": 0, "dy": -20 },
+        { "name": "Hide merchant's stall", "x": 790, "y": 300, "anchor": "start", "dx": 22, "dy": 22 },
+        { "name": "Adventure Society exchange", "x": 278, "y": 214, "anchor": "start", "dx": 18, "dy": 16 },
+        { "name": "Tannery", "x": 665, "y": 605, "anchor": "middle", "dx": 0, "dy": -18, "current": true }
+      ],
+      "route": [
+        { "x": 126, "y": 121 },
+        { "x": 180, "y": 200 },
+        { "x": 250, "y": 268 },
+        { "x": 420, "y": 268 },
+        { "x": 520, "y": 262 },
+        { "x": 600, "y": 268 },
+        { "x": 655, "y": 228 },
+        { "x": 708, "y": 238 },
+        { "x": 790, "y": 300 },
+        { "x": 708, "y": 250 },
+        { "x": 600, "y": 268 },
+        { "x": 520, "y": 262 },
+        { "x": 420, "y": 268 },
+        { "x": 300, "y": 220 },
+        { "x": 278, "y": 214 },
+        { "x": 300, "y": 220 },
+        { "x": 420, "y": 268 },
+        { "x": 520, "y": 262 },
+        { "x": 600, "y": 280 },
+        { "x": 620, "y": 400 },
+        { "x": 640, "y": 500 },
+        { "x": 665, "y": 605 }
+      ],
+      "reveal": [
+        { "x": 150, "y": 90, "r": 85 },
+        { "x": 210, "y": 190, "r": 115 },
+        { "x": 250, "y": 270, "r": 55 },
+        { "x": 205, "y": 244, "r": 40 },
+        { "x": 425, "y": 268, "r": 50 },
+        { "x": 520, "y": 260, "r": 85 },
+        { "x": 605, "y": 268, "r": 55 },
+        { "x": 655, "y": 230, "r": 75 },
+        { "x": 710, "y": 240, "r": 40 },
+        { "x": 790, "y": 300, "r": 75 },
+        { "x": 640, "y": 360, "r": 75 },
+        { "x": 640, "y": 418, "r": 45 },
+        { "x": 150, "y": 330, "r": 55 },
+        { "x": 520, "y": 150, "r": 28 },
+        { "x": 520, "y": 400, "r": 28 },
+        { "x": 520, "y": 530, "r": 28 },
+        { "x": 665, "y": 605, "r": 75 }
+      ],
+      "labelsStatic": [
+        { "text": "Mistrun River", "x": 920, "y": 400, "anchor": "end", "size": 11, "italic": true, "tone": "water" },
+        { "text": "Ocean", "x": 40, "y": 200, "size": 13, "italic": true, "tone": "water" },
+        { "text": "Greenstone · Old City and the Island · N ↑", "x": 80, "y": 700, "size": 11, "tone": "water" }
+      ],
+      "hereLabel": "YOU ARE HERE",
+      "caption": "Only districts and buildings you've seen are shown; everything else is fogged. The dashed line is today's route.",
+      "fogOverlay": 0.72
+    },
+    "battle": {
+      "title": "Nest chamber, tannery culvert",
+      "note": "Past the bend, in the nest chamber. The injured adult is dead at your feet, skull crushed by the hammer. The leader and a second adult are charging side by side down the tunnel. The young one hangs back at the bend, hissing. Three blind pups wail in the nest.",
+      "width": 600,
+      "height": 420,
+      "tunnel": {
+        "d": "M 370 8 L 370 145 Q 370 205 300 220 Q 220 236 188 275",
+        "wall": 118,
+        "floor": 74
+      },
+      "chamber": { "x": 152, "y": 318, "rx": 130, "ry": 82 },
+      "nest": { "x": 158, "y": 356, "label": "nest of hides and bone" },
+      "daylight": { "x": 370, "y": 6 },
+      "reeds": [
+        { "x": 300, "y": 34 },
+        { "x": 440, "y": 30 },
+        { "x": 468, "y": 46 },
+        { "x": 276, "y": 48 }
+      ],
+      "extras": [
+        { "type": "ellipse", "cx": 370, "cy": 0, "rx": 170, "ry": 48, "fill": "water", "opacity": 0.4 }
+      ],
+      "labels": [
+        { "text": "daylight", "x": 458, "y": 28, "size": 12, "tone": "muted" },
+        { "text": "culvert mouth", "x": 458, "y": 46, "size": 11, "tone": "muted" },
+        { "text": "the bend", "x": 248, "y": 168, "size": 12, "tone": "muted" },
+        { "text": "nest chamber", "x": 28, "y": 248, "size": 12, "tone": "muted" }
+      ],
+      "lamp": { "x": 128, "y": 300, "r": 160 },
+      "reveal": [
+        { "type": "ellipse", "cx": 152, "cy": 318, "rx": 175, "ry": 125 },
+        { "type": "stroke", "d": "M 370 0 L 370 145 Q 370 205 300 220 Q 220 236 188 275", "width": 160 }
+      ],
+      "fogOverlay": 0.62,
+      "player": { "x": 145, "y": 292, "label": "Nate" },
+      "lantern": { "x": 108, "y": 312, "label": "Lantern" },
+      "compass": "N ↑",
+      "enemies": [
+        {
+          "id": "young",
+          "name": "Pipe beast, young",
+          "size": "Smaller than the adults, long and low",
+          "rank": "Unknown",
+          "type": "Beast. Young. Long and low, pointed snout, gray-brown fur.",
+          "status": "Hanging back at the bend, hissing.",
+          "x": 338,
+          "y": 162,
+          "tone": "warning",
+          "marker": "!",
+          "facing": "player",
+          "mapLabel": "Young",
+          "labelX": 400,
+          "labelY": 150
+        },
+        {
+          "id": "injured",
+          "name": "Pipe beast, injured",
+          "size": "Big-dog sized, long and low",
+          "rank": "Unknown",
+          "type": "Beast. Long and low, pointed snout, gray-brown fur.",
+          "status": "Dead. Hammer blow to the skull.",
+          "x": 188,
+          "y": 274,
+          "tone": "dead",
+          "marker": "×",
+          "mapLabel": "Dead",
+          "labelX": 214,
+          "labelY": 262
+        },
+        {
+          "id": "adult",
+          "name": "Pipe beast",
+          "size": "Big-dog sized, long and low",
+          "rank": "Unknown",
+          "type": "Beast. Long and low, pointed snout, gray-brown fur.",
+          "status": "Hostile. Charging side by side with the leader.",
+          "x": 286,
+          "y": 208,
+          "tone": "hostile",
+          "marker": "!",
+          "facing": "player",
+          "mapLabel": "Adult",
+          "labelX": 340,
+          "labelY": 196
+        },
+        {
+          "id": "leader",
+          "name": "Pipe beast, leader",
+          "size": "Big-dog sized, long and low",
+          "rank": "Unknown",
+          "type": "Beast. Long body, pointed snout, torn ears, four clawed toes, gray-brown fur.",
+          "status": "Hostile. Charging side by side with the other adult.",
+          "x": 236,
+          "y": 224,
+          "tone": "hostile",
+          "marker": "!",
+          "facing": "player",
+          "mapLabel": "Leader",
+          "labelX": 176,
+          "labelY": 210
+        },
+        {
+          "id": "pup-1",
+          "name": "Blind pup",
+          "size": "Small, newborn",
+          "rank": "Unknown",
+          "type": "Beast pup. Blind, mewling, in a nest of shredded hides and bones.",
+          "status": "Non-hostile. Wailing in the nest.",
+          "x": 128,
+          "y": 348,
+          "r": 7,
+          "tone": "neutral",
+          "marker": "·",
+          "mapLabel": ""
+        },
+        {
+          "id": "pup-2",
+          "name": "Blind pup",
+          "size": "Small, newborn",
+          "rank": "Unknown",
+          "type": "Beast pup. Blind, mewling, in a nest of shredded hides and bones.",
+          "status": "Non-hostile. Wailing in the nest.",
+          "x": 160,
+          "y": 368,
+          "r": 7,
+          "tone": "neutral",
+          "marker": "·",
+          "mapLabel": ""
+        },
+        {
+          "id": "pup-3",
+          "name": "Blind pup",
+          "size": "Small, newborn",
+          "rank": "Unknown",
+          "type": "Beast pup. Blind, mewling, in a nest of shredded hides and bones.",
+          "status": "Non-hostile. Wailing in the nest.",
+          "x": 190,
+          "y": 344,
+          "r": 7,
+          "tone": "neutral",
+          "marker": "·",
+          "mapLabel": ""
+        }
+      ]
+    },
+    "charted": [
+      { "region": "Vane estate", "place": "Estate grounds and manor", "seen": "Grounds explored for Stranger in a Strange Land; manor rooms and the cellar with the ritual pit." },
+      { "region": "The mountain", "place": "Mountain path and waterfall", "seen": "Path down from the estate; the waterfall pool where the first shab was fought." },
+      { "region": "Quarry village", "place": "Village, inn, and channel", "seen": "Streets, the inn and its courtyard, and the water channel from the Shell Shock fight." },
+      { "region": "The road", "place": "South trail", "seen": "The trail south toward the river, where the fruit wagon threw a wheel." },
+      { "region": "The road", "place": "Walled marble town", "seen": "Gate, square, and the free stone cottage." },
+      { "region": "The road", "place": "Rock outcroppings", "seen": "Where Jason fought the desert maw spider." },
+      { "region": "The road", "place": "Pond-aperture village", "seen": "The village and its pond aperture; site of the earth elemental fight." },
+      { "region": "Verdant Fields", "place": "River town", "seen": "Docks and the east wharf, Warehouse 9 (Floorboard Feeders), and the teamsters' hostel." },
+      { "region": "Mistrun River", "place": "River by barge", "seen": "The river west, the aqueduct, and the delta at dawn where Jason left." },
+      { "region": "Greenstone", "place": "Old City wharf and bridge", "seen": "The wharf, Old City streets, and the bridge with its permit booths." },
+      { "region": "Greenstone", "place": "The Island", "seen": "Sailor's Watch (room 32, kitchen) and the transit station." },
+      { "region": "Greenstone", "place": "Adventure Society campus", "seen": "Administration lobby, intake waiting room, and intake room." },
+      { "region": "Greenstone", "place": "Wet Barrel tavern", "seen": "Taproom and the cellar from Cellar Dwellers (burrow now bricked up)." },
+      { "region": "Greenstone", "place": "Forge district", "seen": "The street of smithy storefronts and the crossed-blades weapon shop." },
+      { "region": "Greenstone", "place": "Warehouse district cellar", "seen": "Stairs, the front rows of chewed sacks, and most of the back under the lamp. Three ratlings at the back wall." },
+      { "region": "Greenstone", "place": "Tannery culvert", "seen": "Past the bend in a low nest chamber. The injured adult is dead at Nate's feet. The leader and a second adult are charging down the tunnel. A young one hisses at the bend. Three blind pups wail in the nest.", "current": true }
+    ]
+  }
+}

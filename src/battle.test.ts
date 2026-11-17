@@ -21,7 +21,8 @@ function enemy(partial: Partial<Enemy> & Pick<Enemy, "id" | "name" | "tone">): E
 describe("battle archive", () => {
   it("accepts a missing archive and a list of past battles", () => {
     expect(validateSheet(base)).toBeNull();
-    expect(base.map.battleArchive).toBeUndefined();
+    const stripped = { ...base, map: { ...base.map, battleArchive: undefined } };
+    expect(validateSheet(stripped)).toBeNull();
     const withArchive = {
       ...base,
       map: { ...base.map, battleArchive: [base.map.battle, { ...base.map.battle, title: "Earlier fight" }] },
