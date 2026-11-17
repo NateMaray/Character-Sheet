@@ -1,4 +1,5 @@
-import sheet from "../public/data/nate.json";
+import backup from "../public/data/nate.json";
+import sheet from "./fixtures/campaign.json";
 import { describe, expect, it } from "vitest";
 import {
   ACTIONS_KEY,
@@ -42,6 +43,11 @@ function fresh(): GearState {
 }
 
 describe("nate.json", () => {
+  it("published backup validates", () => {
+    expect(validateSheet(backup)).toBeNull();
+    expect(backup.rev.length).toBeGreaterThan(0);
+  });
+
   it("validates and matches the nest-chamber scene", () => {
     expect(validateSheet(sheet)).toBeNull();
     expect(sheet.rev).toBe("2026-11-14-j-first-kill");

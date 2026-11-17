@@ -21,6 +21,7 @@ export function App() {
   const [syncedAt, setSyncedAt] = useState<Date | null>(null);
   const [connected, setConnected] = useState(false);
   const [fallback, setFallback] = useState(false);
+  const [loadError, setLoadError] = useState("");
   const [pulsing, setPulsing] = useState<string[]>([]);
   const [actions, setActions] = useState<PocketAction[]>(() => readPocketActions());
   const gearRef = useRef<GearState | null>(null);
@@ -102,9 +103,11 @@ export function App() {
     try {
       let data: SheetData;
       let fromBackup = false;
+      let backupReason = "";
       try {
         data = await fetchRemoteSheet();
-      } catch {
+      } catch (err) {
+        backupReason = err instanceof Error ? err.message : "Supabase request failed.";
         data = await fetchSheet();
         fromBackup = true;
       }
@@ -112,6 +115,7 @@ export function App() {
       applySheet(data);
       pulledAt.current = Date.now();
       setFallback(fromBackup);
+      setLoadError(fromBackup ? backupReason : "");
       if (firstLoad.current) firstLoad.current = false;
       else if (manual) setFlash("Updated");
       return fromBackup ? "fallback" : "live";
@@ -134,6 +138,7 @@ export function App() {
         if (!alive.current || mine !== generation.current) return;
         applySheet(data);
         setFallback(false);
+        setLoadError("");
       },
       (status) => {
         if (!alive.current || mine !== generation.current) return;
@@ -248,6 +253,7 @@ export function App() {
             flash={flash}
             connected={connected}
             fallback={fallback}
+            loadError={loadError}
             pulsing={pulsing}
             onRefresh={() => void refresh()}
           />

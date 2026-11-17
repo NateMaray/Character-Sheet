@@ -291,12 +291,13 @@ function BattleSvg({ map, zoom }: { map: BattleMap; zoom: number }) {
           obstacles.push(estimateLabelBox(map.lantern.label, 11, map.lantern.x - 14, map.lantern.y + 4, "end"));
           obstacles.push({ x: map.lantern.x - 10, y: map.lantern.y - 10, w: 20, h: 20 });
         }
-        return roster.allies.map((ally) => {
+        return roster.allies.flatMap((ally) => {
+          if (typeof ally.x !== "number" || typeof ally.y !== "number") return [];
           const text = ally.label || ally.name;
-          const spot = placeAllyLabel(text, ally, obstacles);
+          const spot = placeAllyLabel(text, { x: ally.x, y: ally.y }, obstacles);
           obstacles.push(estimateLabelBox(text, 12, spot.x, spot.y, spot.anchor));
           return (
-            <g key={ally.id}>
+            <g key={ally.id || ally.name}>
               <polygon
                 points={`${ally.x},${ally.y - 11} ${ally.x + 9},${ally.y} ${ally.x},${ally.y + 11} ${ally.x - 9},${ally.y}`}
                 fill="var(--accent)"

@@ -1,0 +1,67 @@
+name: Sync sheet backup
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: sync-sheet
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Fetch the live row
+        id: sync
+        run: |
+          python3 << 'PY'
+          import json, os, urllib.request
+          url = "https://lnbmhrfzilqzttjxvzak.supabase.co/rest/v1/sheet?id=eq.nate&select=data"
+          key = "sb_publishable_5ihjjt92t7aXYKMiMu8lgg_emNNSURG"
+          req = urllib.request.Request(url, headers={"apikey": key, "Authorization": f"Bearer {key}", "Accept": "application/json"})
+          with urllib.request.urlopen(req, timeout=30) as res:
+              rows = json.load(res)
+          data = rows[0]["data"]
+          rev = str(data.get("rev") or "")
+          if not rev:
+              raise SystemExit("live row has no rev")
+          path = "public/data/nate.json"
+          with open(path, encoding="utf-8") as handle:
+              current = json.load(handle)
+          out = os.environ["GITHUB_OUTPUT"]
+          if current.get("rev") == rev:
+              with open(out, "a", encoding="utf-8") as handle:
+                  handle.write("changed=false\n")
+              print(f"backup already at {rev}")
+          else:
+              with open(path, "w", encoding="utf-8") as handle:
+                  json.dump(data, handle, indent=2, ensure_ascii=False)
+                  handle.write("\n")
+              with open(out, "a", encoding="utf-8") as handle:
+                  handle.write("changed=true\n")
+                  handle.write(f"rev={rev}\n")
+              print(f"backup {current.get('rev')} -> {rev}")
+          PY
+      - name: Commit the new backup
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/nate.json
+          git commit -m "Sync sheet backup to ${{ steps.sync.outputs.rev }}"
+          git push origin HEAD:main
+      - name: Deploy Pages
+        if: steps.sync.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run "Deploy to GitHub Pages" --ref main

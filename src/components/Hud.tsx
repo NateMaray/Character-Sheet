@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Identity, Vital } from "../types";
 
 const TONE: Record<Vital["tone"], string> = {
@@ -18,6 +19,7 @@ export function Hud({
   flash,
   connected,
   fallback,
+  loadError,
   pulsing,
   onRefresh,
 }: {
@@ -32,9 +34,11 @@ export function Hud({
   flash: string;
   connected: boolean;
   fallback: boolean;
+  loadError: string;
   pulsing: string[];
   onRefresh: () => void;
 }) {
+  const [noteOpen, setNoteOpen] = useState(false);
   const synced = syncedAt
     ? `Synced ${syncedAt.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })} · rev ${rev}`
     : `rev ${rev}`;
@@ -71,6 +75,11 @@ export function Hud({
           />
           {synced}
         </div>
+        {fallback && loadError ? (
+          <button type="button" className="live-fail" aria-expanded={noteOpen} onClick={() => setNoteOpen((open) => !open)}>
+            {noteOpen ? `${loadError} Backup rev ${rev}.` : "Backup file. Tap for the error."}
+          </button>
+        ) : null}
       </section>
       <section className="card vitals">
         {vitals.map((vital) => (
