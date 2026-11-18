@@ -3197,7 +3197,7 @@
       }
     ]
   },
-  "rev": "2026-11-18-t553",
+  "rev": "2026-11-18-t559",
   "gear": {
     "doll": [
       [
@@ -3330,6 +3330,12 @@
         "qty": "5",
         "name": "Lesser monster cores",
         "note": "From 5 ratlings (Old City yard)."
+      },
+      {
+        "qty": 1,
+        "name": "Heel of bread (from Mae)",
+        "note": "Wrapped in cloth",
+        "slot": ""
       }
     ],
     "borrowed": [
@@ -3728,7 +3734,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Greenstone, Old City backstreets, old woman's cottage (kitchen). Night, 3 days after the assessment.",
+  "location": "Greenstone, Old City backstreets, outside Mae Corran's cottage. Late night, 3 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -3878,6 +3884,12 @@
       "name": "Crooked notice",
       "detail": "Private job: 5 ratlings killed in an old woman's Old City yard. Nate declined her coins; had stew.",
       "status": "COMPLETE"
+    },
+    {
+      "kind": "PRIVATE JOB",
+      "name": "Dennick's coop digger",
+      "detail": "Bram (Mae's neighbour) asked. Something is digging under Dennick Hale's chicken coop at night. Red barn, crooked weathervane, past the 2nd milestone on Hunter's Road, west gate. Pay: a few iron. Not Society-backed.",
+      "status": "ACTIVE"
     }
   ],
   "abilities": [
