@@ -4,32 +4,12 @@
       "river": "M1000,430 C940,415 880,430 820,470 C760,510 700,545 620,555",
       "route": [
         {
-          "x": 600,
-          "y": 268
+          "x": 248,
+          "y": 198
         },
         {
-          "x": 520,
-          "y": 262
-        },
-        {
-          "x": 420,
-          "y": 268
-        },
-        {
-          "x": 250,
-          "y": 268
-        },
-        {
-          "x": 180,
-          "y": 200
-        },
-        {
-          "x": 126,
-          "y": 121
-        },
-        {
-          "x": 108,
-          "y": 108
+          "x": 200,
+          "y": 160
         }
       ],
       "blocks": [
@@ -855,31 +835,38 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Home for the night. Nate sleeps on the couch.",
-      "title": "Sailor's Watch: Rufus's suite",
+      "note": "Quiet broker floor. Polished counter.",
+      "title": "Trade hall, 3rd floor: Ostrander & Vey",
       "width": 600,
-      "allies": [],
+      "allies": [
+        {
+          "x": 300,
+          "y": 140,
+          "name": "Clerk",
+          "label": "Clerk"
+        }
+      ],
       "extras": [],
       "height": 420,
       "labels": [
         {
           "x": 300,
-          "y": 230,
+          "y": 120,
           "size": 11,
-          "text": "Couch",
+          "text": "Counter",
           "tone": "muted"
         },
         {
           "x": 300,
           "y": 395,
           "size": 10,
-          "text": "Door",
+          "text": "Stairs",
           "tone": "muted"
         }
       ],
       "player": {
         "x": 300,
-        "y": 360,
+        "y": 200,
         "label": "You"
       },
       "reveal": [
@@ -3084,10 +3071,57 @@
         "compass": "N ↑",
         "enemies": [],
         "fogOverlay": 0.1
+      },
+      {
+        "note": "Home for the night. Nate sleeps on the couch.",
+        "title": "Sailor's Watch: Rufus's suite",
+        "width": 600,
+        "allies": [],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 230,
+            "size": 11,
+            "text": "Couch",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 395,
+            "size": 10,
+            "text": "Door",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 360,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 260,
+            "ry": 170,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 260,
+          "ry": 170
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
       }
     ]
   },
-  "rev": "2026-11-17-t473",
+  "rev": "2026-11-17-t508",
   "gear": {
     "doll": [
       [
@@ -3613,8 +3647,20 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Greenstone, the Island, Sailor's Watch, Rufus's suite (couch). Dawn, 3 days after the field assessment ended (about 7 and a half weeks in Greenstone).",
+  "location": "Greenstone, Adventure Society contract floor, one-star board. Morning, 3 days after the assessment.",
   "missions": [
+    {
+      "kind": "SYSTEM",
+      "name": "Hunter's Road",
+      "detail": "Slay one-star monsters 0/15. Reward: 150 iron spirit coins, 2 quintessence, chance at an awakening stone.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Aether back pay (unclaimed)",
+      "detail": "Retroactive mission rewards held in the log, NOT yet claimed: 645 iron spirit coins (Pipe 50, Warehouse 50, Floorboard 50, Thorny frogs 100, Bog Shambler 100, Wetland Cores 50, Field Assessment 200, Plumbing Problem +45), Water Quintessence x2, Awakening Stone of the Sky.",
+      "status": "ACTIVE"
+    },
     {
       "kind": "JOB",
       "name": "North Road Hedgehogs",

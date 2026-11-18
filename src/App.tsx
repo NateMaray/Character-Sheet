@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { RealtimeChannel } from "@supabase/supabase-js";
 import { readGearStore, readPins, readPocketActions, resolveGear, samePocketActions, sanitizePins, togglePin, writeGearStore, writePins, writePocketActions, type GearState, type TabId } from "./gear";
-import { changedVitalLabels, fetchSheet } from "./sheet";
+import { changedVitalLabels, fetchSheet, shouldApplySheet } from "./sheet";
 import { fetchRemoteSheet, openSheetChannel, pushPocketAction, supabase } from "./supabase";
 import type { PocketAction, SheetData } from "./types";
 import { EquipmentTab } from "./components/EquipmentTab";
@@ -97,9 +97,9 @@ export function App() {
     }
   }, [rememberActions]);
 
-  const pull = useCallback(async (manual = false): Promise<"live" | "fallback" | "error"> => {
+  const pull = useCallback(async (manual = false, quiet = false): Promise<"live" | "fallback" | "error"> => {
     const id = ++pullId.current;
-    setRefreshing(true);
+    if (!quiet) setRefreshing(true);
     try {
       let data: SheetData;
       let fromBackup = false;
@@ -112,13 +112,18 @@ export function App() {
         fromBackup = true;
       }
       if (!alive.current || id !== pullId.current) return fromBackup ? "fallback" : "live";
+      const source = fromBackup ? "fallback" : "live";
+      if (!shouldApplySheet(sheetRef.current?.rev ?? null, data.rev, source)) {
+        if (fromBackup) setLoadError(`${backupReason} Kept rev ${sheetRef.current?.rev}; backup rev ${data.rev} is older.`);
+        return source;
+      }
       applySheet(data);
       pulledAt.current = Date.now();
       setFallback(fromBackup);
       setLoadError(fromBackup ? backupReason : "");
       if (firstLoad.current) firstLoad.current = false;
       else if (manual) setFlash("Updated");
-      return fromBackup ? "fallback" : "live";
+      return source;
     } catch (err) {
       if (!alive.current || id !== pullId.current) return "error";
       const message = err instanceof Error ? err.message : "Could not refresh.";
@@ -126,7 +131,7 @@ export function App() {
       setFallback(true);
       return "error";
     } finally {
-      if (alive.current && id === pullId.current) setRefreshing(false);
+      if (!quiet && alive.current && id === pullId.current) setRefreshing(false);
     }
   }, [applySheet]);
 
@@ -136,6 +141,7 @@ export function App() {
     const channel = openSheetChannel(
       (data) => {
         if (!alive.current || mine !== generation.current) return;
+        if (!shouldApplySheet(sheetRef.current?.rev ?? null, data.rev, "live")) return;
         applySheet(data);
         setFallback(false);
         setLoadError("");
@@ -192,12 +198,21 @@ export function App() {
   useEffect(() => {
     const onVisible = () => {
       if (document.visibilityState !== "visible") return;
-      void pull().then(() => {
+      void pull(false, true).then(() => {
         if (alive.current) listen();
       });
     };
+    const onFocus = () => {
+      void pull(false, true);
+    };
     document.addEventListener("visibilitychange", onVisible);
-    return () => document.removeEventListener("visibilitychange", onVisible);
+    window.addEventListener("focus", onFocus);
+    const poll = window.setInterval(() => void pull(false, true), 60_000);
+    return () => {
+      document.removeEventListener("visibilitychange", onVisible);
+      window.removeEventListener("focus", onFocus);
+      window.clearInterval(poll);
+    };
   }, [listen, pull]);
 
   useEffect(() => {

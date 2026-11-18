@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { describeLoadError } from "./supabase";
-import { changedVitalLabels, parseSheet } from "./sheet";
+import { changedVitalLabels, parseSheet, shouldApplySheet } from "./sheet";
 
 describe("changedVitalLabels", () => {
   const before = [
@@ -27,6 +27,17 @@ describe("describeLoadError", () => {
     expect(describeLoadError(new DOMException("The operation was aborted", "AbortError"))).toMatch(/timed out after 10 seconds/);
     expect(describeLoadError(new Error("Supabase HTTP 503"))).toBe("Supabase HTTP 503");
     expect(describeLoadError(new TypeError("Failed to fetch"))).toMatch(/network error/);
+  });
+});
+
+describe("shouldApplySheet", () => {
+  it("lets a newer live rev replace the backup and ignores an older backup", () => {
+    expect(shouldApplySheet(null, "2026-11-17-t393", "fallback")).toBe(true);
+    expect(shouldApplySheet("2026-11-17-t393", "2026-11-17-t508", "live")).toBe(true);
+    expect(shouldApplySheet("2026-11-17-t508", "2026-11-17-t473", "fallback")).toBe(false);
+    expect(shouldApplySheet("2026-11-17-t100", "2026-11-17-t99", "live")).toBe(false);
+    expect(shouldApplySheet("2026-11-17-t508", "2026-11-18-t1", "live")).toBe(true);
+    expect(shouldApplySheet("2026-11-17-t508", "2026-11-17-t508", "fallback")).toBe(true);
   });
 });
 
