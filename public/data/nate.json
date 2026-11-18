@@ -851,10 +851,16 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Ratlings 2 and 3 dead. Marked Ratling 1 is about 15 feet down under the house. Ratlings 4 and 5 are half out of holes by the fence.",
-      "title": "Old City: old woman's yard",
+      "note": "Eating stew at the kitchen table.",
+      "title": "Old City: old woman's cottage",
       "width": 600,
-      "allies": [],
+      "allies": [
+        {
+          "x": 360,
+          "y": 220,
+          "name": "Old woman"
+        }
+      ],
       "extras": [],
       "height": 420,
       "labels": [
@@ -881,8 +887,8 @@
         }
       ],
       "player": {
-        "x": 290,
-        "y": 200,
+        "x": 300,
+        "y": 220,
         "label": "You"
       },
       "reveal": [
@@ -901,23 +907,7 @@
         "ry": 170
       },
       "compass": "N ↑",
-      "enemies": [
-        {
-          "x": 400,
-          "y": 70,
-          "name": "Ratling 1 (Star Mark, under house)"
-        },
-        {
-          "x": 130,
-          "y": 320,
-          "name": "Ratling 4"
-        },
-        {
-          "x": 170,
-          "y": 340,
-          "name": "Ratling 5"
-        }
-      ],
+      "enemies": [],
       "fogOverlay": 0.1
     },
     "charted": [
@@ -3207,7 +3197,7 @@
       }
     ]
   },
-  "rev": "2026-11-18-t544b",
+  "rev": "2026-11-18-t553",
   "gear": {
     "doll": [
       [
@@ -3235,7 +3225,7 @@
       {
         "qty": "",
         "name": "Coin pouch",
-        "note": "912 iron, 507 lesser"
+        "note": "912 iron, 516 lesser"
       },
       {
         "qty": "",
@@ -3311,7 +3301,6 @@
         "qty": "",
         "name": "War Hammer",
         "note": "One-handed, flat face and spike. Picked by Gary, 12 iron.",
-        "slot": "Main hand",
         "empty": ""
       },
       {
@@ -3324,7 +3313,8 @@
       {
         "qty": "",
         "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
+        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style).",
+        "slot": "Main hand"
       },
       {
         "qty": "11",
@@ -3335,6 +3325,11 @@
         "qty": 26,
         "name": "Thorny tongue barbs",
         "note": "From northern ditch frogs"
+      },
+      {
+        "qty": "5",
+        "name": "Lesser monster cores",
+        "note": "From 5 ratlings (Old City yard)."
       }
     ],
     "borrowed": [
@@ -3543,7 +3538,7 @@
   },
   "next": "Pick up the adventurer badge at the Society tomorrow. Celebration dinner. Find an aura-power awakening stone (Farrah may help). Gary's lightning hammer.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "912 iron · 507 lesser",
+  "coins": "912 iron · 516 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3626,18 +3621,18 @@
       "value": 100
     },
     {
-      "pct": 93,
-      "note": "Star Mark 2%, Arc Step 5%",
+      "pct": 78,
+      "note": "Star Mark 2%, Arc Step x4 (5% each)",
       "tone": "mana",
       "label": "MANA",
-      "value": "93%"
+      "value": "78%"
     },
     {
-      "pct": 98,
-      "note": "Running hammer swing",
+      "pct": 94,
+      "note": "Hammer swings",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "98%"
+      "value": "94%"
     }
   ],
   "profile": [
@@ -3733,12 +3728,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Greenstone, Old City backstreets, old woman's yard. Just after dusk, 3 days after the assessment.",
+  "location": "Greenstone, Old City backstreets, old woman's cottage (kitchen). Night, 3 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Hunter's Road",
-      "detail": "Slay one-star monsters 2/15. Reward: 150 iron spirit coins, 2 quintessence, chance at an awakening stone.",
+      "detail": "Slay one-star monsters 5/15. Reward: 150 iron spirit coins, 2 quintessence, chance at an awakening stone.",
       "status": "ACTIVE"
     },
     {
@@ -3881,8 +3876,8 @@
     {
       "kind": "PRIVATE",
       "name": "Crooked notice",
-      "detail": "Private posting, not Society-backed: 'a problem on my property', Old City address. Fresh holes in the yard.",
-      "status": "ACTIVE"
+      "detail": "Private job: 5 ratlings killed in an old woman's Old City yard. Nate declined her coins; had stew.",
+      "status": "COMPLETE"
     }
   ],
   "abilities": [
