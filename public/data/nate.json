@@ -4,12 +4,20 @@
       "river": "M1000,430 C940,415 880,430 820,470 C760,510 700,545 620,555",
       "route": [
         {
-          "x": 248,
-          "y": 198
-        },
-        {
           "x": 200,
           "y": 160
+        },
+        {
+          "x": 180,
+          "y": 140
+        },
+        {
+          "x": 126,
+          "y": 121
+        },
+        {
+          "x": 108,
+          "y": 108
         }
       ],
       "blocks": [
@@ -835,15 +843,24 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Quiet broker floor. Polished counter.",
-      "title": "Trade hall, 3rd floor: Ostrander & Vey",
+      "note": "Farrah on the couch, Gary in the kitchen, Rufus at the table.",
+      "title": "Sailor's Watch: Rufus's suite",
       "width": 600,
       "allies": [
         {
           "x": 300,
-          "y": 140,
-          "name": "Clerk",
-          "label": "Clerk"
+          "y": 230,
+          "name": "Farrah"
+        },
+        {
+          "x": 460,
+          "y": 150,
+          "name": "Gary"
+        },
+        {
+          "x": 160,
+          "y": 150,
+          "name": "Rufus"
         }
       ],
       "extras": [],
@@ -851,22 +868,22 @@
       "labels": [
         {
           "x": 300,
-          "y": 120,
+          "y": 230,
           "size": 11,
-          "text": "Counter",
+          "text": "Couch",
           "tone": "muted"
         },
         {
           "x": 300,
           "y": 395,
           "size": 10,
-          "text": "Stairs",
+          "text": "Door",
           "tone": "muted"
         }
       ],
       "player": {
         "x": 300,
-        "y": 200,
+        "y": 360,
         "label": "You"
       },
       "reveal": [
@@ -3118,10 +3135,64 @@
         "compass": "N ↑",
         "enemies": [],
         "fogOverlay": 0.1
+      },
+      {
+        "note": "Quiet broker floor. Polished counter.",
+        "title": "Trade hall, 3rd floor: Ostrander & Vey",
+        "width": 600,
+        "allies": [
+          {
+            "x": 300,
+            "y": 140,
+            "name": "Clerk",
+            "label": "Clerk"
+          }
+        ],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 120,
+            "size": 11,
+            "text": "Counter",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 395,
+            "size": 10,
+            "text": "Stairs",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 260,
+            "ry": 170,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 260,
+          "ry": 170
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
       }
     ]
   },
-  "rev": "2026-11-17-t508",
+  "rev": "2026-11-17-t521",
   "gear": {
     "doll": [
       [
@@ -3241,7 +3312,7 @@
         "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
       },
       {
-        "qty": "9",
+        "qty": "11",
         "name": "Water Quintessence",
         "note": "From the frogs."
       },
@@ -3457,7 +3528,7 @@
   },
   "next": "Pick up the adventurer badge at the Society tomorrow. Celebration dinner. Find an aura-power awakening stone (Farrah may help). Gary's lightning hammer.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "267 iron · 507 lesser",
+  "coins": "912 iron · 507 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3540,11 +3611,11 @@
       "value": 100
     },
     {
-      "pct": 100,
-      "note": "Full after a night of sleep.",
+      "pct": 90,
+      "note": "Sky Stair 10% (window test).",
       "tone": "mana",
       "label": "MANA",
-      "value": "100%"
+      "value": "90%"
     },
     {
       "pct": 100,
@@ -3647,7 +3718,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Greenstone, Adventure Society contract floor, one-star board. Morning, 3 days after the assessment.",
+  "location": "Greenstone, the Island, Sailor's Watch, Rufus's suite. Morning, 3 days after the assessment. Back pay still unclaimed.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -3657,9 +3728,9 @@
     },
     {
       "kind": "SYSTEM",
-      "name": "Aether back pay (unclaimed)",
-      "detail": "Retroactive mission rewards held in the log, NOT yet claimed: 645 iron spirit coins (Pipe 50, Warehouse 50, Floorboard 50, Thorny frogs 100, Bog Shambler 100, Wetland Cores 50, Field Assessment 200, Plumbing Problem +45), Water Quintessence x2, Awakening Stone of the Sky.",
-      "status": "ACTIVE"
+      "name": "Aether back pay",
+      "detail": "Claimed: 645 iron spirit coins, Water Quintessence x2, Awakening Stone of the Sky.",
+      "status": "COMPLETE"
     },
     {
       "kind": "JOB",
@@ -3810,10 +3881,16 @@
       "rank": "Iron 0",
       "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow.",
       "progress": 0
+    },
+    {
+      "name": "Sky Stair",
+      "rank": "Iron 0",
+      "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost 10% mana, 15 s cooldown. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. On the recorded wind flight-ability list: more steps at bronze, continuous air-walking (flight) at silver.",
+      "progress": 1
     }
   ],
   "abilityMeta": {
-    "slotsLabel": "LIGHTNING 1/5 · STAR 2/5 · WIND 1/5 · COMET 1/5 AWAKENED",
+    "slotsLabel": "LIGHTNING 1/5 · STAR 2/5 · WIND 2/5 · COMET 1/5 AWAKENED",
     "racialLabel": "RACIAL (OUTWORLDER)"
   },
   "achievements": [
