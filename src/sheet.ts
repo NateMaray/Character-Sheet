@@ -87,6 +87,26 @@ export function parseSheet(value: unknown): SheetData {
   return value as SheetData;
 }
 
+/** Story revs look like 2026-11-17-t508. The number is not zero-padded, so string order is wrong. */
+export function revRank(rev: string): { date: string; n: number } | null {
+  const match = /^(\d{4}-\d{2}-\d{2})-t(\d+)$/.exec(rev);
+  if (!match) return null;
+  return { date: match[1], n: Number(match[2]) };
+}
+
+/** A newer live row replaces the sheet. An older backup must not. */
+export function shouldApplySheet(currentRev: string | null, incomingRev: string, source: "live" | "fallback"): boolean {
+  if (!currentRev) return true;
+  if (incomingRev === currentRev) return true;
+  const current = revRank(currentRev);
+  const incoming = revRank(incomingRev);
+  if (current && incoming) {
+    if (incoming.date !== current.date) return incoming.date > current.date;
+    return incoming.n >= current.n;
+  }
+  return source === "live";
+}
+
 /** Labels whose percent changed. The first payload does not flash. */
 export function changedVitalLabels(previous: Pick<Vital, "label" | "pct">[] | null, next: Pick<Vital, "label" | "pct">[]): string[] {
   if (!previous) return [];
