@@ -812,7 +812,7 @@
           "dy": 28,
           "name": "Greenstone: Old City",
           "anchor": "middle",
-          "current": true
+          "current": false
         },
         {
           "x": 330,
@@ -894,6 +894,15 @@
           "name": "Hule",
           "anchor": "start",
           "current": false
+        },
+        {
+          "x": 395,
+          "y": 330,
+          "dx": 6,
+          "dy": -4,
+          "name": "Northern farmstead ditches",
+          "anchor": "start",
+          "current": true
         }
       ],
       "region": "M453.7,553.7 L429.3,534.2 L409.8,539.1 L392.7,512.2 L378.0,424.4 L382.9,380.5 L324.4,253.7 L326.8,231.7 L356.1,226.9 L375.6,241.5 L468.3,241.5 L519.5,258.6 L519.5,351.3 L495.1,370.8 L485.4,536.6 L453.7,553.7 Z",
@@ -906,8 +915,8 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Turning in the contract.",
-      "title": "Adventure Society: front desk",
+      "note": "3 frogs killed and looted.",
+      "title": "Northern ditches: frog fight",
       "width": 600,
       "allies": [],
       "extras": [],
@@ -1125,6 +1134,12 @@
         "seen": true,
         "place": "Adventure Society",
         "region": "Greenstone",
+        "current": false
+      },
+      {
+        "seen": true,
+        "place": "Northern farmstead ditches",
+        "region": "Greenstone outskirts",
         "current": true
       }
     ],
@@ -2877,10 +2892,57 @@
         "compass": "N ↑",
         "enemies": [],
         "fogOverlay": 0.1
+      },
+      {
+        "note": "Turning in the contract.",
+        "title": "Adventure Society: front desk",
+        "width": 600,
+        "allies": [],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 60,
+            "size": 11,
+            "text": "Stalls",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Entrance",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
       }
     ]
   },
-  "rev": "2026-11-17-t422",
+  "rev": "2026-11-17-t439",
   "gear": {
     "doll": [
       [
@@ -2908,7 +2970,7 @@
       {
         "qty": "",
         "name": "Coin pouch",
-        "note": "185 iron, 507 lesser"
+        "note": "191 iron, 507 lesser"
       },
       {
         "qty": "",
@@ -3000,14 +3062,19 @@
         "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
       },
       {
-        "qty": "3",
+        "qty": "5",
         "name": "Water Quintessence",
         "note": "From the frogs."
       },
       {
-        "qty": 1,
+        "qty": 4,
         "name": "Iron Monster Core",
-        "note": "From the Hule bog shambler"
+        "note": "1 bog shambler + 3 thorny-tongue frogs. Intact; for the Magic Society wetland core request"
+      },
+      {
+        "qty": 11,
+        "name": "Thorny tongue barbs",
+        "note": "From northern ditch frogs"
       }
     ],
     "borrowed": [
@@ -3216,7 +3283,7 @@
   },
   "next": "Pick up the adventurer badge at the Society tomorrow. Celebration dinner. Find an aura-power awakening stone (Farrah may help). Gary's lightning hammer.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "185 iron · 507 lesser",
+  "coins": "191 iron · 507 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3299,11 +3366,11 @@
       "value": 100
     },
     {
-      "pct": 60,
-      "note": "Natural recovery over the ride back (meditation itself does not restore mana in canon)",
+      "pct": 58,
+      "note": "Star Mark 2%",
       "tone": "mana",
       "label": "MANA",
-      "value": "60%"
+      "value": "58%"
     },
     {
       "pct": 95,
@@ -3406,7 +3473,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Greenstone, Adventure Society front desk, around noon on day 9. Turning in the bog shambler contract. The others went to lunch.",
+  "location": "Northern farmstead drainage ditches outside Greenstone, early afternoon of day 9. Alone, hunting thorny-tongue frogs.",
   "missions": [
     {
       "kind": "JOB",
@@ -3508,6 +3575,18 @@
       "name": "Field Assessment",
       "detail": "A week of delta postings by wagon with Vincent Trenslow's group of 8. Day 1: rune tortoise in the paddies, PASSED. Day 2: watched Jason's bark lurker; declined the trap weaver notice (correct call: no one). Day 3: thorny-tongue frog (extra, not pass/fail). Day 5: marsh wyrm, graded, complete. Day 7: back in Greenstone; PASSED, badge to be issued at the Society tomorrow.",
       "status": "COMPLETE"
+    },
+    {
+      "kind": "Closed contract (Magic Society request)",
+      "name": "Magic Society: Wetland Cores",
+      "detail": "Deliver 5+ intact iron wetland cores to the Magic Society Archivist Wing. 4 in hand (1 shambler, 3 frogs).",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "Open contract",
+      "name": "Northern Ditch Frogs",
+      "detail": "3 killed so far. Open contract, paid per kill at the desk.",
+      "status": "ACTIVE"
     }
   ],
   "abilities": [
@@ -3523,7 +3602,7 @@
       "name": "Star Mark",
       "rank": "Iron 0",
       "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 1 km at Normal 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown.",
-      "progress": 0
+      "progress": 1
     },
     {
       "tag": "Wind · Special · Defense",
