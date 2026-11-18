@@ -851,7 +851,7 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Ratling 3 dead in the turnips. Ratling 2 wounded. Marked Ratling 1 fled underground beneath the house. More scratching below.",
+      "note": "Ratlings 2 and 3 dead. Marked Ratling 1 is about 15 feet down under the house. Ratlings 4 and 5 are half out of holes by the fence.",
       "title": "Old City: old woman's yard",
       "width": 600,
       "allies": [],
@@ -881,8 +881,8 @@
         }
       ],
       "player": {
-        "x": 330,
-        "y": 150,
+        "x": 290,
+        "y": 200,
         "label": "You"
       },
       "reveal": [
@@ -903,14 +903,19 @@
       "compass": "N ↑",
       "enemies": [
         {
-          "x": 290,
-          "y": 200,
-          "name": "Ratling 2 (wounded, crawling)"
-        },
-        {
           "x": 400,
           "y": 70,
-          "name": "Ratling 1 (Star Mark, underground)"
+          "name": "Ratling 1 (Star Mark, under house)"
+        },
+        {
+          "x": 130,
+          "y": 320,
+          "name": "Ratling 4"
+        },
+        {
+          "x": 170,
+          "y": 340,
+          "name": "Ratling 5"
         }
       ],
       "fogOverlay": 0.1
@@ -3202,7 +3207,7 @@
       }
     ]
   },
-  "rev": "2026-11-18-t543",
+  "rev": "2026-11-18-t544b",
   "gear": {
     "doll": [
       [
@@ -3230,7 +3235,7 @@
       {
         "qty": "",
         "name": "Coin pouch",
-        "note": "267 iron, 507 lesser"
+        "note": "912 iron, 507 lesser"
       },
       {
         "qty": "",
@@ -3628,11 +3633,11 @@
       "value": "93%"
     },
     {
-      "pct": 100,
-      "note": "Full after a night of sleep.",
+      "pct": 98,
+      "note": "Running hammer swing",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "100%"
+      "value": "98%"
     }
   ],
   "profile": [
@@ -3733,7 +3738,7 @@
     {
       "kind": "SYSTEM",
       "name": "Hunter's Road",
-      "detail": "Slay one-star monsters 1/15. Reward: 150 iron spirit coins, 2 quintessence, chance at an awakening stone.",
+      "detail": "Slay one-star monsters 2/15. Reward: 150 iron spirit coins, 2 quintessence, chance at an awakening stone.",
       "status": "ACTIVE"
     },
     {
