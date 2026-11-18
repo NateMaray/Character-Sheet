@@ -4,92 +4,32 @@
       "river": "M1000,430 C940,415 880,430 820,470 C760,510 700,545 620,555",
       "route": [
         {
-          "x": 126,
-          "y": 121
+          "x": 600,
+          "y": 268
         },
         {
-          "x": 180,
-          "y": 200
+          "x": 520,
+          "y": 262
+        },
+        {
+          "x": 420,
+          "y": 268
         },
         {
           "x": 250,
           "y": 268
         },
         {
-          "x": 420,
-          "y": 268
+          "x": 180,
+          "y": 200
         },
         {
-          "x": 520,
-          "y": 262
+          "x": 126,
+          "y": 121
         },
         {
-          "x": 600,
-          "y": 268
-        },
-        {
-          "x": 655,
-          "y": 228
-        },
-        {
-          "x": 708,
-          "y": 238
-        },
-        {
-          "x": 790,
-          "y": 300
-        },
-        {
-          "x": 708,
-          "y": 250
-        },
-        {
-          "x": 600,
-          "y": 268
-        },
-        {
-          "x": 520,
-          "y": 262
-        },
-        {
-          "x": 420,
-          "y": 268
-        },
-        {
-          "x": 300,
-          "y": 220
-        },
-        {
-          "x": 278,
-          "y": 214
-        },
-        {
-          "x": 300,
-          "y": 220
-        },
-        {
-          "x": 420,
-          "y": 268
-        },
-        {
-          "x": 520,
-          "y": 262
-        },
-        {
-          "x": 600,
-          "y": 280
-        },
-        {
-          "x": 620,
-          "y": 400
-        },
-        {
-          "x": 640,
-          "y": 500
-        },
-        {
-          "x": 665,
-          "y": 605
+          "x": 108,
+          "y": 108
         }
       ],
       "blocks": [
@@ -915,8 +855,8 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Last door on the left, ajar.",
-      "title": "Magic Society: Archivist Wing corridor",
+      "note": "Home for the night. Nate sleeps on the couch.",
+      "title": "Sailor's Watch: Rufus's suite",
       "width": 600,
       "allies": [],
       "extras": [],
@@ -924,38 +864,38 @@
       "labels": [
         {
           "x": 300,
-          "y": 60,
+          "y": 230,
           "size": 11,
-          "text": "Stalls",
+          "text": "Couch",
           "tone": "muted"
         },
         {
           "x": 300,
-          "y": 400,
+          "y": 395,
           "size": 10,
-          "text": "Entrance",
+          "text": "Door",
           "tone": "muted"
         }
       ],
       "player": {
         "x": 300,
-        "y": 200,
+        "y": 360,
         "label": "You"
       },
       "reveal": [
         {
           "x": 300,
           "y": 210,
-          "rx": 280,
-          "ry": 190,
+          "rx": 260,
+          "ry": 170,
           "type": "ellipse"
         }
       ],
       "chamber": {
         "x": 300,
         "y": 210,
-        "rx": 280,
-        "ry": 190
+        "rx": 260,
+        "ry": 170
       },
       "compass": "N ↑",
       "enemies": [],
@@ -1023,10 +963,10 @@
         "current": false
       },
       {
-        "seen": "Sailor's Watch (room 32, kitchen, roof garden) and the transit station.",
+        "seen": "Sailor's Watch (room 32, kitchen, roof garden, Rufus's suite) and the transit station.",
         "place": "The Island",
         "region": "Greenstone",
-        "current": false
+        "current": true
       },
       {
         "seen": "Administration lobby with the contract board, intake waiting room, and intake room.",
@@ -1152,7 +1092,7 @@
         "seen": true,
         "place": "Magic Society",
         "region": "Greenstone",
-        "current": true
+        "current": false
       }
     ],
     "battleArchive": [
@@ -3097,10 +3037,57 @@
         "compass": "N ↑",
         "enemies": [],
         "fogOverlay": 0.1
+      },
+      {
+        "note": "Last door on the left, ajar.",
+        "title": "Magic Society: Archivist Wing corridor",
+        "width": 600,
+        "allies": [],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 60,
+            "size": 11,
+            "text": "Stalls",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Entrance",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
       }
     ]
   },
-  "rev": "2026-11-17-t461",
+  "rev": "2026-11-17-t473",
   "gear": {
     "doll": [
       [
@@ -3128,7 +3115,7 @@
       {
         "qty": "",
         "name": "Coin pouch",
-        "note": "231 iron, 507 lesser"
+        "note": "267 iron, 507 lesser"
       },
       {
         "qty": "",
@@ -3223,11 +3210,6 @@
         "qty": "9",
         "name": "Water Quintessence",
         "note": "From the frogs."
-      },
-      {
-        "qty": 8,
-        "name": "Iron Monster Core",
-        "note": "1 bog shambler + 7 thorny-tongue frogs (one large). Intact; for the Magic Society wetland core request"
       },
       {
         "qty": 26,
@@ -3441,7 +3423,7 @@
   },
   "next": "Pick up the adventurer badge at the Society tomorrow. Celebration dinner. Find an aura-power awakening stone (Farrah may help). Gary's lightning hammer.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "231 iron · 507 lesser",
+  "coins": "267 iron · 507 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3518,24 +3500,24 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Rested",
+      "note": "Full after a night of sleep.",
       "tone": "health",
       "label": "HEALTH",
       "value": 100
     },
     {
-      "pct": 12,
-      "note": "Comet Strike 15%. Running low.",
+      "pct": 100,
+      "note": "Full after a night of sleep.",
       "tone": "mana",
       "label": "MANA",
-      "value": "12%"
+      "value": "100%"
     },
     {
-      "pct": 80,
-      "note": "Comet Strike 5% plus hard sprinting",
+      "pct": 100,
+      "note": "Full after a night of sleep.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "80%"
+      "value": "100%"
     }
   ],
   "profile": [
@@ -3631,7 +3613,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Greenstone, Magic Society, corridor to the Archivist Wing, evening of day 9. Delivering wetland cores.",
+  "location": "Greenstone, the Island, Sailor's Watch, Rufus's suite (couch). Dawn, 3 days after the field assessment ended (about 7 and a half weeks in Greenstone).",
   "missions": [
     {
       "kind": "JOB",
@@ -3737,8 +3719,8 @@
     {
       "kind": "Closed contract (Magic Society request)",
       "name": "Magic Society: Wetland Cores",
-      "detail": "Deliver 5+ intact iron wetland cores to the Magic Society Archivist Wing. 8 in hand. Ready to deliver.",
-      "status": "ACTIVE"
+      "detail": "Delivered 8 cores to Aldous Fenwick (Archivist Wing). Paid 36 iron. He'll vouch for Nate with the stone brokers if Nate keeps bringing good or odd cores.",
+      "status": "COMPLETE"
     },
     {
       "kind": "Open contract",
