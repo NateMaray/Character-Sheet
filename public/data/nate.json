@@ -26,6 +26,26 @@
         {
           "x": 800,
           "y": 200
+        },
+        {
+          "x": 700,
+          "y": 250
+        },
+        {
+          "x": 582,
+          "y": 256
+        },
+        {
+          "x": 438,
+          "y": 256
+        },
+        {
+          "x": 300,
+          "y": 300
+        },
+        {
+          "x": 75,
+          "y": 360
         }
       ],
       "blocks": [
@@ -273,6 +293,14 @@
           "dy": -18,
           "name": "Tannery",
           "anchor": "middle"
+        },
+        {
+          "x": 75,
+          "y": 360,
+          "dx": 10,
+          "dy": 0,
+          "name": "West gate → Hunter's Road",
+          "anchor": "start"
         }
       ],
       "reveal": [
@@ -360,6 +388,11 @@
           "r": 75,
           "x": 665,
           "y": 605
+        },
+        {
+          "r": 50,
+          "x": 90,
+          "y": 360
         }
       ],
       "bridges": [
@@ -608,6 +641,10 @@
         {
           "x": 382,
           "y": 390
+        },
+        {
+          "x": 352,
+          "y": 384
         }
       ],
       "labels": [
@@ -748,7 +785,7 @@
           "dy": 28,
           "name": "Greenstone: Old City",
           "anchor": "middle",
-          "current": true
+          "current": false
         },
         {
           "x": 330,
@@ -839,6 +876,15 @@
           "name": "Northern farmstead ditches",
           "anchor": "start",
           "current": false
+        },
+        {
+          "x": 352,
+          "y": 384,
+          "dx": -10,
+          "dy": 4,
+          "name": "Dennick's farm (Hunter's Road)",
+          "anchor": "end",
+          "current": true
         }
       ],
       "region": "M453.7,553.7 L429.3,534.2 L409.8,539.1 L392.7,512.2 L378.0,424.4 L382.9,380.5 L324.4,253.7 L326.8,231.7 L356.1,226.9 L375.6,241.5 L468.3,241.5 L519.5,258.6 L519.5,351.3 L495.1,370.8 L485.4,536.6 L453.7,553.7 Z",
@@ -851,44 +897,60 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Eating stew at the kitchen table.",
-      "title": "Old City: old woman's cottage",
+      "note": "Night. Lantern on a post by the coop. Shoulder-wide holes dug up from below along the back wall. Hens silent.",
+      "title": "Dennick Hale's farm: chicken coop",
       "width": 600,
       "allies": [
         {
-          "x": 360,
-          "y": 220,
-          "name": "Old woman"
+          "x": 340,
+          "y": 215,
+          "name": "Dennick Hale"
         }
       ],
-      "extras": [],
+      "extras": [
+        {
+          "h": 50,
+          "w": 120,
+          "x": 240,
+          "y": 95,
+          "fill": "stone",
+          "type": "rect"
+        }
+      ],
       "height": 420,
       "labels": [
         {
           "x": 300,
-          "y": 80,
+          "y": 120,
           "size": 11,
-          "text": "House",
+          "text": "Chicken coop",
           "tone": "muted"
         },
         {
           "x": 300,
-          "y": 260,
+          "y": 80,
           "size": 10,
-          "text": "Vegetable patch",
+          "text": "Dug-up holes",
+          "tone": "muted"
+        },
+        {
+          "x": 480,
+          "y": 200,
+          "size": 11,
+          "text": "Red barn",
           "tone": "muted"
         },
         {
           "x": 300,
           "y": 395,
           "size": 10,
-          "text": "Gate",
+          "text": "Hunter's Road",
           "tone": "muted"
         }
       ],
       "player": {
         "x": 300,
-        "y": 220,
+        "y": 230,
         "label": "You"
       },
       "reveal": [
@@ -908,7 +970,7 @@
       },
       "compass": "N ↑",
       "enemies": [],
-      "fogOverlay": 0.1
+      "fogOverlay": 0.3
     },
     "charted": [
       {
@@ -3194,10 +3256,70 @@
         "compass": "N ↑",
         "enemies": [],
         "fogOverlay": 0.1
+      },
+      {
+        "note": "Eating stew at the kitchen table.",
+        "title": "Old City: old woman's cottage",
+        "width": 600,
+        "allies": [
+          {
+            "x": 360,
+            "y": 220,
+            "name": "Old woman"
+          }
+        ],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 80,
+            "size": 11,
+            "text": "House",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 260,
+            "size": 10,
+            "text": "Vegetable patch",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 395,
+            "size": 10,
+            "text": "Gate",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 220,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 260,
+            "ry": 170,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 260,
+          "ry": 170
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
       }
     ]
   },
-  "rev": "2026-11-18-t559",
+  "rev": "2026-11-18-t560b",
   "gear": {
     "doll": [
       [
@@ -3734,7 +3856,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Greenstone, Old City backstreets, outside Mae Corran's cottage. Late night, 3 days after the assessment.",
+  "location": "Dennick Hale's farm, Hunter's Road past the 2nd milestone (west of Greenstone), by the chicken coop. Late night, 3 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
