@@ -812,7 +812,7 @@
           "dy": 28,
           "name": "Greenstone: Old City",
           "anchor": "middle",
-          "current": false
+          "current": true
         },
         {
           "x": 330,
@@ -893,7 +893,7 @@
           "dy": -4,
           "name": "Hule",
           "anchor": "start",
-          "current": true
+          "current": false
         }
       ],
       "region": "M453.7,553.7 L429.3,534.2 L409.8,539.1 L392.7,512.2 L378.0,424.4 L382.9,380.5 L324.4,253.7 L326.8,231.7 L356.1,226.9 L375.6,241.5 L468.3,241.5 L519.5,258.6 L519.5,351.3 L495.1,370.8 L485.4,536.6 L453.7,553.7 Z",
@@ -906,23 +906,10 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Stilt houses and walkways over mud; cart at hitching post.",
-      "title": "Hule village: arrival",
+      "note": "Turning in the contract.",
+      "title": "Adventure Society: front desk",
       "width": 600,
-      "allies": [
-        {
-          "name": "Jason"
-        },
-        {
-          "name": "Rufus"
-        },
-        {
-          "name": "Farrah"
-        },
-        {
-          "name": "Gary"
-        }
-      ],
+      "allies": [],
       "extras": [],
       "height": 420,
       "labels": [
@@ -1126,6 +1113,18 @@
         "seen": true,
         "place": "Hule village",
         "region": "Greenstone outskirts",
+        "current": false
+      },
+      {
+        "seen": true,
+        "place": "Hule east field (willows)",
+        "region": "Greenstone outskirts",
+        "current": false
+      },
+      {
+        "seen": true,
+        "place": "Adventure Society",
+        "region": "Greenstone",
         "current": true
       }
     ],
@@ -2694,10 +2693,194 @@
         "compass": "N ↑",
         "enemies": [],
         "fogOverlay": 0.1
+      },
+      {
+        "note": "Stilt houses and walkways over mud; cart at hitching post.",
+        "title": "Hule village: arrival",
+        "width": 600,
+        "allies": [
+          {
+            "name": "Jason"
+          },
+          {
+            "name": "Rufus"
+          },
+          {
+            "name": "Farrah"
+          },
+          {
+            "name": "Gary"
+          }
+        ],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 60,
+            "size": 11,
+            "text": "Stalls",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Entrance",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
+      },
+      {
+        "note": "Shambler looted. Nate is back with the group at the bank.",
+        "title": "Hule east field: bog shambler",
+        "width": 600,
+        "allies": [
+          {
+            "name": "Jason",
+            "note": "watching at the field's edge"
+          },
+          {
+            "name": "Rufus",
+            "note": "watching at the field's edge"
+          },
+          {
+            "name": "Farrah",
+            "note": "watching at the field's edge"
+          },
+          {
+            "name": "Gary",
+            "note": "watching at the field's edge"
+          }
+        ],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 60,
+            "size": 11,
+            "text": "Stalls",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Entrance",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
+      },
+      {
+        "note": "Returning the cart and heidels.",
+        "title": "East gate hire yard: return",
+        "width": 600,
+        "allies": [
+          {
+            "name": "Jason"
+          },
+          {
+            "name": "Rufus"
+          },
+          {
+            "name": "Farrah"
+          },
+          {
+            "name": "Gary"
+          }
+        ],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 60,
+            "size": 11,
+            "text": "Stalls",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Entrance",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
       }
     ]
   },
-  "rev": "2026-11-17-t393",
+  "rev": "2026-11-17-t422",
   "gear": {
     "doll": [
       [
@@ -2725,7 +2908,7 @@
       {
         "qty": "",
         "name": "Coin pouch",
-        "note": "146 iron, 507 lesser (10 iron heidel deposit held at east gate hire yard)"
+        "note": "185 iron, 507 lesser"
       },
       {
         "qty": "",
@@ -2820,6 +3003,11 @@
         "qty": "3",
         "name": "Water Quintessence",
         "note": "From the frogs."
+      },
+      {
+        "qty": 1,
+        "name": "Iron Monster Core",
+        "note": "From the Hule bog shambler"
       }
     ],
     "borrowed": [
@@ -3028,7 +3216,7 @@
   },
   "next": "Pick up the adventurer badge at the Society tomorrow. Celebration dinner. Find an aura-power awakening stone (Farrah may help). Gary's lightning hammer.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "146 iron · 507 lesser",
+  "coins": "185 iron · 507 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3111,18 +3299,18 @@
       "value": 100
     },
     {
-      "pct": 100,
-      "note": "Full",
+      "pct": 60,
+      "note": "Natural recovery over the ride back (meditation itself does not restore mana in canon)",
       "tone": "mana",
       "label": "MANA",
-      "value": "100%"
+      "value": "60%"
     },
     {
-      "pct": 100,
-      "note": "Rested",
+      "pct": 95,
+      "note": "Rested on the cart",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "100%"
+      "value": "95%"
     }
   ],
   "profile": [
@@ -3218,7 +3406,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Hule village (wetland hamlet east of Greenstone), morning of day 9. Arrived by hired heidel cart with Jason, Rufus, Farrah, Gary. Bog shambler contract.",
+  "location": "Greenstone, Adventure Society front desk, around noon on day 9. Turning in the bog shambler contract. The others went to lunch.",
   "missions": [
     {
       "kind": "JOB",
@@ -3235,8 +3423,8 @@
     {
       "kind": "JOB",
       "name": "Bog Shambler of Hule",
-      "detail": "Closed iron one-star contract: one bog shambler in the wetlands off Hule village's fields (farther out). Reward 25 iron spirit coins.",
-      "status": "ACTIVE"
+      "detail": "Killed the shambler in Hule's east field. Paid 25 iron.",
+      "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
@@ -3328,7 +3516,7 @@
       "name": "Arc Step",
       "rank": "Iron 0",
       "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Costs 40% mana and 20% stamina per use. Cannot carry passengers.",
-      "progress": 5
+      "progress": 12
     },
     {
       "tag": "Star · Special · Mark",
@@ -3342,14 +3530,14 @@
       "name": "Windward Veil",
       "rank": "Iron 0",
       "detail": "A shell of swirling wind wraps around you, deflecting projectiles and blunting incoming blows. Stronger while you are moving. Cost: 10% mana to raise, then 3% mana per minute while active.",
-      "progress": 0
+      "progress": 8
     },
     {
       "tag": "Comet · Special · Attack",
       "name": "Comet Strike",
       "rank": "Iron 0",
       "detail": "Your weapon or fist ignites with a white-gold comet trail. The strike hits harder the more you moved just before it and leaves a burning wound that deals damage over time. Cost: 15% mana + 5% stamina per strike. Cooldown 10 seconds.",
-      "progress": 0
+      "progress": 8
     },
     {
       "tag": "Star · Spell · Healing, Support",
