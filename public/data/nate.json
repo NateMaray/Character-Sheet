@@ -812,7 +812,7 @@
           "dy": 28,
           "name": "Greenstone: Old City",
           "anchor": "middle",
-          "current": false
+          "current": true
         },
         {
           "x": 330,
@@ -902,7 +902,7 @@
           "dy": -4,
           "name": "Northern farmstead ditches",
           "anchor": "start",
-          "current": true
+          "current": false
         }
       ],
       "region": "M453.7,553.7 L429.3,534.2 L409.8,539.1 L392.7,512.2 L378.0,424.4 L382.9,380.5 L324.4,253.7 L326.8,231.7 L356.1,226.9 L375.6,241.5 L468.3,241.5 L519.5,258.6 L519.5,351.3 L495.1,370.8 L485.4,536.6 L453.7,553.7 Z",
@@ -915,8 +915,8 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "3 frogs killed and looted.",
-      "title": "Northern ditches: frog fight",
+      "note": "Last door on the left, ajar.",
+      "title": "Magic Society: Archivist Wing corridor",
       "width": 600,
       "allies": [],
       "extras": [],
@@ -1140,6 +1140,18 @@
         "seen": true,
         "place": "Northern farmstead ditches",
         "region": "Greenstone outskirts",
+        "current": false
+      },
+      {
+        "seen": true,
+        "place": "Northern farmstead (feed shed)",
+        "region": "Greenstone outskirts",
+        "current": false
+      },
+      {
+        "seen": true,
+        "place": "Magic Society",
+        "region": "Greenstone",
         "current": true
       }
     ],
@@ -2939,10 +2951,156 @@
         "compass": "N ↑",
         "enemies": [],
         "fogOverlay": 0.1
+      },
+      {
+        "note": "All frogs looted; the area looks clear.",
+        "title": "Northern ditches: the bend",
+        "width": 600,
+        "allies": [],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 60,
+            "size": 11,
+            "text": "Stalls",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Entrance",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
+      },
+      {
+        "note": "Frog looted. Farmer thanking Nate.",
+        "title": "Northern farmstead yard",
+        "width": 600,
+        "allies": [
+          {
+            "name": "Farmer",
+            "note": "in the doorway"
+          }
+        ],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 60,
+            "size": 11,
+            "text": "Stalls",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Entrance",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
+      },
+      {
+        "note": "Got paid for the frogs.",
+        "title": "Adventure Society: front desk",
+        "width": 600,
+        "allies": [],
+        "extras": [],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 60,
+            "size": 11,
+            "text": "Stalls",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 400,
+            "size": 10,
+            "text": "Entrance",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 300,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 280,
+            "ry": 190,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 280,
+          "ry": 190
+        },
+        "compass": "N ↑",
+        "enemies": [],
+        "fogOverlay": 0.1
       }
     ]
   },
-  "rev": "2026-11-17-t439",
+  "rev": "2026-11-17-t461",
   "gear": {
     "doll": [
       [
@@ -2970,7 +3128,7 @@
       {
         "qty": "",
         "name": "Coin pouch",
-        "note": "191 iron, 507 lesser"
+        "note": "231 iron, 507 lesser"
       },
       {
         "qty": "",
@@ -3062,17 +3220,17 @@
         "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
       },
       {
-        "qty": "5",
+        "qty": "9",
         "name": "Water Quintessence",
         "note": "From the frogs."
       },
       {
-        "qty": 4,
+        "qty": 8,
         "name": "Iron Monster Core",
-        "note": "1 bog shambler + 3 thorny-tongue frogs. Intact; for the Magic Society wetland core request"
+        "note": "1 bog shambler + 7 thorny-tongue frogs (one large). Intact; for the Magic Society wetland core request"
       },
       {
-        "qty": 11,
+        "qty": 26,
         "name": "Thorny tongue barbs",
         "note": "From northern ditch frogs"
       }
@@ -3283,7 +3441,7 @@
   },
   "next": "Pick up the adventurer badge at the Society tomorrow. Celebration dinner. Find an aura-power awakening stone (Farrah may help). Gary's lightning hammer.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "191 iron · 507 lesser",
+  "coins": "231 iron · 507 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3366,18 +3524,18 @@
       "value": 100
     },
     {
-      "pct": 58,
-      "note": "Star Mark 2%",
+      "pct": 12,
+      "note": "Comet Strike 15%. Running low.",
       "tone": "mana",
       "label": "MANA",
-      "value": "58%"
+      "value": "12%"
     },
     {
-      "pct": 95,
-      "note": "Rested on the cart",
+      "pct": 80,
+      "note": "Comet Strike 5% plus hard sprinting",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "95%"
+      "value": "80%"
     }
   ],
   "profile": [
@@ -3473,7 +3631,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Northern farmstead drainage ditches outside Greenstone, early afternoon of day 9. Alone, hunting thorny-tongue frogs.",
+  "location": "Greenstone, Magic Society, corridor to the Archivist Wing, evening of day 9. Delivering wetland cores.",
   "missions": [
     {
       "kind": "JOB",
@@ -3579,13 +3737,13 @@
     {
       "kind": "Closed contract (Magic Society request)",
       "name": "Magic Society: Wetland Cores",
-      "detail": "Deliver 5+ intact iron wetland cores to the Magic Society Archivist Wing. 4 in hand (1 shambler, 3 frogs).",
+      "detail": "Deliver 5+ intact iron wetland cores to the Magic Society Archivist Wing. 8 in hand. Ready to deliver.",
       "status": "ACTIVE"
     },
     {
       "kind": "Open contract",
       "name": "Northern Ditch Frogs",
-      "detail": "3 killed so far. Open contract, paid per kill at the desk.",
+      "detail": "7 killed, paid 28 iron (4 per kill). Contract stays open.",
       "status": "ACTIVE"
     }
   ],
