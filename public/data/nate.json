@@ -8,16 +8,24 @@
           "y": 160
         },
         {
-          "x": 180,
-          "y": 140
+          "x": 300,
+          "y": 230
         },
         {
-          "x": 126,
-          "y": 121
+          "x": 438,
+          "y": 256
         },
         {
-          "x": 108,
-          "y": 108
+          "x": 582,
+          "y": 256
+        },
+        {
+          "x": 700,
+          "y": 250
+        },
+        {
+          "x": 800,
+          "y": 200
         }
       ],
       "blocks": [
@@ -843,47 +851,38 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Farrah on the couch, Gary in the kitchen, Rufus at the table.",
-      "title": "Sailor's Watch: Rufus's suite",
+      "note": "Ratling 3 dead in the turnips. Ratling 2 wounded. Marked Ratling 1 fled underground beneath the house. More scratching below.",
+      "title": "Old City: old woman's yard",
       "width": 600,
-      "allies": [
-        {
-          "x": 300,
-          "y": 230,
-          "name": "Farrah"
-        },
-        {
-          "x": 460,
-          "y": 150,
-          "name": "Gary"
-        },
-        {
-          "x": 160,
-          "y": 150,
-          "name": "Rufus"
-        }
-      ],
+      "allies": [],
       "extras": [],
       "height": 420,
       "labels": [
         {
           "x": 300,
-          "y": 230,
+          "y": 80,
           "size": 11,
-          "text": "Couch",
+          "text": "House",
+          "tone": "muted"
+        },
+        {
+          "x": 300,
+          "y": 260,
+          "size": 10,
+          "text": "Vegetable patch",
           "tone": "muted"
         },
         {
           "x": 300,
           "y": 395,
           "size": 10,
-          "text": "Door",
+          "text": "Gate",
           "tone": "muted"
         }
       ],
       "player": {
-        "x": 300,
-        "y": 360,
+        "x": 330,
+        "y": 150,
         "label": "You"
       },
       "reveal": [
@@ -902,7 +901,18 @@
         "ry": 170
       },
       "compass": "N ↑",
-      "enemies": [],
+      "enemies": [
+        {
+          "x": 290,
+          "y": 200,
+          "name": "Ratling 2 (wounded, crawling)"
+        },
+        {
+          "x": 400,
+          "y": 70,
+          "name": "Ratling 1 (Star Mark, underground)"
+        }
+      ],
       "fogOverlay": 0.1
     },
     "charted": [
@@ -3192,7 +3202,7 @@
       }
     ]
   },
-  "rev": "2026-11-17-t521",
+  "rev": "2026-11-18-t543",
   "gear": {
     "doll": [
       [
@@ -3611,11 +3621,11 @@
       "value": 100
     },
     {
-      "pct": 90,
-      "note": "Sky Stair 10% (window test).",
+      "pct": 93,
+      "note": "Star Mark 2%, Arc Step 5%",
       "tone": "mana",
       "label": "MANA",
-      "value": "90%"
+      "value": "93%"
     },
     {
       "pct": 100,
@@ -3718,12 +3728,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Greenstone, the Island, Sailor's Watch, Rufus's suite. Morning, 3 days after the assessment. Back pay still unclaimed.",
+  "location": "Greenstone, Old City backstreets, old woman's yard. Just after dusk, 3 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Hunter's Road",
-      "detail": "Slay one-star monsters 0/15. Reward: 150 iron spirit coins, 2 quintessence, chance at an awakening stone.",
+      "detail": "Slay one-star monsters 1/15. Reward: 150 iron spirit coins, 2 quintessence, chance at an awakening stone.",
       "status": "ACTIVE"
     },
     {
@@ -3844,6 +3854,30 @@
       "name": "Northern Ditch Frogs",
       "detail": "7 killed, paid 28 iron (4 per kill). Contract stays open.",
       "status": "ACTIVE"
+    },
+    {
+      "kind": "CONTRACT",
+      "name": "North road hedgehogs",
+      "detail": "Society one-star contract, accepted. 2 iron per kill (spine bundle as proof).",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "CONTRACT",
+      "name": "Northern frogs",
+      "detail": "Society one-star contract, accepted.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "CONTRACT",
+      "name": "West barn nest",
+      "detail": "Society one-star contract, accepted. 30 iron.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "PRIVATE",
+      "name": "Crooked notice",
+      "detail": "Private posting, not Society-backed: 'a problem on my property', Old City address. Fresh holes in the yard.",
+      "status": "ACTIVE"
     }
   ],
   "abilities": [
@@ -3851,29 +3885,29 @@
       "tag": "Lightning · Special · Movement",
       "name": "Arc Step",
       "rank": "Iron 0",
-      "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Costs 40% mana and 20% stamina per use. Cannot carry passengers.",
-      "progress": 12
+      "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Cost: Low mana (5%). Cooldown: 5 seconds. Cannot carry passengers.",
+      "progress": 16
     },
     {
       "tag": "Star · Special · Mark",
       "name": "Star Mark",
       "rank": "Iron 0",
-      "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 1 km at Normal 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown.",
-      "progress": 1
+      "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 3,300 feet (0.6 miles) at Iron 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown.",
+      "progress": 3
     },
     {
       "tag": "Wind · Special · Defense",
       "name": "Windward Veil",
       "rank": "Iron 0",
-      "detail": "A shell of swirling wind wraps around you, deflecting projectiles and blunting incoming blows. Stronger while you are moving. Cost: 10% mana to raise, then 3% mana per minute while active.",
-      "progress": 8
+      "detail": "A shell of swirling wind wraps around you, deflecting projectiles and blunting incoming blows. Stronger while you are moving. Cost: Low mana (5%) to raise, then 1% mana per minute while active.",
+      "progress": 11
     },
     {
       "tag": "Comet · Special · Attack",
       "name": "Comet Strike",
       "rank": "Iron 0",
-      "detail": "Your weapon or fist ignites with a white-gold comet trail. The strike hits harder the more you moved just before it and leaves a burning wound that deals damage over time. Cost: 15% mana + 5% stamina per strike. Cooldown 10 seconds.",
-      "progress": 8
+      "detail": "Your weapon or fist ignites with a white-gold comet trail. The strike hits harder the more you moved just before it and leaves a burning wound that deals damage over time. Cost: Moderate mana (10%) + 5% stamina per strike. Cooldown 10 seconds.",
+      "progress": 12
     },
     {
       "tag": "Star · Spell · Healing, Support",
@@ -3885,8 +3919,8 @@
     {
       "name": "Sky Stair",
       "rank": "Iron 0",
-      "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost 10% mana, 15 s cooldown. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. On the recorded wind flight-ability list: more steps at bronze, continuous air-walking (flight) at silver.",
-      "progress": 1
+      "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost: Low mana (3%). Cooldown: 5 seconds. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. On the recorded wind flight-ability list: more steps at bronze, continuous air-walking (flight) at silver.",
+      "progress": 3
     }
   ],
   "abilityMeta": {
