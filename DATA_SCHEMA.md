@@ -34,7 +34,7 @@ Pins are not part of `rev`. They live only on the phone (at most 5).
 
 ## Checklist after a scene
 
-1. Edit the fields that changed (vitals, location, `next`, battle, map, missions, gear).
+1. Edit the fields that changed (vitals, location, `worldTime`, `next`, battle, map, missions, gear).
 2. Set `rev` to a new string.
 3. Write the whole object into `public.sheet.data` for `id = 'nate'`. The app is listening; Nate does not have to tap anything. The phone still has Refresh, and it reloads the row when he opens the app again.
 4. Copy the same object into `public/data/nate.json` when you can, so the backup matches.
@@ -49,6 +49,7 @@ Pins are not part of `rev`. They live only on the phone (at most 5).
 | `vitals[]` | One bar each. `pct` is 0–100. `note` sits beside the number. `tone` is `health`, `mana`, or `stamina` and picks the color. |
 | `coins` | The coin line in the header. Also update the coin pouch note if the count changed. |
 | `location` | Where he is, in the header. |
+| `worldTime` | Optional in-world clock in the vitals card, directly above the coins, location, and next lines. Leave the field off and the sheet looks the same. |
 | `next` | The "next" line in the header. |
 | `abilities[]` | Powers. `progress` is the percent toward the next rank. |
 | `abilityMeta` | The two small headings under the ability cards. |
@@ -60,6 +61,23 @@ Pins are not part of `rev`. They live only on the phone (at most 5).
 | `essenceNotes[]` | Extra cards under the essences. `tag` is an optional pill. |
 | `achievements[]` | Feat cards. |
 | `profile[]` | Label/value rows. |
+
+### World time (`worldTime`)
+
+Optional. Omit the field entirely when you are not tracking the clock. A sheet without it loads and renders the same as before.
+
+```json
+"worldTime": { "day": 4, "dayLabel": "4 days after the assessment", "time": "Night", "detail": "About an hour before midnight" }
+```
+
+| Field | What it does |
+| --- | --- |
+| `day` | Number. Shown as "Day 4". |
+| `dayLabel` | String under the time, such as "4 days after the assessment". |
+| `time` | Time of day. `Dawn`, `Morning`, `Midday`, `Afternoon`, `Dusk`, `Evening`, `Night`, and `Late night` pick a sun or moon icon. Any other string still shows, with a plain clock. |
+| `detail` | Optional free text, such as "About an hour before midnight". Leave it off when you have nothing to add. |
+
+`day`, `dayLabel`, and `time` are expected when `worldTime` is present. A missing `worldTime` is fine. A present `worldTime` that is not that shape is rejected, and the sheet will not load.
 
 ## Gear
 

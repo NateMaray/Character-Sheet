@@ -1,6 +1,8 @@
+import backup from "../public/data/nate.json";
 import { describe, expect, it } from "vitest";
 import { describeLoadError } from "./supabase";
-import { changedVitalLabels, parseSheet, shouldApplySheet } from "./sheet";
+import { changedVitalLabels, parseSheet, shouldApplySheet, validateSheet } from "./sheet";
+import { timeIconFor } from "./worldTime";
 
 describe("changedVitalLabels", () => {
   const before = [
@@ -44,5 +46,53 @@ describe("shouldApplySheet", () => {
 describe("parseSheet", () => {
   it("rejects a row that is not a sheet", () => {
     expect(() => parseSheet({ rev: "" })).toThrow(/rev/);
+  });
+});
+
+describe("worldTime", () => {
+  const clock = {
+    day: 4,
+    dayLabel: "4 days after the assessment",
+    time: "Night",
+    detail: "About an hour before midnight",
+  };
+
+  it("keeps a sheet with no worldTime valid", () => {
+    expect(validateSheet(backup)).toBeNull();
+    expect(parseSheet(backup).worldTime).toBeUndefined();
+    const copy = { ...backup } as Record<string, unknown>;
+    delete copy.worldTime;
+    expect(validateSheet(copy)).toBeNull();
+  });
+
+  it("accepts the clock, including when detail is left off", () => {
+    const withDetail = { ...backup, worldTime: clock };
+    expect(validateSheet(withDetail)).toBeNull();
+    expect(parseSheet(withDetail).worldTime).toEqual(clock);
+    const noDetail = { ...backup, worldTime: { day: 1, dayLabel: "Assessment day", time: "Dawn" } };
+    expect(validateSheet(noDetail)).toBeNull();
+    expect(parseSheet(noDetail).worldTime).toEqual({ day: 1, dayLabel: "Assessment day", time: "Dawn" });
+    expect(validateSheet({ ...backup, worldTime: { day: 2, dayLabel: "Later", time: "Highsun" } })).toBeNull();
+  });
+
+  it("rejects a malformed worldTime only", () => {
+    expect(validateSheet({ ...backup, worldTime: "Night" })).toMatch(/worldTime/);
+    expect(validateSheet({ ...backup, worldTime: null })).toMatch(/worldTime/);
+    expect(validateSheet({ ...backup, worldTime: { dayLabel: "x", time: "Night" } })).toMatch(/worldTime/);
+    expect(validateSheet({ ...backup, worldTime: { day: "4", dayLabel: "x", time: "Night" } })).toMatch(/worldTime/);
+    expect(validateSheet({ ...backup, worldTime: { day: Number.NaN, dayLabel: "x", time: "Night" } })).toMatch(/worldTime/);
+    expect(validateSheet({ ...backup, worldTime: { day: 4, dayLabel: "x", time: "Night", detail: 1 } })).toMatch(/worldTime/);
+  });
+
+  it("picks a sun, moon, or clock from the time of day", () => {
+    expect(timeIconFor("Dawn")).toBe("dawn");
+    expect(timeIconFor("Morning")).toBe("morning");
+    expect(timeIconFor("Midday")).toBe("midday");
+    expect(timeIconFor("Afternoon")).toBe("afternoon");
+    expect(timeIconFor("Dusk")).toBe("dusk");
+    expect(timeIconFor("Evening")).toBe("evening");
+    expect(timeIconFor("Night")).toBe("night");
+    expect(timeIconFor("  Late   night ")).toBe("late-night");
+    expect(timeIconFor("Highsun")).toBe("clock");
   });
 });

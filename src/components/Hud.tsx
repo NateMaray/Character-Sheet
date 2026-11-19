@@ -1,5 +1,6 @@
 import { useState } from "react";
-import type { Identity, Vital } from "../types";
+import type { Identity, Vital, WorldTime } from "../types";
+import { WorldTimePanel } from "./WorldTimePanel";
 
 const TONE: Record<Vital["tone"], string> = {
   health: "var(--health)",
@@ -12,6 +13,7 @@ export function Hud({
   vitals,
   coins,
   location,
+  worldTime,
   next,
   rev,
   syncedAt,
@@ -27,6 +29,7 @@ export function Hud({
   vitals: Vital[];
   coins: string;
   location: string;
+  worldTime?: WorldTime;
   next: string;
   rev: string;
   syncedAt: Date | null;
@@ -98,6 +101,7 @@ export function Hud({
             </div>
           </div>
         ))}
+        {worldTime ? <WorldTimePanel worldTime={worldTime} /> : null}
         <div className="facts">
           <div className="fact gold">
             <b>COINS</b>
