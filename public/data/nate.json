@@ -94,6 +94,10 @@
         {
           "x": 126,
           "y": 121
+        },
+        {
+          "x": 200,
+          "y": 160
         }
       ],
       "blocks": [
@@ -3447,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-68",
+  "rev": "2026-11-19-aether-69",
   "gear": {
     "doll": [
       [
@@ -3852,7 +3856,7 @@
       }
     ]
   },
-  "next": "After lunch: Gilbert's Resilient Attire in the Adventure Society trade hall arcades with Gary for self-repairing iron-rank field armour, then a tailor with Farrah for everyday clothes. Tell the team your route before heading out. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
+  "next": "Pick out self-repairing iron-rank field armour at Gilbert's (let Gary haggle), then a tailor with Farrah for everyday clothes. Tell the team your route before heading out. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1664 iron · 551 lesser",
   "racial": [
@@ -3945,7 +3949,7 @@
     },
     {
       "pct": 50,
-      "note": "Spent crossing the city by Arc Step and Sky Stair (4 of each). Regenerating.",
+      "note": "Regenerating after the dash across the city.",
       "tone": "mana",
       "label": "MANA",
       "value": "50%"
@@ -4023,7 +4027,7 @@
     }
   ],
   "identity": {
-    "asOf": "Noon, day 62 in this world, at Sailor's Watch",
+    "asOf": "Afternoon, day 62 in this world, at Gilbert's in the trade hall",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4051,7 +4055,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Rufus's suite, Sailor's Watch, the Island, Greenstone. Bathed; lunch with Rufus, Farrah, and Gary. Still in the torn clothes. Gilbert's in the trade hall arcades after lunch. Noon, 5 days after the assessment.",
+  "location": "Gilbert's Resilient Attire for the Discerning Gentleman, a side arcade off the Adventure Society trade hall, Greenstone, with Gary and Farrah. Browsing; nothing bought yet. Early afternoon, 5 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4290,8 +4294,8 @@
   ],
   "worldTime": {
     "day": 62,
-    "time": "Noon",
-    "detail": "Lunch in Rufus's suite at Sailor's Watch, freshly bathed.",
+    "time": "Afternoon",
+    "detail": "Early afternoon, shopping at Gilbert's in the trade hall arcades with Gary and Farrah.",
     "dayLabel": "62 days in this world"
   },
   "abilityMeta": {
