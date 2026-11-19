@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-69",
+  "rev": "2026-11-19-aether-72",
   "gear": {
     "doll": [
       [
@@ -3856,9 +3856,9 @@
       }
     ]
   },
-  "next": "Pick out self-repairing iron-rank field armour at Gilbert's (let Gary haggle), then a tailor with Farrah for everyday clothes. Tell the team your route before heading out. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
+  "next": "Pending order at Gilbert's (Bert): bespoke iron-rank set (layered treated-leather vest, woven-enchanted sleeved undershirt, loose trousers; heat and shock resistant, self-mending, near coat-level protection, lighter). 95 iron total, 48 paid, 47 due at collection about world day 66-67; Bert sends word to Sailor's Watch. Now: everyday clothes with Farrah, then several days of training. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1664 iron · 551 lesser",
+  "coins": "1616 iron · 551 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4055,7 +4055,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Gilbert's Resilient Attire for the Discerning Gentleman, a side arcade off the Adventure Society trade hall, Greenstone, with Gary and Farrah. Browsing; nothing bought yet. Early afternoon, 5 days after the assessment.",
+  "location": "A small clothier's shop down a side passage in the trade hall arcades, Greenstone, with Gary and Farrah, shopping for everyday clothes. Vest set commissioned at Gilbert's (48 of 95 iron paid). Early afternoon, 5 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4295,7 +4295,7 @@
   "worldTime": {
     "day": 62,
     "time": "Afternoon",
-    "detail": "Early afternoon, shopping at Gilbert's in the trade hall arcades with Gary and Farrah.",
+    "detail": "Early afternoon, shopping for everyday clothes in the trade hall arcades with Gary and Farrah.",
     "dayLabel": "62 days in this world"
   },
   "abilityMeta": {
