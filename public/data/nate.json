@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-72",
+  "rev": "2026-11-19-aether-74",
   "gear": {
     "doll": [
       [
@@ -3650,6 +3650,97 @@
         "name": "Hedgehog quills",
         "note": "Loose quills from the north road hedgehogs, plus spines picked up off the road and fence post.",
         "slot": ""
+      },
+      {
+        "qty": "28 pieces",
+        "name": "Outfits tab",
+        "note": "Wardrobe from the trade hall arcade clothier (5 iron, tip included). Garments in the Outfits tab take no main inventory slots (B1 canon). Not yet sorted into outfits.",
+        "contents": [
+          {
+            "name": "Slate-blue shirt with silver vine embroidery"
+          },
+          {
+            "name": "Cobalt shirt"
+          },
+          {
+            "name": "Emerald shirt"
+          },
+          {
+            "name": "Magenta shirt"
+          },
+          {
+            "name": "Coral shirt"
+          },
+          {
+            "name": "Royal blue shirt"
+          },
+          {
+            "name": "Scarlet shirt"
+          },
+          {
+            "name": "Turquoise wrap shirt"
+          },
+          {
+            "name": "Striped tunic"
+          },
+          {
+            "name": "Crimson wrap trousers"
+          },
+          {
+            "name": "Royal purple wrap trousers"
+          },
+          {
+            "name": "Sky blue wrap trousers"
+          },
+          {
+            "name": "Lime wrap trousers"
+          },
+          {
+            "name": "Cobalt wrap trousers"
+          },
+          {
+            "name": "Fuchsia wrap trousers"
+          },
+          {
+            "name": "Turquoise knee shorts"
+          },
+          {
+            "name": "Aqua sleeping shirt"
+          },
+          {
+            "name": "Violet sleeping trousers"
+          },
+          {
+            "name": "Teal hooded overshirt"
+          },
+          {
+            "name": "Cobalt hooded overshirt"
+          },
+          {
+            "name": "Red sleeveless undershirt"
+          },
+          {
+            "name": "Socks (3 pairs)"
+          },
+          {
+            "name": "Sky blue smallclothes"
+          },
+          {
+            "name": "Red sash"
+          },
+          {
+            "name": "Emerald hooded cloak"
+          },
+          {
+            "name": "Blue embroidered pullover"
+          },
+          {
+            "name": "Magenta head wrap"
+          },
+          {
+            "name": "Green vest with brass toggles"
+          }
+        ]
       }
     ],
     "borrowed": [
@@ -3856,9 +3947,9 @@
       }
     ]
   },
-  "next": "Pending order at Gilbert's (Bert): bespoke iron-rank set (layered treated-leather vest, woven-enchanted sleeved undershirt, loose trousers; heat and shock resistant, self-mending, near coat-level protection, lighter). 95 iron total, 48 paid, 47 due at collection about world day 66-67; Bert sends word to Sailor's Watch. Now: everyday clothes with Farrah, then several days of training. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
+  "next": "Pending order at Gilbert's (Bert): bespoke iron-rank set (layered treated-leather vest, woven-enchanted sleeved undershirt, loose trousers; heat and shock resistant, self-mending, near coat-level protection, lighter). 95 iron total, 48 paid, 47 due at collection about world day 66-67; Bert sends word to Sailor's Watch. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); shop offered delivery to where he's staying. Then several days of training. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1616 iron · 551 lesser",
+  "coins": "1611 iron · 551 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
