@@ -927,7 +927,7 @@
           "dy": -4,
           "name": "Northern farmstead ditches",
           "anchor": "start",
-          "current": false
+          "current": true
         },
         {
           "x": 352,
@@ -954,7 +954,7 @@
           "dy": 4,
           "name": "Callow farm",
           "anchor": "end",
-          "current": true
+          "current": false
         }
       ],
       "region": "M453.7,553.7 L429.3,534.2 L409.8,539.1 L392.7,512.2 L378.0,424.4 L382.9,380.5 L324.4,253.7 L326.8,231.7 L356.1,226.9 L375.6,241.5 L468.3,241.5 L519.5,258.6 L519.5,351.3 L495.1,370.8 L485.4,536.6 L453.7,553.7 Z",
@@ -1235,7 +1235,7 @@
         "seen": true,
         "place": "Northern farmstead ditches",
         "region": "Greenstone outskirts",
-        "current": false
+        "current": true
       },
       {
         "seen": true,
@@ -1271,7 +1271,7 @@
         "seen": "Fork off the south road into the south fields. Edge of the bean rows at night, with 9+ ratlings feeding mid-field and burrows about 150 ft beyond them along the far scrub edge. Bean Counting job site.",
         "place": "Callow farm bean rows (south fields)",
         "region": "Greenstone outskirts",
-        "current": true
+        "current": false
       }
     ],
     "battleArchive": [
@@ -3427,7 +3427,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-31",
+  "rev": "2026-11-19-aether-43",
   "gear": {
     "doll": [
       [
@@ -3478,7 +3478,7 @@
         "note": "Brass; twist the top to brighten or dim. Gift from Rufus."
       },
       {
-        "qty": "2",
+        "qty": "1",
         "name": "Bandages",
         "note": "Gift from Farrah."
       },
@@ -3536,12 +3536,6 @@
         "empty": ""
       },
       {
-        "qty": "",
-        "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style).",
-        "slot": "Main hand"
-      },
-      {
         "qty": "12",
         "name": "Water Quintessence",
         "note": "11 from the frogs, 1 from Bean Counting."
@@ -3552,9 +3546,9 @@
         "note": "From northern ditch frogs"
       },
       {
-        "qty": "5",
+        "qty": "21",
         "name": "Lesser monster cores",
-        "note": "From 5 ratlings (Old City yard)."
+        "note": "5 from ratlings (Old City yard), 11 from ratlings (Callow farm bean rows), 5 from north road hedgehogs."
       },
       {
         "qty": 1,
@@ -3620,6 +3614,24 @@
         "name": "Awakening Stone of the Storm",
         "note": "Hunter's Road reward. Unused.",
         "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Callow Farm Food Bundle",
+        "note": "From Wenna Callow: crusty bread, cold mutton, hard yellow cheese. Still warm.",
+        "slot": ""
+      },
+      {
+        "qty": 5,
+        "name": "Hedgehog spine bundles",
+        "note": "Contract proof for the north road hedgehogs, worth 10 iron at the jobs hall.",
+        "slot": ""
+      },
+      {
+        "qty": 60,
+        "name": "Hedgehog quills",
+        "note": "Loose quills from the north road hedgehogs, plus spines picked up off the road and fence post.",
+        "slot": ""
       }
     ],
     "borrowed": [
@@ -3657,10 +3669,10 @@
       },
       {
         "qty": "",
-        "name": "",
-        "note": "",
+        "name": "Invictus",
+        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style).",
         "slot": "Main hand",
-        "empty": "empty"
+        "empty": ""
       },
       {
         "qty": "",
@@ -3828,7 +3840,7 @@
   },
   "next": "Farrah wants to know where Nate was all night. Open contracts: north road hedgehogs, northern frogs, west barn nest. Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1560 iron · 516 lesser",
+  "coins": "1560 iron · 551 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3911,25 +3923,25 @@
   },
   "vitals": [
     {
-      "pct": 100,
-      "note": "Full after sleeping until midday.",
+      "pct": 97,
+      "note": "Bandaged puncture, outer left calf.",
       "tone": "health",
       "label": "HEALTH",
-      "value": 100
+      "value": 97
     },
     {
-      "pct": 63,
-      "note": "Windward Veil up, 1% a minute.",
+      "pct": 32,
+      "note": "Windward Veil down; regenerating.",
       "tone": "mana",
       "label": "MANA",
-      "value": "63%"
+      "value": "32%"
     },
     {
-      "pct": 85,
-      "note": "Full-strength Comet Strike, then the fight.",
+      "pct": 75,
+      "note": "Walk to the northern ditches.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "85%"
+      "value": "75%"
     }
   ],
   "profile": [
@@ -4025,12 +4037,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Callow farm bean rows, south fields, by the burrows along the scrub edge. All 11 ratlings dead (unlooted). Night, 4 days after the assessment.",
+  "location": "Northern farmstead ditches, crouched in the reeds at the near bank (northern frogs contract). 3 thorny-tongue frogs: 20 ft left in the shallows, 50 ft ahead in the water, 70 ft right on the far bank. Veil down. Night, 4 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Hunter's Road II",
-      "detail": "Slay one-star monsters 3/30. Reward: 300 iron spirit coins, 3 quintessence, 1 awakening stone.",
+      "detail": "Slay one-star monsters 8/30. Reward: 300 iron spirit coins, 3 quintessence, 1 awakening stone.",
       "status": "ACTIVE"
     },
     {
@@ -4167,7 +4179,7 @@
     {
       "kind": "CONTRACT",
       "name": "North road hedgehogs",
-      "detail": "Society one-star open contract. 2 iron per kill (spine bundle as proof). Earlier run: 10 killed, 20 iron paid. Contract stays open.",
+      "detail": "Society one-star open contract. 2 iron per kill (spine bundle as proof). Earlier run: 10 killed, 20 iron paid. Current run: 5 killed and looted; 5 spine bundles in Pocket Space, worth 10 iron at turn-in. Contract stays open.",
       "status": "ACTIVE"
     },
     {
