@@ -837,7 +837,7 @@
           "dy": 28,
           "name": "Greenstone: Old City",
           "anchor": "middle",
-          "current": false
+          "current": true
         },
         {
           "x": 330,
@@ -927,7 +927,7 @@
           "dy": -4,
           "name": "Northern farmstead ditches",
           "anchor": "start",
-          "current": true
+          "current": false
         },
         {
           "x": 352,
@@ -3427,7 +3427,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-58",
+  "rev": "2026-11-19-aether-60",
   "gear": {
     "doll": [
       [
@@ -3619,12 +3619,6 @@
         "qty": 1,
         "name": "Callow Farm Food Bundle",
         "note": "From Wenna Callow: crusty bread, cold mutton, hard yellow cheese. Still warm.",
-        "slot": ""
-      },
-      {
-        "qty": 5,
-        "name": "Hedgehog spine bundles",
-        "note": "Contract proof for the north road hedgehogs, worth 10 iron at the jobs hall.",
         "slot": ""
       },
       {
@@ -3838,9 +3832,9 @@
       }
     ]
   },
-  "next": "Farrah wants to know where Nate was all night. Open contracts: north road hedgehogs, northern frogs, west barn nest. Find an aura-power awakening stone.",
+  "next": "Farrah came by the Society asking after Nate. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1567 iron · 551 lesser",
+  "coins": "1664 iron · 551 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3930,11 +3924,11 @@
       "value": "100%"
     },
     {
-      "pct": 80,
-      "note": "Cast Moonwell (30%), recovered some standing in it. Moonwell on 10-minute cooldown.",
+      "pct": 82,
+      "note": "Regenerating. Moonwell cooldown over.",
       "tone": "mana",
       "label": "MANA",
-      "value": "80%"
+      "value": "82%"
     },
     {
       "pct": 100,
@@ -4009,7 +4003,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 62 in this world, at Greenstone's north gate",
+    "asOf": "Mid-morning, day 62 in this world, at the Adventure Society",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4037,7 +4031,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Riding Hob Ferrin's heidel grain wagon through Greenstone's north gate, bound for the grain market by the south gate. Morning, 5 days after the assessment.",
+  "location": "Adventure Society jobs hall counter, Greenstone. Contracts turned in (97 iron). Farrah came by earlier this morning asking after Nate. Mid-morning, 5 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4060,13 +4054,13 @@
     {
       "kind": "SYSTEM",
       "name": "Arm's Length",
-      "detail": "Killed the bark lurker on the south road orchard lane, past the third marker 1/1. Bonus: no limb lost 1/1. Paid: 100 iron spirit coins, 1 earth quintessence, 25 iron (bonus), plus 75 iron unlisted. Society contract (40 iron) still to turn in.",
+      "detail": "Killed the bark lurker on the south road orchard lane, past the third marker 1/1. Bonus: no limb lost 1/1. Paid: 100 iron spirit coins, 1 earth quintessence, 25 iron (bonus), plus 75 iron unlisted. Society contract turned in (40 iron).",
       "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
       "name": "Bean Counting",
-      "detail": "Cleared all 11 ratlings from the Callow farm bean rows. Bonus met: none reached their burrows. Paid on completion: 100 iron spirit coins, bonus 1 water quintessence, plus 50 iron unlisted. (Society contract \"Ratlings, south fields\" still to be turned in.)",
+      "detail": "Cleared all 11 ratlings from the Callow farm bean rows. Bonus met: none reached their burrows. Paid on completion: 100 iron spirit coins, bonus 1 water quintessence, plus 50 iron unlisted. (Society contract turned in, 35 iron.)",
       "status": "COMPLETE"
     },
     {
@@ -4179,13 +4173,13 @@
     {
       "kind": "CONTRACT",
       "name": "North road hedgehogs",
-      "detail": "Society one-star open contract. 2 iron per kill (spine bundle as proof). Earlier run: 10 killed, 20 iron paid. Current run: 5 killed and looted; 5 spine bundles in Pocket Space, worth 10 iron at turn-in. Contract stays open.",
+      "detail": "Society one-star open contract. 2 iron per kill (spine bundle as proof). Paid so far: 20 iron (10 kills), then 10 iron (5 bundles, day 62). Contract stays open.",
       "status": "ACTIVE"
     },
     {
       "kind": "CONTRACT",
       "name": "Northern frogs",
-      "detail": "Society one-star open contract (northern farmstead ditches). 4 iron per kill. Earlier run: 7 killed, 28 iron paid. Current run: 3 killed and looted, 12 iron on turn-in. Contract stays open.",
+      "detail": "Society one-star open contract (northern farmstead ditches). 4 iron per kill. Paid so far: 28 iron (7 kills), then 12 iron (3 kills, day 62). Contract stays open.",
       "status": "ACTIVE"
     },
     {
@@ -4221,14 +4215,14 @@
     {
       "kind": "CONTRACT",
       "name": "Bark lurker, south road",
-      "detail": "Society one-star closed contract, claimed. Orchard lane past the third marker; took a farmhand's arm last week. 40 iron.",
-      "status": "ACTIVE"
+      "detail": "Society one-star closed contract. Turned in day 62 (hide checked, kept). Paid 40 iron.",
+      "status": "COMPLETE"
     },
     {
       "kind": "CONTRACT",
       "name": "Ratlings, south fields",
-      "detail": "Society one-star closed contract, claimed. Eight or more in the bean rows at the Callow farm; they run for burrows on sight. 35 iron.",
-      "status": "ACTIVE"
+      "detail": "Society one-star closed contract, Callow farm bean rows. Turned in day 62 (cores checked, kept). Paid 35 iron.",
+      "status": "COMPLETE"
     }
   ],
   "abilities": [
@@ -4276,8 +4270,8 @@
   ],
   "worldTime": {
     "day": 62,
-    "time": "Morning",
-    "detail": "Riding Hob Ferrin's grain wagon in through the north gate.",
+    "time": "Mid-morning",
+    "detail": "At the Adventure Society jobs hall counter.",
     "dayLabel": "62 days in this world"
   },
   "abilityMeta": {
