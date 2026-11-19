@@ -58,6 +58,18 @@
         {
           "x": 126,
           "y": 121
+        },
+        {
+          "x": 264,
+          "y": 208
+        },
+        {
+          "x": 520,
+          "y": 268
+        },
+        {
+          "x": 800,
+          "y": 235
         }
       ],
       "blocks": [
@@ -312,6 +324,14 @@
           "dx": 10,
           "dy": 0,
           "name": "West gate → Hunter's Road",
+          "anchor": "start"
+        },
+        {
+          "x": 800,
+          "y": 235,
+          "dx": 16,
+          "dy": -10,
+          "name": "Jory's clinic",
           "anchor": "start"
         }
       ],
@@ -805,7 +825,7 @@
           "dy": 28,
           "name": "Greenstone: Old City",
           "anchor": "middle",
-          "current": false
+          "current": true
         },
         {
           "x": 330,
@@ -814,7 +834,7 @@
           "dy": -6,
           "name": "The Island",
           "anchor": "end",
-          "current": true
+          "current": false
         },
         {
           "x": 425,
@@ -1071,7 +1091,7 @@
         "seen": "Sailor's Watch (room 32, kitchen, roof garden, Rufus's suite) and the transit station.",
         "place": "The Island",
         "region": "Greenstone",
-        "current": true
+        "current": false
       },
       {
         "seen": "Administration lobby with the contract board, intake waiting room, and intake room.",
@@ -1204,6 +1224,12 @@
         "place": "Dennick Hale's farm (Hunter's Road, past the 2nd milestone)",
         "region": "Greenstone outskirts",
         "current": false
+      },
+      {
+        "seen": "Clinic for supplies before the south road contracts.",
+        "place": "Jory Tillman's clinic (Old City)",
+        "region": "Greenstone",
+        "current": true
       }
     ],
     "battleArchive": [
@@ -3359,7 +3385,7 @@
       }
     ]
   },
-  "rev": "2026-11-18-aether-07",
+  "rev": "2026-11-18-aether-16",
   "gear": {
     "doll": [
       [
@@ -3387,7 +3413,7 @@
       {
         "qty": "",
         "name": "Coin pouch",
-        "note": "1126 iron, 516 lesser"
+        "note": "976 iron, 516 lesser"
       },
       {
         "qty": "",
@@ -3515,6 +3541,24 @@
         "qty": 2,
         "name": "Bess's honey oat cakes",
         "note": "2 honey-glazed oat cakes with currants, wrapped in a blue cloth. A gift from Bess Hale; stasis keeps them warm."
+      },
+      {
+        "qty": 8,
+        "name": "Healing potion (everyday, iron rank)",
+        "note": "From Jory Tillman, 5 iron each. Space them out; no mana potion while coin magic is still in you.",
+        "slot": ""
+      },
+      {
+        "qty": 10,
+        "name": "Mana potion (everyday, iron rank)",
+        "note": "From Jory Tillman, 4 iron each. Space them out; no mana potion while coin magic is still in you.",
+        "slot": ""
+      },
+      {
+        "qty": 10,
+        "name": "Stamina potion (everyday, iron rank)",
+        "note": "From Jory Tillman, 4 iron each. Space them out; no mana potion while coin magic is still in you.",
+        "slot": ""
       }
     ],
     "borrowed": [
@@ -3723,7 +3767,7 @@
   },
   "next": "Farrah wants to know where Nate was all night. Open contracts: north road hedgehogs, northern frogs, west barn nest. Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1126 iron · 516 lesser",
+  "coins": "976 iron · 516 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3799,7 +3843,11 @@
       "Cellar Dwellers",
       "North road hedgehogs",
       "Northern frogs",
-      "West barn nest"
+      "West barn nest",
+      "Arm's Length",
+      "Bean Counting",
+      "Bark lurker, south road",
+      "Ratlings, south fields"
     ]
   },
   "vitals": [
@@ -3918,7 +3966,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Sailor's Watch (the Island), Rufus's suite, on the couch. Midday, 4 days after the assessment.",
+  "location": "Old City lane outside Jory Tillman's clinic, Greenstone. Wick and Corl have gone off toward Haddie's. Early evening, 4 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -3930,6 +3978,18 @@
       "kind": "SYSTEM",
       "name": "Eyes and Aura",
       "detail": "Objectives: acquire an awakening stone suited to a perception power 0/1; acquire an awakening stone suited to an aura power 0/1. Reward: 200 iron spirit coins. Bonus objective: awaken a perception power and an aura power 0/2. Bonus reward: 1 common awakening stone. Leads: Awakening Stone of Eyes (common; brokers Ostrander & Vey, trade hall 3rd floor, or auction); aura stones are rarer (auction or tougher monsters).",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Arm's Length",
+      "detail": "Objective: kill the bark lurker on the south road orchard lane, past the third marker 0/1. Reward: 100 iron spirit coins, 1 earth quintessence. Bonus objective: finish it without losing a limb to it 0/1. Bonus reward: 25 iron spirit coins.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Bean Counting",
+      "detail": "Objective: clear the ratlings from the bean rows at the Callow farm, south fields 0/8+. Reward: 100 iron spirit coins. Bonus objective: none reach their burrows 0/1. Bonus reward: 1 water quintessence.",
       "status": "ACTIVE"
     },
     {
@@ -4080,6 +4140,18 @@
       "name": "Something Under the Coop",
       "detail": "Stop whatever is digging under Dennick Hale's coop (sand shab). Paid: 100 iron spirit coins, 1 earth quintessence.",
       "status": "COMPLETE"
+    },
+    {
+      "kind": "CONTRACT",
+      "name": "Bark lurker, south road",
+      "detail": "Society one-star closed contract, claimed. Orchard lane past the third marker; took a farmhand's arm last week. 40 iron.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "CONTRACT",
+      "name": "Ratlings, south fields",
+      "detail": "Society one-star closed contract, claimed. Eight or more in the bean rows at the Callow farm; they run for burrows on sight. 35 iron.",
+      "status": "ACTIVE"
     }
   ],
   "abilities": [
