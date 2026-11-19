@@ -3427,7 +3427,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-43",
+  "rev": "2026-11-19-aether-58",
   "gear": {
     "doll": [
       [
@@ -3536,12 +3536,12 @@
         "empty": ""
       },
       {
-        "qty": "12",
+        "qty": "14",
         "name": "Water Quintessence",
-        "note": "11 from the frogs, 1 from Bean Counting."
+        "note": "11 from the frogs, 1 from Bean Counting, 2 from the northern ditch frogs."
       },
       {
-        "qty": 26,
+        "qty": 38,
         "name": "Thorny tongue barbs",
         "note": "From northern ditch frogs"
       },
@@ -3557,9 +3557,9 @@
         "slot": ""
       },
       {
-        "qty": 2,
+        "qty": 5,
         "name": "Iron monster cores",
-        "note": "1 sand shab (Dennick's farm), 1 bark lurker (orchard lane)",
+        "note": "1 sand shab (Dennick's farm), 1 bark lurker (orchard lane), 3 thorny-tongue frogs (northern ditches, wetland cores).",
         "slot": ""
       },
       {
@@ -3840,7 +3840,7 @@
   },
   "next": "Farrah wants to know where Nate was all night. Open contracts: north road hedgehogs, northern frogs, west barn nest. Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1560 iron · 551 lesser",
+  "coins": "1567 iron · 551 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3923,25 +3923,25 @@
   },
   "vitals": [
     {
-      "pct": 97,
-      "note": "Bandaged puncture, outer left calf.",
+      "pct": 100,
+      "note": "Fully healed by Moonwell (calf and arm wounds gone).",
       "tone": "health",
       "label": "HEALTH",
-      "value": 97
+      "value": "100%"
     },
     {
-      "pct": 32,
-      "note": "Windward Veil down; regenerating.",
+      "pct": 80,
+      "note": "Cast Moonwell (30%), recovered some standing in it. Moonwell on 10-minute cooldown.",
       "tone": "mana",
       "label": "MANA",
-      "value": "32%"
+      "value": "80%"
     },
     {
-      "pct": 75,
-      "note": "Walk to the northern ditches.",
+      "pct": 100,
+      "note": "Full after a night's sleep.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "75%"
+      "value": "100%"
     }
   ],
   "profile": [
@@ -4009,7 +4009,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon of field assessment day 5, in the delta",
+    "asOf": "Morning, day 62 in this world, at Greenstone's north gate",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4037,12 +4037,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Northern farmstead ditches, crouched in the reeds at the near bank (northern frogs contract). 3 thorny-tongue frogs: 20 ft left in the shallows, 50 ft ahead in the water, 70 ft right on the far bank. Veil down. Night, 4 days after the assessment.",
+  "location": "Riding Hob Ferrin's heidel grain wagon through Greenstone's north gate, bound for the grain market by the south gate. Morning, 5 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Hunter's Road II",
-      "detail": "Slay one-star monsters 8/30. Reward: 300 iron spirit coins, 3 quintessence, 1 awakening stone.",
+      "detail": "Slay one-star monsters 11/30. Reward: 300 iron spirit coins, 3 quintessence, 1 awakening stone.",
       "status": "ACTIVE"
     },
     {
@@ -4185,7 +4185,7 @@
     {
       "kind": "CONTRACT",
       "name": "Northern frogs",
-      "detail": "Society one-star open contract (northern farmstead ditches). 4 iron per kill. Earlier run: 7 killed, 28 iron paid. Contract stays open.",
+      "detail": "Society one-star open contract (northern farmstead ditches). 4 iron per kill. Earlier run: 7 killed, 28 iron paid. Current run: 3 killed and looted, 12 iron on turn-in. Contract stays open.",
       "status": "ACTIVE"
     },
     {
@@ -4274,6 +4274,12 @@
       "progress": 3
     }
   ],
+  "worldTime": {
+    "day": 62,
+    "time": "Morning",
+    "detail": "Riding Hob Ferrin's grain wagon in through the north gate.",
+    "dayLabel": "62 days in this world"
+  },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 1/5 · STAR 2/5 · WIND 2/5 · COMET 1/5 AWAKENED",
     "racialLabel": "RACIAL (OUTWORLDER)"
