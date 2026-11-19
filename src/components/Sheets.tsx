@@ -1,12 +1,63 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { applyPocketActions, equipItem, isContainer, makePocketAction, pocketActionsForDm, type GearState } from "../gear";
+import {
+  addSellEntries,
+  clampSellQty,
+  clearSellList,
+  formatSellList,
+  pruneSellList,
+  readSellList,
+  removeSellEntry,
+  sameSellList,
+  sellCandidates,
+  sellKey,
+  sellQtyText,
+  writeSellList,
+  type SellEntry,
+} from "../sell";
 import type { GearItem, GearSource, PocketAction, SheetData } from "../types";
 import { Button, Card, Pill } from "./Bits";
 
 type PocketPick = { item: GearItem; chest: string };
 
 function pickKey(chest: string, name: string): string {
-  return `${chest}\n${name}`;
+  return sellKey(chest, name);
+}
+
+async function copyText(text: string): Promise<boolean> {
+  try {
+    if (navigator.clipboard?.writeText) {
+      await navigator.clipboard.writeText(text);
+      return true;
+    }
+  } catch {
+    // Some browsers only allow the clipboard from a focused gesture. Fall through.
+  }
+  try {
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.left = "-9999px";
+    document.body.appendChild(area);
+    area.select();
+    const copiedOk = document.execCommand("copy");
+    area.remove();
+    return copiedOk;
+  } catch {
+    return false;
+  }
+}
+
+function ForSale({ on }: { on: boolean }) {
+  if (!on) return null;
+  return <span className="for-sale">For sale</span>;
+}
+
+function isEmptyChest(pocket: GearItem[], name: string): boolean {
+  const item = pocket.find((entry) => entry.name === name);
+  return Boolean(item && isContainer(item) && !(item.contents?.length));
 }
 
 function picksFrom(pocket: GearItem[], selected: Record<string, boolean>): PocketPick[] {
@@ -114,12 +165,14 @@ export function PocketTab({
   source,
   actions,
   onChange,
+  onSellActions,
 }: {
   active: boolean;
   gear: GearState;
   source: GearSource;
   actions: PocketAction[];
   onChange: (next: GearState, actions?: PocketAction[]) => void;
+  onSellActions: (actions: PocketAction[]) => void;
 }) {
   const slots = source.pocketSlots || 40;
   const [selecting, setSelecting] = useState(false);
@@ -129,6 +182,10 @@ export function PocketTab({
   const [choosing, setChoosing] = useState(false);
   const [notice, setNotice] = useState("");
   const [copied, setCopied] = useState(false);
+  const [sellList, setSellList] = useState<SellEntry[]>(() => readSellList());
+  const [selling, setSelling] = useState(false);
+  const [drafts, setDrafts] = useState<Record<string, { on: boolean; qty: number }>>({});
+  const [copiedSell, setCopiedSell] = useState(false);
   const chests = gear.pocket.filter(isContainer);
   const loose = gear.pocket.filter((item) => !isContainer(item));
   const empties = Math.max(0, slots - gear.pocket.length);
@@ -141,6 +198,33 @@ export function PocketTab({
     const timer = window.setTimeout(() => setCopied(false), 1600);
     return () => window.clearTimeout(timer);
   }, [copied]);
+
+  useEffect(() => {
+    if (!copiedSell) return;
+    const timer = window.setTimeout(() => setCopiedSell(false), 1600);
+    return () => window.clearTimeout(timer);
+  }, [copiedSell]);
+
+  useEffect(() => {
+    const pruned = pruneSellList(sellList, gear.pocket);
+    if (sameSellList(pruned, sellList)) return;
+    writeSellList(pruned);
+    setSellList(pruned);
+  }, [gear.pocket, sellList]);
+
+  useEffect(() => {
+    if (!selling) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelling(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = previous;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [selling]);
 
   const toggleSelect = (chest: string, name: string) => {
     const key = pickKey(chest, name);
@@ -194,34 +278,64 @@ export function PocketTab({
   };
 
   const copyForDm = async () => {
-    const text = pocketActionsForDm(actions);
-    try {
-      if (navigator.clipboard?.writeText) {
-        await navigator.clipboard.writeText(text);
-        setCopied(true);
-        setNotice("");
-        return;
-      }
-    } catch {
-      // Some browsers only allow the clipboard from a focused gesture. Fall through.
-    }
-    try {
-      const area = document.createElement("textarea");
-      area.value = text;
-      area.setAttribute("readonly", "");
-      area.style.position = "fixed";
-      area.style.left = "-9999px";
-      document.body.appendChild(area);
-      area.select();
-      const copiedOk = document.execCommand("copy");
-      area.remove();
-      if (!copiedOk) throw new Error("copy failed");
+    const ok = await copyText(pocketActionsForDm(actions));
+    if (ok) {
       setCopied(true);
       setNotice("");
-    } catch {
-      setNotice("Could not copy. The changes are still saved on this phone.");
+      return;
     }
+    setNotice("Could not copy. The changes are still saved on this phone.");
   };
+
+  const forSale = (chest: string, name: string) => sellList.some((entry) => entry.item === name && entry.chest === chest);
+
+  const commitSell = (next: SellEntry[], removed: SellEntry[], added: SellEntry[]) => {
+    writeSellList(next);
+    setSellList(next);
+    const made = [
+      ...removed.map((entry) => makePocketAction("unsell", { name: entry.item, qty: sellQtyText(entry.qty) }, entry.chest, gear.rev)),
+      ...added.map((entry) => makePocketAction("sell", { name: entry.item, qty: sellQtyText(entry.qty) }, entry.chest, gear.rev)),
+    ];
+    if (made.length) onSellActions(made);
+  };
+
+  const openSell = () => {
+    const next: Record<string, { on: boolean; qty: number }> = {};
+    for (const candidate of sellCandidates(gear.pocket)) {
+      const key = sellKey(candidate.chest, candidate.name);
+      next[key] = { on: Boolean(selected[key]), qty: candidate.max };
+    }
+    setDrafts(next);
+    setSelling(true);
+  };
+
+  const confirmSell = () => {
+    const chosen: SellEntry[] = [];
+    for (const candidate of sellCandidates(gear.pocket)) {
+      const key = sellKey(candidate.chest, candidate.name);
+      const draft = drafts[key];
+      if (!draft?.on) continue;
+      const qty = candidate.picker ? clampSellQty(draft.qty, candidate.max) : 1;
+      chosen.push({ item: candidate.name, chest: candidate.chest, qty });
+    }
+    if (!chosen.length) return;
+    const change = addSellEntries(sellList, chosen);
+    commitSell(change.list, change.removed, change.added);
+    setSelling(false);
+  };
+
+  const copySellList = async () => {
+    const ok = await copyText(formatSellList(sellList));
+    if (ok) {
+      setCopiedSell(true);
+      setNotice("");
+      return;
+    }
+    setNotice("Could not copy. The sell list is still saved on this phone.");
+  };
+
+  const candidates = sellCandidates(gear.pocket);
+  const chosenCount = candidates.filter((candidate) => drafts[sellKey(candidate.chest, candidate.name)]?.on).length;
 
   return (
     <section className="panel" hidden={!active} aria-hidden={!active}>
@@ -229,7 +343,10 @@ export function PocketTab({
         <div className="section-label">
           {gear.pocket.length} OF {slots} SLOTS USED
         </div>
-        <Button label={selecting ? "Done" : "Select"} onClick={() => (selecting ? finishSelect() : setSelecting(true))} />
+        <div className="btn-row">
+          <Button label="Sell" onClick={openSell} />
+          <Button label={selecting ? "Done" : "Select"} onClick={() => (selecting ? finishSelect() : setSelecting(true))} />
+        </div>
       </div>
       {selecting ? <p className="sub">Tap an item to select it, including things inside a chest.</p> : null}
       {selecting ? (
@@ -285,6 +402,40 @@ export function PocketTab({
           </div>
         </div>
       ) : null}
+      <div className="card sell-panel">
+        <div className="card-head">
+          <div className="title">Sell list</div>
+          <div className="btn-row">
+            <Button
+              label="Clear"
+              disabled={sellList.length === 0}
+              onClick={() => {
+                const change = clearSellList(sellList);
+                commitSell(change.list, change.removed, change.added);
+              }}
+            />
+            <Button label={copiedSell ? "Copied" : "Copy sell list"} onClick={() => void copySellList()} />
+          </div>
+        </div>
+        <p className="meta">DM sets the price.</p>
+        {sellList.length === 0 ? (
+          <p className="body">Nothing listed.</p>
+        ) : (
+          <ul className="sell-rows">
+            {sellList.map((entry) => (
+              <li key={sellKey(entry.chest, entry.item)} className="sell-row">
+                <span className="sell-label">
+                  <span className="title">
+                    {entry.item} <span className="slot-qty">x{entry.qty}</span>
+                  </span>
+                  {entry.chest ? <span className="meta">In {entry.chest}</span> : null}
+                </span>
+                <Button label="×" ariaLabel={`Remove ${entry.item} from the sell list`} onClick={() => commitSell(removeSellEntry(sellList, entry.item, entry.chest), [entry], [])} />
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
       {chests.length ? (
         <div className="chest-list">
           {chests.map((chest) => {
@@ -308,6 +459,7 @@ export function PocketTab({
                   />
                 </div>
                 {chest.note ? <div className="slot-note">{chest.note}</div> : null}
+                <ForSale on={count === 0 && forSale("", chest.name)} />
                 <div className="meta">{countLabel(count)}</div>
                 {open ? (
                   count ? (
@@ -322,6 +474,7 @@ export function PocketTab({
                                 <span className="slot-qty">{item.qty}</span>
                               </span>
                               {item.note ? <span className="slot-note">{item.note}</span> : null}
+                              <ForSale on={forSale(chest.name, item.name)} />
                             </button>
                           ) : (
                             <div className="chest-item">
@@ -330,6 +483,7 @@ export function PocketTab({
                                 <span className="slot-qty">{item.qty}</span>
                               </span>
                               {item.note ? <span className="slot-note">{item.note}</span> : null}
+                              <ForSale on={forSale(chest.name, item.name)} />
                             </div>
                           )}
                           <Button label="Take out" onClick={() => takeOut(chest.name, item)} />
@@ -357,6 +511,7 @@ export function PocketTab({
                 <span className="slot-qty">{item.qty}</span>
               </div>
               {item.note ? <div className="slot-note">{item.note}</div> : null}
+              <ForSale on={forSale("", item.name)} />
               {selecting && itemSelected ? <div className="hint">SELECTED</div> : null}
               {!selecting && targets && targets.length ? (
                 <div style={{ marginTop: 8 }}>
@@ -389,9 +544,117 @@ export function PocketTab({
         ))}
       </div>
       <footer className="pocket-footer">
-        <div className="section-label">{waitingLabel(actions.length)}</div>
+        <div>
+          <div className="section-label">{waitingLabel(actions.length)}</div>
+          <div className="pocket-rev">rev {gear.rev}</div>
+        </div>
         <Button label={copied ? "Copied" : "Copy for DM"} onClick={() => void copyForDm()} />
       </footer>
+      {selling
+        ? createPortal(
+        <div className="sheet-backdrop" onClick={() => setSelling(false)}>
+          <div
+            className="card sheet-panel"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="sell-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="card-head">
+              <div className="title" id="sell-title">
+                Sell
+              </div>
+              <Button label="Cancel" onClick={() => setSelling(false)} />
+            </div>
+            <p className="meta">DM sets the price.</p>
+            {candidates.length === 0 ? (
+              <p className="body">Nothing in your pocket to sell.</p>
+            ) : (
+              <div className="sell-options">
+                {candidates.map((candidate, index) => {
+                  const key = sellKey(candidate.chest, candidate.name);
+                  const draft = drafts[key] ?? { on: false, qty: candidate.max };
+                  const qty = candidate.picker ? clampSellQty(draft.qty, candidate.max) : 1;
+                  return (
+                    <div key={`${key}-${index}`} className="sell-option">
+                      <label>
+                        <input
+                          type="checkbox"
+                          checked={draft.on}
+                          onChange={() =>
+                            setDrafts((current) => {
+                              const row = current[key] ?? { on: false, qty: candidate.max };
+                              return { ...current, [key]: { ...row, on: !row.on } };
+                            })
+                          }
+                        />
+                        <span className="sell-name">
+                          <span className="title">{candidate.name}</span>
+                          {candidate.chest ? <span className="meta">In {candidate.chest}</span> : null}
+                          {!candidate.chest && isEmptyChest(gear.pocket, candidate.name) ? <span className="meta">Empty chest</span> : null}
+                        </span>
+                      </label>
+                      {candidate.picker ? (
+                        <span className="qty-step">
+                          <button
+                            type="button"
+                            className="btn"
+                            aria-label={`Fewer ${candidate.name}`}
+                            disabled={qty <= 1}
+                            onClick={() =>
+                              setDrafts((current) => {
+                                const row = current[key] ?? { on: false, qty: candidate.max };
+                                return { ...current, [key]: { ...row, qty: clampSellQty(row.qty - 1, candidate.max) } };
+                              })
+                            }
+                          >
+                            −
+                          </button>
+                          <input
+                            type="number"
+                            inputMode="numeric"
+                            min={1}
+                            max={candidate.max}
+                            aria-label={`Quantity of ${candidate.name}`}
+                            value={qty}
+                            onChange={(event) => {
+                              const nextQty = clampSellQty(Number(event.target.value), candidate.max);
+                              setDrafts((current) => {
+                                const row = current[key] ?? { on: false, qty: candidate.max };
+                                return { ...current, [key]: { ...row, qty: nextQty } };
+                              });
+                            }}
+                          />
+                          <button
+                            type="button"
+                            className="btn"
+                            aria-label={`More ${candidate.name}`}
+                            disabled={qty >= candidate.max}
+                            onClick={() =>
+                              setDrafts((current) => {
+                                const row = current[key] ?? { on: false, qty: candidate.max };
+                                return { ...current, [key]: { ...row, qty: clampSellQty(row.qty + 1, candidate.max) } };
+                              })
+                            }
+                          >
+                            +
+                          </button>
+                        </span>
+                      ) : null}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+            <div className="sheet-actions">
+              <Button label="Add to sell list" variant="primary" disabled={chosenCount === 0} onClick={confirmSell} />
+              <Button label="Cancel" onClick={() => setSelling(false)} />
+            </div>
+          </div>
+        </div>,
+          document.body,
+        )
+        : null}
     </section>
   );
 }

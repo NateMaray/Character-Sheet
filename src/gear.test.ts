@@ -105,6 +105,15 @@ describe("resolveGear", () => {
     expect(resolveGear(sheet.rev, gear, emptyStore, parked).state).toBe(parked);
   });
 
+  it("keeps a numeric quantity when the row stores qty as a number", () => {
+    const nextGear: GearSource = {
+      ...gear,
+      pocket: gear.pocket.map((item) => (item.name === "Waterskins" ? { ...item, qty: 26 as unknown as string } : item)),
+    };
+    const state = resolveGear("rev-qty", nextGear, emptyStore, null).state;
+    expect(state.pocket.find((item) => item.name === "Waterskins")?.qty).toBe("26");
+  });
+
   it("adds a new item on rev change without wiping what Nate equipped", () => {
     const first = fresh();
     const spare = first.pocket.find((item) => item.name === "Spare clothes") as GearItem;
@@ -361,6 +370,7 @@ describe("chests and pocket actions", () => {
     expect(pocketActionRpcMissing({ code: "PGRST202", message: "missing" })).toBe(true);
     expect(pocketActionRpcMissing({ status: 404, message: "not found" })).toBe(true);
     expect(pocketActionRpcMissing({ message: "Failed to fetch" })).toBe(false);
+    expect(pocketActionRpcMissing({ code: "P0001", message: "bad kind" })).toBe(false);
   });
 });
 

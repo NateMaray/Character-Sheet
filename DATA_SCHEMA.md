@@ -123,7 +123,23 @@ When you accept a move:
 2. Append that move's `id` to `gear.appliedActions`.
 3. Bump `rev`.
 
-If you bump `rev` before the row matches, the phone keeps his move. After the merge it plays every waiting move whose id is not in `appliedActions`, in order, and skips a move whose item or chest is no longer in the row.
+If you bump `rev` before the row matches, the phone keeps his move. After the merge it plays every waiting move whose id is not in `appliedActions`, in order, and skips a move whose item or chest is no longer in the row. A `sell` or `unsell` row is not one of those moves. The phone does not replay it as a discard or a chest move.
+
+## Sell list
+
+Nate can list pocket items he wants to sell. The list stays on his phone, under `hwfwm-nate-maray-gear-v1:sell-list`. It is not part of this JSON file, and listing something does not take it out of the pocket. The sheet does not show a price. You set the price when the sale happens in the story.
+
+He can list a top-level item, an item inside a chest, or an empty chest. A chest that still has something in it is not listed on its own; the things inside it are. For a stack whose qty is a number above 1 (`x6`, `6`, or a bare JSON number), he picks how many. Anything else is the whole item.
+
+Each add is sent to `log_pocket_action` with `p_kind` `sell`. Each remove is `unsell`. `p_qty` is the count he is listing, such as `x6`. `p_chest` is the chest name, or `""` when the item is not inside a chest. These calls use the same function as a discard. There is no write key in the app. Until you run `sql/setup4_sell_actions.sql`, the database rejects `sell` and `unsell`. The phone keeps the list and tries the call again later. Do not put these ids in `appliedActions` to make the item disappear. That does not remove it.
+
+When the sale actually happens:
+
+1. Remove the item from `gear.pocket`, or from that chest's `contents`. If he only sold some of a stack, lower `qty` instead.
+2. Update `coins`, and the coin pouch note if the count changed.
+3. Bump `rev`.
+
+On that new rev the phone drops a listed row that is gone, and lowers the listed count when the stack shrank. You do not edit the sell list.
 
 ## Map
 

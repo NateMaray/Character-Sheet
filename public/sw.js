@@ -1,5 +1,5 @@
-/* Home-screen shell. Campaign JSON is never cached. */
-const CACHE = "nate-sheet-shell-v1";
+/* Home-screen shell. Campaign JSON is never cached. v2 is the shell that includes Sell. */
+const CACHE = "nate-sheet-shell-v2";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(self.skipWaiting());

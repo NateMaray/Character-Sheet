@@ -6,9 +6,13 @@ export type GearItem = {
   contents?: GearItem[];
 };
 
-export type PocketActionKind = "discard" | "to_chest" | "from_chest";
+export type PocketActionKind = "discard" | "to_chest" | "from_chest" | "sell" | "unsell";
 
-/** One pocket move waiting on the phone until the DM folds it into the sheet. */
+/**
+ * One logged pocket event.
+ * `discard`, `to_chest`, and `from_chest` stay until the DM lists the id.
+ * `sell` and `unsell` only record the sell list. They do not change the pocket.
+ */
 export type PocketAction = {
   id: string;
   kind: PocketActionKind;
@@ -17,7 +21,7 @@ export type PocketAction = {
   chest: string;
   at: string;
   baseRev: string;
-  /** True once log_pocket_action accepted it. Still pending until appliedActions lists the id. */
+  /** True once log_pocket_action accepted it. Pocket moves stay until appliedActions lists the id. */
   synced?: boolean;
 };
 

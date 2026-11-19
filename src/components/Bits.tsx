@@ -13,15 +13,17 @@ export function Button({
   onClick,
   disabled,
   variant,
+  ariaLabel,
 }: {
   label: string;
   onClick: () => void;
   disabled?: boolean;
   variant?: "primary" | "danger";
+  ariaLabel?: string;
 }) {
   const cls = variant === "primary" ? "btn primary" : variant === "danger" ? "btn danger" : "btn";
   return (
-    <button type="button" className={cls} onClick={onClick} disabled={disabled}>
+    <button type="button" className={cls} onClick={onClick} disabled={disabled} aria-label={ariaLabel}>
       {label}
     </button>
   );
