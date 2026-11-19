@@ -18,6 +18,7 @@ export function validateSheet(value: unknown): string | null {
     need(typeof value.coins === "string", "coins must be a string."),
     need(typeof value.location === "string", "location must be a string."),
     need(typeof value.next === "string", "next must be a string."),
+    need(worldTimeOk(value.worldTime), "worldTime, when present, must be { day: number, dayLabel: string, time: string, detail?: string }."),
     need(Array.isArray(value.abilities), "abilities must be an array."),
     need(Array.isArray(value.racial), "racial must be an array."),
     need(Array.isArray(value.missions), "missions must be an array."),
@@ -37,6 +38,17 @@ export function validateSheet(value: unknown): string | null {
     need(isRecord(value.map) && Array.isArray(value.map.charted), "map.charted must be an array."),
   ];
   return problems.find((problem) => problem) || null;
+}
+
+/** Missing `worldTime` is valid. A present value has to be the clock object. */
+function worldTimeOk(value: unknown): boolean {
+  if (value === undefined) return true;
+  if (!isRecord(value)) return false;
+  if (typeof value.day !== "number" || !Number.isFinite(value.day)) return false;
+  if (typeof value.dayLabel !== "string") return false;
+  if (typeof value.time !== "string") return false;
+  if (value.detail !== undefined && typeof value.detail !== "string") return false;
+  return true;
 }
 
 function pocketContentsOk(gear: unknown): boolean {

@@ -90,6 +90,14 @@ export type LogEntry = { title: string; detail: string };
 
 export type ProfileRow = { label: string; value: string };
 
+/** In-world clock. Omit the whole object and the sheet renders as before. */
+export type WorldTime = {
+  day: number;
+  dayLabel: string;
+  time: string;
+  detail?: string;
+};
+
 export type EssenceNote = { name: string; tag?: string; detail: string };
 
 export type Anchor = "start" | "middle" | "end";
@@ -234,6 +242,7 @@ export type SheetData = {
   coins: string;
   location: string;
   next: string;
+  worldTime?: WorldTime;
   abilities: Ability[];
   abilityMeta: { slotsLabel: string; racialLabel: string };
   racial: NamedDetail[];

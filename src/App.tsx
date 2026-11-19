@@ -302,6 +302,7 @@ export function App() {
             vitals={sheet.vitals}
             coins={sheet.coins}
             location={sheet.location}
+            worldTime={sheet.worldTime}
             next={sheet.next}
             rev={sheet.rev}
             syncedAt={syncedAt}
