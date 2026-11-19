@@ -3359,7 +3359,7 @@
       }
     ]
   },
-  "rev": "2026-11-18-aether-06",
+  "rev": "2026-11-18-aether-07",
   "gear": {
     "doll": [
       [
@@ -3795,6 +3795,7 @@
     ],
     "missionNames": [
       "Hunter's Road",
+      "Eyes and Aura",
       "Cellar Dwellers",
       "North road hedgehogs",
       "Northern frogs",
@@ -3923,6 +3924,12 @@
       "kind": "SYSTEM",
       "name": "Hunter's Road",
       "detail": "Slay one-star monsters 6/15. Reward: 150 iron spirit coins, 2 quintessence, chance at an awakening stone.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Eyes and Aura",
+      "detail": "Objectives: acquire an awakening stone suited to a perception power 0/1; acquire an awakening stone suited to an aura power 0/1. Reward: 200 iron spirit coins. Bonus objective: awaken a perception power and an aura power 0/2. Bonus reward: 1 common awakening stone. Leads: Awakening Stone of Eyes (common; brokers Ostrander & Vey, trade hall 3rd floor, or auction); aura stones are rarer (auction or tougher monsters).",
       "status": "ACTIVE"
     },
     {
