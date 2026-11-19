@@ -74,6 +74,26 @@
         {
           "x": 860,
           "y": 700
+        },
+        {
+          "x": 800,
+          "y": 235
+        },
+        {
+          "x": 520,
+          "y": 268
+        },
+        {
+          "x": 264,
+          "y": 208
+        },
+        {
+          "x": 200,
+          "y": 160
+        },
+        {
+          "x": 126,
+          "y": 121
         }
       ],
       "blocks": [
@@ -837,7 +857,7 @@
           "dy": 28,
           "name": "Greenstone: Old City",
           "anchor": "middle",
-          "current": true
+          "current": false
         },
         {
           "x": 330,
@@ -846,7 +866,7 @@
           "dy": -6,
           "name": "The Island",
           "anchor": "end",
-          "current": false
+          "current": true
         },
         {
           "x": 425,
@@ -3427,7 +3447,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-60",
+  "rev": "2026-11-19-aether-68",
   "gear": {
     "doll": [
       [
@@ -3832,7 +3852,7 @@
       }
     ]
   },
-  "next": "Farrah came by the Society asking after Nate. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
+  "next": "After lunch: Gilbert's Resilient Attire in the Adventure Society trade hall arcades with Gary for self-repairing iron-rank field armour, then a tailor with Farrah for everyday clothes. Tell the team your route before heading out. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1664 iron · 551 lesser",
   "racial": [
@@ -3924,18 +3944,18 @@
       "value": "100%"
     },
     {
-      "pct": 82,
-      "note": "Regenerating. Moonwell cooldown over.",
+      "pct": 50,
+      "note": "Spent crossing the city by Arc Step and Sky Stair (4 of each). Regenerating.",
       "tone": "mana",
       "label": "MANA",
-      "value": "82%"
+      "value": "50%"
     },
     {
-      "pct": 100,
-      "note": "Full after a night's sleep.",
+      "pct": 92,
+      "note": "Winded from a rooftop sprint across the city.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "100%"
+      "value": "92%"
     }
   ],
   "profile": [
@@ -4003,7 +4023,7 @@
     }
   ],
   "identity": {
-    "asOf": "Mid-morning, day 62 in this world, at the Adventure Society",
+    "asOf": "Noon, day 62 in this world, at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4031,7 +4051,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Adventure Society jobs hall counter, Greenstone. Contracts turned in (97 iron). Farrah came by earlier this morning asking after Nate. Mid-morning, 5 days after the assessment.",
+  "location": "Rufus's suite, Sailor's Watch, the Island, Greenstone. Bathed; lunch with Rufus, Farrah, and Gary. Still in the torn clothes. Gilbert's in the trade hall arcades after lunch. Noon, 5 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4270,8 +4290,8 @@
   ],
   "worldTime": {
     "day": 62,
-    "time": "Mid-morning",
-    "detail": "At the Adventure Society jobs hall counter.",
+    "time": "Noon",
+    "detail": "Lunch in Rufus's suite at Sailor's Watch, freshly bathed.",
     "dayLabel": "62 days in this world"
   },
   "abilityMeta": {
