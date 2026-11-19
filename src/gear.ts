@@ -66,7 +66,9 @@ export function removeOne(items: GearItem[], name: string): GearItem[] {
 }
 
 function asText(value: unknown): string {
-  return typeof value === "string" ? value : "";
+  if (typeof value === "string") return value;
+  if (typeof value === "number" && Number.isFinite(value)) return String(value);
+  return "";
 }
 
 /** A container is any pocket item whose `contents` array is present, including an empty chest. */
@@ -403,6 +405,8 @@ function applyFromChest(pocket: GearItem[], action: PocketAction, slotLimit: num
 }
 
 function applyOne(pocket: GearItem[], action: PocketAction, slotLimit: number): GearItem[] {
+  // A sell list entry stays in the pocket until the DM removes it in the story.
+  if (action.kind === "sell" || action.kind === "unsell") return pocket;
   if (action.kind === "discard") return applyDiscard(pocket, action);
   if (action.kind === "to_chest") return applyToChest(pocket, action);
   if (action.kind === "from_chest") return applyFromChest(pocket, action, slotLimit);
@@ -463,6 +467,7 @@ export function samePocketActions(left: PocketAction[], right: PocketAction[]): 
   });
 }
 
+/** Pocket mutations only. sell / unsell live in their own key and must not be replayed from this log. */
 const ACTION_KINDS = new Set<string>(["discard", "to_chest", "from_chest"]);
 
 export function readPocketActions(store?: Store | null): PocketAction[] {

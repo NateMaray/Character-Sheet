@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { RealtimeChannel } from "@supabase/supabase-js";
 import { readGearStore, readPins, readPocketActions, resolveGear, samePocketActions, sanitizePins, togglePin, writeGearStore, writePins, writePocketActions, type GearState, type TabId } from "./gear";
+import { readSellActions, writeSellActions } from "./sell";
 import { changedVitalLabels, fetchSheet, shouldApplySheet } from "./sheet";
 import { fetchRemoteSheet, openSheetChannel, pushPocketAction, supabase } from "./supabase";
 import type { PocketAction, SheetData } from "./types";
@@ -26,8 +27,11 @@ export function App() {
   const [actions, setActions] = useState<PocketAction[]>(() => readPocketActions());
   const gearRef = useRef<GearState | null>(null);
   const actionsRef = useRef<PocketAction[]>(actions);
+  const sellActionsRef = useRef<PocketAction[]>(readSellActions());
   const syncing = useRef(false);
   const syncQueued = useRef(false);
+  const sellSyncing = useRef(false);
+  const sellSyncQueued = useRef(false);
   const sheetRef = useRef<SheetData | null>(null);
   const firstLoad = useRef(true);
   const pullId = useRef(0);
@@ -69,6 +73,39 @@ export function App() {
       syncing.current = false;
     }
   }, []);
+
+  const syncSellActions = useCallback(async () => {
+    if (sellSyncing.current) {
+      sellSyncQueued.current = true;
+      return;
+    }
+    sellSyncing.current = true;
+    try {
+      do {
+        sellSyncQueued.current = false;
+        for (;;) {
+          const action = sellActionsRef.current.find((entry) => !entry.synced);
+          if (!action) break;
+          const result = await pushPocketAction(action);
+          // A rejected sell stays on the phone. It must not stop discard or chest sync.
+          if (!alive.current || result !== "ok") return;
+          const next = sellActionsRef.current.filter((entry) => entry.id !== action.id);
+          sellActionsRef.current = next;
+          writeSellActions(next);
+        }
+      } while (sellSyncQueued.current && alive.current);
+    } finally {
+      sellSyncing.current = false;
+    }
+  }, []);
+
+  const recordSellActions = useCallback((made: PocketAction[]) => {
+    if (!made.length) return;
+    const next = [...sellActionsRef.current, ...made];
+    sellActionsRef.current = next;
+    writeSellActions(next);
+    void syncSellActions();
+  }, [syncSellActions]);
 
   const commitGear = useCallback((next: GearState, nextActions?: PocketAction[]) => {
     gearRef.current = next;
@@ -175,9 +212,13 @@ export function App() {
 
   useEffect(() => {
     void syncActions();
-    const timer = window.setInterval(() => void syncActions(), 15000);
+    void syncSellActions();
+    const timer = window.setInterval(() => {
+      void syncActions();
+      void syncSellActions();
+    }, 15000);
     return () => window.clearInterval(timer);
-  }, [syncActions]);
+  }, [syncActions, syncSellActions]);
 
   useEffect(() => {
     alive.current = true;
@@ -275,7 +316,7 @@ export function App() {
           <MapTab map={sheet.map} active={tab === "map"} />
           <StatusTab sheet={sheet} active={tab === "status"} />
           <AbilitiesTab sheet={sheet} active={tab === "abilities"} />
-          <PocketTab gear={gear} source={sheet.gear} actions={actions} active={tab === "pocket"} onChange={commitGear} />
+          <PocketTab gear={gear} source={sheet.gear} actions={actions} active={tab === "pocket"} onChange={commitGear} onSellActions={recordSellActions} />
           <EquipmentTab gear={gear} source={sheet.gear} active={tab === "equipment"} onChange={commitGear} />
           <MissionsTab sheet={sheet} active={tab === "missions"} />
           <EssencesTab sheet={sheet} active={tab === "essences"} />
