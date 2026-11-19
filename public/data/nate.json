@@ -897,13 +897,13 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Night. Lantern on a post by the coop. Shoulder-wide holes dug up from below along the back wall. Hens silent.",
+      "note": "Night. Sand shab has burst up through the coop floor. Hens panicking. Nate backed into the yard.",
       "title": "Dennick Hale's farm: chicken coop",
       "width": 600,
       "allies": [
         {
-          "x": 340,
-          "y": 215,
+          "x": 330,
+          "y": 200,
           "name": "Dennick Hale"
         }
       ],
@@ -950,7 +950,7 @@
       ],
       "player": {
         "x": 300,
-        "y": 230,
+        "y": 180,
         "label": "You"
       },
       "reveal": [
@@ -969,7 +969,20 @@
         "ry": 170
       },
       "compass": "N ↑",
-      "enemies": [],
+      "enemies": [
+        {
+          "r": 16,
+          "x": 300,
+          "y": 120,
+          "id": "sandshab",
+          "name": "Sand shab",
+          "rank": "Iron",
+          "size": "Much bigger than a river shab",
+          "tone": "enemy",
+          "type": "Sandy-yellow, shark-like, shell-plated, crab legs, big pincers; drags prey under the ground (B1 l.18919-18936).",
+          "status": "Half out of its hole in the coop floor, turning toward the hatch."
+        }
+      ],
       "fogOverlay": 0.3
     },
     "charted": [
@@ -3319,7 +3332,7 @@
       }
     ]
   },
-  "rev": "2026-11-18-t560b",
+  "rev": "2026-11-18-t563",
   "gear": {
     "doll": [
       [
