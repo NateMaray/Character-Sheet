@@ -3427,7 +3427,7 @@
       }
     ]
   },
-  "rev": "2026-11-18-aether-30",
+  "rev": "2026-11-19-aether-31",
   "gear": {
     "doll": [
       [
@@ -3542,9 +3542,9 @@
         "slot": "Main hand"
       },
       {
-        "qty": "11",
+        "qty": "12",
         "name": "Water Quintessence",
-        "note": "From the frogs."
+        "note": "11 from the frogs, 1 from Bean Counting."
       },
       {
         "qty": 26,
@@ -3601,6 +3601,24 @@
         "qty": 4,
         "name": "Bark Lurker Hide",
         "note": "Iron rank crafting material from the orchard lane bark lurker; makes light armour or a shield.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Lightning Quintessence",
+        "note": "Hunter's Road reward.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Wind Quintessence",
+        "note": "Hunter's Road reward.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Awakening Stone of the Storm",
+        "note": "Hunter's Road reward. Unused.",
         "slot": ""
       }
     ],
@@ -3810,7 +3828,7 @@
   },
   "next": "Farrah wants to know where Nate was all night. Open contracts: north road hedgehogs, northern frogs, west barn nest. Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1185 iron · 516 lesser",
+  "coins": "1560 iron · 516 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -3881,13 +3899,12 @@
       }
     ],
     "missionNames": [
-      "Hunter's Road",
+      "Hunter's Road II",
       "Eyes and Aura",
       "Cellar Dwellers",
       "North road hedgehogs",
       "Northern frogs",
       "West barn nest",
-      "Bean Counting",
       "Bark lurker, south road",
       "Ratlings, south fields"
     ]
@@ -3901,18 +3918,18 @@
       "value": 100
     },
     {
-      "pct": 64,
+      "pct": 63,
       "note": "Windward Veil up, 1% a minute.",
       "tone": "mana",
       "label": "MANA",
-      "value": "64%"
+      "value": "63%"
     },
     {
-      "pct": 90,
+      "pct": 85,
       "note": "Full-strength Comet Strike, then the fight.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "90%"
+      "value": "85%"
     }
   ],
   "profile": [
@@ -4008,13 +4025,19 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Callow farm bean rows, south fields, between the field and the burrows along the scrub, mid-fight. 7 ratlings dead (unlooted), 2 stunned behind him, 2 fleeing near the burrows. Night, 4 days after the assessment.",
+  "location": "Callow farm bean rows, south fields, by the burrows along the scrub edge. All 11 ratlings dead (unlooted). Night, 4 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
-      "name": "Hunter's Road",
-      "detail": "Slay one-star monsters 14/15. Reward: 150 iron spirit coins, 2 quintessence, chance at an awakening stone.",
+      "name": "Hunter's Road II",
+      "detail": "Slay one-star monsters 3/30. Reward: 300 iron spirit coins, 3 quintessence, 1 awakening stone.",
       "status": "ACTIVE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Hunter's Road",
+      "detail": "Slay one-star monsters 15/15 (3 overflow carried to Hunter's Road II). Paid on completion: 150 iron spirit coins, 1 Lightning Quintessence, 1 Wind Quintessence, 1 Awakening Stone of the Storm, plus 75 iron unlisted.",
+      "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
@@ -4031,8 +4054,8 @@
     {
       "kind": "SYSTEM",
       "name": "Bean Counting",
-      "detail": "Objective: clear the ratlings from the bean rows at the Callow farm, south fields 7/11. Reward: 100 iron spirit coins. Bonus objective: none reach their burrows (2 still fleeing, none in yet). Bonus reward: 1 water quintessence.",
-      "status": "ACTIVE"
+      "detail": "Cleared all 11 ratlings from the Callow farm bean rows. Bonus met: none reached their burrows. Paid on completion: 100 iron spirit coins, bonus 1 water quintessence, plus 50 iron unlisted. (Society contract \"Ratlings, south fields\" still to be turned in.)",
+      "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
