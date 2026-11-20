@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-76",
+  "rev": "2026-11-19-aether-83",
   "gear": {
     "doll": [
       [
@@ -3652,7 +3652,51 @@
         "slot": ""
       }
     ],
-    "outfits": [],
+    "outfits": [
+      {
+        "name": "First look",
+        "items": [
+          "Slate-blue shirt with silver vine embroidery",
+          "Red sash",
+          "Sky blue wrap trousers",
+          "Socks",
+          "Leather travel pack",
+          "Invictus"
+        ],
+        "pieces": [
+          {
+            "name": "Slate-blue shirt with silver vine embroidery",
+            "slot": "Body",
+            "source": "wardrobe"
+          },
+          {
+            "name": "Red sash",
+            "slot": "Body",
+            "source": "wardrobe"
+          },
+          {
+            "name": "Sky blue wrap trousers",
+            "slot": "Body",
+            "source": "wardrobe"
+          },
+          {
+            "name": "Socks",
+            "slot": "Body",
+            "source": "wardrobe"
+          },
+          {
+            "name": "Leather travel pack",
+            "slot": "Back",
+            "source": "gear"
+          },
+          {
+            "name": "Invictus",
+            "slot": "Main hand",
+            "source": "gear"
+          }
+        ]
+      }
+    ],
     "borrowed": [
       "Foreman's lamp",
       "Tanner's lantern"
@@ -3674,10 +3718,28 @@
       },
       {
         "qty": "",
-        "name": "Linen shirt and dark trousers",
-        "note": "From Rufus after the purge ruined the old travel clothes.",
+        "name": "",
+        "note": "",
         "slot": "Body",
-        "empty": ""
+        "empty": "empty",
+        "clothes": [
+          {
+            "name": "Slate-blue shirt with silver vine embroidery",
+            "slot": "Torso"
+          },
+          {
+            "name": "Red sash",
+            "slot": "Waist"
+          },
+          {
+            "name": "Sky blue wrap trousers",
+            "slot": "Legs"
+          },
+          {
+            "name": "Socks",
+            "slot": "Shoes"
+          }
+        ]
       },
       {
         "qty": "",
@@ -3876,6 +3938,11 @@
         "name": "Green vest with brass toggles",
         "note": "Trade hall arcade clothier, day 62.",
         "slot": "Torso"
+      },
+      {
+        "name": "Linen shirt and dark trousers",
+        "note": "From Rufus after the purge ruined the old travel clothes. Swapped out day 62; travel-stained.",
+        "slot": "Torso"
       }
     ],
     "emptyLabels": {
@@ -3889,6 +3956,10 @@
     },
     "pocketSlots": 40,
     "equipTargets": {
+      "Invictus": [
+        "Main hand",
+        "Off hand"
+      ],
       "War Hammer": [
         "Main hand",
         "Off hand"
@@ -3906,16 +3977,48 @@
         "Off hand",
         "Main hand"
       ],
+      "Foreman's lamp": [
+        "Off hand",
+        "Main hand"
+      ],
       "Travel clothes": [
         "Body"
       ],
+      "Tanner's lantern": [
+        "Off hand",
+        "Main hand"
+      ],
+      "Bone-handled knife": [
+        "Belt / sheath",
+        "Off hand",
+        "Main hand"
+      ],
       "Leather travel pack": [
         "Back"
+      ],
+      "Light stone lantern": [
+        "Off hand",
+        "Main hand"
       ]
     },
     "appliedActions": [
       "c7d98a2e-524f-4361-97f5-aefd3173ed7e",
-      "76f8a61a-c6e6-40ff-bf6a-cef89b75724a"
+      "76f8a61a-c6e6-40ff-bf6a-cef89b75724a",
+      "554761bd-b15a-4dd1-aef6-2ab77d5a6c21",
+      "6f76606e-8e00-4ee0-b937-3f1075f2ec5b",
+      "bd0d8b91-0726-48ea-9886-4e4ecc88020f",
+      "991ead74-deec-4345-a6a7-98480aadcf0c",
+      "2bac03d8-4d5e-40c3-9baa-eb1d7c852a19",
+      "b2c404b8-f0d1-4e3f-a139-36ccafb0e0e0",
+      "d5026104-a0d0-41ad-9615-500117015ab0",
+      "4c5bf686-9127-4c9d-a161-041672b125e1",
+      "0d830044-7589-4db2-97b2-f72400daa60d",
+      "2003b8d3-c692-4c0a-82db-edac624ffb2e",
+      "3d4c922d-f723-4627-a324-f0a3ff7273d0",
+      "9ef592d8-9b57-4334-a935-264ad75db09d",
+      "6ee2a8c2-773f-486a-b018-a03f6d53a42b",
+      "7e6cff10-cece-41cb-abc1-b8ae72b7b60b",
+      "c0587553-ba32-4522-bf4b-30fd3a521912"
     ],
     "defaultLoadouts": [
       {
@@ -4028,7 +4131,7 @@
       }
     ]
   },
-  "next": "Pending order at Gilbert's (Bert): bespoke iron-rank set (layered treated-leather vest, woven-enchanted sleeved undershirt, loose trousers; heat and shock resistant, self-mending, near coat-level protection, lighter). 95 iron total, 48 paid, 47 due at collection about world day 66-67; Bert sends word to Sailor's Watch. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); shop offered delivery to where he's staying. Then several days of training. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
+  "next": "Pending order at Gilbert's (Bert): bespoke iron-rank set (layered treated-leather vest, woven-enchanted sleeved undershirt, loose trousers; heat and shock resistant, self-mending, near coat-level protection, lighter). 95 iron total, 48 paid, 47 due at collection about world day 66-67; Bert sends word to Sailor's Watch. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Then several days of training. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1611 iron · 551 lesser",
   "racial": [
@@ -4157,7 +4260,7 @@
     },
     {
       "label": "Gear",
-      "value": "Simple pants, worn boots, linen shirt, hooded gray travel cloak"
+      "value": "Slate-blue shirt with silver vine embroidery, red sash, sky blue wrap trousers, socks, no shoes"
     },
     {
       "label": "Allies",
