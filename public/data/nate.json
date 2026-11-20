@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-74",
+  "rev": "2026-11-19-aether-76",
   "gear": {
     "doll": [
       [
@@ -3650,99 +3650,9 @@
         "name": "Hedgehog quills",
         "note": "Loose quills from the north road hedgehogs, plus spines picked up off the road and fence post.",
         "slot": ""
-      },
-      {
-        "qty": "28 pieces",
-        "name": "Outfits tab",
-        "note": "Wardrobe from the trade hall arcade clothier (5 iron, tip included). Garments in the Outfits tab take no main inventory slots (B1 canon). Not yet sorted into outfits.",
-        "contents": [
-          {
-            "name": "Slate-blue shirt with silver vine embroidery"
-          },
-          {
-            "name": "Cobalt shirt"
-          },
-          {
-            "name": "Emerald shirt"
-          },
-          {
-            "name": "Magenta shirt"
-          },
-          {
-            "name": "Coral shirt"
-          },
-          {
-            "name": "Royal blue shirt"
-          },
-          {
-            "name": "Scarlet shirt"
-          },
-          {
-            "name": "Turquoise wrap shirt"
-          },
-          {
-            "name": "Striped tunic"
-          },
-          {
-            "name": "Crimson wrap trousers"
-          },
-          {
-            "name": "Royal purple wrap trousers"
-          },
-          {
-            "name": "Sky blue wrap trousers"
-          },
-          {
-            "name": "Lime wrap trousers"
-          },
-          {
-            "name": "Cobalt wrap trousers"
-          },
-          {
-            "name": "Fuchsia wrap trousers"
-          },
-          {
-            "name": "Turquoise knee shorts"
-          },
-          {
-            "name": "Aqua sleeping shirt"
-          },
-          {
-            "name": "Violet sleeping trousers"
-          },
-          {
-            "name": "Teal hooded overshirt"
-          },
-          {
-            "name": "Cobalt hooded overshirt"
-          },
-          {
-            "name": "Red sleeveless undershirt"
-          },
-          {
-            "name": "Socks (3 pairs)"
-          },
-          {
-            "name": "Sky blue smallclothes"
-          },
-          {
-            "name": "Red sash"
-          },
-          {
-            "name": "Emerald hooded cloak"
-          },
-          {
-            "name": "Blue embroidered pullover"
-          },
-          {
-            "name": "Magenta head wrap"
-          },
-          {
-            "name": "Green vest with brass toggles"
-          }
-        ]
       }
     ],
+    "outfits": [],
     "borrowed": [
       "Foreman's lamp",
       "Tanner's lantern"
@@ -3798,6 +3708,176 @@
         "empty": "empty"
       }
     ],
+    "wardrobe": [
+      {
+        "qty": "",
+        "name": "Slate-blue shirt with silver vine embroidery",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Cobalt shirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Emerald shirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Magenta shirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Coral shirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Royal blue shirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Scarlet shirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Turquoise wrap shirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Striped tunic",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Crimson wrap trousers",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Legs"
+      },
+      {
+        "qty": "",
+        "name": "Royal purple wrap trousers",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Legs"
+      },
+      {
+        "qty": "",
+        "name": "Sky blue wrap trousers",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Legs"
+      },
+      {
+        "qty": "",
+        "name": "Lime wrap trousers",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Legs"
+      },
+      {
+        "qty": "",
+        "name": "Cobalt wrap trousers",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Legs"
+      },
+      {
+        "qty": "",
+        "name": "Fuchsia wrap trousers",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Legs"
+      },
+      {
+        "qty": "",
+        "name": "Turquoise knee shorts",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Legs"
+      },
+      {
+        "qty": "",
+        "name": "Aqua sleeping shirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Violet sleeping trousers",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Legs"
+      },
+      {
+        "qty": "",
+        "name": "Teal hooded overshirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Cobalt hooded overshirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Red sleeveless undershirt",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "3 pairs",
+        "name": "Socks",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Shoes"
+      },
+      {
+        "qty": "",
+        "name": "Sky blue smallclothes",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Legs"
+      },
+      {
+        "qty": "",
+        "name": "Red sash",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Waist"
+      },
+      {
+        "qty": "",
+        "name": "Emerald hooded cloak",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Blue embroidered pullover",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      },
+      {
+        "qty": "",
+        "name": "Magenta head wrap",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Head"
+      },
+      {
+        "qty": "",
+        "name": "Green vest with brass toggles",
+        "note": "Trade hall arcade clothier, day 62.",
+        "slot": "Torso"
+      }
+    ],
     "emptyLabels": {
       "Back": "empty",
       "Body": "empty",
@@ -3834,7 +3914,8 @@
       ]
     },
     "appliedActions": [
-      "c7d98a2e-524f-4361-97f5-aefd3173ed7e"
+      "c7d98a2e-524f-4361-97f5-aefd3173ed7e",
+      "76f8a61a-c6e6-40ff-bf6a-cef89b75724a"
     ],
     "defaultLoadouts": [
       {
