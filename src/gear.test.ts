@@ -9,20 +9,23 @@ import {
   equipToSlot,
   itemsForSlot,
   loadLoadout,
+  gearChangeActions,
   pocketActionsForDm,
   readPins,
   readPocketActions,
   resolveGear,
   sanitizePins,
   saveLoadout,
+  softSyncKind,
   togglePin,
   unequip,
+  wearWardrobeItem,
   writePins,
   writePocketActions,
   type TabId,
 } from "./gear";
 import { validateSheet } from "./sheet";
-import { pocketActionRpcMissing } from "./supabase";
+import { pocketActionRpcArgs, pocketActionRpcMissing } from "./supabase";
 import type { GearItem, GearSource, GearState, PocketAction, SheetData } from "./types";
 
 const gear = sheet.gear as GearSource;
@@ -114,7 +117,7 @@ describe("resolveGear", () => {
     expect(state.pocket.find((item) => item.name === "Waterskins")?.qty).toBe("26");
   });
 
-  it("adds a new item on rev change without wiping what Nate equipped", () => {
+  it("adds a new item on rev change and keeps an equip only while its action is still open", () => {
     const first = fresh();
     const spare = first.pocket.find((item) => item.name === "Spare clothes") as GearItem;
     const wearingSpare = equipToSlot(first, gear, spare, "Body");
@@ -123,12 +126,25 @@ describe("resolveGear", () => {
       ...gear,
       pocket: [...gear.pocket, { name: "Coil of rope", qty: "", note: "From the tannery." }],
     };
-    const next = resolveGear("2026-11-14-j-rope", nextGear, emptyStore, wearingSpare);
+    const unlogged = resolveGear("2026-11-14-j-rope", nextGear, emptyStore, wearingSpare, []);
+    expect(unlogged.state.equipped.find((entry) => entry.slot === "Body")?.name).toBe("Travel clothes");
+    expect(unlogged.state.pocket.some((item) => item.name === "Spare clothes")).toBe(true);
+    expect(unlogged.state.pocket.some((item) => item.name === "Coil of rope")).toBe(true);
+
+    const action = move({ id: "wear-spare", kind: "equip", item: "Spare clothes", slot: "Body" });
+    const next = resolveGear("2026-11-14-j-rope", nextGear, emptyStore, wearingSpare, [action]);
     expect(next.dirty).toBe(true);
     expect(next.state.equipped.find((entry) => entry.slot === "Body")?.name).toBe("Spare clothes");
     expect(next.state.pocket.some((item) => item.name === "Coil of rope")).toBe(true);
     expect(next.state.pocket.some((item) => item.name === "Travel clothes")).toBe(true);
     expect(next.state.equipped.find((entry) => entry.slot === "Off hand")?.name).toBe("Tanner's lantern");
+
+    const acked: GearSource = { ...nextGear, appliedActions: ["wear-spare"] };
+    const serverWins = resolveGear("2026-11-14-j-rope-acked", acked, emptyStore, wearingSpare, [action]);
+    expect(serverWins.actions).toEqual([]);
+    expect(serverWins.state.equipped.find((entry) => entry.slot === "Body")?.name).toBe("Travel clothes");
+    expect(serverWins.state.pocket.some((item) => item.name === "Spare clothes")).toBe(true);
+    expect(serverWins.state.pocket.some((item) => item.name === "Coil of rope")).toBe(true);
   });
 
   it("removes gear the story no longer lists and forces the current borrowed piece", () => {
@@ -371,6 +387,100 @@ describe("chests and pocket actions", () => {
     expect(pocketActionRpcMissing({ status: 404, message: "not found" })).toBe(true);
     expect(pocketActionRpcMissing({ message: "Failed to fetch" })).toBe(false);
     expect(pocketActionRpcMissing({ code: "P0001", message: "bad kind" })).toBe(false);
+  });
+});
+
+describe("equip and unequip actions", () => {
+  const clothes = [
+    { name: "Soft cap", slot: "Head" as const },
+    { name: "Linen shirt", slot: "Torso" as const, qty: "", note: "Everyday." },
+    { name: "Dark trousers", slot: "Legs" as const },
+  ];
+
+  function dressedSource(): GearSource {
+    return { ...gear, wardrobe: clothes };
+  }
+
+  it("logs a pocket equip with the doll slot and replays it until the DM applies the id", () => {
+    const state = fresh();
+    const knife = state.pocket.find((item) => item.name === "Kitchen knife") as GearItem;
+    const next = equipItem(state, gear, knife);
+    expect(next).not.toBeNull();
+    const made = gearChangeActions(state, next as GearState);
+    expect(made.map((action) => action.kind)).toEqual(["unequip", "equip"]);
+    expect(made[1]).toMatchObject({ kind: "equip", item: "Kitchen knife", slot: "Belt / sheath", chest: "" });
+    expect(pocketActionRpcArgs(made[1]).p_chest).toBe("Belt / sheath");
+    expect(softSyncKind("equip")).toBe(true);
+    expect(softSyncKind("discard")).toBe(false);
+
+    const stored = { rev: sheet.rev, equipped: state.equipped, pocket: state.pocket, loadouts: state.loadouts };
+    const action = move({ id: "eq-knife", kind: "equip", item: "Kitchen knife", slot: "Belt / sheath" });
+    const replayed = resolveGear("rev-eq", gear, stored, null, [action]);
+    expect(replayed.state.equipped.find((slot) => slot.slot === "Belt / sheath")?.name).toBe("Kitchen knife");
+    expect(replayed.state.pocket.some((item) => item.name === "Fighting Knife")).toBe(true);
+    expect(replayed.state.pocket.some((item) => item.name === "Kitchen knife")).toBe(false);
+
+    const acked: GearSource = { ...gear, appliedActions: ["eq-knife"] };
+    const dropped = resolveGear("rev-eq-acked", acked, stored, null, [action]);
+    expect(dropped.actions).toEqual([]);
+    expect(dropped.state.equipped.find((slot) => slot.slot === "Belt / sheath")?.name).toBe("Fighting Knife");
+  });
+
+  it("wears wardrobe clothes on Head and Body without spending a pocket slot", () => {
+    const source = dressedSource();
+    const state = resolveGear(sheet.rev, source, emptyStore, null).state;
+    const shirt = source.wardrobe?.find((item) => item.name === "Linen shirt");
+    const cap = source.wardrobe?.find((item) => item.name === "Soft cap");
+    const trousers = source.wardrobe?.find((item) => item.name === "Dark trousers");
+    expect(shirt && cap && trousers).toBeTruthy();
+    const withShirt = wearWardrobeItem(state, shirt!);
+    const withBoth = wearWardrobeItem(wearWardrobeItem(withShirt!, trousers!)!, cap!);
+    expect(withBoth?.pocket.map((item) => item.name)).toEqual(state.pocket.map((item) => item.name));
+    expect(withBoth?.equipped.find((slot) => slot.slot === "Body")?.name).toBe("Travel clothes");
+    expect(withBoth?.equipped.find((slot) => slot.slot === "Body")?.clothes?.map((piece) => piece.name)).toEqual(["Linen shirt", "Dark trousers"]);
+    expect(withBoth?.equipped.find((slot) => slot.slot === "Head")?.clothes?.map((piece) => piece.name)).toEqual(["Soft cap"]);
+    const made = gearChangeActions(state, withBoth as GearState);
+    expect(made.map((action) => `${action.kind}:${action.item}:${action.slot}`)).toEqual([
+      "equip:Soft cap:Head",
+      "equip:Linen shirt:Body",
+      "equip:Dark trousers:Body",
+    ]);
+
+    const wearShirt = move({ id: "wear-shirt", kind: "equip", item: "Linen shirt", slot: "Body" });
+    const wearPants = move({ id: "wear-pants", kind: "equip", item: "Dark trousers", slot: "Body" });
+    const replayed = resolveGear("rev-wear", source, { rev: sheet.rev, equipped: state.equipped, pocket: state.pocket, loadouts: state.loadouts }, null, [
+      wearShirt,
+      wearPants,
+    ]);
+    expect(replayed.state.equipped.find((slot) => slot.slot === "Body")?.clothes?.map((piece) => piece.name)).toEqual(["Linen shirt", "Dark trousers"]);
+    expect(replayed.state.pocket.some((item) => item.name === "Linen shirt" || item.name === "Dark trousers")).toBe(false);
+
+    const applied: GearSource = {
+      ...source,
+      appliedActions: ["wear-shirt", "wear-pants"],
+      equipped: source.equipped.map((slot) =>
+        slot.slot === "Body" ? { ...slot, clothes: [{ name: "Linen shirt", slot: "Torso" }] } : slot,
+      ),
+    };
+    const settled = resolveGear(
+      "rev-wear-acked",
+      applied,
+      { rev: sheet.rev, equipped: withBoth!.equipped, pocket: withBoth!.pocket, loadouts: withBoth!.loadouts },
+      null,
+      [wearShirt, wearPants],
+    );
+    expect(settled.actions).toEqual([]);
+    expect(settled.state.equipped.find((slot) => slot.slot === "Body")?.clothes?.map((piece) => piece.name)).toEqual(["Linen shirt"]);
+  });
+
+  it("stores an equip row with its slot and copies that slot for the DM", () => {
+    const store = memory();
+    const equip = move({ id: "eq-hammer", kind: "equip", item: "War Hammer", slot: "Main hand", synced: true });
+    writePocketActions([equip], store);
+    expect(readPocketActions(store)).toEqual([equip]);
+    const parsed = JSON.parse(pocketActionsForDm([equip])) as PocketAction[];
+    expect(parsed[0]).toMatchObject({ kind: "equip", item: "War Hammer", slot: "Main hand", chest: "" });
+    expect(Object.hasOwn(parsed[0], "synced")).toBe(false);
   });
 });
 

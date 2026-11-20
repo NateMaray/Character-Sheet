@@ -82,18 +82,39 @@ export function pocketActionRpcMissing(error: RpcError): boolean {
 
 let pocketRpcMissing = false;
 
+/**
+ * The RPC is still 6 text arguments. Equip sends the doll slot as `p_chest`.
+ * Look rows send the item list (or `{ from }`) as JSON text in `p_chest`.
+ * sql/setup5_equip_actions.sql copies those into `slot` and `detail`.
+ */
+export function pocketActionRpcArgs(action: PocketAction): {
+  p_action_id: string;
+  p_kind: string;
+  p_item: string;
+  p_qty: string;
+  p_chest: string;
+  p_base_rev: string;
+} {
+  let chest = action.chest;
+  if (action.kind === "equip" || action.kind === "unequip") chest = action.slot || "";
+  if (action.kind === "save_look" || action.kind === "delete_look" || action.kind === "wear_look" || action.kind === "rename_look") {
+    chest = JSON.stringify(action.detail ?? []);
+  }
+  return {
+    p_action_id: action.id,
+    p_kind: action.kind,
+    p_item: action.item,
+    p_qty: action.qty,
+    p_chest: chest,
+    p_base_rev: action.baseRev,
+  };
+}
+
 /** Fire-and-forget log. A missing RPC stays on the phone; no DM write key is used. */
 export async function pushPocketAction(action: PocketAction): Promise<"ok" | "missing" | "error"> {
   if (pocketRpcMissing) return "missing";
   try {
-    const { error } = await supabase.rpc("log_pocket_action", {
-      p_action_id: action.id,
-      p_kind: action.kind,
-      p_item: action.item,
-      p_qty: action.qty,
-      p_chest: action.chest,
-      p_base_rev: action.baseRev,
-    });
+    const { error } = await supabase.rpc("log_pocket_action", pocketActionRpcArgs(action));
     if (!error) return "ok";
     if (pocketActionRpcMissing(error)) {
       pocketRpcMissing = true;

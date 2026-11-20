@@ -63,6 +63,9 @@ describe("wardrobe", () => {
     expect(readWardrobe({ wardrobe: [] })).toEqual([]);
     expect(readOutfits({})).toEqual([]);
     expect(readOutfits({ outfits: [{ name: "Town", items: ["Soft cap"] }] })).toEqual([{ name: "Town", items: ["Soft cap"] }]);
+    expect(readOutfits({ outfits: [{ name: "Town", items: ["Soft cap"], pieces: [{ name: "Soft cap", slot: "Head", source: "wardrobe" }] }] })[0].pieces).toEqual([
+      { name: "Soft cap", slot: "Head", source: "wardrobe" },
+    ]);
 
     const source = withWardrobe();
     const plain = resolveGear(sheet.rev, gear, emptyStore, null).state;

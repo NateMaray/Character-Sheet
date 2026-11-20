@@ -1,5 +1,5 @@
 import type { SheetData, Vital } from "./types";
-import { outfitsShapeOk, wardrobeShapeOk } from "./wardrobe";
+import { isWardrobeSlot, outfitsShapeOk, wardrobeShapeOk } from "./wardrobe";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -32,6 +32,7 @@ export function validateSheet(value: unknown): string | null {
     need(isRecord(value.gear) && Array.isArray(value.gear.borrowed) && isRecord(value.gear.equipTargets), "gear.borrowed and gear.equipTargets are required."),
     need(pocketContentsOk(value.gear), "gear.pocket contents, when present, must be an array of {name}."),
     need(appliedActionsOk(value.gear), "gear.appliedActions, when present, must be an array of strings."),
+    need(equippedClothesOk(value.gear), "gear.equipped[].clothes, when present, must be an array of { name, slot } with a wardrobe slot."),
     need(!isRecord(value.gear) || wardrobeShapeOk(value.gear.wardrobe), "gear.wardrobe, when present, must be an array of { name, slot, qty?, note? }. slot is Head, Face, Neck, Torso, Wrist, Waist, Legs, or Shoes."),
     need(!isRecord(value.gear) || outfitsShapeOk(value.gear.outfits), "gear.outfits, when present, must be an array of { name, items: string[] }."),
     need(isRecord(value.map) && isRecord(value.map.world) && isRecord(value.map.town) && isRecord(value.map.battle), "map.world, map.town, and map.battle are required."),
@@ -60,6 +61,18 @@ function pocketContentsOk(gear: unknown): boolean {
     if (!isRecord(item) || item.contents === undefined) return true;
     if (!Array.isArray(item.contents)) return false;
     return item.contents.every((entry) => isRecord(entry) && typeof entry.name === "string");
+  });
+}
+
+function equippedClothesOk(gear: unknown): boolean {
+  if (!isRecord(gear) || !Array.isArray(gear.equipped)) return true;
+  return gear.equipped.every((slot) => {
+    if (!isRecord(slot) || slot.clothes === undefined) return true;
+    if (!Array.isArray(slot.clothes)) return false;
+    return slot.clothes.every((piece) => {
+      if (!isRecord(piece) || typeof piece.name !== "string" || piece.name.length === 0) return false;
+      return isWardrobeSlot(piece.slot);
+    });
   });
 }
 

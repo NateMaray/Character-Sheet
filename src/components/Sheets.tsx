@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { applyPocketActions, equipItem, isContainer, makePocketAction, pocketActionsForDm, type GearState } from "../gear";
+import { applyPocketActions, equipItem, gearChangeActions, isContainer, makePocketAction, pocketActionsForDm, type GearState } from "../gear";
 import {
   addSellEntries,
   clampSellQty,
@@ -531,7 +531,9 @@ export function PocketTab({
                     label={`Equip to ${targets[0]}`}
                     onClick={() => {
                       const next = equipItem(gear, source, item);
-                      if (next) onChange(next);
+                      if (!next) return;
+                      const made = gearChangeActions(gear, next);
+                      onChange(next, made.length ? [...actions, ...made] : undefined);
                     }}
                   />
                 </div>
@@ -558,11 +560,16 @@ export function PocketTab({
       <footer className="pocket-footer">
         <div>
           <div className="section-label">{waitingLabel(actions.length)}</div>
+          {actions.some((action) => !action.synced && (action.kind === "equip" || action.kind === "unequip")) ? (
+            <div className="not-synced">Not synced</div>
+          ) : null}
           <div className="pocket-rev">rev {gear.rev}</div>
         </div>
         <Button label={copied ? "Copied" : "Copy for DM"} onClick={() => void copyForDm()} />
       </footer>
-      {wardrobeOpen ? <WardrobeView source={source} onClose={() => setWardrobeOpen(false)} /> : null}
+      {wardrobeOpen ? (
+        <WardrobeView source={source} gear={gear} actions={actions} onChange={onChange} onClose={() => setWardrobeOpen(false)} />
+      ) : null}
       {selling
         ? createPortal(
         <div className="sheet-backdrop" onClick={() => setSelling(false)}>

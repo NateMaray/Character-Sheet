@@ -12,7 +12,7 @@ Published backup URL:
 
 `https://natemaray.github.io/Character-Sheet/data/nate.json`
 
-Equip, loadouts, and pinned tabs stay on the phone.
+Loadouts and pinned tabs stay on the phone. Equip, unequip, and saved looks are logged with his other pocket changes. Until you list that action's id in `gear.appliedActions`, the phone keeps the change.
 
 Bump `rev` to a new string after every scene, even a small one. The sheet shows the rev under Nate's name, so you can ask him what he sees. Use a date plus a short scene tag, like `2026-11-14-j-first-kill`. Never reuse an old rev.
 
@@ -20,15 +20,15 @@ Bump `rev` to a new string after every scene, even a small one. The sheet shows 
 
 `rev` is the reconcile key for gear only.
 
-- Same `rev`: the phone keeps his equipped items, pocket, and loadouts exactly, including things he moved himself.
-- New `rev`: his arrangement is kept, then the new row is merged in.
+- Same `rev`: the phone keeps his equipped items, worn clothes, pocket, looks, and loadouts exactly, including things he moved himself.
+- New `rev`: `gear.equipped` (including each slot's `clothes`) and `gear.outfits` on the row are the doll and the saved looks. His pocket arrangement is kept, then the new row is merged in.
   - A new owned item (in `gear.pocket`, or worn in `gear.equipped` and not borrowed) appears in his pocket if he does not already have it.
   - Item notes and quantities refresh from the row.
   - An item listed only inside a chest's `contents` stays in that chest. It is not also added as its own pocket row.
-  - Moves still waiting on the phone are played again after that merge, so a discarded item does not come back and a chest he filled does not come back empty. See "Pocket changes from Nate".
+  - Moves still waiting on the phone are played again after that merge, so a discarded item does not come back, a chest he filled does not come back empty, and an equip or look you have not applied yet is played on top of this row. See "Pocket changes from Nate".
   - An owned item removed from both lists disappears, even if he had it equipped.
-  - A borrowed item listed on a slot in `gear.equipped` is forced back onto that slot. Anything of his that was in the way goes to his pocket. Borrowed names are `gear.borrowed` (the tanner's lantern, the foreman's lamp). They are never his, so Unequip does not put them in the pocket.
-  - His loadout names and which of his items they contain are kept. Notes refresh. A loadout entry whose item no longer exists is cleared. Default Combat and Travel are only used on a phone that has never saved loadouts.
+  - A borrowed item listed on a slot in `gear.equipped` is on that slot. Anything of his that was in the way goes to his pocket. Borrowed names are `gear.borrowed` (the tanner's lantern, the foreman's lamp). They are never his, so Unequip does not put them in the pocket. If he has an open unequip for that piece, it is played after the merge.
+  - His loadout names and which of his items they contain are kept. Notes refresh. A loadout entry whose item no longer exists is cleared. Default Combat and Travel are only used on a phone that has never saved loadouts. Loading a loadout logs an equip or unequip for each slot that changed. The loadout list itself is not in this JSON.
 
 Pins are not part of `rev`. They live only on the phone (at most 5).
 
@@ -85,6 +85,8 @@ Optional. Omit the field entirely when you are not tracking the clock. A sheet w
 
 `gear.equipped` is what is worn in the story snapshot, including borrowed pieces. Empty slots stay in the list with `"name": ""` so the paper doll still has that slot. `empty` is the word shown on a bare slot (`none` for armour, `empty` for the rest).
 
+`clothes`, when present on a slot, is wardrobe pieces worn there: `{ "name": "Linen shirt", "slot": "Torso" }`. `name` is a `gear.wardrobe` name. `slot` is that piece's wardrobe slot (`Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, or `Shoes`), not the doll slot. The doll slot is the parent (`Head` or `Body`). Head-slot clothes sit on doll `Head`. Every other wardrobe slot sits on doll `Body`, as a list under Worn clothes. These pieces are not removed from `gear.wardrobe` and they do not use a pocket slot. Leave `clothes` off a slot that has none. A `clothes` entry that is not `{ name, slot }` with a wardrobe slot rejects the sheet.
+
 Owned items that are worn (travel clothes, the hammer) do not also need a `pocket` row. The app treats a non-borrowed equipped item as his.
 
 `gear.equipTargets` maps an item name to the slots it can fill, first choice first. The pocket's Equip button uses the first slot, or the first empty legal slot. The paper doll only offers items whose list includes that slot.
@@ -99,17 +101,17 @@ Owned items that are worn (travel clothes, the hammer) do not also need a `pocke
 
 `gear.wardrobe` is optional. It is his clothes, the Outfits tab in inventory. Each entry is `{ "name": "Linen shirt", "slot": "Torso", "qty": "", "note": "Everyday." }`. `name` and `slot` are required. `qty` and `note` are optional strings. `slot` is one of `Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, `Shoes`. The phone lists them in that order, head to toe, with a button for each slot plus All. Omit the field, or use `[]`, and the Wardrobe button opens an empty list. These pieces are not pocket rows. Do not also put them in `gear.pocket` unless he is carrying that piece as cargo. A bad `slot`, a missing `name`, or a `qty` that is not a string rejects the sheet.
 
-`gear.outfits` is optional. Named sets built from wardrobe item names: `{ "name": "Town", "items": ["Linen shirt", "Dark trousers"] }`. They show at the bottom of the same Wardrobe view. `items` is an array of strings (the `name` of a wardrobe piece). Omit the field and that section stays hidden. A present `outfits` that is not that shape rejects the sheet.
+`gear.outfits` is his saved looks, at most 10. Each entry is `{ "name": "Town", "items": ["Linen shirt", "War Hammer"], "pieces": [{ "name": "Linen shirt", "slot": "Body", "source": "wardrobe" }, { "name": "War Hammer", "slot": "Main hand", "source": "gear" }] }`. `name` and `items` are required. `items` is the flat list of names. `pieces` is optional and is what Wear look uses. Each piece has `name`, `slot` (the doll slot), and `source` (`wardrobe` or `gear`). A wardrobe piece stays in the wardrobe. A gear piece is an owned doll item such as a weapon. Borrowed gear is not saved in a look. An older row with only `name` and `items` still loads: a wardrobe name is worn on Head or Body from its wardrobe slot, and any other name is equipped to the first `equipTargets` slot. Omit `outfits`, or use `[]`, and he has no saved looks. The phone shows 10 slots. A present `outfits` that is not that shape rejects the sheet. Extra looks past 10 are ignored.
 
 `gear.pocket[].contents`, when present, makes that row a container (a chest). Use an array of `{name, qty, note}`, or `[]` for an empty chest. Leave `contents` off a normal item. Do not put a chest inside `contents`. On his phone the chest shows its name, its note, and how many things are in it. He can open the list. Things inside a chest are not offered when he equips.
 
-`gear.appliedActions` is an optional list of action ids you have already folded into this row. Leave it off until he has thrown something away or moved something into a chest.
+`gear.appliedActions` is an optional list of action ids you have already folded into this row. Leave it off until he has thrown something away, moved something into a chest, equipped or unequipped, or saved, renamed, deleted, or worn a look.
 
 ### Add an item
 
 1. If it is in his pocket, add an object to `gear.pocket`: `name`, `qty` ("" or "x2"), `note`.
 2. If it can be worn, add `equipTargets["Exact Name"]` with slot names.
-3. If the story has it worn already, put it on that slot in `gear.equipped` (and do not also list it in `pocket` unless you want a spare). On the next rev it still appears in his pocket if he was not already wearing it. His own worn items are not forced on; only borrowed ones are.
+3. If the story has it worn already, put it on that slot in `gear.equipped` (and do not also list it in `pocket` unless you want a spare). On the next rev the doll matches `gear.equipped`, then any equip or unequip he logged that is not yet in `appliedActions` is played on top. A logged equip keeps the piece on the doll even if this row still shows the old slot.
 4. If it is borrowed, add the name to `gear.borrowed`, put it on the slot, and do not put it in `pocket`.
 5. Bump `rev`.
 
@@ -120,42 +122,59 @@ To give him a chest, add a pocket object with `contents`. Put anything that star
 1. Append an object to `gear.wardrobe`: `name`, `slot`, and optional `qty` and `note`.
 2. `slot` is `Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, or `Shoes`.
 3. Leave it out of `gear.pocket`. It does not spend one of the 40 slots.
-4. To name a set, append `{ "name": "Town", "items": ["Linen shirt", "Dark trousers"] }` to `gear.outfits`. `items` are wardrobe `name` values.
+4. To save a look yourself, append `{ "name": "Town", "items": ["Linen shirt"], "pieces": [{ "name": "Linen shirt", "slot": "Body", "source": "wardrobe" }] }` to `gear.outfits`. Keep the list at 10 or fewer. He can also save looks on the phone. Those arrive as `save_look` rows.
 5. Bump `rev`.
 
 A chest in the pocket is still one slot. Garments inside the "Outfits tab" chest stay there until each one is also an entry in `gear.wardrobe`. Remove them from that chest in the same rev if they should no longer use the slot.
 
 ### Take an item away
 
-Remove it from `pocket` and from every `equipped` slot. On the next rev it leaves his phone, including loadouts. If it was only inside a chest, remove it from that chest's `contents`. A wardrobe piece leaves when you delete it from `gear.wardrobe`. It was never a pocket row.
+Remove it from `pocket` and from every `equipped` slot. On the next rev it leaves his phone, including loadouts. If it was only inside a chest, remove it from that chest's `contents`. A wardrobe piece leaves when you delete it from `gear.wardrobe`. It was never a pocket row. Also remove that name from every `equipped` slot's `clothes`, and from any look that names it.
 
 ## Pocket changes from Nate
 
-He can discard pocket items, put them in a chest, and take them back out. Equipped items stay on the paper doll until he unequips them, so they are not in the pocket to discard or chest. Each move stays on the phone (`hwfwm-nate-maray-gear-v1:actions`) until that move's id is in `gear.appliedActions`.
+He can discard pocket items, put them in a chest, take them back out, equip, unequip, and save looks. Equipped pocket gear stays on the paper doll until he unequips it, so it is not in the pocket to discard or chest. Wardrobe clothes never enter the pocket. Each move stays on the phone (`hwfwm-nate-maray-gear-v1:actions`) until that move's id is in `gear.appliedActions`.
 
 A move is one object:
 
 | Field | What it does |
 | --- | --- |
 | `id` | Stable id. Copy this into `appliedActions` once the row matches the move. |
-| `kind` | `discard`, `to_chest`, or `from_chest`. |
-| `item` | The item name. |
-| `qty` | The quantity text at the time, such as `x2` or `""`. |
-| `chest` | The chest name. `""` when he discards something that is not inside a chest. |
+| `kind` | `discard`, `to_chest`, `from_chest`, `equip`, `unequip`, `save_look`, `delete_look`, `rename_look`, or `wear_look`. |
+| `item` | The item name. For a look, this is the look name. For `rename_look`, this is the new name. |
+| `qty` | The quantity text at the time, such as `x2` or `""`. Empty for clothes and looks. |
+| `chest` | The chest name. `""` when he discards something that is not inside a chest, and `""` for equip and looks. |
+| `slot` | Doll slot for `equip` and `unequip` (`Head`, `Body`, `Main hand`, `Off hand`, `Belt / sheath`, `Back`, `Armour`). Omitted on other kinds. |
+| `detail` | Look rows only. For `save_look`, `delete_look`, and `wear_look`, an array of `{ "name", "slot", "source" }` (`source` is `wardrobe` or `gear`, `slot` is the doll slot). For `rename_look`, `{ "from": "Old name" }`. |
 | `at` | When he did it, ISO time. |
 | `baseRev` | The `rev` he was looking at. |
 
+`equip` / `unequip` of a `gear.wardrobe` name does not take the piece out of the wardrobe and does not use a pocket slot. Head-slot clothes use doll `Head`. Torso, Legs, Shoes, Waist, Neck, Face, and Wrist use doll `Body`. `equip` / `unequip` of anything else is pocket gear: it leaves or enters the pocket, and it fills that one doll slot's `name`.
+
+`save_look` stores the current doll (worn clothes plus owned gear, not borrowed gear) under `item`. The phone keeps at most 10 looks. Saving an existing name overwrites that look. `delete_look` removes the look named `item`. `rename_look` renames `detail.from` to `item`. `wear_look` puts that look on: Head and Body `clothes` become the look's wardrobe pieces (other worn clothes on those two slots come off), and each gear piece is equipped to its doll slot. Slots the look does not mention stay as they are.
+
 Discarding a chest discards what is inside it too. That is one `discard`, on the chest. Putting an item in a chest does not spend another slot. Taking an item out does, and the phone refuses when every top-level slot is full. A chest cannot go inside itself or another chest.
 
-The pocket tab shows how many moves are still waiting and can copy them as a JSON array. The phone also sends each move to the database function `log_pocket_action` (`p_action_id`, `p_kind`, `p_item`, `p_qty`, `p_chest`, `p_base_rev`) when that function exists. There is no write key in the app. If the function is missing, the move stays on the phone only.
+The pocket tab shows how many moves are still waiting and can copy them as a JSON array. The phone also sends each move to the database function `log_pocket_action` (`p_action_id`, `p_kind`, `p_item`, `p_qty`, `p_chest`, `p_base_rev`) when that function exists. There is no write key in the app. If the function is missing, the move stays on the phone only. Until you run `sql/setup5_equip_actions.sql`, the database rejects `equip`, `unequip`, `save_look`, `delete_look`, `rename_look`, and `wear_look`. The phone keeps the change and shows "Not synced". It tries again later. That rejection does not block a discard or a chest move.
+
+The function is still those 6 text arguments. For `equip` and `unequip`, `p_chest` is the doll slot. For a look, `p_chest` is the JSON text of `detail`. After `sql/setup5_equip_actions.sql`, a trigger copies that into the `slot` or `detail` column and stores `chest` as `""`.
 
 When you accept a move:
 
-1. Change `gear.pocket` so the row matches (delete a discard, or move the object into or out of `contents`).
+1. Change the row so it matches.
+   - `discard`, `to_chest`, `from_chest`: change `gear.pocket` (delete a discard, or move the object into or out of `contents`).
+   - `equip` of pocket gear: set that doll slot's `name`, `note`, and `qty`, and remove the item from `gear.pocket`. The owned item that was on the slot goes back to the pocket. Do not pocket a borrowed item.
+   - `unequip` of pocket gear: clear that slot's `name`. If it is not borrowed, add it to `gear.pocket`.
+   - `equip` of a wardrobe piece: append `{ "name", "slot" }` to that doll slot's `clothes` (`slot` here is the wardrobe slot from `gear.wardrobe`). Leave the wardrobe row in place. Do not add a pocket row.
+   - `unequip` of a wardrobe piece: remove that name from the doll slot's `clothes`. Leave the wardrobe row in place.
+   - `save_look`: upsert `gear.outfits` by `item`. Set `items` to the piece names and `pieces` to `detail`. If this name is new and he already has 10 looks, ignore it.
+   - `delete_look`: remove the outfit named `item`.
+   - `rename_look`: rename `detail.from` to `item`. If `item` is already a look, ignore it.
+   - `wear_look`: set doll `Head` `clothes` to the wardrobe pieces in `detail` whose doll slot is `Head`, and doll `Body` `clothes` to the ones whose doll slot is `Body`. Equip each `source: "gear"` piece onto its doll slot the same way as `equip`.
 2. Append that move's `id` to `gear.appliedActions`.
 3. Bump `rev`.
 
-If you bump `rev` before the row matches, the phone keeps his move. After the merge it plays every waiting move whose id is not in `appliedActions`, in order, and skips a move whose item or chest is no longer in the row. A `sell` or `unsell` row is not one of those moves. The phone does not replay it as a discard or a chest move.
+If you bump `rev` before the row matches, the phone keeps his move. After the merge it plays every waiting move whose id is not in `appliedActions`, in order, and skips a move whose item or chest is no longer in the row. A `sell` or `unsell` row is not one of those moves. The phone does not replay it as a discard, a chest move, an equip, or a look. Once the id is in `appliedActions`, the phone does not play that action again: `gear.equipped` and `gear.outfits` on the new rev are the doll and the looks.
 
 ## Sell list
 

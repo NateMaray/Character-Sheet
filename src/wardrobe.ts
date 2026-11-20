@@ -1,4 +1,4 @@
-import type { GearSource, WardrobeItem, WardrobeOutfit, WardrobeSlot } from "./types";
+import type { GearSource, LookPiece, WardrobeItem, WardrobeOutfit, WardrobeSlot } from "./types";
 
 /** Head to toe. The wardrobe view and its filter buttons use this order. */
 export const WARDROBE_SLOTS = ["Head", "Face", "Neck", "Torso", "Wrist", "Waist", "Legs", "Shoes"] as const satisfies readonly WardrobeSlot[];
@@ -9,6 +9,11 @@ const SLOT_SET = new Set<string>(WARDROBE_SLOTS);
 
 export function isWardrobeSlot(value: unknown): value is WardrobeSlot {
   return typeof value === "string" && SLOT_SET.has(value);
+}
+
+/** Headwear sits on the doll's Head. Every other clothes slot shares Body. */
+export function dollSlotForWardrobe(slot: WardrobeSlot): "Head" | "Body" {
+  return slot === "Head" ? "Head" : "Body";
 }
 
 /** Missing or empty wardrobe is an empty list. Bad rows are skipped; the validator rejects them first. */
@@ -25,13 +30,32 @@ export function readWardrobe(gear: Pick<GearSource, "wardrobe">): WardrobeItem[]
   return items;
 }
 
+export function sanitizePieces(value: unknown): LookPiece[] {
+  if (!Array.isArray(value)) return [];
+  const pieces: LookPiece[] = [];
+  for (const entry of value) {
+    if (!entry || typeof entry !== "object" || Array.isArray(entry)) continue;
+    const row = entry as Partial<LookPiece>;
+    if (typeof row.name !== "string" || !row.name.trim()) continue;
+    if (typeof row.slot !== "string" || !row.slot.trim()) continue;
+    if (row.source !== "wardrobe" && row.source !== "gear") continue;
+    const piece: LookPiece = { name: row.name.trim(), slot: row.slot.trim(), source: row.source };
+    if (pieces.some((item) => item.name === piece.name && item.slot === piece.slot && item.source === piece.source)) continue;
+    pieces.push(piece);
+  }
+  return pieces;
+}
+
 export function readOutfits(gear: Pick<GearSource, "outfits">): WardrobeOutfit[] {
   if (!Array.isArray(gear.outfits)) return [];
   const outfits: WardrobeOutfit[] = [];
   for (const entry of gear.outfits) {
-    if (!entry || typeof entry.name !== "string" || !Array.isArray(entry.items)) continue;
+    if (!entry || typeof entry.name !== "string" || !entry.name.trim() || !Array.isArray(entry.items)) continue;
     if (!entry.items.every((name) => typeof name === "string")) continue;
-    outfits.push({ name: entry.name, items: entry.items.slice() });
+    const outfit: WardrobeOutfit = { name: entry.name.trim(), items: entry.items.slice() };
+    const pieces = sanitizePieces(entry.pieces);
+    if (pieces.length || Array.isArray(entry.pieces)) outfit.pieces = pieces;
+    outfits.push(outfit);
   }
   return outfits;
 }
@@ -66,6 +90,14 @@ export function outfitsShapeOk(value: unknown): boolean {
     const row = item as Record<string, unknown>;
     if (typeof row.name !== "string" || row.name.length === 0) return false;
     if (!Array.isArray(row.items) || !row.items.every((name) => typeof name === "string")) return false;
-    return true;
+    if (row.pieces === undefined) return true;
+    if (!Array.isArray(row.pieces)) return false;
+    return row.pieces.every((piece) => {
+      if (!piece || typeof piece !== "object" || Array.isArray(piece)) return false;
+      const rowPiece = piece as Record<string, unknown>;
+      if (typeof rowPiece.name !== "string" || rowPiece.name.length === 0) return false;
+      if (typeof rowPiece.slot !== "string" || rowPiece.slot.length === 0) return false;
+      return rowPiece.source === "wardrobe" || rowPiece.source === "gear";
+    });
   });
 }
