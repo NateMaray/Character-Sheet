@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-103",
+  "rev": "2026-11-19-aether-104",
   "gear": {
     "doll": [
       [
@@ -4350,7 +4350,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Director Elspeth Arella's office, upper floor of the Adventure Society, Greenstone, with Rufus. They have come to hand over the Vane ledger (Rufus holds it). Early afternoon, 11 days after the assessment.",
+  "location": "Adventure Society building, Greenstone, leaving Director Elspeth Arella's upper-floor office with Rufus. The Vane ledger is sealed in Arella's private file; Rufus is to deliver the Vane signet to her, sealed, by midday day 69. Early afternoon, 11 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4590,7 +4590,7 @@
   "worldTime": {
     "day": 68,
     "time": "Afternoon",
-    "detail": "Early afternoon in Director Arella's office at the Adventure Society. Nate and Rufus are about to present the Vane ledger.",
+    "detail": "Early afternoon. The meeting with Director Arella is over; Nate and Rufus are leaving her office in the Adventure Society.",
     "dayLabel": "68 days in this world"
   },
   "abilityMeta": {
