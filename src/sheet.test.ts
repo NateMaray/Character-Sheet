@@ -59,10 +59,10 @@ describe("worldTime", () => {
 
   it("keeps a sheet with no worldTime valid", () => {
     expect(validateSheet(backup)).toBeNull();
-    expect(parseSheet(backup).worldTime).toBeUndefined();
     const copy = { ...backup } as Record<string, unknown>;
     delete copy.worldTime;
     expect(validateSheet(copy)).toBeNull();
+    expect(parseSheet(copy).worldTime).toBeUndefined();
   });
 
   it("accepts the clock, including when detail is left off", () => {

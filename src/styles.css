@@ -779,6 +779,42 @@ button.slot-cell {
   padding: 2px 6px;
 }
 .sell-panel { margin: 8px 0 12px; }
+.wardrobe-banner { margin-top: 10px; }
+.wardrobe-banner .body { margin-top: 8px; }
+.wardrobe-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.wardrobe-filters button {
+  min-height: 40px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.35);
+  color: var(--text-dim);
+  cursor: pointer;
+  font-weight: 650;
+  font-size: 13px;
+}
+.wardrobe-filters button[aria-pressed="true"] {
+  background: rgba(103, 231, 255, 0.16);
+  color: var(--text);
+  border-color: transparent;
+  box-shadow: inset 0 0 0 1px rgba(103, 231, 255, 0.55);
+}
+.wardrobe-group { margin-top: 14px; }
+.wardrobe-item {
+  padding: 10px 0 0;
+  margin-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.wardrobe-item .slot-name span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.wardrobe-item .title { overflow-wrap: anywhere; }
 .sell-rows { list-style: none; margin: 8px 0 0; padding: 0; }
 .sell-row {
   display: flex;
@@ -811,6 +847,9 @@ button.slot-cell {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   padding-bottom: calc(16px + var(--safe-b));
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 120px),
+    #0e1422;
 }
 .sell-options { margin-top: 4px; }
 .sell-option {
@@ -858,7 +897,7 @@ button.slot-cell {
   flex-wrap: wrap;
   gap: 8px;
   padding-top: 12px;
-  background: #101826;
+  background: #0e1422;
 }
 @media (min-width: 720px) {
   .sheet-backdrop { align-items: center; padding: 24px; }

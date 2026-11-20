@@ -93,9 +93,13 @@ Owned items that are worn (travel clothes, the hammer) do not also need a `pocke
 
 `gear.defaultLoadouts` is Combat and Travel for a phone that has no saved loadouts yet. Combat is the story kit without borrowed gear. Travel clears Main hand and Off hand.
 
-`gear.pocketSlots` is the pocket grid size (40). Only top-level pocket rows use a slot. A chest is one row, so it uses one slot.
+`gear.pocketSlots` is the pocket grid size (40). Only top-level pocket rows use a slot. A chest is one row, so it uses one slot. Clothes in `gear.wardrobe` do not use a slot, and they are not part of the pocket counter.
 
 `gear.borrowed` is the list of items that are not his.
+
+`gear.wardrobe` is optional. It is his clothes, the Outfits tab in inventory. Each entry is `{ "name": "Linen shirt", "slot": "Torso", "qty": "", "note": "Everyday." }`. `name` and `slot` are required. `qty` and `note` are optional strings. `slot` is one of `Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, `Shoes`. The phone lists them in that order, head to toe, with a button for each slot plus All. Omit the field, or use `[]`, and the Wardrobe button opens an empty list. These pieces are not pocket rows. Do not also put them in `gear.pocket` unless he is carrying that piece as cargo. A bad `slot`, a missing `name`, or a `qty` that is not a string rejects the sheet.
+
+`gear.outfits` is optional. Named sets built from wardrobe item names: `{ "name": "Town", "items": ["Linen shirt", "Dark trousers"] }`. They show at the bottom of the same Wardrobe view. `items` is an array of strings (the `name` of a wardrobe piece). Omit the field and that section stays hidden. A present `outfits` that is not that shape rejects the sheet.
 
 `gear.pocket[].contents`, when present, makes that row a container (a chest). Use an array of `{name, qty, note}`, or `[]` for an empty chest. Leave `contents` off a normal item. Do not put a chest inside `contents`. On his phone the chest shows its name, its note, and how many things are in it. He can open the list. Things inside a chest are not offered when he equips.
 
@@ -111,9 +115,19 @@ Owned items that are worn (travel clothes, the hammer) do not also need a `pocke
 
 To give him a chest, add a pocket object with `contents`. Put anything that starts inside it in that array, not as its own pocket row.
 
+### Add clothes
+
+1. Append an object to `gear.wardrobe`: `name`, `slot`, and optional `qty` and `note`.
+2. `slot` is `Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, or `Shoes`.
+3. Leave it out of `gear.pocket`. It does not spend one of the 40 slots.
+4. To name a set, append `{ "name": "Town", "items": ["Linen shirt", "Dark trousers"] }` to `gear.outfits`. `items` are wardrobe `name` values.
+5. Bump `rev`.
+
+A chest in the pocket is still one slot. Garments inside the "Outfits tab" chest stay there until each one is also an entry in `gear.wardrobe`. Remove them from that chest in the same rev if they should no longer use the slot.
+
 ### Take an item away
 
-Remove it from `pocket` and from every `equipped` slot. On the next rev it leaves his phone, including loadouts. If it was only inside a chest, remove it from that chest's `contents`.
+Remove it from `pocket` and from every `equipped` slot. On the next rev it leaves his phone, including loadouts. If it was only inside a chest, remove it from that chest's `contents`. A wardrobe piece leaves when you delete it from `gear.wardrobe`. It was never a pocket row.
 
 ## Pocket changes from Nate
 
