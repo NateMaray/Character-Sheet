@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-20-aether-107",
+  "rev": "2026-11-20-aether-111",
   "gear": {
     "doll": [
       [
@@ -3650,12 +3650,6 @@
         "qty": 1,
         "name": "Awakening Stone of Persistence",
         "note": "Hunter's Road II reward. Unused.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Awakening Stone of Omens",
-        "note": "Epic. Won at the Ostrander & Vey auction, Lot 8, for 111 bronze (day 78). Unused.",
         "slot": ""
       }
     ],
@@ -4163,9 +4157,9 @@
       }
     ]
   },
-  "next": "Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
+  "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1076 iron · 560 lesser",
+  "coins": "1046 iron · 560 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4329,7 +4323,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 78 in this world, at the Ostrander & Vey stone auction",
+    "asOf": "Mid-afternoon, day 78 in this world, at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4357,7 +4351,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Adventure Society trade hall, 3rd floor, Greenstone, for the Ostrander & Vey joint stone auction, with Gary, Farrah, and Rufus. Morning, day 78 in this world.",
+  "location": "Rufus's suite, Sailor's Watch, Greenstone (door locked, shutters closed), with Rufus, Farrah, and Gary, preparing to absorb the Awakening Stone of Omens. Mid-afternoon, day 78 in this world.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4374,7 +4368,7 @@
     {
       "kind": "SYSTEM",
       "name": "Eyes and Aura",
-      "detail": "Objectives: acquire an awakening stone suited to a perception power 0/1; acquire an awakening stone suited to an aura power 1/1 (Awakening Stone of Omens, won at auction day 78). Reward: 200 iron spirit coins. Bonus objective: awaken a perception power and an aura power 0/2. Bonus reward: 1 common awakening stone. Leads: Awakening Stone of Eyes (common; Lot 7 sold to another bidder for 45 bronze; try the Ostrander & Vey brokers, trade hall 3rd floor).",
+      "detail": "Objectives: acquire an awakening stone suited to a perception power 0/1; acquire an awakening stone suited to an aura power 1/1 (Awakening Stone of Omens, won at auction and absorbed day 78). Reward: 200 iron spirit coins. Bonus objective: awaken a perception power and an aura power 1/2 (Harbinger). Bonus reward: 1 common awakening stone. Leads: Awakening Stone of Eyes (common; Lot 7 sold to another bidder for 45 bronze; try the Ostrander & Vey brokers, trade hall 3rd floor).",
       "status": "ACTIVE"
     },
     {
@@ -4598,16 +4592,23 @@
       "rank": "Iron 0",
       "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost: Low mana (3%). Cooldown: 5 seconds. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. On the recorded wind flight-ability list: more steps at bronze, continuous air-walking (flight) at silver.",
       "progress": 3
+    },
+    {
+      "tag": "Comet · Aura · Special",
+      "name": "Harbinger",
+      "rank": "Iron 0",
+      "detail": "Your presence carries the weight of a comet in the sky: a sign that something is coming. Passive aura, about 30 feet across at iron rank. Allies within it gain a minor bonus to movement speed, and their movement counts toward Momentum-style effects such as Comet Strike. Enemies within it have reduced resistance to afflictions, and burning wounds (such as Comet Strike's) last longer on them. Also grants aura control: you can suppress or extend your aura and press it on others, like any aura power. Cost: none (the aura is always on and can be suppressed at will). From the Awakening Stone of Omens.",
+      "progress": 0
     }
   ],
   "worldTime": {
     "day": 78,
-    "time": "Morning",
+    "time": "Mid-afternoon",
     "detail": "Auction morning. After a week of daily contracts (days 69-77), Nate is at the Ostrander & Vey joint stone auction on the trade hall's 3rd floor with Gary, Farrah, and Rufus.",
     "dayLabel": "78 days in this world"
   },
   "abilityMeta": {
-    "slotsLabel": "LIGHTNING 1/5 · STAR 2/5 · WIND 2/5 · COMET 1/5 AWAKENED",
+    "slotsLabel": "LIGHTNING 1/5 · STAR 2/5 · WIND 2/5 · COMET 2/5 AWAKENED",
     "racialLabel": "RACIAL (OUTWORLDER)"
   },
   "achievements": [
