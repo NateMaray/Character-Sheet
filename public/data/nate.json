@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-83",
+  "rev": "2026-11-19-aether-98",
   "gear": {
     "doll": [
       [
@@ -3660,6 +3660,7 @@
           "Red sash",
           "Sky blue wrap trousers",
           "Socks",
+          "Honey-brown pebble-buck running shoes",
           "Leather travel pack",
           "Invictus"
         ],
@@ -3681,6 +3682,11 @@
           },
           {
             "name": "Socks",
+            "slot": "Body",
+            "source": "wardrobe"
+          },
+          {
+            "name": "Honey-brown pebble-buck running shoes",
             "slot": "Body",
             "source": "wardrobe"
           },
@@ -3711,10 +3717,10 @@
       },
       {
         "qty": "",
-        "name": "",
-        "note": "",
+        "name": "Gilbert's bespoke armour set",
+        "note": "Bespoke, by Bert at Gilbert's Resilient Attire (day 68). Midnight-blue wrap vest with silver piping, high collar and skirted tassets to mid-thigh; dark brown leather crossing straps and belts with silver buckles; steel-grey undershirt with faint silver weave; loose charcoal trousers; wrapped dark brown leather forearm bracers trimmed in silver (Bert's gift, free). Heat and shock resistant, self-mending, near coat-level protection, lighter than it looks. Paid in full: 50 iron (47 balance plus 3 tip), day 68.",
         "slot": "Armour",
-        "empty": "none"
+        "empty": ""
       },
       {
         "qty": "",
@@ -3724,19 +3730,11 @@
         "empty": "empty",
         "clothes": [
           {
-            "name": "Slate-blue shirt with silver vine embroidery",
-            "slot": "Torso"
-          },
-          {
-            "name": "Red sash",
-            "slot": "Waist"
-          },
-          {
-            "name": "Sky blue wrap trousers",
-            "slot": "Legs"
-          },
-          {
             "name": "Socks",
+            "slot": "Shoes"
+          },
+          {
+            "name": "Honey-brown pebble-buck running shoes",
             "slot": "Shoes"
           }
         ]
@@ -3943,6 +3941,31 @@
         "name": "Linen shirt and dark trousers",
         "note": "From Rufus after the purge ruined the old travel clothes. Swapped out day 62; travel-stained.",
         "slot": "Torso"
+      },
+      {
+        "name": "Honey-brown pebble-buck running shoes",
+        "note": "Closed toe, thin flexible stitched sole, single lace tied at the ankle. Arcade sandal-maker, day 62. Free resoling for life.",
+        "slot": "Shoes"
+      },
+      {
+        "name": "Sea-blue woven-thong sandals",
+        "note": "Arcade sandal-maker, day 62. Free resoling for life.",
+        "slot": "Shoes"
+      },
+      {
+        "name": "Wrap-binding travel sandals",
+        "note": "Sturdy, thick layered soles. Arcade sandal-maker, day 62. Free resoling for life.",
+        "slot": "Shoes"
+      },
+      {
+        "name": "Dark green leather house slippers",
+        "note": "Soft leather. Arcade sandal-maker, day 62. Free resoling for life.",
+        "slot": "Shoes"
+      },
+      {
+        "name": "Black evening shoes with silver-thread stitching",
+        "note": "Polished. Arcade sandal-maker, day 62. Free resoling for life.",
+        "slot": "Shoes"
       }
     ],
     "emptyLabels": {
@@ -4018,7 +4041,9 @@
       "9ef592d8-9b57-4334-a935-264ad75db09d",
       "6ee2a8c2-773f-486a-b018-a03f6d53a42b",
       "7e6cff10-cece-41cb-abc1-b8ae72b7b60b",
-      "c0587553-ba32-4522-bf4b-30fd3a521912"
+      "c0587553-ba32-4522-bf4b-30fd3a521912",
+      "73f242c8-ea87-4104-9ee0-7b514a8a8cc8",
+      "7e43a584-6b3a-433d-bf21-88ad2f2f7c67"
     ],
     "defaultLoadouts": [
       {
@@ -4131,9 +4156,9 @@
       }
     ]
   },
-  "next": "Pending order at Gilbert's (Bert): bespoke iron-rank set (layered treated-leather vest, woven-enchanted sleeved undershirt, loose trousers; heat and shock resistant, self-mending, near coat-level protection, lighter). 95 iron total, 48 paid, 47 due at collection about world day 66-67; Bert sends word to Sailor's Watch. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Then several days of training. Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
+  "next": "Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1611 iron · 551 lesser",
+  "coins": "1556 iron · 551 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4217,24 +4242,24 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Fully healed by Moonwell (calf and arm wounds gone).",
+      "note": "Full after rest, five days of training.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
-      "pct": 50,
-      "note": "Regenerating after the dash across the city.",
+      "pct": 100,
+      "note": "Full after rest, five days of training.",
       "tone": "mana",
       "label": "MANA",
-      "value": "50%"
+      "value": "100%"
     },
     {
-      "pct": 92,
-      "note": "Winded from a rooftop sprint across the city.",
+      "pct": 100,
+      "note": "Full after rest, five days of training.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "92%"
+      "value": "100%"
     }
   ],
   "profile": [
@@ -4260,7 +4285,7 @@
     },
     {
       "label": "Gear",
-      "value": "Slate-blue shirt with silver vine embroidery, red sash, sky blue wrap trousers, socks, no shoes"
+      "value": "Gilbert's bespoke armour set (midnight-blue wrap vest with brown leather straps, steel-grey undershirt, charcoal trousers, brown leather bracers), socks, honey-brown pebble-buck running shoes"
     },
     {
       "label": "Allies",
@@ -4302,7 +4327,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 62 in this world, at Gilbert's in the trade hall",
+    "asOf": "Morning, day 68 in this world, at Gilbert's",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4330,7 +4355,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "A small clothier's shop down a side passage in the trade hall arcades, Greenstone, with Gary and Farrah, shopping for everyday clothes. Vest set commissioned at Gilbert's (48 of 95 iron paid). Early afternoon, 5 days after the assessment.",
+  "location": "Gilbert's Resilient Attire for the Discerning Gentleman, boutique arcade off the Adventure Society trade hall, Greenstone. The bespoke armour set is worn and paid for. Morning, 11 days after the assessment.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4568,10 +4593,10 @@
     }
   ],
   "worldTime": {
-    "day": 62,
-    "time": "Afternoon",
-    "detail": "Early afternoon, shopping for everyday clothes in the trade hall arcades with Gary and Farrah.",
-    "dayLabel": "62 days in this world"
+    "day": 68,
+    "time": "Morning",
+    "detail": "Morning at Gilbert's. Nate is wearing the new bespoke armour set, paid in full.",
+    "dayLabel": "68 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 1/5 · STAR 2/5 · WIND 2/5 · COMET 1/5 AWAKENED",
