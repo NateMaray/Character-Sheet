@@ -18,6 +18,7 @@ import {
 } from "../sell";
 import type { GearItem, GearSource, PocketAction, SheetData } from "../types";
 import { Button, Card, Pill } from "./Bits";
+import { WardrobeView } from "./WardrobeView";
 
 type PocketPick = { item: GearItem; chest: string };
 
@@ -174,6 +175,7 @@ export function PocketTab({
   onChange: (next: GearState, actions?: PocketAction[]) => void;
   onSellActions: (actions: PocketAction[]) => void;
 }) {
+  // Wardrobe clothes are not pocket rows, so they never spend one of these slots.
   const slots = source.pocketSlots || 40;
   const [selecting, setSelecting] = useState(false);
   const [selected, setSelected] = useState<Record<string, boolean>>({});
@@ -184,6 +186,7 @@ export function PocketTab({
   const [copied, setCopied] = useState(false);
   const [sellList, setSellList] = useState<SellEntry[]>(() => readSellList());
   const [selling, setSelling] = useState(false);
+  const [wardrobeOpen, setWardrobeOpen] = useState(false);
   const [drafts, setDrafts] = useState<Record<string, { on: boolean; qty: number }>>({});
   const [copiedSell, setCopiedSell] = useState(false);
   const chests = gear.pocket.filter(isContainer);
@@ -300,6 +303,7 @@ export function PocketTab({
   };
 
   const openSell = () => {
+    setWardrobeOpen(false);
     const next: Record<string, { on: boolean; qty: number }> = {};
     for (const candidate of sellCandidates(gear.pocket)) {
       const key = sellKey(candidate.chest, candidate.name);
@@ -345,6 +349,14 @@ export function PocketTab({
         </div>
         <div className="btn-row">
           <Button label="Sell" onClick={openSell} />
+          <Button
+            label="Wardrobe"
+            ariaLabel="Open wardrobe. These clothes do not use inventory slots."
+            onClick={() => {
+              setSelling(false);
+              setWardrobeOpen(true);
+            }}
+          />
           <Button label={selecting ? "Done" : "Select"} onClick={() => (selecting ? finishSelect() : setSelecting(true))} />
         </div>
       </div>
@@ -550,6 +562,7 @@ export function PocketTab({
         </div>
         <Button label={copied ? "Copied" : "Copy for DM"} onClick={() => void copyForDm()} />
       </footer>
+      {wardrobeOpen ? <WardrobeView source={source} onClose={() => setWardrobeOpen(false)} /> : null}
       {selling
         ? createPortal(
         <div className="sheet-backdrop" onClick={() => setSelling(false)}>

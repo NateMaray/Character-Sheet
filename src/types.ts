@@ -33,6 +33,23 @@ export type EquipSlot = {
   qty: string;
 };
 
+/** Head-to-toe clothes slots. Order is the wardrobe list order. */
+export type WardrobeSlot = "Head" | "Face" | "Neck" | "Torso" | "Wrist" | "Waist" | "Legs" | "Shoes";
+
+/** A clothes piece stored in the wardrobe. It does not use a pocket slot. */
+export type WardrobeItem = {
+  name: string;
+  slot: WardrobeSlot;
+  qty?: string;
+  note?: string;
+};
+
+/** A named outfit built from wardrobe item names. */
+export type WardrobeOutfit = {
+  name: string;
+  items: string[];
+};
+
 export type GearLoadout = { name: string; equipped: EquipSlot[] };
 
 export type GearSource = {
@@ -46,6 +63,10 @@ export type GearSource = {
   defaultLoadouts?: GearLoadout[];
   /** Action ids already folded into this row. */
   appliedActions?: string[];
+  /** Clothes that do not use pocket slots. Omit or leave empty when there are none. */
+  wardrobe?: WardrobeItem[];
+  /** Named outfits whose items are wardrobe piece names. */
+  outfits?: WardrobeOutfit[];
 };
 
 export type GearState = {

@@ -86,6 +86,7 @@ function copyItem(item: GearItem): GearItem {
   return next;
 }
 
+/** Owned pocket and worn items. Wardrobe clothes stay on `gear.wardrobe` and never take a pocket slot. */
 export function sourceCatalog(gear: GearSource): GearItem[] {
   const byName: Record<string, GearItem> = {};
   for (const item of gear.pocket) byName[item.name] = copyItem(item);

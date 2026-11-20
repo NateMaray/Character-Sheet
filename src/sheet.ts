@@ -1,4 +1,5 @@
 import type { SheetData, Vital } from "./types";
+import { outfitsShapeOk, wardrobeShapeOk } from "./wardrobe";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -31,6 +32,8 @@ export function validateSheet(value: unknown): string | null {
     need(isRecord(value.gear) && Array.isArray(value.gear.borrowed) && isRecord(value.gear.equipTargets), "gear.borrowed and gear.equipTargets are required."),
     need(pocketContentsOk(value.gear), "gear.pocket contents, when present, must be an array of {name}."),
     need(appliedActionsOk(value.gear), "gear.appliedActions, when present, must be an array of strings."),
+    need(!isRecord(value.gear) || wardrobeShapeOk(value.gear.wardrobe), "gear.wardrobe, when present, must be an array of { name, slot, qty?, note? }. slot is Head, Face, Neck, Torso, Wrist, Waist, Legs, or Shoes."),
+    need(!isRecord(value.gear) || outfitsShapeOk(value.gear.outfits), "gear.outfits, when present, must be an array of { name, items: string[] }."),
     need(isRecord(value.map) && isRecord(value.map.world) && isRecord(value.map.town) && isRecord(value.map.battle), "map.world, map.town, and map.battle are required."),
     need(isRecord(value.map) && isRecord(value.map.battle) && Array.isArray(value.map.battle.enemies), "map.battle.enemies must be an array."),
     need(isRecord(value.map) && alliesAreValid(value.map.battle), "map.battle.allies must be an array of {name} when present."),
