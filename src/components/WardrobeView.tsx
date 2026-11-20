@@ -1,21 +1,42 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import type { GearSource, WardrobeSlot } from "../types";
-import { readOutfits, readWardrobe, WARDROBE_SLOTS, wardrobeGroups, type WardrobeFilter } from "../wardrobe";
+import { gearChangeActions, unwearWardrobeItem, wearWardrobeItem, wornClothNames, type GearState } from "../gear";
+import type { GearSource, PocketAction, WardrobeItem, WardrobeSlot } from "../types";
+import { readWardrobe, WARDROBE_SLOTS, wardrobeGroups, type WardrobeFilter } from "../wardrobe";
 import { Button, Pill } from "./Bits";
+import { LooksPanel } from "./LooksPanel";
 
 const FILTERS: { value: WardrobeFilter; label: string }[] = [
   { value: "All", label: "All" },
   ...WARDROBE_SLOTS.map((slot) => ({ value: slot, label: slot })),
 ];
 
-export function WardrobeView({ source, onClose }: { source: GearSource; onClose: () => void }) {
+export function WardrobeView({
+  source,
+  gear,
+  actions,
+  onChange,
+  onClose,
+}: {
+  source: GearSource;
+  gear: GearState;
+  actions: PocketAction[];
+  onChange: (next: GearState, actions?: PocketAction[]) => void;
+  onClose: () => void;
+}) {
   const [filter, setFilter] = useState<WardrobeFilter>("All");
   const closeRef = useRef(onClose);
   closeRef.current = onClose;
   const items = readWardrobe(source);
-  const outfits = readOutfits(source);
   const groups = wardrobeGroups(items, filter);
+  const worn = wornClothNames(gear.equipped);
+  const equipUnsynced = actions.some((action) => !action.synced && (action.kind === "equip" || action.kind === "unequip"));
+
+  const commit = (next: GearState | null) => {
+    if (!next || next === gear) return;
+    const made = gearChangeActions(gear, next);
+    onChange(next, made.length ? [...actions, ...made] : undefined);
+  };
 
   useEffect(() => {
     const previous = document.body.style.overflow;
@@ -49,6 +70,8 @@ export function WardrobeView({ source, onClose }: { source: GearSource; onClose:
           <Pill text="DOES NOT USE INVENTORY SLOTS" on />
           <p className="body">Clothes stored here stay out of pocket space. They are not part of the slot count.</p>
         </div>
+        {equipUnsynced ? <p className="not-synced">Not synced</p> : null}
+        <LooksPanel gear={gear} source={source} actions={actions} onChange={onChange} />
         <div className="wardrobe-filters" role="group" aria-label="Wardrobe categories">
           {FILTERS.map((option) => (
             <button key={option.value} type="button" aria-pressed={filter === option.value} onClick={() => setFilter(option.value)}>
@@ -59,19 +82,18 @@ export function WardrobeView({ source, onClose }: { source: GearSource; onClose:
         {items.length === 0 && filter === "All" ? (
           <p className="body">No clothes stored yet.</p>
         ) : (
-          groups.map((group) => <WardrobeGroup key={group.slot} slot={group.slot} items={group.items} filtered={filter !== "All"} />)
+          groups.map((group) => (
+            <WardrobeGroup
+              key={group.slot}
+              slot={group.slot}
+              items={group.items}
+              filtered={filter !== "All"}
+              worn={worn}
+              onEquip={(item) => commit(wearWardrobeItem(gear, item))}
+              onUnequip={(item) => commit(unwearWardrobeItem(gear, item.name))}
+            />
+          ))
         )}
-        {outfits.length > 0 ? (
-          <section className="wardrobe-group" aria-label="Outfits">
-            <div className="section-label">OUTFITS</div>
-            {outfits.map((outfit, index) => (
-              <div key={`${outfit.name}-${index}`} className="wardrobe-item">
-                <div className="title">{outfit.name}</div>
-                <div className="slot-note">{outfit.items.length ? outfit.items.join(" · ") : "No pieces listed."}</div>
-              </div>
-            ))}
-          </section>
-        ) : null}
       </div>
     </div>,
     document.body,
@@ -82,10 +104,16 @@ function WardrobeGroup({
   slot,
   items,
   filtered,
+  worn,
+  onEquip,
+  onUnequip,
 }: {
   slot: WardrobeSlot;
-  items: { name: string; qty?: string; note?: string }[];
+  items: WardrobeItem[];
   filtered: boolean;
+  worn: Set<string>;
+  onEquip: (item: WardrobeItem) => void;
+  onUnequip: (item: WardrobeItem) => void;
 }) {
   if (!items.length && !filtered) return null;
   return (
@@ -94,15 +122,26 @@ function WardrobeGroup({
       {items.length === 0 ? (
         <p className="body">Nothing in {slot}.</p>
       ) : (
-        items.map((item, index) => (
-          <div key={`${slot}-${item.name}-${index}`} className="wardrobe-item">
-            <div className="slot-name">
-              <span>{item.name}</span>
-              {item.qty ? <span className="slot-qty">{item.qty}</span> : null}
+        items.map((item, index) => {
+          const on = worn.has(item.name);
+          return (
+            <div key={`${slot}-${item.name}-${index}`} className="wardrobe-item">
+              <div className="slot-name">
+                <span>{item.name}</span>
+                {item.qty ? <span className="slot-qty">{item.qty}</span> : null}
+              </div>
+              {on ? <span className="worn-badge">Worn</span> : null}
+              {item.note ? <div className="slot-note">{item.note}</div> : null}
+              <div style={{ marginTop: 8 }}>
+                <Button
+                  label={on ? "Unequip" : "Equip"}
+                  ariaLabel={on ? `Unequip ${item.name}` : `Equip ${item.name}`}
+                  onClick={() => (on ? onUnequip(item) : onEquip(item))}
+                />
+              </div>
             </div>
-            {item.note ? <div className="slot-note">{item.note}</div> : null}
-          </div>
-        ))
+          );
+        })
       )}
     </section>
   );

@@ -6,12 +6,38 @@ export type GearItem = {
   contents?: GearItem[];
 };
 
-export type PocketActionKind = "discard" | "to_chest" | "from_chest" | "sell" | "unsell";
+export type PocketActionKind =
+  | "discard"
+  | "to_chest"
+  | "from_chest"
+  | "sell"
+  | "unsell"
+  | "equip"
+  | "unequip"
+  | "save_look"
+  | "delete_look"
+  | "wear_look"
+  | "rename_look";
+
+/**
+ * One piece of a saved look.
+ * `slot` is the doll slot (`Head`, `Body`, `Main hand`, …).
+ * `wardrobe` clothes stay in the wardrobe. `gear` comes from the pocket or the doll.
+ */
+export type LookPiece = {
+  name: string;
+  slot: string;
+  source: "wardrobe" | "gear";
+};
+
+/** Item list for save / delete / wear, or `{ from }` for a rename. */
+export type LookDetail = LookPiece[] | { from: string };
 
 /**
  * One logged pocket event.
  * `discard`, `to_chest`, and `from_chest` stay until the DM lists the id.
  * `sell` and `unsell` only record the sell list. They do not change the pocket.
+ * `equip`, `unequip`, and the look kinds stay until the DM lists the id.
  */
 export type PocketAction = {
   id: string;
@@ -21,7 +47,11 @@ export type PocketAction = {
   chest: string;
   at: string;
   baseRev: string;
-  /** True once log_pocket_action accepted it. Pocket moves stay until appliedActions lists the id. */
+  /** Doll slot for equip / unequip (`Head`, `Body`, `Main hand`, …). */
+  slot?: string;
+  /** Look item list, or `{ from }` when the kind is rename_look. */
+  detail?: LookDetail;
+  /** True once log_pocket_action accepted it. Moves stay until appliedActions lists the id. */
   synced?: boolean;
 };
 
@@ -31,6 +61,8 @@ export type EquipSlot = {
   empty: string;
   note: string;
   qty: string;
+  /** Wardrobe pieces worn on this doll slot. They are not pocket rows. */
+  clothes?: WornCloth[];
 };
 
 /** Head-to-toe clothes slots. Order is the wardrobe list order. */
@@ -44,10 +76,20 @@ export type WardrobeItem = {
   note?: string;
 };
 
-/** A named outfit built from wardrobe item names. */
+/** One worn wardrobe piece on a doll slot. `slot` is the wardrobe category, not the doll. */
+export type WornCloth = {
+  name: string;
+  slot: WardrobeSlot;
+};
+
+/**
+ * A saved look. `items` is the flat name list (older rows may only have this).
+ * `pieces` is the doll snapshot used to wear it again, including weapons.
+ */
 export type WardrobeOutfit = {
   name: string;
   items: string[];
+  pieces?: LookPiece[];
 };
 
 export type GearLoadout = { name: string; equipped: EquipSlot[] };
@@ -74,6 +116,8 @@ export type GearState = {
   equipped: EquipSlot[];
   pocket: GearItem[];
   loadouts: GearLoadout[];
+  /** Saved looks, at most 10. Same rows as `gear.outfits` once the DM has applied them. */
+  looks: WardrobeOutfit[];
 };
 
 export type VitalTone = "health" | "mana" | "stamina";

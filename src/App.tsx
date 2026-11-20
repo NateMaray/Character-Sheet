@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { RealtimeChannel } from "@supabase/supabase-js";
-import { readGearStore, readPins, readPocketActions, resolveGear, samePocketActions, sanitizePins, togglePin, writeGearStore, writePins, writePocketActions, type GearState, type TabId } from "./gear";
+import { readGearStore, readPins, readPocketActions, resolveGear, samePocketActions, sanitizePins, softSyncKind, togglePin, writeGearStore, writePins, writePocketActions, type GearState, type TabId } from "./gear";
 import { readSellActions, writeSellActions } from "./sell";
 import { changedVitalLabels, fetchSheet, shouldApplySheet } from "./sheet";
 import { fetchRemoteSheet, openSheetChannel, pushPocketAction, supabase } from "./supabase";
@@ -57,16 +57,26 @@ export function App() {
     try {
       do {
         syncQueued.current = false;
+        const skipped = new Set<string>();
         for (;;) {
-          const action = actionsRef.current.find((entry) => !entry.synced);
+          const action = actionsRef.current.find((entry) => !entry.synced && !skipped.has(entry.id));
           if (!action) break;
           const result = await pushPocketAction(action);
-          if (!alive.current || result !== "ok") return;
-          if (!actionsRef.current.some((entry) => entry.id === action.id && !entry.synced)) continue;
-          const next = actionsRef.current.map((entry) => (entry.id === action.id ? { ...entry, synced: true } : entry));
-          actionsRef.current = next;
-          writePocketActions(next);
-          setActions(next);
+          if (!alive.current) return;
+          if (result === "ok") {
+            if (!actionsRef.current.some((entry) => entry.id === action.id && !entry.synced)) continue;
+            const next = actionsRef.current.map((entry) => (entry.id === action.id ? { ...entry, synced: true } : entry));
+            actionsRef.current = next;
+            writePocketActions(next);
+            setActions(next);
+            continue;
+          }
+          // A rejected equip or look stays on the phone and must not block a discard.
+          if (result === "error" && softSyncKind(action.kind)) {
+            skipped.add(action.id);
+            continue;
+          }
+          return;
         }
       } while (syncQueued.current && alive.current);
     } finally {
@@ -318,7 +328,7 @@ export function App() {
           <StatusTab sheet={sheet} active={tab === "status"} />
           <AbilitiesTab sheet={sheet} active={tab === "abilities"} />
           <PocketTab gear={gear} source={sheet.gear} actions={actions} active={tab === "pocket"} onChange={commitGear} onSellActions={recordSellActions} />
-          <EquipmentTab gear={gear} source={sheet.gear} active={tab === "equipment"} onChange={commitGear} />
+          <EquipmentTab gear={gear} source={sheet.gear} actions={actions} active={tab === "equipment"} onChange={commitGear} />
           <MissionsTab sheet={sheet} active={tab === "missions"} />
           <EssencesTab sheet={sheet} active={tab === "essences"} />
           <AchievementsTab sheet={sheet} active={tab === "feats"} />

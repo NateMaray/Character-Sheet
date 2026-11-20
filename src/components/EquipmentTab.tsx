@@ -1,35 +1,57 @@
 import { useState } from "react";
-import { deleteLoadout, equipToSlot, isBorrowed, itemsForSlot, loadLoadout, saveLoadout, unequip, DEFAULT_DOLL, type GearState } from "../gear";
-import type { GearSource } from "../types";
+import { deleteLoadout, equipToSlot, gearChangeActions, isBorrowed, itemsForSlot, loadLoadout, saveLoadout, unequip, unwearWardrobeItem, DEFAULT_DOLL, type GearState } from "../gear";
+import type { GearSource, PocketAction } from "../types";
 import { Button } from "./Bits";
+import { LooksPanel } from "./LooksPanel";
+
+function unsyncedEquip(actions: PocketAction[]): boolean {
+  return actions.some((action) => !action.synced && (action.kind === "equip" || action.kind === "unequip"));
+}
 
 export function EquipmentTab({
   active,
   gear,
   source,
+  actions,
   onChange,
 }: {
   active: boolean;
   gear: GearState;
   source: GearSource;
-  onChange: (next: GearState) => void;
+  actions: PocketAction[];
+  onChange: (next: GearState, actions?: PocketAction[]) => void;
 }) {
   const [showLoadouts, setShowLoadouts] = useState(false);
+  const [showLooks, setShowLooks] = useState(false);
   const [loadoutName, setLoadoutName] = useState("");
   const [pickedSlot, setPickedSlot] = useState<string | null>(null);
   const doll = source.doll?.length ? source.doll : DEFAULT_DOLL;
 
+  const commit = (next: GearState | null) => {
+    if (!next || next === gear) return;
+    const made = gearChangeActions(gear, next);
+    onChange(next, made.length ? [...actions, ...made] : undefined);
+  };
+
   const unequipSlot = (slotName: string) => {
-    const next = unequip(gear, source, slotName);
-    if (next) onChange(next);
+    commit(unequip(gear, source, slotName));
   };
 
   return (
     <section className="panel" hidden={!active} aria-hidden={!active}>
       <div className="card-head" style={{ marginBottom: 12 }}>
         <div className="section-label">EQUIPPED · UNEQUIP MOVES AN ITEM TO POCKET SPACE</div>
-        <Button label={showLoadouts ? "Hide loadouts" : "Loadouts"} onClick={() => setShowLoadouts((value) => !value)} />
+        <div className="btn-row">
+          <Button label={showLooks ? "Hide looks" : "Looks"} onClick={() => setShowLooks((value) => !value)} />
+          <Button label={showLoadouts ? "Hide loadouts" : "Loadouts"} onClick={() => setShowLoadouts((value) => !value)} />
+        </div>
       </div>
+      {unsyncedEquip(actions) ? <p className="not-synced">Not synced</p> : null}
+      {showLooks ? (
+        <div className="card" style={{ marginBottom: 16 }}>
+          <LooksPanel gear={gear} source={source} actions={actions} onChange={onChange} />
+        </div>
+      ) : null}
       {showLoadouts ? (
         <div className="card" style={{ marginBottom: 16 }}>
           <div className="title">Loadouts</div>
@@ -51,7 +73,7 @@ export function EquipmentTab({
               onClick={() => {
                 const next = saveLoadout(gear, loadoutName);
                 if (!next) return;
-                onChange(next);
+                commit(next);
                 setLoadoutName("");
               }}
             />
@@ -66,8 +88,8 @@ export function EquipmentTab({
                     <div className="body">{summary}</div>
                   </div>
                   <div className="btn-row">
-                    <Button label="Load" onClick={() => onChange(loadLoadout(gear, source, loadout))} />
-                    <Button label="Delete" variant="danger" onClick={() => onChange(deleteLoadout(gear, loadout.name))} />
+                    <Button label="Load" onClick={() => commit(loadLoadout(gear, source, loadout))} />
+                    <Button label="Delete" variant="danger" onClick={() => commit(deleteLoadout(gear, loadout.name))} />
                   </div>
                 </div>
               );
@@ -80,7 +102,8 @@ export function EquipmentTab({
           row.map((slot, colIndex) => {
             if (!slot) return <div key={`pad-${rowIndex}-${colIndex}`} />;
             const item = gear.equipped.find((entry) => entry.slot === slot);
-            const filled = Boolean(item && item.name);
+            const clothes = item?.clothes ?? [];
+            const filled = Boolean(item && (item.name || clothes.length));
             const selected = pickedSlot === slot;
             const cls = `doll-slot${filled ? " filled" : ""}${selected ? " selected" : ""}`;
             return (
@@ -89,7 +112,7 @@ export function EquipmentTab({
                   {slot.toUpperCase()}
                   {filled || !item ? "" : ` · ${item.empty.toUpperCase()}`}
                 </div>
-                {filled && item ? (
+                {item?.name ? (
                   <>
                     <div className="title" style={{ marginTop: 6 }}>
                       {item.name}
@@ -97,11 +120,21 @@ export function EquipmentTab({
                     {item.note ? <div className="body">{item.note}</div> : null}
                     {isBorrowed(item.name, source.borrowed) ? <div className="borrowed">BORROWED</div> : null}
                   </>
-                ) : (
+                ) : clothes.length ? null : (
                   <div className="body">
                     {slot}: {item ? item.empty : "empty"}
                   </div>
                 )}
+                {clothes.length ? (
+                  <div className="worn-list">
+                    <div className="section-label">WORN CLOTHES</div>
+                    <ul>
+                      {clothes.map((cloth) => (
+                        <li key={cloth.name}>{cloth.name}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
                 <div className="hint">{selected ? "SELECTED" : "TAP TO EQUIP"}</div>
               </button>
             );
@@ -128,6 +161,17 @@ export function EquipmentTab({
                     </div>
                   </div>
                 ) : null}
+                {worn?.clothes?.length ? (
+                  <div className="worn-list" style={{ marginBottom: 12 }}>
+                    <div className="section-label">WORN CLOTHES</div>
+                    {worn.clothes.map((cloth) => (
+                      <div key={cloth.name} className="look-head">
+                        <div className="title">{cloth.name}</div>
+                        <Button label="Unequip" ariaLabel={`Unequip ${cloth.name}`} onClick={() => commit(unwearWardrobeItem(gear, cloth.name))} />
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
                 {fits.length === 0 ? (
                   <div className="body">{emptyMsg}</div>
                 ) : (
@@ -139,7 +183,7 @@ export function EquipmentTab({
                         className="pick"
                         onClick={() => {
                           const next = equipToSlot(gear, source, item, pickedSlot);
-                          if (next) onChange(next);
+                          if (next) commit(next);
                           setPickedSlot(null);
                         }}
                       >

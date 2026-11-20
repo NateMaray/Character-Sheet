@@ -1,6 +1,6 @@
 # Nate Maray
 
-Mobile character sheet for Nate Maray in a He Who Fights With Monsters game. The live sheet is a Supabase row. Nate keeps his own equip, loadouts, and pinned tabs on his phone.
+Mobile character sheet for Nate Maray in a He Who Fights With Monsters game. The live sheet is a Supabase row. Loadouts and pinned tabs stay on his phone. Equip, unequip, and saved looks are written to the pocket action log.
 
 **Sheet:** https://natemaray.github.io/Character-Sheet/
 
@@ -14,7 +14,7 @@ The Pages site updates when `main` changes. The workflow is `.github/workflows/p
 2. Share → Add to Home Screen.
 3. Open it from the icon. It runs full screen, including the area around the notch.
 
-A green dot means the sheet is live. Refresh reloads the row and leaves equip, loadouts, and pins alone. The rev under his name is how you know which scene you are looking at.
+A green dot means the sheet is live. Refresh reloads the row. On the same rev, equip, looks, loadouts, and pins stay as they are on the phone. A new rev uses the row's equipped gear and looks, then replays changes the log has not applied yet. The rev under his name is how you know which scene you are looking at.
 
 ## For the game master
 

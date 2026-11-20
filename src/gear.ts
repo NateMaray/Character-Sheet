@@ -1,10 +1,20 @@
-import type { EquipSlot, GearItem, GearLoadout, GearSource, GearState, PocketAction } from "./types";
+import { deleteLook, lookFromPieces, normalizeLooks, renameLook, saveLook } from "./looks";
+import type { EquipSlot, GearItem, GearLoadout, GearSource, GearState, LookDetail, LookPiece, PocketAction, WardrobeItem, WardrobeOutfit, WornCloth } from "./types";
+import { dollSlotForWardrobe, isWardrobeSlot, readWardrobe, sanitizePieces, WARDROBE_SLOTS } from "./wardrobe";
 
 export type { GearState };
 
 export const GEAR_PREFIX = "hwfwm-nate-maray-gear-v1:";
 export const ACTIONS_KEY = GEAR_PREFIX + "actions";
+export const LOOKS_KEY = GEAR_PREFIX + "looks";
 export const PINS_KEY = "hwfwm-nate-maray-ui-v1:pins";
+
+/** Kinds the phone still keeps locally when log_pocket_action rejects them. */
+export const SOFT_SYNC_KINDS = ["equip", "unequip", "save_look", "delete_look", "wear_look", "rename_look"] as const;
+
+export function softSyncKind(kind: string): boolean {
+  return (SOFT_SYNC_KINDS as readonly string[]).indexOf(kind) >= 0;
+}
 
 export const TABS = [
   { value: "map", label: "Map", short: "Map" },
@@ -51,8 +61,32 @@ export function emptySlot(slot: string, labels: Record<string, string>): EquipSl
   return { slot, name: "", empty: labels[slot] || "empty", note: "", qty: "" };
 }
 
-export function fillSlot(slot: string, item: GearItem): EquipSlot {
-  return { slot, name: item.name, empty: "", note: item.note, qty: item.qty };
+export function withClothes(slot: EquipSlot, clothes: WornCloth[] | undefined): EquipSlot {
+  const next: EquipSlot = { slot: slot.slot, name: slot.name, empty: slot.empty, note: slot.note, qty: slot.qty };
+  if (clothes?.length) next.clothes = clothes.map((piece) => ({ name: piece.name, slot: piece.slot }));
+  return next;
+}
+
+/** Keep only pieces that are still in the wardrobe. The wardrobe row supplies the category. */
+export function cleanClothes(value: unknown, gear: Pick<GearSource, "wardrobe">): WornCloth[] | undefined {
+  if (!Array.isArray(value)) return undefined;
+  const known = new Map(readWardrobe(gear).map((item) => [item.name, item.slot]));
+  const clothes: WornCloth[] = [];
+  for (const entry of value) {
+    if (!entry || typeof entry !== "object") continue;
+    const name = (entry as { name?: unknown }).name;
+    if (typeof name !== "string" || !known.has(name)) continue;
+    if (clothes.some((piece) => piece.name === name)) continue;
+    const slot = known.get(name);
+    if (!slot || !isWardrobeSlot(slot)) continue;
+    clothes.push({ name, slot });
+  }
+  if (!clothes.length) return undefined;
+  return clothes.sort((a, b) => WARDROBE_SLOTS.indexOf(a.slot) - WARDROBE_SLOTS.indexOf(b.slot));
+}
+
+export function fillSlot(slot: string, item: GearItem, clothes?: WornCloth[]): EquipSlot {
+  return withClothes({ slot, name: item.name, empty: "", note: item.note, qty: item.qty }, clothes);
 }
 
 export function toGear(slot: EquipSlot): GearItem {
@@ -104,13 +138,18 @@ function withSourceItem(catalog: GearItem[], item: GearItem): GearItem {
 }
 
 export function initialEquipped(gear: GearSource): EquipSlot[] {
-  return gear.equipped.map((slot) => ({
-    slot: slot.slot,
-    name: slot.name,
-    empty: slot.name ? "" : slot.empty || emptySlot(slot.slot, gear.emptyLabels).empty,
-    note: slot.note || "",
-    qty: slot.qty || "",
-  }));
+  return gear.equipped.map((slot) =>
+    withClothes(
+      {
+        slot: slot.slot,
+        name: slot.name,
+        empty: slot.name ? "" : slot.empty || emptySlot(slot.slot, gear.emptyLabels).empty,
+        note: slot.note || "",
+        qty: slot.qty || "",
+      },
+      cleanClothes(slot.clothes, gear),
+    ),
+  );
 }
 
 export function initialPocket(gear: GearSource): GearItem[] {
@@ -159,8 +198,9 @@ export function reconcileGear(
   const slots = initial.map((slot) => slot.slot);
   const kept = slots.map((slot) => {
     const saved = savedEquipped.filter((entry) => entry.slot === slot)[0];
-    if (saved && saved.name && sourceNames[saved.name]) return fillSlot(slot, withSourceItem(catalog, saved));
-    return emptySlot(slot, gear.emptyLabels);
+    const clothes = cleanClothes(saved?.clothes, gear);
+    if (saved && saved.name && sourceNames[saved.name]) return withClothes(fillSlot(slot, withSourceItem(catalog, saved)), clothes);
+    return withClothes(emptySlot(slot, gear.emptyLabels), clothes);
   });
   const displaced: GearItem[] = [];
   const equipped = slots.map((slot, index) => {
@@ -168,9 +208,9 @@ export function reconcileGear(
     const src = gear.equipped.filter((entry) => entry.slot === slot)[0];
     if (src && src.name && isBorrowed(src.name, gear.borrowed)) {
       if (current.name && current.name !== src.name && !isBorrowed(current.name, gear.borrowed)) displaced.push(toGear(current));
-      return { slot, name: src.name, empty: "", note: src.note, qty: src.qty || "" };
+      return withClothes({ slot, name: src.name, empty: "", note: src.note, qty: src.qty || "" }, current.clothes);
     }
-    if (current.name && isBorrowed(current.name, gear.borrowed)) return emptySlot(slot, gear.emptyLabels);
+    if (current.name && isBorrowed(current.name, gear.borrowed)) return withClothes(emptySlot(slot, gear.emptyLabels), current.clothes);
     return current;
   });
   const held: Record<string, boolean> = {};
@@ -190,7 +230,10 @@ export function reconcileGear(
     equipped: (loadout.equipped.length ? loadout.equipped : initial).map((slot) => {
       if (slot.name && !sourceNames[slot.name]) return emptySlot(slot.slot, gear.emptyLabels);
       if (slot.name) return fillSlot(slot.slot, withSourceItem(catalog, slot));
-      return { ...slot, qty: slot.qty || "", empty: slot.empty || emptySlot(slot.slot, gear.emptyLabels).empty, note: slot.note || "" };
+      return withClothes(
+        { ...slot, qty: slot.qty || "", empty: slot.empty || emptySlot(slot.slot, gear.emptyLabels).empty, note: slot.note || "" },
+        undefined,
+      );
     }),
   }));
   return { equipped, pocket, loadouts };
@@ -201,6 +244,8 @@ export type StoredGear = {
   equipped: EquipSlot[] | null;
   pocket: GearItem[] | null;
   loadouts: GearLoadout[] | null;
+  /** Null when this phone has never stored looks. Omitted on older saves. */
+  looks?: WardrobeOutfit[] | null;
 };
 
 function readJson<T>(store: Store | null, key: string, fallback: T): T {
@@ -221,7 +266,24 @@ export function readGearStore(store?: Store | null): StoredGear {
     equipped: readJson<EquipSlot[] | null>(resolved, GEAR_PREFIX + "equipped", null),
     pocket: readJson<GearItem[] | null>(resolved, GEAR_PREFIX + "pocket", null),
     loadouts: readJson<GearLoadout[] | null>(resolved, GEAR_PREFIX + "loadouts", null),
+    looks: readStoredLooks(resolved),
   };
+}
+
+function readStoredLooks(store: Store | null): WardrobeOutfit[] | null {
+  if (!store) return null;
+  let raw: string | null;
+  try {
+    raw = store.getItem(LOOKS_KEY);
+  } catch {
+    return null;
+  }
+  if (raw === null) return null;
+  try {
+    return normalizeLooks(JSON.parse(raw) as unknown);
+  } catch {
+    return null;
+  }
 }
 
 export function writeGearStore(state: GearState, store?: Store | null): void {
@@ -231,14 +293,11 @@ export function writeGearStore(state: GearState, store?: Store | null): void {
     resolved.setItem(GEAR_PREFIX + "equipped", JSON.stringify(state.equipped));
     resolved.setItem(GEAR_PREFIX + "pocket", JSON.stringify(state.pocket));
     resolved.setItem(GEAR_PREFIX + "loadouts", JSON.stringify(state.loadouts));
+    resolved.setItem(LOOKS_KEY, JSON.stringify(state.looks));
     resolved.setItem(GEAR_PREFIX + "rev", JSON.stringify(state.rev));
   } catch {
     // Keep the in-memory sheet if storage is blocked.
   }
-}
-
-function asSlots(value: EquipSlot[] | null | undefined, fallback: EquipSlot[]): EquipSlot[] {
-  return Array.isArray(value) ? value : fallback;
 }
 
 function asItems(value: GearItem[] | null | undefined, fallback: GearItem[]): GearItem[] {
@@ -249,9 +308,15 @@ function asLoadouts(value: GearLoadout[] | null | undefined, fallback: GearLoado
   return Array.isArray(value) ? value : fallback;
 }
 
+function looksFor(gear: GearSource, stored: WardrobeOutfit[] | null | undefined): WardrobeOutfit[] {
+  if (Array.isArray(stored)) return normalizeLooks(stored);
+  return normalizeLooks(gear.outfits);
+}
+
 /**
- * Keep a live equip arrangement. Reconcile only when `rev` changes, then replay
- * pocket moves the DM has not listed in `appliedActions`.
+ * Same `rev`: keep the phone's doll, pocket, looks, and loadouts.
+ * New `rev`: `gear.equipped` and `gear.outfits` are the base, then replay
+ * pocket, equip, and look actions the DM has not listed in `appliedActions`.
  */
 export function resolveGear(
   rev: string,
@@ -261,23 +326,35 @@ export function resolveGear(
   actions: PocketAction[] = [],
 ): { state: GearState; dirty: boolean; actions: PocketAction[] } {
   const kept = settlePocketActions(actions, gear.appliedActions);
-  if (live && live.rev === rev) return { state: live, dirty: false, actions: kept };
+  if (live && live.rev === rev) {
+    if (Array.isArray(live.looks)) return { state: live, dirty: false, actions: kept };
+    return { state: { ...live, looks: looksFor(gear, null) }, dirty: false, actions: kept };
+  }
   const initialE = initialEquipped(gear);
   const initialP = initialPocket(gear);
   const initialL = defaultLoadouts(gear);
   if (!live && stored.rev === rev && Array.isArray(stored.equipped) && Array.isArray(stored.pocket) && Array.isArray(stored.loadouts)) {
     return {
-      state: { rev, equipped: stored.equipped, pocket: stored.pocket, loadouts: stored.loadouts },
+      state: {
+        rev,
+        equipped: stored.equipped,
+        pocket: stored.pocket,
+        loadouts: stored.loadouts,
+        looks: looksFor(gear, stored.looks),
+      },
       dirty: false,
       actions: kept,
     };
   }
-  const baseE = live ? live.equipped : asSlots(stored.equipped, initialE);
   const baseP = live ? live.pocket : asItems(stored.pocket, initialP);
   const baseL = live ? live.loadouts : asLoadouts(stored.loadouts, initialL);
-  const next = reconcileGear(baseE, baseP, baseL, gear);
-  const pocket = applyPocketActions(next.pocket, kept, gear.pocketSlots || 40);
-  return { state: { rev, equipped: next.equipped, pocket, loadouts: next.loadouts }, dirty: true, actions: kept };
+  const next = reconcileGear(initialE, baseP, baseL, gear);
+  const replayed = applyGearActions(
+    { rev, equipped: next.equipped, pocket: next.pocket, loadouts: next.loadouts, looks: normalizeLooks(gear.outfits) },
+    kept,
+    gear,
+  );
+  return { state: replayed, dirty: true, actions: kept };
 }
 
 export function itemsForSlot(pocket: GearItem[], gear: GearSource, slotName: string): GearItem[] {
@@ -294,7 +371,7 @@ export function equipToSlot(state: GearState, gear: GearSource, item: GearItem, 
   return {
     ...state,
     pocket,
-    equipped: state.equipped.map((slot) => (slot.slot === slotName ? fillSlot(slot.slot, item) : slot)),
+    equipped: state.equipped.map((slot) => (slot.slot === slotName ? withClothes(fillSlot(slot.slot, item), slot.clothes) : slot)),
   };
 }
 
@@ -305,7 +382,7 @@ export function unequip(state: GearState, gear: GearSource, slotName: string): G
   return {
     ...state,
     pocket,
-    equipped: state.equipped.map((slot) => (slot.slot === slotName ? emptySlot(slotName, gear.emptyLabels) : slot)),
+    equipped: state.equipped.map((slot) => (slot.slot === slotName ? withClothes(emptySlot(slotName, gear.emptyLabels), slot.clothes) : slot)),
   };
 }
 
@@ -314,6 +391,86 @@ export function equipItem(state: GearState, gear: GearSource, item: GearItem): G
   if (!targets.length) return null;
   const dest = targets.find((slot) => !state.equipped.find((entry) => entry.slot === slot && entry.name)) || targets[0];
   return equipToSlot(state, gear, item, dest);
+}
+
+export function wornClothNames(equipped: EquipSlot[]): Set<string> {
+  const names = new Set<string>();
+  for (const slot of equipped) {
+    for (const cloth of slot.clothes || []) names.add(cloth.name);
+  }
+  return names;
+}
+
+function insertCloth(list: WornCloth[] | undefined, cloth: WornCloth): WornCloth[] {
+  const next = (list || []).filter((piece) => piece.name !== cloth.name).concat([cloth]);
+  return next.sort((a, b) => WARDROBE_SLOTS.indexOf(a.slot) - WARDROBE_SLOTS.indexOf(b.slot));
+}
+
+/** Wear a wardrobe piece on Head or Body. It stays in the wardrobe and out of the pocket. */
+export function wearWardrobeItem(state: GearState, item: WardrobeItem): GearState | null {
+  const doll = dollSlotForWardrobe(item.slot);
+  if (!state.equipped.some((slot) => slot.slot === doll)) return null;
+  if (state.equipped.some((slot) => (slot.clothes || []).some((piece) => piece.name === item.name))) return state;
+  const cloth: WornCloth = { name: item.name, slot: item.slot };
+  return {
+    ...state,
+    equipped: state.equipped.map((slot) => (slot.slot === doll ? withClothes(slot, insertCloth(slot.clothes, cloth)) : slot)),
+  };
+}
+
+export function unwearWardrobeItem(state: GearState, name: string): GearState | null {
+  if (!state.equipped.some((slot) => (slot.clothes || []).some((piece) => piece.name === name))) return null;
+  return {
+    ...state,
+    equipped: state.equipped.map((slot) =>
+      (slot.clothes || []).some((piece) => piece.name === name) ? withClothes(slot, (slot.clothes || []).filter((piece) => piece.name !== name)) : slot,
+    ),
+  };
+}
+
+function setDollClothes(state: GearState, doll: "Head" | "Body", clothes: WornCloth[]): GearState {
+  if (!state.equipped.some((slot) => slot.slot === doll)) return state;
+  return {
+    ...state,
+    equipped: state.equipped.map((slot) => (slot.slot === doll ? withClothes(slot, clothes) : slot)),
+  };
+}
+
+function moveGearToSlot(state: GearState, gear: GearSource, name: string, slotName: string): GearState {
+  const current = state.equipped.find((slot) => slot.name === name);
+  if (current?.slot === slotName) return state;
+  let working = state;
+  if (current) {
+    const cleared = unequip(working, gear, current.slot);
+    if (!cleared) return state;
+    working = cleared;
+  }
+  const item = working.pocket.find((entry) => entry.name === name && !isContainer(entry));
+  if (!item) return state;
+  return equipToSlot(working, gear, item, slotName) ?? working;
+}
+
+function clothesForDoll(pieces: LookPiece[], doll: "Head" | "Body", gear: GearSource): WornCloth[] {
+  const wardrobe = readWardrobe(gear);
+  const clothes: WornCloth[] = [];
+  for (const piece of pieces) {
+    if (piece.source !== "wardrobe" || piece.slot !== doll) continue;
+    const found = wardrobe.find((item) => item.name === piece.name);
+    if (!found || clothes.some((cloth) => cloth.name === found.name)) continue;
+    clothes.push({ name: found.name, slot: found.slot });
+  }
+  return clothes.sort((a, b) => WARDROBE_SLOTS.indexOf(a.slot) - WARDROBE_SLOTS.indexOf(b.slot));
+}
+
+/** Put on every piece in the look. Wardrobe clothes replace Head and Body clothes. Other doll slots stay. */
+export function wearLook(state: GearState, pieces: LookPiece[], gear: GearSource): GearState {
+  let next = setDollClothes(state, "Head", clothesForDoll(pieces, "Head", gear));
+  next = setDollClothes(next, "Body", clothesForDoll(pieces, "Body", gear));
+  for (const piece of pieces) {
+    if (piece.source !== "gear") continue;
+    next = moveGearToSlot(next, gear, piece.name, piece.slot);
+  }
+  return next;
 }
 
 export function loadLoadout(state: GearState, gear: GearSource, loadout: GearLoadout): GearState {
@@ -325,7 +482,9 @@ export function loadLoadout(state: GearState, gear: GearSource, loadout: GearLoa
     pocket: stripNames([...held, ...state.pocket], keep),
     equipped: initial.map((slot) => {
       const found = loadout.equipped.find((entry) => entry.slot === slot.slot);
-      return found && found.name ? { ...found, qty: found.qty || "" } : emptySlot(slot.slot, gear.emptyLabels);
+      const clothes = state.equipped.find((entry) => entry.slot === slot.slot)?.clothes;
+      const next = found && found.name ? { ...found, qty: found.qty || "" } : emptySlot(slot.slot, gear.emptyLabels);
+      return withClothes(next, clothes);
     }),
   };
 }
@@ -333,7 +492,7 @@ export function loadLoadout(state: GearState, gear: GearSource, loadout: GearLoa
 export function saveLoadout(state: GearState, name: string): GearState | null {
   const trimmed = name.trim();
   if (!trimmed) return null;
-  const snap: GearLoadout = { name: trimmed, equipped: state.equipped.map((slot) => ({ ...slot })) };
+  const snap: GearLoadout = { name: trimmed, equipped: state.equipped.map((slot) => withClothes(slot, undefined)) };
   return { ...state, loadouts: [...state.loadouts.filter((loadout) => loadout.name !== trimmed), snap] };
 }
 
@@ -414,6 +573,72 @@ function applyOne(pocket: GearItem[], action: PocketAction, slotLimit: number): 
   return pocket;
 }
 
+function wardrobeCloth(gear: GearSource, name: string): WornCloth | null {
+  const found = readWardrobe(gear).find((item) => item.name === name);
+  if (!found) return null;
+  return { name: found.name, slot: found.slot };
+}
+
+function applyEquipAction(state: GearState, gear: GearSource, action: PocketAction): GearState {
+  const cloth = wardrobeCloth(gear, action.item);
+  if (cloth) {
+    if (action.kind === "unequip") return unwearWardrobeItem(state, cloth.name) ?? state;
+    if (wornClothNames(state.equipped).has(cloth.name)) return state;
+    const doll = action.slot && state.equipped.some((slot) => slot.slot === action.slot) ? action.slot : dollSlotForWardrobe(cloth.slot);
+    if (!state.equipped.some((slot) => slot.slot === doll)) return state;
+    return {
+      ...state,
+      equipped: state.equipped.map((slot) => (slot.slot === doll ? withClothes(slot, insertCloth(slot.clothes, cloth)) : slot)),
+    };
+  }
+  if (action.kind === "equip") {
+    if (!action.slot) return state;
+    return moveGearToSlot(state, gear, action.item, action.slot);
+  }
+  const onSlot = state.equipped.find((slot) => slot.slot === action.slot && slot.name === action.item);
+  if (onSlot) return unequip(state, gear, onSlot.slot) ?? state;
+  const elsewhere = state.equipped.find((slot) => slot.name === action.item);
+  if (elsewhere) return unequip(state, gear, elsewhere.slot) ?? state;
+  return unwearWardrobeItem(state, action.item) ?? state;
+}
+
+function lookPieces(action: PocketAction): LookPiece[] {
+  return sanitizePieces(action.detail);
+}
+
+function applyLookAction(state: GearState, gear: GearSource, action: PocketAction): GearState {
+  if (action.kind === "save_look") {
+    const look = lookFromPieces(action.item, lookPieces(action));
+    if (!look) return state;
+    const looks = saveLook(state.looks, look);
+    if (!looks) return state;
+    return { ...state, looks };
+  }
+  if (action.kind === "delete_look") return { ...state, looks: deleteLook(state.looks, action.item) };
+  if (action.kind === "rename_look") {
+    const from = action.detail && !Array.isArray(action.detail) ? action.detail.from : "";
+    const looks = renameLook(state.looks, from, action.item);
+    if (!looks) return state;
+    return { ...state, looks };
+  }
+  if (action.kind === "wear_look") return wearLook(state, lookPieces(action), gear);
+  return state;
+}
+
+/** Replay pocket moves, equips, and look edits in order. A move whose item is already gone is left untouched. */
+export function applyGearActions(state: GearState, actions: PocketAction[], gear: GearSource): GearState {
+  const limit = gear.pocketSlots || 40;
+  return actions.reduce((current, action) => {
+    if (action.kind === "equip" || action.kind === "unequip") return applyEquipAction(current, gear, action);
+    if (action.kind === "save_look" || action.kind === "delete_look" || action.kind === "wear_look" || action.kind === "rename_look") {
+      return applyLookAction(current, gear, action);
+    }
+    const pocket = applyOne(current.pocket, action, limit);
+    if (pocket === current.pocket) return current;
+    return { ...current, pocket };
+  }, state);
+}
+
 /** Replay moves in order. An action whose item or chest is already gone is left untouched. */
 export function applyPocketActions(pocket: GearItem[], actions: PocketAction[], slotLimit: number): GearItem[] {
   return actions.reduce((current, action) => applyOne(current, action, slotLimit), pocket);
@@ -430,31 +655,78 @@ export function makePocketAction(
   item: { name: string; qty: string },
   chest: string,
   baseRev: string,
-  now: Date = new Date(),
+  extra?: { slot?: string; detail?: LookDetail; now?: Date },
 ): PocketAction {
-  return {
+  const action: PocketAction = {
     id: crypto.randomUUID(),
     kind,
     item: item.name,
     qty: item.qty || "",
     chest,
-    at: now.toISOString(),
+    at: (extra?.now ?? new Date()).toISOString(),
     baseRev,
     synced: false,
   };
+  if (extra?.slot) action.slot = extra.slot;
+  if (extra?.detail !== undefined) action.detail = extra.detail;
+  return action;
+}
+
+/** Equip and unequip rows for a doll change. Borrowed pieces are included so a later rev can replay them. */
+export function gearChangeActions(before: GearState, after: GearState): PocketAction[] {
+  const made: PocketAction[] = [];
+  for (const slot of after.equipped) {
+    const prev = before.equipped.find((entry) => entry.slot === slot.slot);
+    const prevName = prev?.name || "";
+    const nextName = slot.name || "";
+    if (prevName && prevName !== nextName) {
+      made.push(makePocketAction("unequip", { name: prevName, qty: prev?.qty || "" }, "", before.rev, { slot: slot.slot }));
+    }
+    if (nextName && nextName !== prevName) {
+      made.push(makePocketAction("equip", { name: nextName, qty: slot.qty || "" }, "", before.rev, { slot: slot.slot }));
+    }
+    const prevClothes = prev?.clothes ?? [];
+    const nextClothes = slot.clothes ?? [];
+    for (const piece of prevClothes) {
+      if (!nextClothes.some((cloth) => cloth.name === piece.name)) {
+        made.push(makePocketAction("unequip", { name: piece.name, qty: "" }, "", before.rev, { slot: slot.slot }));
+      }
+    }
+    for (const piece of nextClothes) {
+      if (!prevClothes.some((cloth) => cloth.name === piece.name)) {
+        made.push(makePocketAction("equip", { name: piece.name, qty: "" }, "", before.rev, { slot: slot.slot }));
+      }
+    }
+  }
+  return made;
 }
 
 export function pocketActionsForDm(actions: PocketAction[]): string {
   return JSON.stringify(
-    actions.map((action) => ({
-      id: action.id,
-      kind: action.kind,
-      item: action.item,
-      qty: action.qty,
-      chest: action.chest,
-      at: action.at,
-      baseRev: action.baseRev,
-    })),
+    actions.map((action) => {
+      const row: {
+        id: string;
+        kind: PocketAction["kind"];
+        item: string;
+        qty: string;
+        chest: string;
+        at: string;
+        baseRev: string;
+        slot?: string;
+        detail?: LookDetail;
+      } = {
+        id: action.id,
+        kind: action.kind,
+        item: action.item,
+        qty: action.qty,
+        chest: action.chest,
+        at: action.at,
+        baseRev: action.baseRev,
+      };
+      if (action.slot) row.slot = action.slot;
+      if (action.detail !== undefined) row.detail = action.detail;
+      return row;
+    }),
     null,
     2,
   );
@@ -464,12 +736,29 @@ export function samePocketActions(left: PocketAction[], right: PocketAction[]): 
   if (left.length !== right.length) return false;
   return left.every((action, index) => {
     const other = right[index];
-    return action.id === other.id && Boolean(action.synced) === Boolean(other.synced) && action.kind === other.kind && action.item === other.item && action.chest === other.chest;
+    return (
+      action.id === other.id &&
+      Boolean(action.synced) === Boolean(other.synced) &&
+      action.kind === other.kind &&
+      action.item === other.item &&
+      action.chest === other.chest &&
+      action.slot === other.slot
+    );
   });
 }
 
-/** Pocket mutations only. sell / unsell live in their own key and must not be replayed from this log. */
-const ACTION_KINDS = new Set<string>(["discard", "to_chest", "from_chest"]);
+/** Pocket, equip, and look rows. sell / unsell live in their own key and must not be replayed from this log. */
+const ACTION_KINDS = new Set<string>([
+  "discard",
+  "to_chest",
+  "from_chest",
+  "equip",
+  "unequip",
+  "save_look",
+  "delete_look",
+  "wear_look",
+  "rename_look",
+]);
 
 export function readPocketActions(store?: Store | null): PocketAction[] {
   const resolved = store === undefined ? browserStore() : store;
@@ -482,7 +771,7 @@ export function readPocketActions(store?: Store | null): PocketAction[] {
     if (typeof action.id !== "string" || !action.id) continue;
     if (typeof action.kind !== "string" || !ACTION_KINDS.has(action.kind)) continue;
     if (typeof action.item !== "string" || !action.item) continue;
-    actions.push({
+    const next: PocketAction = {
       id: action.id,
       kind: action.kind as PocketAction["kind"],
       item: action.item,
@@ -491,7 +780,14 @@ export function readPocketActions(store?: Store | null): PocketAction[] {
       at: typeof action.at === "string" ? action.at : "",
       baseRev: typeof action.baseRev === "string" ? action.baseRev : "",
       synced: action.synced === true,
-    });
+    };
+    if (typeof action.slot === "string" && action.slot) next.slot = action.slot;
+    if (next.kind === "rename_look" && action.detail && !Array.isArray(action.detail) && typeof action.detail.from === "string" && action.detail.from) {
+      next.detail = { from: action.detail.from };
+    } else if (next.kind === "save_look" || next.kind === "delete_look" || next.kind === "wear_look") {
+      next.detail = sanitizePieces(action.detail);
+    }
+    actions.push(next);
   }
   return actions;
 }
