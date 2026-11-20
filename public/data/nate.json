@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-19-aether-104",
+  "rev": "2026-11-20-aether-106",
   "gear": {
     "doll": [
       [
@@ -3555,9 +3555,9 @@
         "empty": ""
       },
       {
-        "qty": "14",
+        "qty": "17",
         "name": "Water Quintessence",
-        "note": "11 from the frogs, 1 from Bean Counting, 2 from the northern ditch frogs."
+        "note": "11 from the frogs, 1 from Bean Counting, 2 from the northern ditch frogs. +2 northern-ditch frogs (days 69-77), +1 Hunter's Road II."
       },
       {
         "qty": 38,
@@ -3565,9 +3565,9 @@
         "note": "From northern ditch frogs"
       },
       {
-        "qty": "21",
+        "qty": "36",
         "name": "Lesser monster cores",
-        "note": "5 from ratlings (Old City yard), 11 from ratlings (Callow farm bean rows), 5 from north road hedgehogs."
+        "note": "5 from ratlings (Old City yard), 11 from ratlings (Callow farm bean rows), 5 from north road hedgehogs. +15 from days 69-77 (6 hedgehogs, 9 ratlings)."
       },
       {
         "qty": 1,
@@ -3576,15 +3576,15 @@
         "slot": ""
       },
       {
-        "qty": 5,
+        "qty": 9,
         "name": "Iron monster cores",
-        "note": "1 sand shab (Dennick's farm), 1 bark lurker (orchard lane), 3 thorny-tongue frogs (northern ditches, wetland cores).",
+        "note": "1 sand shab (Dennick's farm), 1 bark lurker (orchard lane), 3 thorny-tongue frogs (northern ditches, wetland cores). +4 thorny-tongue frogs (northern ditches, days 69-77).",
         "slot": ""
       },
       {
-        "qty": 3,
+        "qty": 5,
         "name": "Earth quintessence",
-        "note": "1 from the sand shab, 1 from Something Under the Coop, 1 from Arm's Length",
+        "note": "1 from the sand shab, 1 from Something Under the Coop, 1 from Arm's Length, 1 Hunter's Road II, 1 Nest Egg",
         "slot": ""
       },
       {
@@ -3623,9 +3623,9 @@
         "slot": ""
       },
       {
-        "qty": 1,
+        "qty": 2,
         "name": "Wind Quintessence",
-        "note": "Hunter's Road reward.",
+        "note": "Hunter's Road reward; 1 more from Hunter's Road II.",
         "slot": ""
       },
       {
@@ -3644,6 +3644,12 @@
         "qty": 60,
         "name": "Hedgehog quills",
         "note": "Loose quills from the north road hedgehogs, plus spines picked up off the road and fence post.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Awakening Stone of Persistence",
+        "note": "Hunter's Road II reward. Unused.",
         "slot": ""
       }
     ],
@@ -4151,9 +4157,9 @@
       }
     ]
   },
-  "next": "Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
+  "next": "Day 78 morning: at the Ostrander & Vey joint stone auction, bidding for an aura or perception awakening stone (Eyes and Aura). Coins 2186 iron · 560 lesser. Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1556 iron · 551 lesser",
+  "coins": "2186 iron · 560 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4224,34 +4230,29 @@
       }
     ],
     "missionNames": [
-      "Hunter's Road II",
       "Eyes and Aura",
       "Cellar Dwellers",
-      "North road hedgehogs",
-      "Northern frogs",
-      "West barn nest",
-      "Bark lurker, south road",
-      "Ratlings, south fields"
+      "North road hedgehogs"
     ]
   },
   "vitals": [
     {
       "pct": 100,
-      "note": "Full after rest, five days of training.",
+      "note": "Full on day 78, auction morning.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full after rest, five days of training.",
+      "note": "Full on day 78, auction morning.",
       "tone": "mana",
       "label": "MANA",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full after rest, five days of training.",
+      "note": "Full on day 78, auction morning.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4322,7 +4323,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 68 in this world, at the Adventure Society",
+    "asOf": "Morning, day 78 in this world, at the Ostrander & Vey stone auction",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4350,13 +4351,13 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Adventure Society building, Greenstone, leaving Director Elspeth Arella's upper-floor office with Rufus. The Vane ledger is sealed in Arella's private file; Rufus is to deliver the Vane signet to her, sealed, by midday day 69. Early afternoon, 11 days after the assessment.",
+  "location": "Adventure Society trade hall, 3rd floor, Greenstone, for the Ostrander & Vey joint stone auction, with Gary, Farrah, and Rufus. Morning, day 78 in this world.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Hunter's Road II",
-      "detail": "Slay one-star monsters 11/30. Reward: 300 iron spirit coins, 3 quintessence, 1 awakening stone.",
-      "status": "ACTIVE"
+      "detail": "Slay one-star monsters 30/30 (completed during days 69-77: hedgehogs, northern-ditch frogs, west barn ratlings). Paid on completion: 300 iron spirit coins, 1 Earth Quintessence, 1 Water Quintessence, 1 Wind Quintessence, 1 Awakening Stone of Persistence, plus 100 iron unlisted.",
+      "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
@@ -4492,20 +4493,26 @@
     {
       "kind": "CONTRACT",
       "name": "North road hedgehogs",
-      "detail": "Society one-star open contract. 2 iron per kill (spine bundle as proof). Paid so far: 20 iron (10 kills), then 10 iron (5 bundles, day 62). Contract stays open.",
+      "detail": "Society one-star open contract. 2 iron per kill (spine bundle as proof). Paid so far: 20 iron (10), 10 iron (5 bundles, day 62), 12 iron (6 bundles, days 69-77). Contract stays open.",
       "status": "ACTIVE"
     },
     {
       "kind": "CONTRACT",
       "name": "Northern frogs",
-      "detail": "Society one-star open contract (northern farmstead ditches). 4 iron per kill. Paid so far: 28 iron (7 kills), then 12 iron (3 kills, day 62). Contract stays open.",
-      "status": "ACTIVE"
+      "detail": "Society one-star open contract (northern farmstead ditches), 4 iron per kill. Paid: 28 iron (7), 12 iron (3, day 62), 16 iron (4, days 69-77). CLOSED.",
+      "status": "COMPLETE"
     },
     {
       "kind": "CONTRACT",
       "name": "West barn nest",
-      "detail": "Society one-star contract, accepted. 30 iron.",
-      "status": "ACTIVE"
+      "detail": "Society one-star contract. Nest was ratlings; 9 killed during days 69-77. Paid 30 iron. CLOSED.",
+      "status": "COMPLETE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Nest Egg",
+      "detail": "Clear the west barn ratling nest 9/9. Paid on completion: 100 iron spirit coins, 1 Earth Quintessence, plus 50 iron unlisted.",
+      "status": "COMPLETE"
     },
     {
       "kind": "PRIVATE",
@@ -4588,10 +4595,10 @@
     }
   ],
   "worldTime": {
-    "day": 68,
-    "time": "Afternoon",
-    "detail": "Early afternoon. The meeting with Director Arella is over; Nate and Rufus are leaving her office in the Adventure Society.",
-    "dayLabel": "68 days in this world"
+    "day": 78,
+    "time": "Morning",
+    "detail": "Auction morning. After a week of daily contracts (days 69-77), Nate is at the Ostrander & Vey joint stone auction on the trade hall's 3rd floor with Gary, Farrah, and Rufus.",
+    "dayLabel": "78 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 1/5 · STAR 2/5 · WIND 2/5 · COMET 1/5 AWAKENED",
