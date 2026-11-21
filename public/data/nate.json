@@ -110,6 +110,10 @@
         {
           "x": 98,
           "y": 146
+        },
+        {
+          "x": 126,
+          "y": 121
         }
       ],
       "blocks": [
@@ -3470,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-163",
+  "rev": "2026-11-21-aether-171",
   "gear": {
     "doll": [
       [
@@ -3607,11 +3611,6 @@
       },
       {
         "qty": "",
-        "name": "Tanner's lantern",
-        "note": "Borrowed from the tanner. Not Nate's."
-      },
-      {
-        "qty": "",
         "name": "Light stone lantern",
         "note": "Brass; twist the top to brighten or dim. Gift from Rufus."
       },
@@ -3619,6 +3618,11 @@
         "qty": "",
         "name": "Invictus",
         "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
+      },
+      {
+        "qty": "",
+        "name": "Awakening Stone of Eyes",
+        "note": "Common. Bought from Seven at the Gilded Heron, day 79 evening, for 450 iron (45 bronze, her cousin's auction price) plus a promise to someday tell her one true thing of Nate's choosing. Suited to a perception power. Dusk-blue glow."
       }
     ],
     "outfits": [
@@ -3673,8 +3677,7 @@
       }
     ],
     "borrowed": [
-      "Foreman's lamp",
-      "Tanner's lantern"
+      "Foreman's lamp"
     ],
     "equipped": [
       {
@@ -3699,15 +3702,23 @@
         "empty": "empty",
         "clothes": [
           {
-            "name": "Bert's evening set",
-            "slot": "Outfit"
+            "name": "Slate-blue shirt with silver vine embroidery",
+            "slot": "Torso"
+          },
+          {
+            "name": "Red sash",
+            "slot": "Waist"
+          },
+          {
+            "name": "Sky blue wrap trousers",
+            "slot": "Legs"
           },
           {
             "name": "Socks",
             "slot": "Shoes"
           },
           {
-            "name": "Black evening shoes with silver-thread stitching",
+            "name": "Honey-brown pebble-buck running shoes",
             "slot": "Shoes"
           }
         ]
@@ -3749,7 +3760,7 @@
       },
       {
         "name": "Bert's evening set",
-        "note": "Gilbert's Resilient Attire, day 79 (rush job, 30 iron balance paid). Midnight-black knee-length frock coat with a faint silver-blue pinstripe, evening waistcoat, dove-grey dress shirt, dark sharply creased trousers. No enchantments.",
+        "note": "Gilbert's Resilient Attire, day 79 (rush job, 30 iron balance paid). Midnight-black knee-length frock coat with a faint silver-blue pinstripe, evening waistcoat, dove-grey dress shirt, dark sharply creased trousers. No enchantments. Breast pocket: Seven's second cream card, violet ink: 'Leave word with Aurel' (sealed note marked 'Seven' left with Aurel, the Heron's waiter, reaches her by morning).",
         "slot": "Outfit"
       },
       {
@@ -3990,10 +4001,6 @@
       "Travel clothes": [
         "Body"
       ],
-      "Tanner's lantern": [
-        "Off hand",
-        "Main hand"
-      ],
       "Bone-handled knife": [
         "Belt / sheath",
         "Off hand",
@@ -4152,7 +4159,7 @@
   },
   "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1213 iron · 785 lesser",
+  "coins": "1063 iron · 785 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4316,7 +4323,7 @@
     }
   ],
   "identity": {
-    "asOf": "Evening, day 79 in this world, at the Gilded Heron",
+    "asOf": "Evening, day 79 in this world, in Rufus's suite at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4344,7 +4351,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "The Gilded Heron, Island waterfront promenade (about 10 minutes' walk from Sailor's Watch), at the front doors with the doorman, here to meet Seven. Dressed in Bert's evening set and the black evening shoes. Jason stayed at Sailor's Watch. Harbinger aura restrained (active, held close); Veil off. Evening, day 79 in this world.",
+  "location": "Sailor's Watch, the Island: in Rufus's suite (dark; the rest of the team not back yet), with Jason in the armchair. Changed on the way up into his everyday clothes (First look: slate-blue shirt, red sash, sky blue wrap trousers, socks, honey-brown running shoes); Bert's evening set is back in the Wardrobe with Seven's card still in its breast pocket. Plans to absorb the Eyes, Storm, and Persistence stones tonight; none used yet. Harbinger aura restrained (active, held close); Veil off. Evening, day 79 in this world.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4367,7 +4374,7 @@
     {
       "kind": "SYSTEM",
       "name": "Eyes and Aura",
-      "detail": "Objectives: acquire an awakening stone suited to a perception power 0/1; acquire an awakening stone suited to an aura power 1/1 (Awakening Stone of Omens, won at auction and absorbed day 78). Reward: 200 iron spirit coins. Bonus objective: awaken a perception power and an aura power 1/2 (Harbinger). Bonus reward: 1 common awakening stone. Leads: Awakening Stone of Eyes (common; Lot 7 sold to another bidder for 45 bronze; try the Ostrander & Vey brokers, trade hall 3rd floor).",
+      "detail": "Main objectives complete day 79 evening (Awakening Stone of Eyes bought from Seven; Awakening Stone of Omens absorbed day 78); reward paid: 200 iron plus 100 unlisted iron. Bonus objective still open: awaken a perception power and an aura power 1/2 (Harbinger done). Bonus reward: 1 common awakening stone, auto-deposits on completion.",
       "status": "ACTIVE"
     },
     {
@@ -4603,7 +4610,7 @@
   "worldTime": {
     "day": 79,
     "time": "Evening",
-    "detail": "Sixth bell. Arrived at the Gilded Heron to meet Seven.",
+    "detail": "About the eighth bell. Up in Rufus's suite at Sailor's Watch with Jason.",
     "dayLabel": "79 days in this world"
   },
   "abilityMeta": {
