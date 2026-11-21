@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-212",
+  "rev": "2026-11-21-aether-220",
   "gear": {
     "doll": [
       [
@@ -4219,18 +4219,18 @@
       "value": "100%"
     },
     {
-      "pct": 95,
-      "note": "Unchanged during the Second Wind test run; no mark active.",
+      "pct": 88,
+      "note": "Recovering at the active rate during the Second Wind test run. Moonwell ready.",
       "tone": "mana",
       "label": "MANA",
-      "value": "95%"
+      "value": "88%"
     },
     {
-      "pct": 48,
-      "note": "Second Wind triggered mid lap 8 (dropped to ~23%, +25%). Second Wind on 10-minute cooldown. Park-district loop path, afternoon day 80.",
+      "pct": 27,
+      "note": "After lap 18 of the Second Wind test run. Second Wind about 9 minutes into its cooldown (fired lap 16). Park-district loop path, mid to late afternoon day 80.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "48%"
+      "value": "27%"
     }
   ],
   "profile": [
@@ -4326,7 +4326,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Park district loop path, running laps with Gary pacing for Farrah's Second Wind test (mid lap 8; Second Wind just triggered, on cooldown). Jason, Rufus and Farrah are back in the shade where they had lunch at the food carts. Wearing Gilbert's bespoke armour set. No mark active (dropped the Star Mark on Rufus after lap 1). Harbinger restrained, Veil off. Early afternoon, day 80.",
+  "location": "Park district loop path, running laps with Gary pacing for Farrah's Second Wind test (lap 18 done; Second Wind nearly off cooldown, Moonwell ready). Jason, Rufus and Farrah are back in the shade where they had lunch at the food carts. Wearing Gilbert's bespoke armour set. No mark active (dropped the Star Mark on Rufus after lap 1). Harbinger restrained, Veil off. Mid to late afternoon, day 80.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4569,7 +4569,7 @@
       "tag": "Star · Spell · Healing, Support",
       "name": "Moonwell",
       "rank": "Iron 0",
-      "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow.",
+      "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run (progress pending next meditation).",
       "essence": "Star",
       "progress": 0
     },
@@ -4608,7 +4608,7 @@
       "tag": "Wind · Special · Recovery",
       "name": "Second Wind",
       "rank": "Iron 0",
-      "detail": "When Nate's stamina falls below 25%, the wind fills him and he instantly regains 25% stamina. Cost: none. Cooldown: 10 minutes. From the Awakening Stone of Persistence. Absorbed day 79 evening in Rufus's suite. DM-made. First triggered day 80 afternoon, mid lap 8 of Farrah's test run (progress pending next meditation).",
+      "detail": "When Nate's stamina falls below 25%, the wind fills him and he instantly regains 25% stamina. Cost: none. Cooldown: 10 minutes. From the Awakening Stone of Persistence. Absorbed day 79 evening in Rufus's suite. DM-made. If stamina is already under 25% when the cooldown ends, it fires immediately (DM ruling, day 80). First triggered day 80 afternoon mid lap 8 of Farrah's test run, again in laps 11 and 16 (progress pending next meditation).",
       "essence": "Wind",
       "progress": 0
     },
@@ -4624,7 +4624,7 @@
   "worldTime": {
     "day": 80,
     "time": "Afternoon",
-    "detail": "Second Wind test run with Gary on the park-district loop path, after lunch at the food carts.",
+    "detail": "Second Wind test run with Gary on the park-district loop path, 18 laps in, mid to late afternoon.",
     "dayLabel": "80 days in this world"
   },
   "abilityMeta": {
