@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-20-aether-113",
+  "rev": "2026-11-20-aether-114",
   "gear": {
     "doll": [
       [
@@ -4323,7 +4323,7 @@
     }
   ],
   "identity": {
-    "asOf": "Dusk, day 78 in this world, at Sailor's Watch",
+    "asOf": "Evening, day 78 in this world, at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4351,7 +4351,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Rufus's suite, Sailor's Watch, Greenstone (door locked, shutters closed), with Rufus, Farrah, and Gary, resting after his first aura-control lesson with Farrah. Dusk, day 78 in this world.",
+  "location": "Common room, Sailor's Watch, Greenstone, at dinner with Rufus, Farrah, and Gary after Nate's first aura lesson (basic projection and restraint learned; Jason not in his room). Evening, day 78 in this world.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4603,7 +4603,7 @@
   ],
   "worldTime": {
     "day": 78,
-    "time": "Dusk",
+    "time": "Evening",
     "detail": "Auction morning. After a week of daily contracts (days 69-77), Nate is at the Ostrander & Vey joint stone auction on the trade hall's 3rd floor with Gary, Farrah, and Rufus.",
     "dayLabel": "78 days in this world"
   },
