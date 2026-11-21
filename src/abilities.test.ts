@@ -1,8 +1,9 @@
 import backup from "../public/data/nate.json";
+import sheet from "./fixtures/campaign.json";
 import { describe, expect, it } from "vitest";
-import { abilityEssence, essenceCountLabel, groupAbilities, rankFromLabel, rankLadder } from "./abilities";
+import { ESSENCE_ORDER, abilityEssence, essenceCountLabel, groupAbilities, rankFromLabel, rankLadder } from "./abilities";
 import { parseSheet, validateSheet } from "./sheet";
-import type { Ability, SheetData } from "./types";
+import type { Ability } from "./types";
 
 function ability(partial: Partial<Ability> & Pick<Ability, "name">): Ability {
   return {
@@ -43,28 +44,47 @@ describe("groupAbilities", () => {
     expect(groups.map((group) => group.essence)).toEqual(["Lightning", "Star", "Wind", "Comet", "Outworlder", "Other", "Racial"]);
     expect(groups.find((group) => group.essence === "Lightning")?.abilities.map((entry) => entry.name)).toEqual(["Arc Step"]);
     expect(groups.find((group) => group.essence === "Star")?.abilities.map((entry) => entry.name)).toEqual(["Star Mark"]);
+    expect(groups.find((group) => group.essence === "Other")?.abilities.map((entry) => entry.name)).toEqual(["Untagged"]);
     expect(essenceCountLabel("Lightning", 2)).toBe("2/5");
     expect(essenceCountLabel("Comet", 3)).toBe("3/5");
     expect(essenceCountLabel("Outworlder", 1)).toBe("1");
     expect(essenceCountLabel("Other", 1)).toBe("1");
   });
 
-  it("groups the backup, and leaves an ability with no tag under Other", () => {
-    const sheet = parseSheet(backup);
-    const groups = groupAbilities(sheet.abilities);
+  it("files an essence with no tag under that essence, and an ability with neither under Other", () => {
+    const groups = groupAbilities([
+      ability({ name: "Bolt", tag: "Lightning · Special" }),
+      ability({ name: "Storm", tag: "Lightning · Spell" }),
+      ability({ name: "Mark", tag: "Star · Special" }),
+      ability({ name: "Well", tag: "Star · Spell" }),
+      ability({ name: "Gaze", tag: "Star · Special" }),
+      ability({ name: "Veil", tag: "Wind · Special" }),
+      ability({ name: "Gust", tag: "Wind · Special" }),
+      ability({ name: "Stair", essence: "Wind", tag: undefined }),
+      ability({ name: "Strike", tag: "Comet · Attack" }),
+      ability({ name: "Wake", tag: "Comet · Special" }),
+      ability({ name: "Trail", tag: "Comet · Aura" }),
+      ability({ name: "Loose", tag: undefined }),
+    ]);
     expect(groups.map((group) => [group.essence, essenceCountLabel(group.essence, group.abilities.length)])).toEqual([
       ["Lightning", "2/5"],
       ["Star", "3/5"],
-      ["Wind", "2/5"],
+      ["Wind", "3/5"],
       ["Comet", "3/5"],
       ["Other", "1"],
     ]);
-    expect(groups[0].abilities.map((entry) => entry.name)).toEqual(["Arc Step", "Thunderhead"]);
-    expect(groups[1].abilities.map((entry) => entry.name)).toEqual(["Star Mark", "Moonwell", "Starward Gaze"]);
-    expect(groups[2].abilities.map((entry) => entry.name)).toEqual(["Windward Veil", "Second Wind"]);
-    expect(groups[3].abilities.map((entry) => entry.name)).toEqual(["Comet Strike", "Harbinger", "Quarry's Wake"]);
-    expect(groups[4].abilities.map((entry) => entry.name)).toEqual(["Sky Stair"]);
-    expect(sheet.abilityMeta.slotsLabel).toBe("LIGHTNING 2/5 · STAR 3/5 · WIND 3/5 · COMET 3/5 AWAKENED");
+    expect(groups.find((group) => group.essence === "Wind")?.abilities.map((entry) => entry.name)).toEqual(["Veil", "Gust", "Stair"]);
+    expect(groups.find((group) => group.essence === "Other")?.abilities.map((entry) => entry.name)).toEqual(["Loose"]);
+  });
+
+  it("groups every ability in the synced backup, in essence order", () => {
+    const live = parseSheet(backup);
+    const groups = groupAbilities(live.abilities);
+    const listed = groups.flatMap((group) => group.abilities);
+    expect(listed).toHaveLength(live.abilities.length);
+    for (const entry of live.abilities) expect(listed).toContain(entry);
+    const known = groups.map((group) => group.essence).filter((name) => (ESSENCE_ORDER as readonly string[]).includes(name));
+    expect(known).toEqual(ESSENCE_ORDER.filter((name) => known.includes(name)));
   });
 });
 
@@ -120,22 +140,34 @@ describe("rankLadder", () => {
 });
 
 describe("ability fields on the sheet", () => {
-  it("keeps a sheet with no essence or ranks valid", () => {
+  it("accepts the synced backup", () => {
     expect(validateSheet(backup)).toBeNull();
-    const sheet = parseSheet(backup);
-    expect(sheet.abilities.every((entry) => entry.essence === undefined && entry.ranks === undefined)).toBe(true);
+    expect(parseSheet(backup).abilities).toHaveLength(backup.abilities.length);
+  });
+
+  it("keeps a sheet with no essence or ranks valid", () => {
+    const copy = structuredClone(parseSheet(sheet));
+    for (const entry of copy.abilities) {
+      delete entry.essence;
+      delete entry.ranks;
+    }
+    expect(validateSheet(copy)).toBeNull();
+    const parsed = parseSheet(copy);
+    expect(parsed.abilities.length).toBeGreaterThan(0);
+    expect(parsed.abilities.every((entry) => entry.essence === undefined && entry.ranks === undefined)).toBe(true);
   });
 
   it("accepts essence and a partial ranks object", () => {
-    const copy = structuredClone(parseSheet(backup)) as SheetData;
+    const copy = structuredClone(parseSheet(sheet));
     copy.abilities[0].essence = "Lightning";
     copy.abilities[0].ranks = { Bronze: "The streak reaches about 40 feet." };
     expect(validateSheet(copy)).toBeNull();
     expect(parseSheet(copy).abilities[0].ranks?.Bronze).toBe("The streak reaches about 40 feet.");
+    expect(parseSheet(copy).abilities[0].essence).toBe("Lightning");
   });
 
   it("rejects a bad essence or ranks shape", () => {
-    const copy = structuredClone(parseSheet(backup)) as SheetData;
+    const copy = structuredClone(parseSheet(sheet));
     (copy.abilities[0] as { essence: unknown }).essence = 1;
     expect(validateSheet(copy)).toMatch(/essence/);
     copy.abilities[0].essence = "Lightning";
