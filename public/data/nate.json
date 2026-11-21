@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-20-aether-135",
+  "rev": "2026-11-20-aether-145",
   "gear": {
     "doll": [
       [
@@ -3555,7 +3555,7 @@
         "empty": ""
       },
       {
-        "qty": "17",
+        "qty": "18",
         "name": "Water Quintessence",
         "note": "11 from the frogs, 1 from Bean Counting, 2 from the northern ditch frogs. +2 northern-ditch frogs (days 69-77), +1 Hunter's Road II."
       },
@@ -3576,13 +3576,13 @@
         "slot": ""
       },
       {
-        "qty": 9,
+        "qty": 10,
         "name": "Iron monster cores",
         "note": "1 sand shab (Dennick's farm), 1 bark lurker (orchard lane), 3 thorny-tongue frogs (northern ditches, wetland cores). +4 thorny-tongue frogs (northern ditches, days 69-77).",
         "slot": ""
       },
       {
-        "qty": 5,
+        "qty": 6,
         "name": "Earth quintessence",
         "note": "1 from the sand shab, 1 from Something Under the Coop, 1 from Arm's Length, 1 Hunter's Road II, 1 Nest Egg",
         "slot": ""
@@ -3623,7 +3623,7 @@
         "slot": ""
       },
       {
-        "qty": 2,
+        "qty": 3,
         "name": "Wind Quintessence",
         "note": "Hunter's Road reward; 1 more from Hunter's Road II.",
         "slot": ""
@@ -3656,6 +3656,11 @@
         "qty": "",
         "name": "Tanner's lantern",
         "note": "Borrowed from the tanner. Not Nate's."
+      },
+      {
+        "qty": 1,
+        "name": "Mangrove Snatcher Hide",
+        "note": "Looted from the mangrove snatcher (iron rank, one-star) killed with Jason in the mangroves past Dorran's farm, day 79."
       }
     ],
     "outfits": [
@@ -4164,7 +4169,7 @@
   },
   "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1046 iron · 556 lesser",
+  "coins": "1180 iron · 556 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4235,7 +4240,6 @@
       }
     ],
     "missionNames": [
-      "Broken Fences",
       "Eyes and Aura",
       "Cellar Dwellers",
       "North road hedgehogs"
@@ -4250,18 +4254,18 @@
       "value": "100%"
     },
     {
-      "pct": 74,
-      "note": "Veil (-5%, sustaining 1%/min), Arc Step (-5%), Comet Strike (-10%), Sky Stair pinball slam (-3%), day 79 mid-morning.",
+      "pct": 59,
+      "note": "Arc Step, Sky Stair and Windward Veil drain on the race from Dorran's farm; Veil dropped on the cart track, day 79 mid-morning.",
       "tone": "mana",
       "label": "MANA",
-      "value": "74%"
+      "value": "59%"
     },
     {
-      "pct": 95,
-      "note": "Comet Strike on the croc (-5%), day 79 mid-morning.",
+      "pct": 85,
+      "note": "Comet Strike and the 30-minute run back from Dorran's farm, day 79 noon.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "95%"
+      "value": "85%"
     }
   ],
   "profile": [
@@ -4329,7 +4333,7 @@
     }
   ],
   "identity": {
-    "asOf": "Mid-morning, day 79 in this world, at the eastern farms",
+    "asOf": "Noon, day 79 in this world, at the trade hall",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4357,13 +4361,13 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Mangrove clearing below Dorran's pasture, in melee with the six-legged fence-chewer croc, Jason in the shadows. Harbinger unsuppressed, Windward Veil up. Mid-morning, day 79 in this world.",
+  "location": "Adventure Society trade hall, ground floor (iron), at a monster-parts buying counter, with Jason. Harbinger unsuppressed. Just after noon, day 79 in this world.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Broken Fences",
-      "detail": "Landed day 78 evening (Jason's contract, eastern farms, morning of day 79). Objectives: find whatever is chewing through the fences past the eastern farms 1/1 (a mangrove snatcher, iron rank, six-legged croc, 12 ft plus); deal with it 0/1. Bonus objective: land a combined attack with Jason 0/1. Reward: 100 iron spirit coins, 1 earth quintessence. Bonus reward: 1 wind quintessence.",
-      "status": "ACTIVE"
+      "detail": "Landed day 78 evening (Jason's contract, eastern farms). Objectives: find whatever is chewing through the fences 1/1 (a mangrove snatcher, iron rank, one-star, six-legged croc, 12 ft plus); deal with it 1/1 (killed day 79 mid-morning in the mangroves past Dorran's farm). Bonus: combined attack with Jason 1/1 (on-three skull slam with his throat strike). Paid on completion: 100 iron spirit coins, 1 Earth Quintessence, bonus 1 Wind Quintessence, plus 25 iron unlisted.",
+      "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
@@ -4615,8 +4619,8 @@
   ],
   "worldTime": {
     "day": 79,
-    "time": "Mid-morning",
-    "detail": "Auction morning. After a week of daily contracts (days 69-77), Nate is at the Ostrander & Vey joint stone auction on the trade hall's 3rd floor with Gary, Farrah, and Rufus.",
+    "time": "Noon",
+    "detail": "Back at Greenstone's eastern gate with Jason after Broken Fences (mangrove snatcher killed at Dorran's farm). Next: trade hall to sell, lemonade, then Bert's evening set at the second bell after noon.",
     "dayLabel": "79 days in this world"
   },
   "abilityMeta": {
