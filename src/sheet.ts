@@ -1,4 +1,4 @@
-import type { SheetData, Vital } from "./types";
+import { ABILITY_RANKS, type SheetData, type Vital } from "./types";
 import { isWardrobeSlot, outfitsShapeOk, wardrobeShapeOk } from "./wardrobe";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -20,7 +20,10 @@ export function validateSheet(value: unknown): string | null {
     need(typeof value.location === "string", "location must be a string."),
     need(typeof value.next === "string", "next must be a string."),
     need(worldTimeOk(value.worldTime), "worldTime, when present, must be { day: number, dayLabel: string, time: string, detail?: string }."),
-    need(Array.isArray(value.abilities), "abilities must be an array."),
+    need(
+      abilitiesOk(value.abilities),
+      "abilities must be an array of objects. essence, when present, must be a string. ranks, when present, must be an object whose keys are Iron, Bronze, Silver, Gold, or Diamond and whose values are strings.",
+    ),
     need(Array.isArray(value.racial), "racial must be an array."),
     need(Array.isArray(value.missions), "missions must be an array."),
     need(isRecord(value.status) && Array.isArray(value.status.missionNames) && Array.isArray(value.status.log), "status.missionNames and status.log are required."),
@@ -42,6 +45,20 @@ export function validateSheet(value: unknown): string | null {
     need(isRecord(value.map) && Array.isArray(value.map.charted), "map.charted must be an array."),
   ];
   return problems.find((problem) => problem) || null;
+}
+
+const ABILITY_RANK_KEYS = new Set<string>(ABILITY_RANKS);
+
+/** Each ability stays an object. `essence` and `ranks` are optional and checked only when present. */
+function abilitiesOk(abilities: unknown): boolean {
+  if (!Array.isArray(abilities)) return false;
+  return abilities.every((ability) => {
+    if (!isRecord(ability)) return false;
+    if (ability.essence !== undefined && typeof ability.essence !== "string") return false;
+    if (ability.ranks === undefined) return true;
+    if (!isRecord(ability.ranks)) return false;
+    return Object.entries(ability.ranks).every(([key, value]) => ABILITY_RANK_KEYS.has(key) && typeof value === "string");
+  });
 }
 
 /** Missing `worldTime` is valid. A present value has to be the clock object. */

@@ -133,12 +133,21 @@ export type Identity = {
   slots: { title: string; mark: string; filled: boolean }[];
 };
 
+export const ABILITY_RANKS = ["Iron", "Bronze", "Silver", "Gold", "Diamond"] as const;
+
+export type AbilityRank = (typeof ABILITY_RANKS)[number];
+
 export type Ability = {
   name: string;
-  tag: string;
+  /** First segment is the essence when `essence` is omitted, e.g. "Lightning · Special · Movement". */
+  tag?: string;
+  /** Wins over the first segment of `tag` when set. */
+  essence?: string;
   rank: string;
   progress: number;
   detail: string;
+  /** What the ability does at each rank. Iron falls back to `detail` when omitted. */
+  ranks?: Partial<Record<AbilityRank, string>>;
 };
 
 export type NamedDetail = { name: string; detail: string };
