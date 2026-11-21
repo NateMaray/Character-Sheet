@@ -16,7 +16,8 @@ import {
   writeSellList,
   type SellEntry,
 } from "../sell";
-import type { GearItem, GearSource, PocketAction, SheetData } from "../types";
+import { essenceCountLabel, groupAbilities, rankLadder } from "../abilities";
+import type { Ability, GearItem, GearSource, PocketAction, SheetData } from "../types";
 import { Button, Card, Pill } from "./Bits";
 import { WardrobeView } from "./WardrobeView";
 
@@ -128,23 +129,56 @@ export function StatusTab({ sheet, active }: { sheet: SheetData; active: boolean
   );
 }
 
+function abilityMetaLine(ability: Ability): string {
+  const progress = `${ability.progress}% to next rank`;
+  return ability.tag ? `${ability.tag} · ${progress}` : progress;
+}
+
+function AbilityCard({ ability, panelId }: { ability: Ability; panelId: string }) {
+  const rungs = rankLadder(ability);
+  return (
+    <Card>
+      <div className="card-head">
+        <span className="title">{ability.name}</span>
+        <Pill text={ability.rank} on />
+      </div>
+      <div className="meta">{abilityMetaLine(ability)}</div>
+      <div className="track" style={{ height: 8 }}>
+        <span style={{ width: `${Math.max(ability.progress, 2)}%`, ["--bar" as string]: "var(--accent)" }} />
+      </div>
+      <div className="body">{ability.detail}</div>
+      <details className="rank-details" name="ability-ranks">
+        <summary aria-controls={panelId}>
+          <span>Ranks</span>
+          <span className="chev" aria-hidden="true" />
+        </summary>
+        <ol className="rank-ladder" id={panelId} aria-label={`${ability.name} rank ladder`}>
+          {rungs.map((rung) => (
+            <li key={rung.name} className={`rank-rung is-${rung.state}`} aria-current={rung.state === "current" ? "true" : undefined}>
+              <span className="rank-name">{rung.name}</span>
+              {rung.text ? <span className="rank-text">{rung.text}</span> : null}
+            </li>
+          ))}
+        </ol>
+      </details>
+    </Card>
+  );
+}
+
 export function AbilitiesTab({ sheet, active }: { sheet: SheetData; active: boolean }) {
+  const groups = groupAbilities(sheet.abilities);
   return (
     <section className="stack panel" hidden={!active} aria-hidden={!active}>
-      {sheet.abilities.map((ability) => (
-        <Card key={ability.name}>
-          <div className="card-head">
-            <span className="title">{ability.name}</span>
-            <Pill text={ability.rank} on />
+      {groups.map((group) => (
+        <div key={group.essence} className="essence-group">
+          <div className="essence-head">
+            <h2 className="section-label">{group.essence.toUpperCase()}</h2>
+            <span className="essence-count">{essenceCountLabel(group.essence, group.abilities.length)}</span>
           </div>
-          <div className="meta">
-            {ability.tag} · {ability.progress}% to next rank
-          </div>
-          <div className="track" style={{ height: 8 }}>
-            <span style={{ width: `${Math.max(ability.progress, 2)}%`, ["--bar" as string]: "var(--accent)" }} />
-          </div>
-          <div className="body">{ability.detail}</div>
-        </Card>
+          {group.abilities.map((ability, index) => (
+            <AbilityCard key={`${group.essence}-${ability.name}-${index}`} ability={ability} panelId={`rank-ladder-${group.essence}-${index}`} />
+          ))}
+        </div>
       ))}
       <div className="section-label">{sheet.abilityMeta.slotsLabel}</div>
       <div className="section-label">{sheet.abilityMeta.racialLabel}</div>

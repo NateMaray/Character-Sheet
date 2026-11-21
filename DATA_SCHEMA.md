@@ -51,8 +51,8 @@ Pins are not part of `rev`. They live only on the phone (at most 5).
 | `location` | Where he is, in the header. |
 | `worldTime` | Optional in-world clock in the vitals card, directly above the coins, location, and next lines. Leave the field off and the sheet looks the same. |
 | `next` | The "next" line in the header. |
-| `abilities[]` | Powers. `progress` is the percent toward the next rank. |
-| `abilityMeta` | The two small headings under the ability cards. |
+| `abilities[]` | Powers, grouped on the sheet by essence. `progress` is the percent toward the next rank. Optional `essence` and `ranks` are described below. |
+| `abilityMeta` | The two small headings under the ability cards. `slotsLabel` still prints as written. |
 | `racial[]` | Outworlder gifts. |
 | `missions[]` | Every contract, rumour, and finished job. `status` is the pill (`ACTIVE` is highlighted). `kind` is optional (`JOB`, `SYSTEM`). `filler` shows a FILLER pill when true. |
 | `status.missionNames` | Which missions are featured on the Status tab, in order. Names must match `missions[].name`. |
@@ -78,6 +78,41 @@ Optional. Omit the field entirely when you are not tracking the clock. A sheet w
 | `detail` | Optional free text, such as "About an hour before midnight". Leave it off when you have nothing to add. |
 
 `day`, `dayLabel`, and `time` are expected when `worldTime` is present. A missing `worldTime` is fine. A present `worldTime` that is not that shape is rejected, and the sheet will not load.
+
+## Abilities
+
+Each entry is `{ "name", "tag", "rank", "progress", "detail" }`. `tag` usually starts with the essence, as in `"Lightning · Special · Movement"`. Leave `tag` off only when you set `essence` instead. An older row that has neither still loads: that ability is listed under Other.
+
+Two optional fields:
+
+| Field | What it does |
+| --- | --- |
+| `essence` | String. When it is a non-empty string, the ability is filed under that essence. `"wind"` is the same group as `"Wind"`. |
+| `ranks` | Object. Keys are `Iron`, `Bronze`, `Silver`, `Gold`, and `Diamond`. Each value is the text for that rank. Omit a key when you have not written that rank yet. |
+
+`essence` wins over `tag`. With no `essence`, the sheet uses the text before the first `·` in `tag`.
+
+The Abilities tab shows Lightning, then Star, then Wind, then Comet. Anything else (a racial gift, an outworlder power, or an ability with no essence) gets its own header after those four, in the order it first appears. Lightning, Star, Wind, and Comet show how many abilities are listed out of 5, such as `2/5`. Another group shows how many abilities it holds. `abilityMeta.slotsLabel` is unchanged and still prints under the list, above the racial gifts.
+
+`rank` such as `"Iron 0"` or `"Bronze 2"` picks the highlighted rung. The first word is the rank. Tap Ranks on an ability to open the ladder. Iron shows `ranks.Iron` when that text is present, and `detail` when it is not. A later rank with no text is sealed (`Sealed: revealed on reaching Bronze`). A later rank that has text is shown, and it does not look like the current rank. Ranks he has already passed are shown in the normal style.
+
+Leave both new fields off and the ability renders as before: one card, `detail` as the Iron text, and the higher ranks sealed.
+
+```json
+{
+  "name": "Arc Step",
+  "tag": "Lightning · Special · Movement",
+  "essence": "Lightning",
+  "rank": "Iron 0",
+  "progress": 16,
+  "detail": "Dissolve into a streak of lightning and reappear a short distance away.",
+  "ranks": {
+    "Bronze": "The streak reaches about 40 feet, and the jolt along the path hits harder."
+  }
+}
+```
+
+`ranks` that is not an object, a rank key other than those five, or a rank value that is not a string rejects the sheet. `essence` that is present and not a string rejects the sheet. Distances in these texts stay in feet and inches.
 
 ## Gear
 
