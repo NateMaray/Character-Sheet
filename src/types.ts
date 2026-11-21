@@ -65,8 +65,8 @@ export type EquipSlot = {
   clothes?: WornCloth[];
 };
 
-/** Head-to-toe clothes slots. Order is the wardrobe list order. */
-export type WardrobeSlot = "Head" | "Face" | "Neck" | "Torso" | "Wrist" | "Waist" | "Legs" | "Shoes";
+/** Clothes slots. Outfit is a full set and comes first. The rest run head to toe. */
+export type WardrobeSlot = "Outfit" | "Head" | "Face" | "Neck" | "Torso" | "Wrist" | "Waist" | "Legs" | "Shoes";
 
 /** A clothes piece stored in the wardrobe. It does not use a pocket slot. */
 export type WardrobeItem = {
