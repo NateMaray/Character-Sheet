@@ -98,6 +98,18 @@
         {
           "x": 200,
           "y": 160
+        },
+        {
+          "x": 264,
+          "y": 208
+        },
+        {
+          "x": 126,
+          "y": 121
+        },
+        {
+          "x": 98,
+          "y": 146
         }
       ],
       "blocks": [
@@ -571,6 +583,13 @@
           "x": 648,
           "y": 588,
           "name": "Tannery"
+        },
+        {
+          "h": 20,
+          "w": 28,
+          "x": 84,
+          "y": 146,
+          "name": "Gilded Heron"
         }
       ],
       "districts": [
@@ -1145,7 +1164,7 @@
         "seen": "Sailor's Watch (room 32, kitchen, roof garden, Rufus's suite) and the transit station.",
         "place": "The Island",
         "region": "Greenstone",
-        "current": false
+        "current": true
       },
       {
         "seen": "Administration lobby with the contract board, intake waiting room, and intake room.",
@@ -1214,7 +1233,7 @@
         "current": false
       },
       {
-        "seen": "Main hall of iron-rank stalls, the bronze floor, and the 3rd-floor brokerages (Ostrander & Vey).",
+        "seen": "Main hall of iron-rank stalls, the bronze floor, and the 3rd-floor brokerages (Ostrander & Vey); Gilbert's Resilient Attire in the ground-floor arcade.",
         "place": "Adventure Society trade hall",
         "region": "Greenstone",
         "current": false
@@ -1259,7 +1278,7 @@
         "seen": true,
         "place": "Northern farmstead ditches",
         "region": "Greenstone outskirts",
-        "current": true
+        "current": false
       },
       {
         "seen": true,
@@ -3451,7 +3470,7 @@
       }
     ]
   },
-  "rev": "2026-11-20-aether-153",
+  "rev": "2026-11-21-aether-163",
   "gear": {
     "doll": [
       [
@@ -3598,11 +3617,6 @@
       },
       {
         "qty": "",
-        "name": "Gilbert's bespoke armour set",
-        "note": "Bespoke, by Bert at Gilbert's Resilient Attire (day 68). Midnight-blue wrap vest with silver piping, high collar and skirted tassets to mid-thigh; dark brown leather crossing straps and belts with silver buckles; steel-grey undershirt with faint silver weave; loose charcoal trousers; wrapped dark brown leather forearm bracers trimmed in silver (Bert's gift, free). Heat and shock resistant, self-mending, near coat-level protection, lighter than it looks. Paid in full: 50 iron (47 balance plus 3 tip), day 68."
-      },
-      {
-        "qty": "",
         "name": "Invictus",
         "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
       }
@@ -3685,23 +3699,15 @@
         "empty": "empty",
         "clothes": [
           {
-            "name": "Slate-blue shirt with silver vine embroidery",
-            "slot": "Torso"
-          },
-          {
-            "name": "Red sash",
-            "slot": "Waist"
-          },
-          {
-            "name": "Sky blue wrap trousers",
-            "slot": "Legs"
+            "name": "Bert's evening set",
+            "slot": "Outfit"
           },
           {
             "name": "Socks",
             "slot": "Shoes"
           },
           {
-            "name": "Honey-brown pebble-buck running shoes",
+            "name": "Black evening shoes with silver-thread stitching",
             "slot": "Shoes"
           }
         ]
@@ -3736,6 +3742,16 @@
       }
     ],
     "wardrobe": [
+      {
+        "name": "Gilbert's bespoke armour set",
+        "note": "Bespoke, by Bert at Gilbert's Resilient Attire (day 68). Midnight-blue wrap vest with silver piping, high collar and skirted tassets to mid-thigh; dark brown leather crossing straps and belts with silver buckles; steel-grey undershirt with faint silver weave; loose charcoal trousers; wrapped dark brown leather forearm bracers trimmed in silver (Bert's gift, free). Heat and shock resistant, self-mending, near coat-level protection, lighter than it looks. Paid in full: 50 iron (47 balance plus 3 tip), day 68.",
+        "slot": "Outfit"
+      },
+      {
+        "name": "Bert's evening set",
+        "note": "Gilbert's Resilient Attire, day 79 (rush job, 30 iron balance paid). Midnight-black knee-length frock coat with a faint silver-blue pinstripe, evening waistcoat, dove-grey dress shirt, dark sharply creased trousers. No enchantments.",
+        "slot": "Outfit"
+      },
       {
         "qty": "",
         "name": "Slate-blue shirt with silver vine embroidery",
@@ -4016,7 +4032,12 @@
       "eb39b864-2118-43db-b574-281b3c8a52d6",
       "3e367f78-da52-4eed-8add-149b6c5a140f",
       "06531640-0c57-44e4-b613-b9954df969a4",
-      "4585a056-527f-4d6b-a149-cadf11ce7694"
+      "4585a056-527f-4d6b-a149-cadf11ce7694",
+      "4d57ea95-b028-47eb-b41f-78856eb6edff",
+      "9ff4196c-436a-4fdd-9777-06f0f333a334",
+      "4bea2d0e-4359-42e9-8775-9810c9768bcd",
+      "9955c128-1517-4a80-a058-3edd806a3870",
+      "72dde3c4-0b95-4581-8ad1-4679137f539e"
     ],
     "defaultLoadouts": [
       {
@@ -4131,7 +4152,7 @@
   },
   "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1243 iron · 785 lesser",
+  "coins": "1213 iron · 785 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4210,24 +4231,24 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Full on day 78, auction morning.",
+      "note": "Full after a shower and three hours of meditation in Rufus's suite, day 79, fifth bell.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
-      "pct": 59,
-      "note": "Arc Step, Sky Stair and Windward Veil drain on the race from Dorran's farm; Veil dropped on the cart track, day 79 mid-morning.",
+      "pct": 100,
+      "note": "Full after a shower and three hours of meditation in Rufus's suite, day 79, fifth bell.",
       "tone": "mana",
       "label": "MANA",
-      "value": "59%"
+      "value": "100%"
     },
     {
-      "pct": 85,
-      "note": "Comet Strike and the 30-minute run back from Dorran's farm, day 79 noon.",
+      "pct": 100,
+      "note": "Full after a shower and three hours of meditation in Rufus's suite, day 79, fifth bell.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "85%"
+      "value": "100%"
     }
   ],
   "profile": [
@@ -4295,7 +4316,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 79 in this world, at the Adventure Society",
+    "asOf": "Evening, day 79 in this world, at the Gilded Heron",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4323,7 +4344,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Adventure Society campus, administration building lobby, with Jason, turning in the Broken Fences contract (in Jason's name). Harbinger unsuppressed. Afternoon, day 79 in this world.",
+  "location": "The Gilded Heron, Island waterfront promenade (about 10 minutes' walk from Sailor's Watch), at the front doors with the doorman, here to meet Seven. Dressed in Bert's evening set and the black evening shoes. Jason stayed at Sailor's Watch. Harbinger aura restrained (active, held close); Veil off. Evening, day 79 in this world.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4581,8 +4602,8 @@
   ],
   "worldTime": {
     "day": 79,
-    "time": "Afternoon",
-    "detail": "Turning in Broken Fences at the Society with Jason; then Bert's evening set at the second bell after noon, and the Gilded Heron at the sixth bell.",
+    "time": "Evening",
+    "detail": "Sixth bell. Arrived at the Gilded Heron to meet Seven.",
     "dayLabel": "79 days in this world"
   },
   "abilityMeta": {
