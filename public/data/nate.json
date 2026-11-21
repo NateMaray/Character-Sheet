@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-171",
+  "rev": "2026-11-21-aether-182",
   "gear": {
     "doll": [
       [
@@ -3593,20 +3593,8 @@
       },
       {
         "qty": 1,
-        "name": "Awakening Stone of the Storm",
-        "note": "Hunter's Road reward. Unused.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
         "name": "Callow Farm Food Bundle",
         "note": "From Wenna Callow: crusty bread, cold mutton, hard yellow cheese. Still warm.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Awakening Stone of Persistence",
-        "note": "Hunter's Road II reward. Unused.",
         "slot": ""
       },
       {
@@ -3618,11 +3606,6 @@
         "qty": "",
         "name": "Invictus",
         "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
-      },
-      {
-        "qty": "",
-        "name": "Awakening Stone of Eyes",
-        "note": "Common. Bought from Seven at the Gilded Heron, day 79 evening, for 450 iron (45 bronze, her cousin's auction price) plus a promise to someday tell her one true thing of Nate's choosing. Suited to a perception power. Dusk-blue glow."
       }
     ],
     "outfits": [
@@ -4244,11 +4227,11 @@
       "value": "100%"
     },
     {
-      "pct": 100,
-      "note": "Full after a shower and three hours of meditation in Rufus's suite, day 79, fifth bell.",
+      "pct": 95,
+      "note": "Star Mark on Jason (2%, since released) and Sky Stair off the roof garden (3%), day 79 evening.",
       "tone": "mana",
       "label": "MANA",
-      "value": "100%"
+      "value": "95%"
     },
     {
       "pct": 100,
@@ -4323,7 +4306,7 @@
     }
   ],
   "identity": {
-    "asOf": "Evening, day 79 in this world, in Rufus's suite at Sailor's Watch",
+    "asOf": "Evening, day 79 in this world, on the Island waterfront",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4351,7 +4334,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Sailor's Watch, the Island: in Rufus's suite (dark; the rest of the team not back yet), with Jason in the armchair. Changed on the way up into his everyday clothes (First look: slate-blue shirt, red sash, sky blue wrap trousers, socks, honey-brown running shoes); Bert's evening set is back in the Wardrobe with Seven's card still in its breast pocket. Plans to absorb the Eyes, Storm, and Persistence stones tonight; none used yet. Harbinger aura restrained (active, held close); Veil off. Evening, day 79 in this world.",
+  "location": "The Island waterfront: walking back down the long wooden pier toward a fish seller on the promenade near Sailor's Watch, with Jason (he's buying). Star Mark released; no mark active. Harbinger restrained, Veil off. Evening, day 79.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4374,8 +4357,8 @@
     {
       "kind": "SYSTEM",
       "name": "Eyes and Aura",
-      "detail": "Main objectives complete day 79 evening (Awakening Stone of Eyes bought from Seven; Awakening Stone of Omens absorbed day 78); reward paid: 200 iron plus 100 unlisted iron. Bonus objective still open: awaken a perception power and an aura power 1/2 (Harbinger done). Bonus reward: 1 common awakening stone, auto-deposits on completion.",
-      "status": "ACTIVE"
+      "detail": "Completed day 79 evening. Main objectives: Awakening Stone of Eyes bought from Seven; Awakening Stone of Omens absorbed day 78. Reward paid: 200 iron plus 100 unlisted iron. Bonus objective complete 2/2 (Harbinger aura; Starward Gaze perception). Bonus reward: 1 common awakening stone, deposited to Pocket Space.",
+      "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
@@ -4605,16 +4588,44 @@
       "rank": "Iron 0",
       "detail": "Your presence carries the weight of a comet in the sky: a sign that something is coming. Passive aura, reaching about 30 feet out from Nate in every direction at iron rank (about 60 feet across). Allies within it gain a minor bonus to movement speed, and their movement counts toward Momentum-style effects such as Comet Strike. Enemies within it have reduced resistance to afflictions, and burning wounds (such as Comet Strike's) last longer on them. Also grants aura control: you can suppress or extend your aura and press it on others, like any aura power. Cost: none (the aura is always on and can be suppressed at will). From the Awakening Stone of Omens.",
       "progress": 0
+    },
+    {
+      "tag": "Star · Special · Perception",
+      "name": "Starward Gaze",
+      "rank": "Iron 0",
+      "detail": "See fine detail at great distances as clearly as if it were close. Needs line of sight: it magnifies what you can already see and does not see through walls (tested day 79). Cost: none. Cooldown: none. From the Awakening Stone of Eyes, absorbed day 79 evening on the couch in Rufus's suite. DM-made, modelled on Midnight Eyes and Sight Beyond Sight.",
+      "progress": 0
+    },
+    {
+      "tag": "Lightning · Spell · Lightning, Area",
+      "name": "Thunderhead",
+      "rank": "Iron 0",
+      "detail": "A burst of storm-lightning rips outward about 10 feet from Nate, shocking every enemy caught in it and briefly jolting them (staggered, slowed reactions for a moment). Cost: 15% mana. Cooldown: 30 seconds. From the Awakening Stone of the Storm. Absorbed day 79 evening in Rufus's suite. DM-made.",
+      "progress": 0
+    },
+    {
+      "tag": "Wind · Special · Recovery",
+      "name": "Second Wind",
+      "rank": "Iron 0",
+      "detail": "When Nate's stamina falls below 25%, the wind fills him and he instantly regains 25% stamina. Cost: none. Cooldown: 10 minutes. From the Awakening Stone of Persistence. Absorbed day 79 evening in Rufus's suite. DM-made.",
+      "progress": 0
+    },
+    {
+      "tag": "Comet · Special · Boon, Passive",
+      "name": "Quarry's Wake",
+      "rank": "Iron 0",
+      "detail": "Nate's movement speed increases while he moves toward a target he has marked with Star Mark. Cost: none. Cooldown: none. From the Awakening Stone of the Hunt. Absorbed day 79 evening in Rufus's suite. DM-made.",
+      "progress": 0
     }
   ],
   "worldTime": {
     "day": 79,
     "time": "Evening",
-    "detail": "About the eighth bell. Up in Rufus's suite at Sailor's Watch with Jason.",
+    "detail": "About two-thirds of a bell past the eighth. Walking down the pier toward a fish seller on the waterfront promenade with Jason.",
     "dayLabel": "79 days in this world"
   },
   "abilityMeta": {
-    "slotsLabel": "LIGHTNING 1/5 · STAR 2/5 · WIND 2/5 · COMET 2/5 AWAKENED",
+    "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 3/5 · COMET 3/5 AWAKENED",
     "racialLabel": "RACIAL (OUTWORLDER)"
   },
   "achievements": [
@@ -4640,10 +4651,6 @@
       "tag": "NON-CANON",
       "name": "Comet",
       "detail": "Confluence of Lightning + Star + Wind (invented, non-canon; locked). Streaking high-speed movement, burning trails, impact landings. Claimed on the roof garden; Nate reached iron rank."
-    },
-    {
-      "name": "Still needed",
-      "detail": "A perception power and an aura ability, which every adventurer should have. These can come naturally."
     }
   ]
 }
