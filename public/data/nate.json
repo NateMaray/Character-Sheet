@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-203",
+  "rev": "2026-11-21-aether-212",
   "gear": {
     "doll": [
       [
@@ -4134,7 +4134,7 @@
   },
   "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1063 iron · 785 lesser",
+  "coins": "1063 iron · 777 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4219,18 +4219,18 @@
       "value": "100%"
     },
     {
-      "pct": 98,
-      "note": "Star Mark on Rufus (2%) at the start of his sparring drill, late morning day 80.",
+      "pct": 95,
+      "note": "Unchanged during the Second Wind test run; no mark active.",
       "tone": "mana",
       "label": "MANA",
-      "value": "98%"
+      "value": "95%"
     },
     {
-      "pct": 95,
-      "note": "Circling Rufus in the sparring drill, late morning day 80.",
+      "pct": 48,
+      "note": "Second Wind triggered mid lap 8 (dropped to ~23%, +25%). Second Wind on 10-minute cooldown. Park-district loop path, afternoon day 80.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "95%"
+      "value": "48%"
     }
   ],
   "profile": [
@@ -4298,7 +4298,7 @@
     }
   ],
   "identity": {
-    "asOf": "Late morning, day 80 in this world, at the Adventure Society training field",
+    "asOf": "Afternoon, day 80 in this world, on the park district loop path",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4326,7 +4326,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Adventure Society campus, the training field, after an hour of meditation by the low wall. Now sparring Rufus (iron pace) in the scorched ring; Gary, Farrah and Jason watching. Farrah's Second Wind test still to come. Wearing Gilbert's bespoke armour set. Star Mark on Rufus. Harbinger restrained, Veil off. Late morning, day 80.",
+  "location": "Park district loop path, running laps with Gary pacing for Farrah's Second Wind test (mid lap 8; Second Wind just triggered, on cooldown). Jason, Rufus and Farrah are back in the shade where they had lunch at the food carts. Wearing Gilbert's bespoke armour set. No mark active (dropped the Star Mark on Rufus after lap 1). Harbinger restrained, Veil off. Early afternoon, day 80.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4608,7 +4608,7 @@
       "tag": "Wind · Special · Recovery",
       "name": "Second Wind",
       "rank": "Iron 0",
-      "detail": "When Nate's stamina falls below 25%, the wind fills him and he instantly regains 25% stamina. Cost: none. Cooldown: 10 minutes. From the Awakening Stone of Persistence. Absorbed day 79 evening in Rufus's suite. DM-made.",
+      "detail": "When Nate's stamina falls below 25%, the wind fills him and he instantly regains 25% stamina. Cost: none. Cooldown: 10 minutes. From the Awakening Stone of Persistence. Absorbed day 79 evening in Rufus's suite. DM-made. First triggered day 80 afternoon, mid lap 8 of Farrah's test run (progress pending next meditation).",
       "essence": "Wind",
       "progress": 0
     },
@@ -4623,8 +4623,8 @@
   ],
   "worldTime": {
     "day": 80,
-    "time": "Late morning",
-    "detail": "At the Adventure Society training field after an hour's meditation; Rufus just arrived.",
+    "time": "Afternoon",
+    "detail": "Second Wind test run with Gary on the park-district loop path, after lunch at the food carts.",
     "dayLabel": "80 days in this world"
   },
   "abilityMeta": {
