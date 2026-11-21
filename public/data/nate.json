@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-182",
+  "rev": "2026-11-21-aether-187",
   "gear": {
     "doll": [
       [
@@ -4227,11 +4227,11 @@
       "value": "100%"
     },
     {
-      "pct": 95,
-      "note": "Star Mark on Jason (2%, since released) and Sky Stair off the roof garden (3%), day 79 evening.",
+      "pct": 85,
+      "note": "Star Mark on Gary (2%, since released), then Arc Step (5%) and Sky Stair (3%) up to Rufus's balcony racing Jason, day 79 evening. Earlier: Star Mark on Jason and Sky Stair off the roof garden.",
       "tone": "mana",
       "label": "MANA",
-      "value": "95%"
+      "value": "85%"
     },
     {
       "pct": 100,
@@ -4306,7 +4306,7 @@
     }
   ],
   "identity": {
-    "asOf": "Evening, day 79 in this world, on the Island waterfront",
+    "asOf": "Evening, day 79 in this world, at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4334,7 +4334,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "The Island waterfront: walking back down the long wooden pier toward a fish seller on the promenade near Sailor's Watch, with Jason (he's buying). Star Mark released; no mark active. Harbinger restrained, Veil off. Evening, day 79.",
+  "location": "Sailor's Watch, the Island: in the balcony doorway of Rufus's suite after beating Jason in a race up from the waterfront (Arc Step onto the veranda roof, Sky Stair to the balcony). Present: Gary, Farrah, Rufus, Jason. No mark active. Harbinger restrained, Veil off. Evening, day 79.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4546,6 +4546,7 @@
       "name": "Arc Step",
       "rank": "Iron 0",
       "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Cost: Low mana (5%). Cooldown: 5 seconds. Cannot carry passengers.",
+      "essence": "Lightning",
       "progress": 16
     },
     {
@@ -4553,6 +4554,7 @@
       "name": "Star Mark",
       "rank": "Iron 0",
       "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 3,300 feet (0.6 miles) at Iron 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown.",
+      "essence": "Star",
       "progress": 3
     },
     {
@@ -4560,6 +4562,7 @@
       "name": "Windward Veil",
       "rank": "Iron 0",
       "detail": "A shell of swirling wind wraps around you, deflecting projectiles and blunting incoming blows. Stronger while you are moving. Cost: Low mana (5%) to raise, then 1% mana per minute while active.",
+      "essence": "Wind",
       "progress": 11
     },
     {
@@ -4567,6 +4570,7 @@
       "name": "Comet Strike",
       "rank": "Iron 0",
       "detail": "Your weapon or fist ignites with a white-gold comet trail. The strike hits harder the more you moved just before it and leaves a burning wound that deals damage over time. Cost: Moderate mana (10%) + 5% stamina per strike. Cooldown 10 seconds.",
+      "essence": "Comet",
       "progress": 12
     },
     {
@@ -4574,12 +4578,14 @@
       "name": "Moonwell",
       "rank": "Iron 0",
       "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow.",
+      "essence": "Star",
       "progress": 0
     },
     {
       "name": "Sky Stair",
       "rank": "Iron 0",
       "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost: Low mana (3%). Cooldown: 5 seconds. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. On the recorded wind flight-ability list: more steps at bronze, continuous air-walking (flight) at silver.",
+      "essence": "Wind",
       "progress": 3
     },
     {
@@ -4587,6 +4593,7 @@
       "name": "Harbinger",
       "rank": "Iron 0",
       "detail": "Your presence carries the weight of a comet in the sky: a sign that something is coming. Passive aura, reaching about 30 feet out from Nate in every direction at iron rank (about 60 feet across). Allies within it gain a minor bonus to movement speed, and their movement counts toward Momentum-style effects such as Comet Strike. Enemies within it have reduced resistance to afflictions, and burning wounds (such as Comet Strike's) last longer on them. Also grants aura control: you can suppress or extend your aura and press it on others, like any aura power. Cost: none (the aura is always on and can be suppressed at will). From the Awakening Stone of Omens.",
+      "essence": "Comet",
       "progress": 0
     },
     {
@@ -4594,6 +4601,7 @@
       "name": "Starward Gaze",
       "rank": "Iron 0",
       "detail": "See fine detail at great distances as clearly as if it were close. Needs line of sight: it magnifies what you can already see and does not see through walls (tested day 79). Cost: none. Cooldown: none. From the Awakening Stone of Eyes, absorbed day 79 evening on the couch in Rufus's suite. DM-made, modelled on Midnight Eyes and Sight Beyond Sight.",
+      "essence": "Star",
       "progress": 0
     },
     {
@@ -4601,6 +4609,7 @@
       "name": "Thunderhead",
       "rank": "Iron 0",
       "detail": "A burst of storm-lightning rips outward about 10 feet from Nate, shocking every enemy caught in it and briefly jolting them (staggered, slowed reactions for a moment). Cost: 15% mana. Cooldown: 30 seconds. From the Awakening Stone of the Storm. Absorbed day 79 evening in Rufus's suite. DM-made.",
+      "essence": "Lightning",
       "progress": 0
     },
     {
@@ -4608,6 +4617,7 @@
       "name": "Second Wind",
       "rank": "Iron 0",
       "detail": "When Nate's stamina falls below 25%, the wind fills him and he instantly regains 25% stamina. Cost: none. Cooldown: 10 minutes. From the Awakening Stone of Persistence. Absorbed day 79 evening in Rufus's suite. DM-made.",
+      "essence": "Wind",
       "progress": 0
     },
     {
@@ -4615,13 +4625,14 @@
       "name": "Quarry's Wake",
       "rank": "Iron 0",
       "detail": "Nate's movement speed increases while he moves toward a target he has marked with Star Mark. Cost: none. Cooldown: none. From the Awakening Stone of the Hunt. Absorbed day 79 evening in Rufus's suite. DM-made.",
+      "essence": "Comet",
       "progress": 0
     }
   ],
   "worldTime": {
     "day": 79,
     "time": "Evening",
-    "detail": "About two-thirds of a bell past the eighth. Walking down the pier toward a fish seller on the waterfront promenade with Jason.",
+    "detail": "Just before the ninth bell. Back at Rufus's suite at Sailor's Watch with the team, after racing Jason up from the waterfront.",
     "dayLabel": "79 days in this world"
   },
   "abilityMeta": {
