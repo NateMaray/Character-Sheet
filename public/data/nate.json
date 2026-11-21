@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-187",
+  "rev": "2026-11-21-aether-192",
   "gear": {
     "doll": [
       [
@@ -3685,16 +3685,8 @@
         "empty": "empty",
         "clothes": [
           {
-            "name": "Slate-blue shirt with silver vine embroidery",
-            "slot": "Torso"
-          },
-          {
-            "name": "Red sash",
-            "slot": "Waist"
-          },
-          {
-            "name": "Sky blue wrap trousers",
-            "slot": "Legs"
+            "name": "Gilbert's bespoke armour set",
+            "slot": "Outfit"
           },
           {
             "name": "Socks",
@@ -4227,15 +4219,15 @@
       "value": "100%"
     },
     {
-      "pct": 85,
-      "note": "Star Mark on Gary (2%, since released), then Arc Step (5%) and Sky Stair (3%) up to Rufus's balcony racing Jason, day 79 evening. Earlier: Star Mark on Jason and Sky Stair off the roof garden.",
+      "pct": 70,
+      "note": "Two Thunderhead casts on the Society training field (15% each): one into empty ground, one on Gary as a willing test target. Morning day 80. Thunderhead on 30-second cooldown.",
       "tone": "mana",
       "label": "MANA",
-      "value": "85%"
+      "value": "70%"
     },
     {
       "pct": 100,
-      "note": "Full after a shower and three hours of meditation in Rufus's suite, day 79, fifth bell.",
+      "note": "Full after a night's sleep on the couch in Rufus's suite, dawn day 80.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4306,7 +4298,7 @@
     }
   ],
   "identity": {
-    "asOf": "Evening, day 79 in this world, at Sailor's Watch",
+    "asOf": "Morning, day 80 in this world, at the Adventure Society training field",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4334,7 +4326,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Sailor's Watch, the Island: in the balcony doorway of Rufus's suite after beating Jason in a race up from the waterfront (Arc Step onto the veranda roof, Sky Stair to the balcony). Present: Gary, Farrah, Rufus, Jason. No mark active. Harbinger restrained, Veil off. Evening, day 79.",
+  "location": "Adventure Society campus, the training field: arrived by loop line with Farrah; Gary and Jason already running laps. Wearing Gilbert's bespoke armour set. About to test the new abilities. No mark active. Harbinger restrained, Veil off. Morning, day 80.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4630,10 +4622,10 @@
     }
   ],
   "worldTime": {
-    "day": 79,
-    "time": "Evening",
-    "detail": "Just before the ninth bell. Back at Rufus's suite at Sailor's Watch with the team, after racing Jason up from the waterfront.",
-    "dayLabel": "79 days in this world"
+    "day": 80,
+    "time": "Morning",
+    "detail": "At the Adventure Society campus training field with Farrah, Gary and Jason; ability tests about to start.",
+    "dayLabel": "80 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 3/5 · COMET 3/5 AWAKENED",
