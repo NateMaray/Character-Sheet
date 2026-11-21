@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-192",
+  "rev": "2026-11-21-aether-194",
   "gear": {
     "doll": [
       [
@@ -4219,11 +4219,11 @@
       "value": "100%"
     },
     {
-      "pct": 70,
-      "note": "Two Thunderhead casts on the Society training field (15% each): one into empty ground, one on Gary as a willing test target. Morning day 80. Thunderhead on 30-second cooldown.",
+      "pct": 50,
+      "note": "Training field, morning day 80: three Thunderhead casts (15% each), one Sky Stair (3%), and a Star Mark on Gary (2%) in the sparring drill.",
       "tone": "mana",
       "label": "MANA",
-      "value": "70%"
+      "value": "50%"
     },
     {
       "pct": 100,
@@ -4326,7 +4326,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Adventure Society campus, the training field: arrived by loop line with Farrah; Gary and Jason already running laps. Wearing Gilbert's bespoke armour set. About to test the new abilities. No mark active. Harbinger restrained, Veil off. Morning, day 80.",
+  "location": "Adventure Society campus, the training field: arrived by loop line with Farrah; Gary and Jason already running laps. Wearing Gilbert's bespoke armour set. About to test the new abilities. Star Mark on Gary (sparring). Harbinger restrained, Veil off. Morning, day 80.",
   "missions": [
     {
       "kind": "SYSTEM",
