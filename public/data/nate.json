@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-20-aether-114",
+  "rev": "2026-11-20-aether-121",
   "gear": {
     "doll": [
       [
@@ -3651,6 +3651,16 @@
         "name": "Awakening Stone of Persistence",
         "note": "Hunter's Road II reward. Unused.",
         "slot": ""
+      },
+      {
+        "qty": "",
+        "name": "Invictus",
+        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
+      },
+      {
+        "qty": "",
+        "name": "Tanner's lantern",
+        "note": "Borrowed from the tanner. Not Nate's."
       }
     ],
     "outfits": [
@@ -3749,17 +3759,17 @@
       },
       {
         "qty": "",
-        "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style).",
+        "name": "",
+        "note": "",
         "slot": "Main hand",
-        "empty": ""
+        "empty": "empty"
       },
       {
         "qty": "",
-        "name": "Tanner's lantern",
-        "note": "Borrowed from the tanner. Not Nate's.",
+        "name": "",
+        "note": "",
         "slot": "Off hand",
-        "empty": ""
+        "empty": "empty"
       },
       {
         "qty": "",
@@ -4230,6 +4240,7 @@
       }
     ],
     "missionNames": [
+      "Broken Fences",
       "Eyes and Aura",
       "Cellar Dwellers",
       "North road hedgehogs"
@@ -4323,7 +4334,7 @@
     }
   ],
   "identity": {
-    "asOf": "Evening, day 78 in this world, at Sailor's Watch",
+    "asOf": "Dawn, day 79 in this world, at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4351,8 +4362,14 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Common room, Sailor's Watch, Greenstone, at dinner with Rufus, Farrah, and Gary after Nate's first aura lesson (basic projection and restraint learned; Jason not in his room). Evening, day 78 in this world.",
+  "location": "Courtyard, Sailor's Watch, Greenstone, meeting Jason at first light; heading out for pastries, lemonade, then the eastern farms contract. Dawn, day 79 in this world.",
   "missions": [
+    {
+      "kind": "SYSTEM",
+      "name": "Broken Fences",
+      "detail": "Landed day 78 evening (Jason's contract, eastern farms, morning of day 79). Objectives: find whatever is chewing through the fences past the eastern farms 0/1; deal with it 0/1. Bonus objective: land a combined attack with Jason 0/1. Reward: 100 iron spirit coins, 1 earth quintessence. Bonus reward: 1 wind quintessence.",
+      "status": "ACTIVE"
+    },
     {
       "kind": "SYSTEM",
       "name": "Hunter's Road II",
@@ -4602,10 +4619,10 @@
     }
   ],
   "worldTime": {
-    "day": 78,
-    "time": "Evening",
+    "day": 79,
+    "time": "Dawn",
     "detail": "Auction morning. After a week of daily contracts (days 69-77), Nate is at the Ostrander & Vey joint stone auction on the trade hall's 3rd floor with Gary, Farrah, and Rufus.",
-    "dayLabel": "78 days in this world"
+    "dayLabel": "79 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 1/5 · STAR 2/5 · WIND 2/5 · COMET 2/5 AWAKENED",
