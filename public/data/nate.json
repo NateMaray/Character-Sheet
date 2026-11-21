@@ -3451,7 +3451,7 @@
       }
     ]
   },
-  "rev": "2026-11-20-aether-145",
+  "rev": "2026-11-20-aether-153",
   "gear": {
     "doll": [
       [
@@ -3492,11 +3492,6 @@
         "note": "If you're reading this and you're not me, I didn't make it back. Whatever's inside, don't let the Waterworks bosses have it. They know. — T.R."
       },
       {
-        "qty": "",
-        "name": "Light stone lantern",
-        "note": "Brass; twist the top to brighten or dim. Gift from Rufus."
-      },
-      {
         "qty": "1",
         "name": "Bandages",
         "note": "Gift from Farrah."
@@ -3522,30 +3517,14 @@
         "note": "From Farrah."
       },
       {
-        "qty": "several",
-        "name": "Chalk sticks",
-        "note": "For marking cave walls."
-      },
-      {
         "qty": "2",
         "name": "Oilcloth wraps",
         "note": "Waterproof gear wraps from Rufus."
       },
       {
         "qty": "",
-        "name": "Bone-handled knife",
-        "note": "From the cistern junk heap. Gary said keep it as a spare blade."
-      },
-      {
-        "qty": "",
         "name": "Brass token (circle-and-wave, No. 17)",
         "note": "From the cistern oilcloth packet. Same mark as the Waterworks bribers. Rufus: a membership token or a key."
-      },
-      {
-        "qty": "",
-        "name": "War Hammer",
-        "note": "One-handed, flat face and spike. Picked by Gary, 12 iron.",
-        "empty": ""
       },
       {
         "qty": "",
@@ -3555,36 +3534,9 @@
         "empty": ""
       },
       {
-        "qty": "18",
-        "name": "Water Quintessence",
-        "note": "11 from the frogs, 1 from Bean Counting, 2 from the northern ditch frogs. +2 northern-ditch frogs (days 69-77), +1 Hunter's Road II."
-      },
-      {
-        "qty": 38,
-        "name": "Thorny tongue barbs",
-        "note": "From northern ditch frogs"
-      },
-      {
-        "qty": "36",
-        "name": "Lesser monster cores",
-        "note": "5 from ratlings (Old City yard), 11 from ratlings (Callow farm bean rows), 5 from north road hedgehogs. +15 from days 69-77 (6 hedgehogs, 9 ratlings)."
-      },
-      {
         "qty": 1,
         "name": "Heel of bread (from Mae)",
         "note": "Wrapped in cloth",
-        "slot": ""
-      },
-      {
-        "qty": 10,
-        "name": "Iron monster cores",
-        "note": "1 sand shab (Dennick's farm), 1 bark lurker (orchard lane), 3 thorny-tongue frogs (northern ditches, wetland cores). +4 thorny-tongue frogs (northern ditches, days 69-77).",
-        "slot": ""
-      },
-      {
-        "qty": 6,
-        "name": "Earth quintessence",
-        "note": "1 from the sand shab, 1 from Something Under the Coop, 1 from Arm's Length, 1 Hunter's Road II, 1 Nest Egg",
         "slot": ""
       },
       {
@@ -3611,21 +3563,9 @@
         "slot": ""
       },
       {
-        "qty": 4,
-        "name": "Bark Lurker Hide",
-        "note": "Iron rank crafting material from the orchard lane bark lurker; makes light armour or a shield.",
-        "slot": ""
-      },
-      {
         "qty": 1,
         "name": "Lightning Quintessence",
         "note": "Hunter's Road reward.",
-        "slot": ""
-      },
-      {
-        "qty": 3,
-        "name": "Wind Quintessence",
-        "note": "Hunter's Road reward; 1 more from Hunter's Road II.",
         "slot": ""
       },
       {
@@ -3641,12 +3581,6 @@
         "slot": ""
       },
       {
-        "qty": 60,
-        "name": "Hedgehog quills",
-        "note": "Loose quills from the north road hedgehogs, plus spines picked up off the road and fence post.",
-        "slot": ""
-      },
-      {
         "qty": 1,
         "name": "Awakening Stone of Persistence",
         "note": "Hunter's Road II reward. Unused.",
@@ -3658,9 +3592,19 @@
         "note": "Borrowed from the tanner. Not Nate's."
       },
       {
-        "qty": 1,
-        "name": "Mangrove Snatcher Hide",
-        "note": "Looted from the mangrove snatcher (iron rank, one-star) killed with Jason in the mangroves past Dorran's farm, day 79."
+        "qty": "",
+        "name": "Light stone lantern",
+        "note": "Brass; twist the top to brighten or dim. Gift from Rufus."
+      },
+      {
+        "qty": "",
+        "name": "Gilbert's bespoke armour set",
+        "note": "Bespoke, by Bert at Gilbert's Resilient Attire (day 68). Midnight-blue wrap vest with silver piping, high collar and skirted tassets to mid-thigh; dark brown leather crossing straps and belts with silver buckles; steel-grey undershirt with faint silver weave; loose charcoal trousers; wrapped dark brown leather forearm bracers trimmed in silver (Bert's gift, free). Heat and shock resistant, self-mending, near coat-level protection, lighter than it looks. Paid in full: 50 iron (47 balance plus 3 tip), day 68."
+      },
+      {
+        "qty": "",
+        "name": "Invictus",
+        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
       }
     ],
     "outfits": [
@@ -3728,10 +3672,10 @@
       },
       {
         "qty": "",
-        "name": "Gilbert's bespoke armour set",
-        "note": "Bespoke, by Bert at Gilbert's Resilient Attire (day 68). Midnight-blue wrap vest with silver piping, high collar and skirted tassets to mid-thigh; dark brown leather crossing straps and belts with silver buckles; steel-grey undershirt with faint silver weave; loose charcoal trousers; wrapped dark brown leather forearm bracers trimmed in silver (Bert's gift, free). Heat and shock resistant, self-mending, near coat-level protection, lighter than it looks. Paid in full: 50 iron (47 balance plus 3 tip), day 68.",
+        "name": "",
+        "note": "",
         "slot": "Armour",
-        "empty": ""
+        "empty": "none"
       },
       {
         "qty": "",
@@ -3740,6 +3684,18 @@
         "slot": "Body",
         "empty": "empty",
         "clothes": [
+          {
+            "name": "Slate-blue shirt with silver vine embroidery",
+            "slot": "Torso"
+          },
+          {
+            "name": "Red sash",
+            "slot": "Waist"
+          },
+          {
+            "name": "Sky blue wrap trousers",
+            "slot": "Legs"
+          },
           {
             "name": "Socks",
             "slot": "Shoes"
@@ -3759,10 +3715,10 @@
       },
       {
         "qty": "",
-        "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style).",
+        "name": "",
+        "note": "",
         "slot": "Main hand",
-        "empty": ""
+        "empty": "empty"
       },
       {
         "qty": "",
@@ -4054,7 +4010,13 @@
       "7e6cff10-cece-41cb-abc1-b8ae72b7b60b",
       "c0587553-ba32-4522-bf4b-30fd3a521912",
       "73f242c8-ea87-4104-9ee0-7b514a8a8cc8",
-      "7e43a584-6b3a-433d-bf21-88ad2f2f7c67"
+      "7e43a584-6b3a-433d-bf21-88ad2f2f7c67",
+      "f297e7cf-ba84-4ad8-b9b4-a2ca4f3ea21c",
+      "01b1bb6e-0bd3-4b25-aec8-b2e0feebf885",
+      "eb39b864-2118-43db-b574-281b3c8a52d6",
+      "3e367f78-da52-4eed-8add-149b6c5a140f",
+      "06531640-0c57-44e4-b613-b9954df969a4",
+      "4585a056-527f-4d6b-a149-cadf11ce7694"
     ],
     "defaultLoadouts": [
       {
@@ -4169,7 +4131,7 @@
   },
   "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1180 iron · 556 lesser",
+  "coins": "1243 iron · 785 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4333,7 +4295,7 @@
     }
   ],
   "identity": {
-    "asOf": "Noon, day 79 in this world, at the trade hall",
+    "asOf": "Afternoon, day 79 in this world, at the Adventure Society",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4361,7 +4323,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Adventure Society trade hall, ground floor (iron), at a monster-parts buying counter, with Jason. Harbinger unsuppressed. Just after noon, day 79 in this world.",
+  "location": "Adventure Society campus, administration building lobby, with Jason, turning in the Broken Fences contract (in Jason's name). Harbinger unsuppressed. Afternoon, day 79 in this world.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4619,8 +4581,8 @@
   ],
   "worldTime": {
     "day": 79,
-    "time": "Noon",
-    "detail": "Back at Greenstone's eastern gate with Jason after Broken Fences (mangrove snatcher killed at Dorran's farm). Next: trade hall to sell, lemonade, then Bert's evening set at the second bell after noon.",
+    "time": "Afternoon",
+    "detail": "Turning in Broken Fences at the Society with Jason; then Bert's evening set at the second bell after noon, and the Gilded Heron at the sixth bell.",
     "dayLabel": "79 days in this world"
   },
   "abilityMeta": {
