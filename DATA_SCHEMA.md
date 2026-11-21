@@ -85,7 +85,7 @@ Optional. Omit the field entirely when you are not tracking the clock. A sheet w
 
 `gear.equipped` is what is worn in the story snapshot, including borrowed pieces. Empty slots stay in the list with `"name": ""` so the paper doll still has that slot. `empty` is the word shown on a bare slot (`none` for armour, `empty` for the rest).
 
-`clothes`, when present on a slot, is wardrobe pieces worn there: `{ "name": "Linen shirt", "slot": "Torso" }`. `name` is a `gear.wardrobe` name. `slot` is that piece's wardrobe slot (`Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, or `Shoes`), not the doll slot. The doll slot is the parent (`Head` or `Body`). Head-slot clothes sit on doll `Head`. Every other wardrobe slot sits on doll `Body`, as a list under Worn clothes. These pieces are not removed from `gear.wardrobe` and they do not use a pocket slot. Leave `clothes` off a slot that has none. A `clothes` entry that is not `{ name, slot }` with a wardrobe slot rejects the sheet.
+`clothes`, when present on a slot, is wardrobe pieces worn there: `{ "name": "Linen shirt", "slot": "Torso" }`. `name` is a `gear.wardrobe` name. `slot` is that piece's wardrobe slot (`Outfit`, `Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, or `Shoes`), not the doll slot. The doll slot is the parent (`Head` or `Body`). Head-slot clothes sit on doll `Head`. Outfit and every other wardrobe slot sit on doll `Body`, as a list under Worn clothes. These pieces are not removed from `gear.wardrobe` and they do not use a pocket slot. Unequipping one leaves it in the wardrobe. It is not added to the pocket. Leave `clothes` off a slot that has none. A `clothes` entry that is not `{ name, slot }` with a wardrobe slot rejects the sheet.
 
 Owned items that are worn (travel clothes, the hammer) do not also need a `pocket` row. The app treats a non-borrowed equipped item as his.
 
@@ -99,7 +99,7 @@ Owned items that are worn (travel clothes, the hammer) do not also need a `pocke
 
 `gear.borrowed` is the list of items that are not his.
 
-`gear.wardrobe` is optional. It is his clothes, the Outfits tab in inventory. Each entry is `{ "name": "Linen shirt", "slot": "Torso", "qty": "", "note": "Everyday." }`. `name` and `slot` are required. `qty` and `note` are optional strings. `slot` is one of `Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, `Shoes`. The phone lists them in that order, head to toe, with a button for each slot plus All. Omit the field, or use `[]`, and the Wardrobe button opens an empty list. These pieces are not pocket rows. Do not also put them in `gear.pocket` unless he is carrying that piece as cargo. A bad `slot`, a missing `name`, or a `qty` that is not a string rejects the sheet.
+`gear.wardrobe` is optional. It is his clothes, the Outfits tab in inventory. Each entry is `{ "name": "Linen shirt", "slot": "Torso", "qty": "", "note": "Everyday." }`. `name` and `slot` are required. `note` is an optional string. `qty` is an optional string or a finite number; a number is shown as its digits, so one numeric qty does not hide the wardrobe. `slot` is one of `Outfit`, `Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, `Shoes`. `Outfit` is a complete set worn as one piece (an armour set, a suit) and is listed first. The rest run head to toe. The phone lists them in that order, with a button for each slot plus All. Omit the field, or use `[]`, and the Wardrobe button opens an empty list. These pieces are not pocket rows. Do not also put them in `gear.pocket` unless he is carrying that piece as cargo. A bad `slot`, a missing `name`, or a `qty` that is neither a string nor a finite number rejects the sheet.
 
 `gear.outfits` is his saved looks, at most 10. Each entry is `{ "name": "Town", "items": ["Linen shirt", "War Hammer"], "pieces": [{ "name": "Linen shirt", "slot": "Body", "source": "wardrobe" }, { "name": "War Hammer", "slot": "Main hand", "source": "gear" }] }`. `name` and `items` are required. `items` is the flat list of names. `pieces` is optional and is what Wear look uses. Each piece has `name`, `slot` (the doll slot), and `source` (`wardrobe` or `gear`). A wardrobe piece stays in the wardrobe. A gear piece is an owned doll item such as a weapon. Borrowed gear is not saved in a look. An older row with only `name` and `items` still loads: a wardrobe name is worn on Head or Body from its wardrobe slot, and any other name is equipped to the first `equipTargets` slot. Omit `outfits`, or use `[]`, and he has no saved looks. The phone shows 10 slots. A present `outfits` that is not that shape rejects the sheet. Extra looks past 10 are ignored.
 
@@ -120,7 +120,7 @@ To give him a chest, add a pocket object with `contents`. Put anything that star
 ### Add clothes
 
 1. Append an object to `gear.wardrobe`: `name`, `slot`, and optional `qty` and `note`.
-2. `slot` is `Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, or `Shoes`.
+2. `slot` is `Outfit`, `Head`, `Face`, `Neck`, `Torso`, `Wrist`, `Waist`, `Legs`, or `Shoes`. Use `Outfit` for a complete set worn as one piece.
 3. Leave it out of `gear.pocket`. It does not spend one of the 40 slots.
 4. To save a look yourself, append `{ "name": "Town", "items": ["Linen shirt"], "pieces": [{ "name": "Linen shirt", "slot": "Body", "source": "wardrobe" }] }` to `gear.outfits`. Keep the list at 10 or fewer. He can also save looks on the phone. Those arrive as `save_look` rows.
 5. Bump `rev`.
@@ -149,7 +149,7 @@ A move is one object:
 | `at` | When he did it, ISO time. |
 | `baseRev` | The `rev` he was looking at. |
 
-`equip` / `unequip` of a `gear.wardrobe` name does not take the piece out of the wardrobe and does not use a pocket slot. Head-slot clothes use doll `Head`. Torso, Legs, Shoes, Waist, Neck, Face, and Wrist use doll `Body`. `equip` / `unequip` of anything else is pocket gear: it leaves or enters the pocket, and it fills that one doll slot's `name`.
+`equip` / `unequip` of a `gear.wardrobe` name does not take the piece out of the wardrobe and does not use a pocket slot. Unequip sends it back to the wardrobe. It never enters Pocket Space. Head-slot clothes use doll `Head`. Outfit, Torso, Legs, Shoes, Waist, Neck, Face, and Wrist use doll `Body`. `equip` / `unequip` of anything else is pocket gear: it leaves or enters the pocket, and it fills that one doll slot's `name`.
 
 `save_look` stores the current doll (worn clothes plus owned gear, not borrowed gear) under `item`. The phone keeps at most 10 looks. Saving an existing name overwrites that look. `delete_look` removes the look named `item`. `rename_look` renames `detail.from` to `item`. `wear_look` puts that look on: Head and Body `clothes` become the look's wardrobe pieces (other worn clothes on those two slots come off), and each gear piece is equipped to its doll slot. Slots the look does not mention stay as they are.
 

@@ -33,7 +33,7 @@ export function validateSheet(value: unknown): string | null {
     need(pocketContentsOk(value.gear), "gear.pocket contents, when present, must be an array of {name}."),
     need(appliedActionsOk(value.gear), "gear.appliedActions, when present, must be an array of strings."),
     need(equippedClothesOk(value.gear), "gear.equipped[].clothes, when present, must be an array of { name, slot } with a wardrobe slot."),
-    need(!isRecord(value.gear) || wardrobeShapeOk(value.gear.wardrobe), "gear.wardrobe, when present, must be an array of { name, slot, qty?, note? }. slot is Head, Face, Neck, Torso, Wrist, Waist, Legs, or Shoes."),
+    need(!isRecord(value.gear) || wardrobeShapeOk(value.gear.wardrobe), "gear.wardrobe, when present, must be an array of { name, slot, qty?, note? }. slot is Outfit, Head, Face, Neck, Torso, Wrist, Waist, Legs, or Shoes. qty, when present, is a string or a number."),
     need(!isRecord(value.gear) || outfitsShapeOk(value.gear.outfits), "gear.outfits, when present, must be an array of { name, items: string[] }."),
     need(isRecord(value.map) && isRecord(value.map.world) && isRecord(value.map.town) && isRecord(value.map.battle), "map.world, map.town, and map.battle are required."),
     need(isRecord(value.map) && isRecord(value.map.battle) && Array.isArray(value.map.battle.enemies), "map.battle.enemies must be an array."),

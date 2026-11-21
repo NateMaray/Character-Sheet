@@ -207,7 +207,7 @@ export function reconcileGear(
     const current = kept[index];
     const src = gear.equipped.filter((entry) => entry.slot === slot)[0];
     if (src && src.name && isBorrowed(src.name, gear.borrowed)) {
-      if (current.name && current.name !== src.name && !isBorrowed(current.name, gear.borrowed)) displaced.push(toGear(current));
+      if (current.name && current.name !== src.name && returnsToPocket(gear, current.name)) displaced.push(toGear(current));
       return withClothes({ slot, name: src.name, empty: "", note: src.note, qty: src.qty || "" }, current.clothes);
     }
     if (current.name && isBorrowed(current.name, gear.borrowed)) return withClothes(emptySlot(slot, gear.emptyLabels), current.clothes);
@@ -215,15 +215,22 @@ export function reconcileGear(
   });
   const held: Record<string, boolean> = {};
   for (const slot of equipped) if (slot.name) held[slot.name] = true;
+  const wardrobe = wardrobeNames(gear);
+  const pocketSource = new Set(gear.pocket.map((item) => item.name));
+  const staysInWardrobe = (name: string) => wardrobe.has(name) && !pocketSource.has(name);
   let pocket = displaced.concat(
-    savedPocket.filter((item) => sourceNames[item.name] && !held[item.name]).map((item) => withSourceItem(catalog, item)),
+    savedPocket
+      .filter((item) => sourceNames[item.name] && !held[item.name] && !staysInWardrobe(item.name))
+      .map((item) => withSourceItem(catalog, item)),
   );
   const present: Record<string, boolean> = {};
   for (const slot of equipped) if (slot.name) present[slot.name] = true;
   for (const item of pocket) present[item.name] = true;
   // Catalog rows are top-level only, so an item that exists solely inside a source chest is not added again.
+  // A wardrobe piece that is not also a pocket row stays in the wardrobe.
   for (const item of catalog) {
-    if (!present[item.name]) pocket = pocket.concat([withSourceItem(catalog, item)]);
+    if (present[item.name] || staysInWardrobe(item.name)) continue;
+    pocket = pocket.concat([withSourceItem(catalog, item)]);
   }
   const loadouts = savedLoadouts.map((loadout) => ({
     name: loadout.name,
@@ -361,13 +368,22 @@ export function itemsForSlot(pocket: GearItem[], gear: GearSource, slotName: str
   return pocket.filter((item) => !isContainer(item) && (gear.equipTargets[item.name] || []).indexOf(slotName) >= 0);
 }
 
+function wardrobeNames(gear: Pick<GearSource, "wardrobe">): Set<string> {
+  return new Set(readWardrobe(gear).map((item) => item.name));
+}
+
+/** Pocket gear goes back to the pocket. A wardrobe piece stays in the wardrobe. */
+function returnsToPocket(gear: GearSource, name: string): boolean {
+  return !isBorrowed(name, gear.borrowed) && !wardrobeNames(gear).has(name);
+}
+
 export function equipToSlot(state: GearState, gear: GearSource, item: GearItem, slotName: string): GearState | null {
   const allowed = gear.equipTargets[item.name] || [];
   if (allowed.indexOf(slotName) < 0) return null;
   if (!state.equipped.some((slot) => slot.slot === slotName)) return null;
   const previous = state.equipped.find((slot) => slot.slot === slotName);
   let pocket = removeOne(state.pocket, item.name);
-  if (previous && previous.name && !isBorrowed(previous.name, gear.borrowed)) pocket = [...pocket, toGear(previous)];
+  if (previous?.name && returnsToPocket(gear, previous.name)) pocket = [...pocket, toGear(previous)];
   return {
     ...state,
     pocket,
@@ -378,7 +394,7 @@ export function equipToSlot(state: GearState, gear: GearSource, item: GearItem, 
 export function unequip(state: GearState, gear: GearSource, slotName: string): GearState | null {
   const current = state.equipped.find((slot) => slot.slot === slotName);
   if (!current || !current.name) return null;
-  const pocket = isBorrowed(current.name, gear.borrowed) ? state.pocket : [...state.pocket, toGear(current)];
+  const pocket = returnsToPocket(gear, current.name) ? [...state.pocket, toGear(current)] : state.pocket;
   return {
     ...state,
     pocket,
@@ -475,7 +491,7 @@ export function wearLook(state: GearState, pieces: LookPiece[], gear: GearSource
 
 export function loadLoadout(state: GearState, gear: GearSource, loadout: GearLoadout): GearState {
   const keep = new Set(loadout.equipped.filter((slot) => slot.name).map((slot) => slot.name));
-  const held = state.equipped.filter((slot) => slot.name && !isBorrowed(slot.name, gear.borrowed)).map(toGear);
+  const held = state.equipped.filter((slot) => slot.name && returnsToPocket(gear, slot.name)).map(toGear);
   const initial = initialEquipped(gear);
   return {
     ...state,
@@ -582,7 +598,12 @@ function wardrobeCloth(gear: GearSource, name: string): WornCloth | null {
 function applyEquipAction(state: GearState, gear: GearSource, action: PocketAction): GearState {
   const cloth = wardrobeCloth(gear, action.item);
   if (cloth) {
-    if (action.kind === "unequip") return unwearWardrobeItem(state, cloth.name) ?? state;
+    if (action.kind === "unequip") {
+      const unworn = unwearWardrobeItem(state, cloth.name) ?? state;
+      const named = unworn.equipped.find((slot) => slot.name === cloth.name);
+      if (!named) return unworn;
+      return unequip(unworn, gear, named.slot) ?? unworn;
+    }
     if (wornClothNames(state.equipped).has(cloth.name)) return state;
     const doll = action.slot && state.equipped.some((slot) => slot.slot === action.slot) ? action.slot : dollSlotForWardrobe(cloth.slot);
     if (!state.equipped.some((slot) => slot.slot === doll)) return state;
