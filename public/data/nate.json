@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-235",
+  "rev": "2026-11-21-aether-236",
   "gear": {
     "doll": [
       [
@@ -4322,7 +4322,7 @@
     }
   ],
   "identity": {
-    "asOf": "Late morning, day 87 in this world, in the forge district",
+    "asOf": "Noon, day 87 in this world, at the Society training field",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4350,7 +4350,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Marl's skewer cart, Greenstone forge district, with Gary and Jason (Jason lost the bet: paid Nate 1 silver spirit coin and covered Gary's skewer pile). Carrying the Turning Millstone skill book, bought from Hollis for 200 iron; not yet used. Rufus and Farrah are at the Society training field. Wearing Gilbert's bespoke armour set with socks and running shoes. No mark active. Harbinger restrained, Veil off. Late morning, day 87.",
+  "location": "Society training field, back from the forge district with Gary and Jason; Rufus waiting at the edge. Carrying the Turning Millstone skill book (bought from Hollis for 200 iron), not yet used. Wearing Gilbert's bespoke armour set with socks and running shoes. No mark active. Harbinger restrained, Veil off. Around noon, day 87.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4665,8 +4665,8 @@
   ],
   "worldTime": {
     "day": 87,
-    "time": "Late morning",
-    "detail": "Forge district, Greenstone",
+    "time": "Noon",
+    "detail": "Society training field",
     "dayLabel": "87 days in this world"
   },
   "abilityMeta": {
