@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-22-aether-254",
+  "rev": "2026-11-22-aether-255",
   "gear": {
     "doll": [
       [
@@ -4358,7 +4358,7 @@
     {
       "kind": "SYSTEM",
       "name": "Grinding the Stone",
-      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started.",
+      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started. Morning day 88: Grinding Wheel full shape learned with the practice hammer (low, high, low circles, rising strike, two-hand catch, back into circles); now drilling repetitions before Rufus starts moving. Empty Hand not started.",
       "status": "ACTIVE"
     },
     {
