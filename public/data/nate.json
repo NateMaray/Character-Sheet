@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-22-aether-260",
+  "rev": "2026-11-22-aether-268",
   "gear": {
     "doll": [
       [
@@ -4157,7 +4157,7 @@
   },
   "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1213 iron · 777 lesser",
+  "coins": "1 silver · 1218 iron · 777 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4242,18 +4242,18 @@
       "value": "100%"
     },
     {
-      "pct": 100,
-      "note": "Refilled over the late-morning session after the mid-morning Moonwell cast. Full at noon, day 88.",
+      "pct": 70,
+      "note": "Moonwell (30%) just cast lying on the field after the session, late afternoon day 88; pool active.",
       "tone": "mana",
       "label": "MANA",
-      "value": "100%"
+      "value": "70%"
     },
     {
-      "pct": 60,
-      "note": "Legs dragging after about an hour and a half of Grinding Wheel sparring with Rufus stepping in, noon day 88.",
+      "pct": 55,
+      "note": "Low after the full day of drilling; recovering in the Moonwell pool, late afternoon day 88.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "60%"
+      "value": "55%"
     }
   ],
   "profile": [
@@ -4325,7 +4325,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 88 in this world, at Sailor's Watch",
+    "asOf": "Afternoon, day 88 in this world, at the Society training field",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4353,12 +4353,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Sailor's Watch common room in Greenstone, lunch at a window table with Rufus, Farrah and Gary, early afternoon; morning session over after about three and a half hours of drilling. Another session after lunch. Wearing Gilbert's bespoke armour set with socks and running shoes; practice hammer returned to the field rack. Invictus and the empty leather travel pack in Pocket Space; First look outfit back in the wardrobe. No mark active. Harbinger restrained, Veil off. Grinding Wheel practice today; open 5-iron bet with Farrah on self-hits (Gary counting, self-hits at 4). Early afternoon, day 88.",
+  "location": "Society training field with Rufus, Farrah and Gary after the afternoon session ended, after lunch at Sailor's Watch; morning session was about three and a half hours. Tomorrow: show Rufus a Star Mark move idea at the field. Wearing Gilbert's bespoke armour set with socks and running shoes; practice hammer racked by Rufus. Invictus and the empty leather travel pack in Pocket Space; First look outfit back in the wardrobe. No mark active (fork mark dropped). Flat on the field under a Moonwell. Harbinger restrained, Veil off. Grinding Wheel practice done for the day; won the 5-iron self-hit bet from Farrah (finished at 5). Late afternoon, day 88.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Grinding the Stone",
-      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started. Morning day 88: Grinding Wheel full shape learned with the practice hammer (low, high, low circles, rising strike, two-hand catch, back into circles); drilled a few hundred reps, then tracked Rufus as he circled (feet leading) for nearly two hours; after Moonwell and a water break, about an hour and a half with Rufus stepping in and reaching: strikes find him, turns carry Nate around his reach, form held until it slipped at noon. Wheel nearly there. Another session after lunch. Empty Hand not started.",
+      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started. Morning day 88: Grinding Wheel full shape learned with the practice hammer (low, high, low circles, rising strike, two-hand catch, back into circles); drilled a few hundred reps, then tracked Rufus as he circled (feet leading) for nearly two hours; after Moonwell and a water break, about an hour and a half with Rufus stepping in and reaching: strikes find him, turns carry Nate around his reach, form held until it slipped at noon. Wheel nearly there. Afternoon session: held aura restraint under Farrah's aura pressure, then learned to save the hammer when Rufus deflects, jams, or shoves it back (turn with it so the circle swallows the mistake). Empty Hand not started.",
       "status": "ACTIVE"
     },
     {
@@ -4596,7 +4596,7 @@
       "tag": "Star · Special · Mark",
       "name": "Star Mark",
       "rank": "Iron 0",
-      "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 3,300 feet (0.6 miles) at Iron 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown.",
+      "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 3,300 feet (0.6 miles) at Iron 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown. DM ruling day 88: works on any visible target, objects included. First object mark: an iron fork at lunch in Sailor's Watch, afternoon day 88.",
       "essence": "Star",
       "progress": 5
     },
@@ -4620,7 +4620,7 @@
       "tag": "Star · Spell · Healing, Support",
       "name": "Moonwell",
       "rank": "Iron 0",
-      "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run, again early lap 19 (consolidated in meditation day 80 night: 0 to 4). Used late morning day 87 at the training field to clear the skill-book headache; meditation early evening day 87: 4 to 5. Used mid-morning day 88 on the training-field bench during a water break to ease drill-sore arms (Gary in the pool too).",
+      "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run, again early lap 19 (consolidated in meditation day 80 night: 0 to 4). Used late morning day 87 at the training field to clear the skill-book headache; meditation early evening day 87: 4 to 5. Used mid-morning day 88 on the training-field bench during a water break to ease drill-sore arms (Gary in the pool too). Used again at lunch in Sailor's Watch, afternoon day 88, before the afternoon session; cast again late afternoon after the session (3 uses on day 88).",
       "essence": "Star",
       "progress": 5
     },
@@ -4675,7 +4675,7 @@
   "worldTime": {
     "day": 88,
     "time": "Afternoon",
-    "detail": "Lunch at Sailor's Watch",
+    "detail": "Society training field, afternoon session finished",
     "dayLabel": "88 days in this world"
   },
   "abilityMeta": {
