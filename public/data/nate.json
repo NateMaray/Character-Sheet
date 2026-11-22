@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-250",
+  "rev": "2026-11-22-aether-251",
   "gear": {
     "doll": [
       [
@@ -3624,6 +3624,11 @@
         "qty": "",
         "name": "Invictus",
         "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
+      },
+      {
+        "qty": "",
+        "name": "Leather travel pack",
+        "note": "Sturdy, worn leather pack with double-stitched seams and metal buckles, from a Vane manor wardrobe. Empty."
       }
     ],
     "outfits": [
@@ -3726,10 +3731,10 @@
       },
       {
         "qty": "",
-        "name": "Leather travel pack",
+        "name": "",
         "note": "",
         "slot": "Back",
-        "empty": ""
+        "empty": "empty"
       },
       {
         "qty": "",
@@ -4356,7 +4361,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Sailor's Watch, Rufus's suite, washed and dressed in the First look outfit (slate-blue shirt with silver vine embroidery, red sash, sky blue wrap trousers, socks and running shoes, leather travel pack; Invictus back in Pocket Space), with Rufus, Gary, Jason and Farrah; heading down to dinner at Sailor's Watch. Gilbert's armour set back in the wardrobe. No mark active. Harbinger restrained, Veil off. Grinding Wheel with Invictus starts tomorrow. Early night, day 87.",
+  "location": "Sailor's Watch, Rufus's suite, washed and dressed in the First look outfit (slate-blue shirt with silver vine embroidery, red sash, sky blue wrap trousers, socks and running shoes; Invictus and the leather travel pack in Pocket Space), with Rufus, Gary, Jason and Farrah; going down to dinner at Sailor's Watch. Gilbert's armour set back in the wardrobe. No mark active. Harbinger restrained, Veil off. Grinding Wheel with Invictus starts tomorrow. Early night, day 87.",
   "missions": [
     {
       "kind": "SYSTEM",
