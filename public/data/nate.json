@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-229",
+  "rev": "2026-11-21-aether-235",
   "gear": {
     "doll": [
       [
@@ -3608,9 +3608,9 @@
         "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
       },
       {
-        "qty": 1,
+        "qty": 2,
         "name": "Wind Quintessence",
-        "note": "Beyond the Wall reward.",
+        "note": "Beyond the Wall and Foundation First rewards.",
         "slot": ""
       },
       {
@@ -3618,6 +3618,18 @@
         "name": "Water Quintessence",
         "note": "Beyond the Wall bonus reward.",
         "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Earth Quintessence",
+        "note": "Foundation First reward.",
+        "slot": ""
+      },
+      {
+        "qty": "1",
+        "name": "Turning Millstone skill book (iron rank)",
+        "note": "Bought from Hollis at her forge, forge district, day 87 for 200 iron. Her old master's copy. Unused. Rufus wants to see Nate before he uses it.",
+        "slot": "Books"
       }
     ],
     "outfits": [
@@ -4146,7 +4158,7 @@
   },
   "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1163 iron · 777 lesser",
+  "coins": "1 silver · 1113 iron · 777 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4238,11 +4250,11 @@
       "value": "100%"
     },
     {
-      "pct": 80,
-      "note": "Just after Gary's dawn run, Society training field, morning day 87.",
+      "pct": 75,
+      "note": "After passing Rufus's staff test, Society training field, morning day 87. Minor sting on both forearms.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "80%"
+      "value": "75%"
     }
   ],
   "profile": [
@@ -4310,7 +4322,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 87 in this world, at the Society training field",
+    "asOf": "Late morning, day 87 in this world, in the forge district",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4338,13 +4350,19 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Society training field, just after Gary's dawn run, with Rufus (holding a wooden staff), Farrah, Gary and Jason. Rufus's skill-book test is starting. Wearing Gilbert's bespoke armour set with socks and running shoes. No mark active. Harbinger restrained, Veil off. Morning, day 87.",
+  "location": "Marl's skewer cart, Greenstone forge district, with Gary and Jason (Jason lost the bet: paid Nate 1 silver spirit coin and covered Gary's skewer pile). Carrying the Turning Millstone skill book, bought from Hollis for 200 iron; not yet used. Rufus and Farrah are at the Society training field. Wearing Gilbert's bespoke armour set with socks and running shoes. No mark active. Harbinger restrained, Veil off. Late morning, day 87.",
   "missions": [
     {
       "kind": "SYSTEM",
-      "name": "Foundation First",
-      "detail": "Landed day 80 night at Rufus's suite, after Rufus said Nate will get a combat skill book once his footwork is ready and he passes a test. Objective: pass Rufus's test for a skill book 0/1. Bonus: pass it on the first attempt 0/1. Reward: 100 iron spirit coins, 1 Earth Quintessence. Bonus: 1 Wind Quintessence.",
+      "name": "The Turning Millstone",
+      "detail": "Landed morning day 87 at the Society training field. Objective: obtain (done: bought from Hollis for 200 iron, day 87) a copy of the Turning Millstone skill book (DM-made hammer-and-fist style) and absorb it. Bonus: stay conscious through the entire absorption. Rewards: 75 iron spirit coins, 1 Earth Quintessence. Bonus reward: 1 Wind Quintessence.",
       "status": "ACTIVE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Foundation First",
+      "detail": "Landed day 80 night at Rufus's suite. Completed day 87 morning on the Society training field. Objective: pass Rufus's test for a skill book 1/1 (staff-pressure body-control test). Bonus: passed on the first attempt 1/1. Paid on completion: 100 iron spirit coins, 1 Earth Quintessence, bonus 1 Wind Quintessence, plus 50 iron unlisted. The skill book still has to be bought.",
+      "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
@@ -4647,8 +4665,8 @@
   ],
   "worldTime": {
     "day": 87,
-    "time": "Morning",
-    "detail": "Society training field after a week of Gary's dawn runs and Rufus's footwork, balance and handstand drills (days 81-86); Rufus's skill-book test is starting.",
+    "time": "Late morning",
+    "detail": "Forge district, Greenstone",
     "dayLabel": "87 days in this world"
   },
   "abilityMeta": {
