@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-220",
+  "rev": "2026-11-21-aether-229",
   "gear": {
     "doll": [
       [
@@ -3606,6 +3606,18 @@
         "qty": "",
         "name": "Invictus",
         "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
+      },
+      {
+        "qty": 1,
+        "name": "Wind Quintessence",
+        "note": "Beyond the Wall reward.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Water Quintessence",
+        "note": "Beyond the Wall bonus reward.",
+        "slot": ""
       }
     ],
     "outfits": [
@@ -4134,7 +4146,7 @@
   },
   "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1063 iron · 777 lesser",
+  "coins": "1163 iron · 777 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4213,24 +4225,24 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Full after a shower and three hours of meditation in Rufus's suite, day 79, fifth bell.",
+      "note": "Full, day 87 morning.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
-      "pct": 88,
-      "note": "Recovering at the active rate during the Second Wind test run. Moonwell ready.",
+      "pct": 100,
+      "note": "Full, morning day 87. Moonwell ready.",
       "tone": "mana",
       "label": "MANA",
-      "value": "88%"
+      "value": "100%"
     },
     {
-      "pct": 27,
-      "note": "After lap 18 of the Second Wind test run. Second Wind about 9 minutes into its cooldown (fired lap 16). Park-district loop path, mid to late afternoon day 80.",
+      "pct": 80,
+      "note": "Just after Gary's dawn run, Society training field, morning day 87.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "27%"
+      "value": "80%"
     }
   ],
   "profile": [
@@ -4298,7 +4310,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 80 in this world, on the park district loop path",
+    "asOf": "Morning, day 87 in this world, at the Society training field",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4326,8 +4338,20 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Park district loop path, running laps with Gary pacing for Farrah's Second Wind test (lap 18 done; Second Wind nearly off cooldown, Moonwell ready). Jason, Rufus and Farrah are back in the shade where they had lunch at the food carts. Wearing Gilbert's bespoke armour set. No mark active (dropped the Star Mark on Rufus after lap 1). Harbinger restrained, Veil off. Mid to late afternoon, day 80.",
+  "location": "Society training field, just after Gary's dawn run, with Rufus (holding a wooden staff), Farrah, Gary and Jason. Rufus's skill-book test is starting. Wearing Gilbert's bespoke armour set with socks and running shoes. No mark active. Harbinger restrained, Veil off. Morning, day 87.",
   "missions": [
+    {
+      "kind": "SYSTEM",
+      "name": "Foundation First",
+      "detail": "Landed day 80 night at Rufus's suite, after Rufus said Nate will get a combat skill book once his footwork is ready and he passes a test. Objective: pass Rufus's test for a skill book 0/1. Bonus: pass it on the first attempt 0/1. Reward: 100 iron spirit coins, 1 Earth Quintessence. Bonus: 1 Wind Quintessence.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Beyond the Wall",
+      "detail": "Landed day 80 afternoon during Farrah's Second Wind test run (lap 19). Completed day 80 at dusk when Farrah called it after 21 laps. Objective: finish the test run with no potions or spirit coins 1/1. Bonus: finished on his own legs after a sprint final lap with Gary 1/1. Paid on completion: 75 iron spirit coins, 1 Wind Quintessence, bonus 1 Water Quintessence, plus 25 iron unlisted.",
+      "status": "COMPLETE"
+    },
     {
       "kind": "SYSTEM",
       "name": "Broken Fences",
@@ -4569,9 +4593,9 @@
       "tag": "Star · Spell · Healing, Support",
       "name": "Moonwell",
       "rank": "Iron 0",
-      "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run (progress pending next meditation).",
+      "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run, again early lap 19 (consolidated in meditation day 80 night: 0 to 4).",
       "essence": "Star",
-      "progress": 0
+      "progress": 4
     },
     {
       "name": "Sky Stair",
@@ -4608,9 +4632,9 @@
       "tag": "Wind · Special · Recovery",
       "name": "Second Wind",
       "rank": "Iron 0",
-      "detail": "When Nate's stamina falls below 25%, the wind fills him and he instantly regains 25% stamina. Cost: none. Cooldown: 10 minutes. From the Awakening Stone of Persistence. Absorbed day 79 evening in Rufus's suite. DM-made. If stamina is already under 25% when the cooldown ends, it fires immediately (DM ruling, day 80). First triggered day 80 afternoon mid lap 8 of Farrah's test run, again in laps 11 and 16 (progress pending next meditation).",
+      "detail": "When Nate's stamina falls below 25%, the wind fills him and he instantly regains 25% stamina. Cost: none. Cooldown: 10 minutes. From the Awakening Stone of Persistence. Absorbed day 79 evening in Rufus's suite. DM-made. If stamina is already under 25% when the cooldown ends, it fires immediately (DM ruling, day 80). First triggered day 80 afternoon mid lap 8 of Farrah's test run, again in laps 11, 16 and early 19 (consolidated in meditation day 80 night: 0 to 6).",
       "essence": "Wind",
-      "progress": 0
+      "progress": 6
     },
     {
       "tag": "Comet · Special · Boon, Passive",
@@ -4622,10 +4646,10 @@
     }
   ],
   "worldTime": {
-    "day": 80,
-    "time": "Afternoon",
-    "detail": "Second Wind test run with Gary on the park-district loop path, 18 laps in, mid to late afternoon.",
-    "dayLabel": "80 days in this world"
+    "day": 87,
+    "time": "Morning",
+    "detail": "Society training field after a week of Gary's dawn runs and Rufus's footwork, balance and handstand drills (days 81-86); Rufus's skill-book test is starting.",
+    "dayLabel": "87 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 3/5 · COMET 3/5 AWAKENED",
