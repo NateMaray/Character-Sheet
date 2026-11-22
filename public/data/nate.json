@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-22-aether-251",
+  "rev": "2026-11-22-aether-254",
   "gear": {
     "doll": [
       [
@@ -3708,16 +3708,8 @@
         "empty": "empty",
         "clothes": [
           {
-            "name": "Slate-blue shirt with silver vine embroidery",
-            "slot": "Torso"
-          },
-          {
-            "name": "Red sash",
-            "slot": "Waist"
-          },
-          {
-            "name": "Sky blue wrap trousers",
-            "slot": "Legs"
+            "name": "Gilbert's bespoke armour set",
+            "slot": "Outfit"
           },
           {
             "name": "Socks",
@@ -4251,17 +4243,17 @@
     },
     {
       "pct": 100,
-      "note": "Full by sunset, day 87, after the late-morning Moonwell cast (30%).",
+      "note": "Full.",
       "tone": "mana",
       "label": "MANA",
       "value": "100%"
     },
     {
-      "pct": 35,
-      "note": "Recovering after the afternoon of Millstone Turn drills; hot shower loosened the legs, evening day 87.",
+      "pct": 100,
+      "note": "Full after a night's sleep in Rufus's suite, dawn day 88.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "35%"
+      "value": "100%"
     }
   ],
   "profile": [
@@ -4333,7 +4325,7 @@
     }
   ],
   "identity": {
-    "asOf": "Early night, day 87 in this world, at Sailor's Watch",
+    "asOf": "Morning, day 88 in this world, at the Society training field",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4361,7 +4353,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Sailor's Watch, Rufus's suite, washed and dressed in the First look outfit (slate-blue shirt with silver vine embroidery, red sash, sky blue wrap trousers, socks and running shoes; Invictus and the leather travel pack in Pocket Space), with Rufus, Gary, Jason and Farrah; going down to dinner at Sailor's Watch. Gilbert's armour set back in the wardrobe. No mark active. Harbinger restrained, Veil off. Grinding Wheel with Invictus starts tomorrow. Early night, day 87.",
+  "location": "Society training field with Rufus, Farrah and Gary, early morning. Wearing Gilbert's bespoke armour set with socks and running shoes; holding a borrowed training-field practice hammer (wood and padding, about Invictus's weight). Invictus and the empty leather travel pack in Pocket Space; First look outfit back in the wardrobe. No mark active. Harbinger restrained, Veil off. Grinding Wheel practice today; open 5-iron bet with Farrah on self-hits (Gary counting). Morning, day 88.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4681,10 +4673,10 @@
     }
   ],
   "worldTime": {
-    "day": 87,
-    "time": "Night",
-    "detail": "Sailor's Watch, Rufus's suite",
-    "dayLabel": "87 days in this world"
+    "day": 88,
+    "time": "Morning",
+    "detail": "Society training field",
+    "dayLabel": "88 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 3/5 · COMET 3/5 AWAKENED",
