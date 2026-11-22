@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-22-aether-268",
+  "rev": "2026-11-22-aether-271",
   "gear": {
     "doll": [
       [
@@ -3708,8 +3708,16 @@
         "empty": "empty",
         "clothes": [
           {
-            "name": "Gilbert's bespoke armour set",
-            "slot": "Outfit"
+            "name": "Slate-blue shirt with silver vine embroidery",
+            "slot": "Torso"
+          },
+          {
+            "name": "Red sash",
+            "slot": "Waist"
+          },
+          {
+            "name": "Sky blue wrap trousers",
+            "slot": "Legs"
           },
           {
             "name": "Socks",
@@ -4236,24 +4244,24 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Full.",
+      "note": "Full after sleep, dawn day 89.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
-      "pct": 70,
-      "note": "Moonwell (30%) just cast lying on the field after the session, late afternoon day 88; pool active.",
+      "pct": 100,
+      "note": "Full after sleep, dawn day 89.",
       "tone": "mana",
       "label": "MANA",
-      "value": "70%"
+      "value": "100%"
     },
     {
-      "pct": 55,
-      "note": "Low after the full day of drilling; recovering in the Moonwell pool, late afternoon day 88.",
+      "pct": 100,
+      "note": "Full after sleep, dawn day 89.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "55%"
+      "value": "100%"
     }
   ],
   "profile": [
@@ -4325,7 +4333,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 88 in this world, at the Society training field",
+    "asOf": "Dawn, day 89 in this world, in Rufus's suite at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4353,12 +4361,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Society training field with Rufus, Farrah and Gary after the afternoon session ended, after lunch at Sailor's Watch; morning session was about three and a half hours. Tomorrow: show Rufus a Star Mark move idea at the field. Wearing Gilbert's bespoke armour set with socks and running shoes; practice hammer racked by Rufus. Invictus and the empty leather travel pack in Pocket Space; First look outfit back in the wardrobe. No mark active (fork mark dropped). Flat on the field under a Moonwell. Harbinger restrained, Veil off. Grinding Wheel practice done for the day; won the 5-iron self-hit bet from Farrah (finished at 5). Late afternoon, day 88.",
+  "location": "Rufus's suite at Sailor's Watch, awake first on the couch at dawn; Rufus, Farrah and Gary still asleep. Day 89 plan: training field at first light with Invictus (Grinding Wheel with the real weapon), plus Nate's surprise Star Mark move. Wearing the First look outfit; Gilbert's armour set in the wardrobe. Invictus and the empty leather travel pack in Pocket Space. No mark active. Harbinger restrained, Veil off. Dawn, day 89.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Grinding the Stone",
-      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started. Morning day 88: Grinding Wheel full shape learned with the practice hammer (low, high, low circles, rising strike, two-hand catch, back into circles); drilled a few hundred reps, then tracked Rufus as he circled (feet leading) for nearly two hours; after Moonwell and a water break, about an hour and a half with Rufus stepping in and reaching: strikes find him, turns carry Nate around his reach, form held until it slipped at noon. Wheel nearly there. Afternoon session: held aura restraint under Farrah's aura pressure, then learned to save the hammer when Rufus deflects, jams, or shoves it back (turn with it so the circle swallows the mistake). Empty Hand not started.",
+      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started. Morning day 88: Grinding Wheel full shape learned with the practice hammer (low, high, low circles, rising strike, two-hand catch, back into circles); drilled a few hundred reps, then tracked Rufus as he circled (feet leading) for nearly two hours; after Moonwell and a water break, about an hour and a half with Rufus stepping in and reaching: strikes find him, turns carry Nate around his reach, form held until it slipped at noon. Wheel nearly there. Afternoon session: held aura restraint under Farrah's aura pressure, then learned to save the hammer when Rufus deflects, jams, or shoves it back (turn with it so the circle swallows the mistake). Late afternoon day 88: Empty Hand found unarmed after Gary tripped him mid-run (rolled out of it, then cartwheel, round-off, back flip); repeated slowly from a leg swing into spin and cartwheel, and Rufus named it Empty Hand. First success, not mastered; remaining: show Hollis at her forge, plus the Invictus spar bonus. Night day 88: Grinding Wheel and Empty Hand consolidated in meditation. Day 89 plan: Grinding Wheel with Invictus at the field.",
       "status": "ACTIVE"
     },
     {
@@ -4622,7 +4630,7 @@
       "rank": "Iron 0",
       "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run, again early lap 19 (consolidated in meditation day 80 night: 0 to 4). Used late morning day 87 at the training field to clear the skill-book headache; meditation early evening day 87: 4 to 5. Used mid-morning day 88 on the training-field bench during a water break to ease drill-sore arms (Gary in the pool too). Used again at lunch in Sailor's Watch, afternoon day 88, before the afternoon session; cast again late afternoon after the session (3 uses on day 88).",
       "essence": "Star",
-      "progress": 5
+      "progress": 7
     },
     {
       "name": "Sky Stair",
@@ -4673,10 +4681,10 @@
     }
   ],
   "worldTime": {
-    "day": 88,
-    "time": "Afternoon",
-    "detail": "Society training field, afternoon session finished",
-    "dayLabel": "88 days in this world"
+    "day": 89,
+    "time": "Dawn",
+    "detail": "Rufus's suite at Sailor's Watch, awake first",
+    "dayLabel": "89 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 3/5 · COMET 3/5 AWAKENED",
