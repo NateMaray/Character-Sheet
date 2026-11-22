@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-21-aether-243",
+  "rev": "2026-11-21-aether-249",
   "gear": {
     "doll": [
       [
@@ -3603,11 +3603,6 @@
         "note": "Brass; twist the top to brighten or dim. Gift from Rufus."
       },
       {
-        "qty": "",
-        "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 30 m, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
-      },
-      {
         "qty": 3,
         "name": "Wind Quintessence",
         "note": "Beyond the Wall and Foundation First rewards.",
@@ -3703,8 +3698,16 @@
         "empty": "empty",
         "clothes": [
           {
-            "name": "Gilbert's bespoke armour set",
-            "slot": "Outfit"
+            "name": "Slate-blue shirt with silver vine embroidery",
+            "slot": "Torso"
+          },
+          {
+            "name": "Red sash",
+            "slot": "Waist"
+          },
+          {
+            "name": "Sky blue wrap trousers",
+            "slot": "Legs"
           },
           {
             "name": "Socks",
@@ -3725,10 +3728,10 @@
       },
       {
         "qty": "",
-        "name": "",
-        "note": "",
+        "name": "Invictus",
+        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style).",
         "slot": "Main hand",
-        "empty": "empty"
+        "empty": ""
       },
       {
         "qty": "",
@@ -4231,24 +4234,24 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Full, day 87 morning.",
+      "note": "Full.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
-      "pct": 67,
-      "note": "About a third spent on Moonwell at the Society training field, late morning day 87.",
+      "pct": 100,
+      "note": "Full by sunset, day 87, after the late-morning Moonwell cast (30%).",
       "tone": "mana",
       "label": "MANA",
-      "value": "67%"
+      "value": "100%"
     },
     {
-      "pct": 100,
-      "note": "Full. Moonwell washed out the headache and nausea from the skill book; legs eased after pivot drills.",
+      "pct": 35,
+      "note": "Recovering after the afternoon of Millstone Turn drills; hot shower loosened the legs, evening day 87.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "100%"
+      "value": "35%"
     }
   ],
   "profile": [
@@ -4294,7 +4297,7 @@
     },
     {
       "label": "Martial art",
-      "value": "Turning Millstone I (iron rank, DM-made smith's style): everything moves in a circle and nothing resets. Forms: Millstone Turn (pivot on a planted foot, turn a strike aside with the arm, carry it into a counter); Grinding Wheel (hammer swings loop around the body so each strike feeds the next); Empty Hand (without Invictus, the circle continues with palm, elbow and footwork). Absorbed from a skill book while conscious, late morning day 87; needs drilling with Rufus before it works properly. No mana cost."
+      "value": "Turning Millstone I (iron rank, DM-made smith's style): everything moves in a circle and nothing resets. Forms: Millstone Turn (pivot on a planted foot, turn a strike aside with the arm, carry it into a counter); Grinding Wheel (hammer swings loop around the body so each strike feeds the next); Empty Hand (without Invictus, the circle continues with palm, elbow and footwork). Absorbed from a skill book while conscious, late morning day 87; Millstone Turn consolidated in meditation early evening day 87 (holds at medium speed, still needs work at full speed); Grinding Wheel and Empty Hand still to drill with Rufus. No mana cost."
     },
     {
       "label": "System",
@@ -4320,7 +4323,7 @@
     }
   ],
   "identity": {
-    "asOf": "Late morning, day 87 in this world, at the Society training field",
+    "asOf": "Early night, day 87 in this world, at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4348,12 +4351,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Society training field, drilling Turning Millstone footwork with Rufus, pivot drills (Moonwell has faded), with Rufus, Gary, Jason and Farrah. Wearing Gilbert's bespoke armour set with socks and running shoes. No mark active. Harbinger restrained, Veil off. Late morning, day 87.",
+  "location": "Sailor's Watch, Rufus's suite, washed and dressed in the First look outfit (slate-blue shirt with silver vine embroidery, red sash, sky blue wrap trousers, socks and running shoes, leather travel pack, Invictus in hand), with Rufus, Gary, Jason and Farrah; heading down to dinner at Sailor's Watch. Gilbert's armour set back in the wardrobe. No mark active. Harbinger restrained, Veil off. Grinding Wheel with Invictus starts tomorrow. Early night, day 87.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Grinding the Stone",
-      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence.",
+      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started.",
       "status": "ACTIVE"
     },
     {
@@ -4615,9 +4618,9 @@
       "tag": "Star · Spell · Healing, Support",
       "name": "Moonwell",
       "rank": "Iron 0",
-      "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run, again early lap 19 (consolidated in meditation day 80 night: 0 to 4).",
+      "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run, again early lap 19 (consolidated in meditation day 80 night: 0 to 4). Used late morning day 87 at the training field to clear the skill-book headache; meditation early evening day 87: 4 to 5.",
       "essence": "Star",
-      "progress": 4
+      "progress": 5
     },
     {
       "name": "Sky Stair",
@@ -4669,8 +4672,8 @@
   ],
   "worldTime": {
     "day": 87,
-    "time": "Late morning",
-    "detail": "Society training field",
+    "time": "Night",
+    "detail": "Sailor's Watch, Rufus's suite",
     "dayLabel": "87 days in this world"
   },
   "abilityMeta": {
