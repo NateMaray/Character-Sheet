@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-349",
+  "rev": "2026-11-23-aether-355",
   "gear": {
     "doll": [
       [
@@ -4321,11 +4321,11 @@
       "value": "98%"
     },
     {
-      "pct": 85,
-      "note": "Three Squall casts in training (Gary, jump test, Rufus spar), morning day 93.",
+      "pct": 80,
+      "note": "Four Squall casts in training (Gary, jump test, two on Rufus), morning day 93.",
       "tone": "mana",
       "label": "MANA",
-      "value": "85%"
+      "value": "80%"
     },
     {
       "pct": 100,
@@ -4404,7 +4404,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 93 in this world, training field",
+    "asOf": "Late morning, day 93 in this world, training field",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4432,7 +4432,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "On the empty training field with Rufus, Gary and Farrah, morning day 93.",
+  "location": "On the training field with Rufus, Gary and Farrah, late morning day 93, about to break for lunch.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4680,7 +4680,7 @@
       "name": "Arc Step",
       "rank": "Iron 0",
       "ranks": {
-        "Bronze": "Can carry one willing ally in physical contact. (Magic Society record, nearest match.)"
+        "Bronze": "Can carry one willing ally in physical contact. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
       "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Cost: Low mana (5%). Cooldown: 5 seconds. Cannot carry passengers.",
       "essence": "Lightning",
@@ -4691,7 +4691,7 @@
       "name": "Star Mark",
       "rank": "Iron 0",
       "ranks": {
-        "Bronze": "Two marks at once. (Magic Society record, nearest match.)"
+        "Bronze": "Two marks at once. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
       "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 3,300 feet (0.6 miles) at Iron 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown. DM ruling day 88: works on any visible target, objects included. First object mark: an iron fork at lunch in Sailor's Watch, afternoon day 88.",
       "essence": "Star",
@@ -4702,7 +4702,7 @@
       "name": "Windward Veil",
       "rank": "Iron 0",
       "ranks": {
-        "Bronze": "Deflected projectiles can be turned back along their path, weakened. (Magic Society record, nearest match.)"
+        "Bronze": "Deflected projectiles can be turned back along their path, weakened. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
       "detail": "A shell of swirling wind wraps around you, deflecting projectiles and blunting incoming blows. Stronger while you are moving. Cost: Low mana (5%) to raise, then 1% mana per minute while active.",
       "essence": "Wind",
@@ -4712,6 +4712,9 @@
       "tag": "Comet · Special · Attack",
       "name": "Comet Strike",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "The movement before your strike leaves a burning comet trail on the ground for a few seconds; enemies who cross it catch the burn. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
+      },
       "detail": "Your weapon or fist ignites with a white-gold comet trail. The strike hits harder the more you moved just before it and leaves a burning wound that deals damage over time. Cost: Moderate mana (10%) + 5% stamina per strike. Cooldown 10 seconds.",
       "essence": "Comet",
       "progress": 13
@@ -4721,7 +4724,7 @@
       "name": "Moonwell",
       "rank": "Iron 0",
       "ranks": {
-        "Bronze": "The pool can be conjured anywhere in line of sight, not just at your feet. (Magic Society record, nearest match.)"
+        "Bronze": "The pool can be conjured anywhere in line of sight, not just at your feet. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
       "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run, again early lap 19 (consolidated in meditation day 80 night: 0 to 4). Used late morning day 87 at the training field to clear the skill-book headache; meditation early evening day 87: 4 to 5. Used mid-morning day 88 on the training-field bench during a water break to ease drill-sore arms (Gary in the pool too). Used again at lunch in Sailor's Watch, afternoon day 88, before the afternoon session; cast again late afternoon after the session (3 uses on day 88).",
       "essence": "Star",
@@ -4731,10 +4734,10 @@
       "name": "Sky Stair",
       "rank": "Iron 0",
       "ranks": {
-        "Bronze": "Shared footing: allies can use your air steps too, so you can lay a path for the team. (Chosen by Nathan, day 93.)",
-        "Silver": "Continuous air-walking (flight). (Magic Society record, nearest match.)"
+        "Bronze": "Shared footing: allies can use your air steps too, so you can lay a path for the team. (Magic Society record, nearest match; Nathan's preferred reading, day 93. Not guaranteed.)",
+        "Silver": "Continuous air-walking (flight). (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost: Low mana (3%). Cooldown: 5 seconds. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. Bronze: Shared footing (allies can use your air steps too). Silver: continuous air-walking (flight). Each rank adds its effect; earlier effects stay.",
+      "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost: Low mana (3%). Cooldown: 5 seconds. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. Rank records (Magic Society nearest match, not guaranteed): Bronze shared footing, Silver continuous air-walking. Each rank adds its effect; earlier effects stay. The real effect is revealed at rank-up.",
       "essence": "Wind",
       "progress": 6
     },
@@ -4742,14 +4745,20 @@
       "tag": "Wind · Special · Attack",
       "name": "Squall",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "Anything shoved into a wall, tree or other solid object takes impact damage and is briefly dazed. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
+      },
       "detail": "Release a sudden blast of storm wind in a cone in front of you, out to about 15 feet. Anything caught is shoved back and thrown off balance, and lighter targets are knocked off their feet. Cost: Low mana (5%). Cooldown: 15 seconds. From the Awakening Stone of the Storm found beside the Cistern 3 upwelling; absorbed near midnight day 92 in Rufus's suite. DM-made.",
       "essence": "Wind",
-      "progress": 0
+      "progress": 2
     },
     {
       "tag": "Comet · Aura · Special",
       "name": "Harbinger",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "Allies in your aura recover stamina faster while they're moving. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
+      },
       "detail": "Your presence carries the weight of a comet in the sky: a sign that something is coming. Passive aura, reaching about 30 feet out from Nate in every direction at iron rank (about 60 feet across). Allies within it gain a minor bonus to movement speed, and their movement counts toward Momentum-style effects such as Comet Strike. Enemies within it have reduced resistance to afflictions, and burning wounds (such as Comet Strike's) last longer on them. Also grants aura control: you can suppress or extend your aura and press it on others, like any aura power. Cost: none (the aura is always on and can be suppressed at will). From the Awakening Stone of Omens.",
       "essence": "Comet",
       "progress": 0
@@ -4759,7 +4768,7 @@
       "name": "Starward Gaze",
       "rank": "Iron 0",
       "ranks": {
-        "Bronze": "Sense magic: enchantments and active magic show in whatever you magnify. (Magic Society record, nearest match.)"
+        "Bronze": "Sense magic: enchantments and active magic show in whatever you magnify. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
       "detail": "See fine detail at great distances as clearly as if it were close. Needs line of sight: it magnifies what you can already see and does not see through walls (tested day 79). Cost: none. Cooldown: none. From the Awakening Stone of Eyes, absorbed day 79 evening on the couch in Rufus's suite. DM-made, modelled on Midnight Eyes and Sight Beyond Sight.",
       "essence": "Star",
@@ -4770,7 +4779,7 @@
       "name": "Thunderhead",
       "rank": "Iron 0",
       "ranks": {
-        "Bronze": "Lightning arcs between enemies caught in the burst and jumps a short way to nearby enemies outside it. (Magic Society record, nearest match.)"
+        "Bronze": "Lightning arcs between enemies caught in the burst and jumps a short way to nearby enemies outside it. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
       "detail": "A burst of storm-lightning rips outward about 10 feet from Nate, shocking every enemy caught in it and briefly jolting them (staggered, slowed reactions for a moment). Cost: 15% mana. Cooldown: 30 seconds. From the Awakening Stone of the Storm. Absorbed day 79 evening in Rufus's suite. DM-made.",
       "essence": "Lightning",
@@ -4781,7 +4790,7 @@
       "name": "Second Wind",
       "rank": "Iron 0",
       "ranks": {
-        "Bronze": "Also restores 10% mana when it triggers. (Magic Society record, nearest match.)"
+        "Bronze": "Also restores 10% mana when it triggers. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
       "detail": "When Nate's stamina falls below 25%, the wind fills him and he instantly regains 25% stamina. Cost: none. Cooldown: 10 minutes. From the Awakening Stone of Persistence. Absorbed day 79 evening in Rufus's suite. DM-made. If stamina is already under 25% when the cooldown ends, it fires immediately (DM ruling, day 80). First triggered day 80 afternoon mid lap 8 of Farrah's test run, again in laps 11, 16 and early 19 (consolidated in meditation day 80 night: 0 to 6).",
       "essence": "Wind",
@@ -4791,6 +4800,9 @@
       "tag": "Comet · Special · Boon, Passive",
       "name": "Quarry's Wake",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "Allies moving toward your Star Mark target get the speed boost too. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
+      },
       "detail": "Nate's movement speed increases while he moves toward a target he has marked with Star Mark. Cost: none. Cooldown: none. From the Awakening Stone of the Hunt. Absorbed day 79 evening in Rufus's suite. DM-made.",
       "essence": "Comet",
       "progress": 8
@@ -4798,8 +4810,8 @@
   ],
   "worldTime": {
     "day": 93,
-    "time": "Morning",
-    "detail": "Morning, on the training field after second breakfast.",
+    "time": "Late morning",
+    "detail": "Late morning, on the training field, sun climbing toward midday; lunch next, then the contract.",
     "dayLabel": "93 days in this world"
   },
   "abilityMeta": {
