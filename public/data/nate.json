@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-22-aether-271",
+  "rev": "2026-11-22-aether-281",
   "gear": {
     "doll": [
       [
@@ -3622,13 +3622,13 @@
       },
       {
         "qty": "",
-        "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
+        "name": "Leather travel pack",
+        "note": "Sturdy, worn leather pack with double-stitched seams and metal buckles, from a Vane manor wardrobe. Empty."
       },
       {
         "qty": "",
-        "name": "Leather travel pack",
-        "note": "Sturdy, worn leather pack with double-stitched seams and metal buckles, from a Vane manor wardrobe. Empty."
+        "name": "Invictus",
+        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
       }
     ],
     "outfits": [
@@ -4243,25 +4243,25 @@
   },
   "vitals": [
     {
-      "pct": 100,
-      "note": "Full after sleep, dawn day 89.",
+      "pct": 94,
+      "note": "Two self-hits with Invictus (charged hip strike, shoulder clip), early morning day 89.",
       "tone": "health",
       "label": "HEALTH",
-      "value": "100%"
+      "value": "94%"
     },
     {
-      "pct": 100,
-      "note": "Full after sleep, dawn day 89.",
+      "pct": 90,
+      "note": "Star Marks today: two in the suite, Invictus, the field wall (DM figure about 90%), morning day 89.",
       "tone": "mana",
       "label": "MANA",
-      "value": "100%"
+      "value": "90%"
     },
     {
-      "pct": 100,
-      "note": "Full after sleep, dawn day 89.",
+      "pct": 70,
+      "note": "Grinding Wheel drill with Invictus, ten runs with Rufus, early morning day 89.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "100%"
+      "value": "70%"
     }
   ],
   "profile": [
@@ -4333,7 +4333,7 @@
     }
   ],
   "identity": {
-    "asOf": "Dawn, day 89 in this world, in Rufus's suite at Sailor's Watch",
+    "asOf": "Mid-morning, day 89 in this world, Magic Society records counter",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4361,12 +4361,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Rufus's suite at Sailor's Watch, awake first on the couch at dawn; Rufus, Farrah and Gary still asleep. Day 89 plan: training field at first light with Invictus (Grinding Wheel with the real weapon), plus Nate's surprise Star Mark move. Wearing the First look outfit; Gilbert's armour set in the wardrobe. Invictus and the empty leather travel pack in Pocket Space. No mark active. Harbinger restrained, Veil off. Dawn, day 89.",
+  "location": "Magic Society building, across town from the training field, mid-morning, with Rufus, Farrah and Gary. Came to check the Society's records for what Nate's Lightning, Wind and Star abilities become at bronze (Comet confluence abilities have no record). Plan: back to the field to train afterwards, including wall-running toward a Star Mark (got about 10 feet up the 20-foot east wall on the first try). Earlier at the field: Grinding Wheel with Invictus (2 self-hits in 10), and the mark-throw-chase idea with Invictus. Invictus and the empty leather travel pack in Pocket Space. Star Mark last placed on top of the field's east wall. Wearing the First look outfit; Gilbert's armour set in the wardrobe. Harbinger restrained, Veil off. Mid-morning, day 89.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Grinding the Stone",
-      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started. Morning day 88: Grinding Wheel full shape learned with the practice hammer (low, high, low circles, rising strike, two-hand catch, back into circles); drilled a few hundred reps, then tracked Rufus as he circled (feet leading) for nearly two hours; after Moonwell and a water break, about an hour and a half with Rufus stepping in and reaching: strikes find him, turns carry Nate around his reach, form held until it slipped at noon. Wheel nearly there. Afternoon session: held aura restraint under Farrah's aura pressure, then learned to save the hammer when Rufus deflects, jams, or shoves it back (turn with it so the circle swallows the mistake). Late afternoon day 88: Empty Hand found unarmed after Gary tripped him mid-run (rolled out of it, then cartwheel, round-off, back flip); repeated slowly from a leg swing into spin and cartwheel, and Rufus named it Empty Hand. First success, not mastered; remaining: show Hollis at her forge, plus the Invictus spar bonus. Night day 88: Grinding Wheel and Empty Hand consolidated in meditation. Day 89 plan: Grinding Wheel with Invictus at the field.",
+      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started. Morning day 88: Grinding Wheel full shape learned with the practice hammer (low, high, low circles, rising strike, two-hand catch, back into circles); drilled a few hundred reps, then tracked Rufus as he circled (feet leading) for nearly two hours; after Moonwell and a water break, about an hour and a half with Rufus stepping in and reaching: strikes find him, turns carry Nate around his reach, form held until it slipped at noon. Wheel nearly there. Afternoon session: held aura restraint under Farrah's aura pressure, then learned to save the hammer when Rufus deflects, jams, or shoves it back (turn with it so the circle swallows the mistake). Late afternoon day 88: Empty Hand found unarmed after Gary tripped him mid-run (rolled out of it, then cartwheel, round-off, back flip); repeated slowly from a leg swing into spin and cartwheel, and Rufus named it Empty Hand. First success, not mastered; remaining: show Hollis at her forge, plus the Invictus spar bonus. Night day 88: Grinding Wheel and Empty Hand consolidated in meditation. Dawn to early morning day 89: Grinding Wheel with Invictus at the Society field. Clean solo runs (the heavier head pulls the circle a hand's width wider). Ten runs with Rufus deflecting (palm, forearm, stepping into the line): two self-hits (hip with Invictus's charge, shoulder clip), eight held by going with the late swing. Rufus: keep telling yourself whatever you told yourself. Not yet a spar, so the bonus stays open.",
       "status": "ACTIVE"
     },
     {
@@ -4596,6 +4596,9 @@
       "tag": "Lightning · Special · Movement",
       "name": "Arc Step",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "Can carry one willing ally in physical contact. (Magic Society record, nearest match.)"
+      },
       "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Cost: Low mana (5%). Cooldown: 5 seconds. Cannot carry passengers.",
       "essence": "Lightning",
       "progress": 18
@@ -4604,6 +4607,9 @@
       "tag": "Star · Special · Mark",
       "name": "Star Mark",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "Two marks at once. (Magic Society record, nearest match.)"
+      },
       "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 3,300 feet (0.6 miles) at Iron 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown. DM ruling day 88: works on any visible target, objects included. First object mark: an iron fork at lunch in Sailor's Watch, afternoon day 88.",
       "essence": "Star",
       "progress": 5
@@ -4612,6 +4618,9 @@
       "tag": "Wind · Special · Defense",
       "name": "Windward Veil",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "Deflected projectiles can be turned back along their path, weakened. (Magic Society record, nearest match.)"
+      },
       "detail": "A shell of swirling wind wraps around you, deflecting projectiles and blunting incoming blows. Stronger while you are moving. Cost: Low mana (5%) to raise, then 1% mana per minute while active.",
       "essence": "Wind",
       "progress": 11
@@ -4628,6 +4637,9 @@
       "tag": "Star · Spell · Healing, Support",
       "name": "Moonwell",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "The pool can be conjured anywhere in line of sight, not just at your feet. (Magic Society record, nearest match.)"
+      },
       "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run, again early lap 19 (consolidated in meditation day 80 night: 0 to 4). Used late morning day 87 at the training field to clear the skill-book headache; meditation early evening day 87: 4 to 5. Used mid-morning day 88 on the training-field bench during a water break to ease drill-sore arms (Gary in the pool too). Used again at lunch in Sailor's Watch, afternoon day 88, before the afternoon session; cast again late afternoon after the session (3 uses on day 88).",
       "essence": "Star",
       "progress": 7
@@ -4635,6 +4647,10 @@
     {
       "name": "Sky Stair",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "More steps. (Magic Society record, nearest match.)",
+        "Silver": "Continuous air-walking (flight). (Magic Society record, nearest match.)"
+      },
       "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost: Low mana (3%). Cooldown: 5 seconds. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. On the recorded wind flight-ability list: more steps at bronze, continuous air-walking (flight) at silver.",
       "essence": "Wind",
       "progress": 5
@@ -4651,6 +4667,9 @@
       "tag": "Star · Special · Perception",
       "name": "Starward Gaze",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "Sense magic: enchantments and active magic show in whatever you magnify. (Magic Society record, nearest match.)"
+      },
       "detail": "See fine detail at great distances as clearly as if it were close. Needs line of sight: it magnifies what you can already see and does not see through walls (tested day 79). Cost: none. Cooldown: none. From the Awakening Stone of Eyes, absorbed day 79 evening on the couch in Rufus's suite. DM-made, modelled on Midnight Eyes and Sight Beyond Sight.",
       "essence": "Star",
       "progress": 1
@@ -4659,6 +4678,9 @@
       "tag": "Lightning · Spell · Lightning, Area",
       "name": "Thunderhead",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "Lightning arcs between enemies caught in the burst and jumps a short way to nearby enemies outside it. (Magic Society record, nearest match.)"
+      },
       "detail": "A burst of storm-lightning rips outward about 10 feet from Nate, shocking every enemy caught in it and briefly jolting them (staggered, slowed reactions for a moment). Cost: 15% mana. Cooldown: 30 seconds. From the Awakening Stone of the Storm. Absorbed day 79 evening in Rufus's suite. DM-made.",
       "essence": "Lightning",
       "progress": 5
@@ -4667,6 +4689,9 @@
       "tag": "Wind · Special · Recovery",
       "name": "Second Wind",
       "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "Also restores 10% mana when it triggers. (Magic Society record, nearest match.)"
+      },
       "detail": "When Nate's stamina falls below 25%, the wind fills him and he instantly regains 25% stamina. Cost: none. Cooldown: 10 minutes. From the Awakening Stone of Persistence. Absorbed day 79 evening in Rufus's suite. DM-made. If stamina is already under 25% when the cooldown ends, it fires immediately (DM ruling, day 80). First triggered day 80 afternoon mid lap 8 of Farrah's test run, again in laps 11, 16 and early 19 (consolidated in meditation day 80 night: 0 to 6).",
       "essence": "Wind",
       "progress": 6
@@ -4682,8 +4707,8 @@
   ],
   "worldTime": {
     "day": 89,
-    "time": "Dawn",
-    "detail": "Rufus's suite at Sailor's Watch, awake first",
+    "time": "Mid-morning",
+    "detail": "At the Magic Society to look up ability records",
     "dayLabel": "89 days in this world"
   },
   "abilityMeta": {
