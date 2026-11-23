@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-389",
+  "rev": "2026-11-23-aether-393",
   "gear": {
     "doll": [
       [
@@ -3657,6 +3657,18 @@
         "qty": 1,
         "name": "Basket of fried-dough twists",
         "note": "About two dozen less two (about 22) sugar-and-red-spice twists in a woven reed basket, stored hot (held in stasis). Nate's half of the stall's whole stock, bought for 5 iron at the dock-road corner, dawn day 94; Gary ate the other basket. Gave Gary one twist and Farrah one in the Wet Barrel cellar, morning day 94.",
+        "slot": ""
+      },
+      {
+        "qty": 2,
+        "name": "Earth Quintessence",
+        "note": "1 from Putting a Lid on It, 1 from the Cellar Dwellers bonus, mid-morning day 94.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Lightning Quintessence",
+        "note": "From Putting a Lid on It, mid-morning day 94.",
         "slot": ""
       }
     ],
@@ -4182,7 +4194,7 @@
   },
   "next": "Now: meet Arella's crew and Rufus's team at the Wet Barrel and guide them to the upwelling (Putting a Lid on It; also finishes the Cellar Dwellers bonus). Day 95: rest day (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1244 iron · 870 lesser",
+  "coins": "1 silver · 1454 iron · 870 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4267,11 +4279,11 @@
       "value": "100%"
     },
     {
-      "pct": 97,
-      "note": "Sky Stair across the drain channel (3%), mid-morning day 94.",
+      "pct": 92,
+      "note": "Sky Stair (3%) and Squall (5%) at Cistern 3, mid-morning day 94.",
       "tone": "mana",
       "label": "MANA",
-      "value": "97%"
+      "value": "92%"
     },
     {
       "pct": 100,
@@ -4378,12 +4390,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "On the platform at the torn grate above the domed chamber (Cistern 3), mid-morning day 94, scouting alone while Hesk raises a footing across the water.",
+  "location": "On the grate platform above Cistern 3, mid-morning day 94, the upwelling freshly capped and the crew still down in the chamber.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Putting a Lid on It",
-      "detail": "Landed and accepted morning day 93 in Director Arella's office (quiet Adventure Society contract, Rufus's team escorting). Objectives: guide the Society's capping crew to the upwelling chamber under the Old City 1/1 (crew reached the Cistern 3 grate, mid-morning day 94); see the upwelling properly capped 0/1. Bonus: bring the whole crew back up with no serious injuries 0/1. Optional: find out where the freshly bricked-up archway leads 0/1. Rewards: 150 iron spirit coins, 1 Earth Quintessence, 1 Lightning Quintessence. Bonus: 1 common awakening stone. Optional: 50 iron spirit coins.",
+      "detail": "Landed and accepted morning day 93 in Director Arella's office (quiet Adventure Society contract, Rufus's team escorting). Objectives: guide the Society's capping crew to the upwelling chamber under the Old City 1/1 (crew reached the Cistern 3 grate, mid-morning day 94); see the upwelling properly capped 1/1 (Hesk's stone lid, chained and bolted, mid-morning day 94). Bonus: bring the whole crew back up with no serious injuries 0/1. Optional: find out where the freshly bricked-up archway leads 0/1. Rewards: 150 iron spirit coins, 1 Earth Quintessence, 1 Lightning Quintessence. Bonus: 1 common awakening stone. Optional: 50 iron spirit coins. MAIN OBJECTIVES COMPLETE mid-morning day 94: 150 iron + 50 iron unlisted, 1 Earth Quintessence, 1 Lightning Quintessence auto-deposited. Bonus (crew back up unhurt) and optional (bricked archway) still OPEN.",
       "status": "ACTIVE"
     },
     {
@@ -4506,9 +4518,9 @@
     },
     {
       "name": "Cellar Dwellers",
-      "detail": "Wet Barrel tavern, Old City docks. Earlier: one ratling escaped down a burrow, now bricked up; Mags expected Nate back once he was a real adventurer. Updated night day 92: Nate came back at iron rank. The old brickwork held, but for a couple of weeks Mags has heard scratching behind the far cellar wall, likely more than one. Objectives: find what is behind the far wall; clear the cellar. Bonus: find where they are getting in and close it for good. Rewards: 40 iron, 1 iron-rank healing potion; bonus 1 Earth Quintessence. Progress: behind the far wall is a gnawed tunnel hole about 2 feet across, hidden behind crates in the corner; 6 ratlings killed (1 by Invictus, 3 by Thunderhead, 2 finished with Invictus); cellar clear for now. Main objectives COMPLETE night day 92: 40 iron + 8 iron unlisted spirit coins and 1 iron-rank healing potion auto-deposited. Bonus still OPEN: the hole leads into a draughty tunnel; find where they are getting in and close it for good (1 Earth Quintessence). Night day 92: followed the tunnel into an Old City drain; the ratling trail led to a bent grate and a passage beyond; killed a huge ratling there that tore the grate open. Entry still not closed. Source found night day 92: a natural lightning-aligned magic upwelling in a domed chamber below the drains, once sealed with mortar and deliberately chiselled open again (Waterworks crate and circle-and-wave mark nearby). Bonus progress: find where they are getting in 1/1; close it for good 0/1.",
+      "detail": "Wet Barrel tavern, Old City docks. Earlier: one ratling escaped down a burrow, now bricked up; Mags expected Nate back once he was a real adventurer. Updated night day 92: Nate came back at iron rank. The old brickwork held, but for a couple of weeks Mags has heard scratching behind the far cellar wall, likely more than one. Objectives: find what is behind the far wall; clear the cellar. Bonus: find where they are getting in and close it for good. Rewards: 40 iron, 1 iron-rank healing potion; bonus 1 Earth Quintessence. Progress: behind the far wall is a gnawed tunnel hole about 2 feet across, hidden behind crates in the corner; 6 ratlings killed (1 by Invictus, 3 by Thunderhead, 2 finished with Invictus); cellar clear for now. Main objectives COMPLETE night day 92: 40 iron + 8 iron unlisted spirit coins and 1 iron-rank healing potion auto-deposited. Bonus still OPEN: the hole leads into a draughty tunnel; find where they are getting in and close it for good (1 Earth Quintessence). Night day 92: followed the tunnel into an Old City drain; the ratling trail led to a bent grate and a passage beyond; killed a huge ratling there that tore the grate open. Entry still not closed. Source found night day 92: a natural lightning-aligned magic upwelling in a domed chamber below the drains, once sealed with mortar and deliberately chiselled open again (Waterworks crate and circle-and-wave mark nearby). Bonus progress: find where they are getting in 1/1; close it for good 1/1 (the upwelling capped by the Society crew, mid-morning day 94). BONUS COMPLETE: 1 Earth Quintessence + 10 iron unlisted auto-deposited.",
       "filler": false,
-      "status": "ACTIVE"
+      "status": "COMPLETE"
     },
     {
       "name": "Floorboard Feeders",
@@ -4696,7 +4708,7 @@
       },
       "detail": "Release a sudden blast of storm wind in a cone in front of you, out to about 15 feet. Anything caught is shoved back and thrown off balance, and lighter targets are knocked off their feet. Cost: Low mana (5%). Cooldown: 15 seconds. From the Awakening Stone of the Storm found beside the Cistern 3 upwelling; absorbed near midnight day 92 in Rufus's suite. DM-made. Tested afternoon day 93: hits everything in the cone; knocks thrown objects off course at close range (heavy ones are only slowed); works straight out of Arc Step and from a Sky Stair step.",
       "essence": "Wind",
-      "progress": 5
+      "progress": 6
     },
     {
       "tag": "Comet · Aura · Special",
