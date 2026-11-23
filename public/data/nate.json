@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-356",
+  "rev": "2026-11-23-aether-358",
   "gear": {
     "doll": [
       [
@@ -3566,13 +3566,6 @@
         "note": "From the cistern oilcloth packet. Same mark as the Waterworks bribers. Rufus: a membership token or a key."
       },
       {
-        "qty": "",
-        "name": "Fighting Knife",
-        "note": "Single-edged, sheathed. For close work and skinning.",
-        "slot": "Belt / sheath",
-        "empty": ""
-      },
-      {
         "qty": 1,
         "name": "Heel of bread (from Mae)",
         "note": "Wrapped in cloth",
@@ -3603,12 +3596,6 @@
       },
       {
         "qty": 1,
-        "name": "Lightning Quintessence",
-        "note": "Hunter's Road reward.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
         "name": "Callow Farm Food Bundle",
         "note": "From Wenna Callow: crusty bread, cold mutton, hard yellow cheese. Still warm.",
         "slot": ""
@@ -3617,54 +3604,6 @@
         "qty": "",
         "name": "Light stone lantern",
         "note": "Brass; twist the top to brighten or dim. Gift from Rufus."
-      },
-      {
-        "qty": 3,
-        "name": "Wind Quintessence",
-        "note": "Beyond the Wall and Foundation First rewards.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Water Quintessence",
-        "note": "Beyond the Wall bonus reward.",
-        "slot": ""
-      },
-      {
-        "qty": 2,
-        "name": "Earth Quintessence",
-        "note": "Foundation First reward.",
-        "slot": ""
-      },
-      {
-        "qty": "",
-        "name": "Leather travel pack",
-        "note": "Sturdy, worn leather pack with double-stitched seams and metal buckles, from a Vane manor wardrobe. Empty.",
-        "slot": ""
-      },
-      {
-        "qty": 9,
-        "name": "Monster core (normal rank)",
-        "note": "Six from the Wet Barrel cellar ratlings, three from ratlings that manifested at the upwelling, night day 92.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Ratling pelt",
-        "note": "Looted from the Wet Barrel cellar ratlings, night day 92.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Monster core (iron rank)",
-        "note": "From the huge ratling past the sewer grate under the Wet Barrel, night day 92.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Large ratling pelt",
-        "note": "Thick, wiry grey fur with a scorched patch over the chest. From the huge iron-rank ratling, night day 92.",
-        "slot": ""
       },
       {
         "qty": 1,
@@ -4236,7 +4175,7 @@
   },
   "next": "Afternoon day 93: collect the drain-work contract at the jobs hall desk. Dawn day 94: meet Arella's crew and Rufus's team at the Wet Barrel and guide them to the upwelling (Putting a Lid on It; also finishes the Cellar Dwellers bonus). Day 95: rest day (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1220 iron · 795 lesser",
+  "coins": "1 silver · 1249 iron · 870 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4404,7 +4343,7 @@
     }
   ],
   "identity": {
-    "asOf": "Late morning, day 93 in this world, on the way to the trade hall",
+    "asOf": "Late morning, day 93 in this world, trade hall",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4432,7 +4371,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Walking the dirt track from the training field into the city with Rufus, Gary and Farrah, heading for the trade hall stalls, late morning day 93.",
+  "location": "Leaving the trade hall ground floor with Gary, Rufus and Farrah, heading to lunch, late morning day 93.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4811,7 +4750,7 @@
   "worldTime": {
     "day": 93,
     "time": "Late morning",
-    "detail": "Late morning, walking into the city toward the trade hall; selling, then lunch, then the contract.",
+    "detail": "Late morning, leaving the trade hall for lunch; the drain-work contract after.",
     "dayLabel": "93 days in this world"
   },
   "abilityMeta": {
