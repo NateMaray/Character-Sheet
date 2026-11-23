@@ -3474,7 +3474,7 @@
       }
     ]
   },
-  "rev": "2026-11-22-aether-281",
+  "rev": "2026-11-22-aether-286",
   "gear": {
     "doll": [
       [
@@ -4243,25 +4243,25 @@
   },
   "vitals": [
     {
-      "pct": 94,
-      "note": "Two self-hits with Invictus (charged hip strike, shoulder clip), early morning day 89.",
+      "pct": 95,
+      "note": "Minor bruises from three days of turn drills and Invictus Wheel reps, days 89-92.",
       "tone": "health",
       "label": "HEALTH",
-      "value": "94%"
-    },
-    {
-      "pct": 90,
-      "note": "Star Marks today: two in the suite, Invictus, the field wall (DM figure about 90%), morning day 89.",
-      "tone": "mana",
-      "label": "MANA",
-      "value": "90%"
+      "value": "95%"
     },
     {
       "pct": 70,
-      "note": "Grinding Wheel drill with Invictus, ten runs with Rufus, early morning day 89.",
+      "note": "Star Mark switching for mark-chain turn drills (2% per mark), late afternoon day 92; recovered each night in meditation.",
+      "tone": "mana",
+      "label": "MANA",
+      "value": "70%"
+    },
+    {
+      "pct": 60,
+      "note": "Daily mark-chain sprint and direction-change drills, days 89-92.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "70%"
+      "value": "60%"
     }
   ],
   "profile": [
@@ -4333,7 +4333,7 @@
     }
   ],
   "identity": {
-    "asOf": "Mid-morning, day 89 in this world, Magic Society records counter",
+    "asOf": "Late afternoon, day 92 in this world, Society training field after mastering the mark-chain turns",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4361,12 +4361,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Magic Society building, across town from the training field, mid-morning, with Rufus, Farrah and Gary. Came to check the Society's records for what Nate's Lightning, Wind and Star abilities become at bronze (Comet confluence abilities have no record). Plan: back to the field to train afterwards, including wall-running toward a Star Mark (got about 10 feet up the 20-foot east wall on the first try). Earlier at the field: Grinding Wheel with Invictus (2 self-hits in 10), and the mark-throw-chase idea with Invictus. Invictus and the empty leather travel pack in Pocket Space. Star Mark last placed on top of the field's east wall. Wearing the First look outfit; Gilbert's armour set in the wardrobe. Harbinger restrained, Veil off. Mid-morning, day 89.",
+  "location": "At the Society campus training field by the east wall, late afternoon, with Rufus, Farrah and Gary. Days 89-92: drilled mark-chain direction changes (Star Mark switching with Quarry's Wake) every day with Gary calling marks; Rufus coached mornings, then left on his own business. Some Invictus Wheel reps. Meditated each night at Sailor's Watch, meals there. Day 92: mastered the technique with a clean four-corner chain lap with no skids, and a reactive chain to Gary's calls. Earlier, day 89: Magic Society records visit (bronze effects for 8 abilities on the ranks ladder; none for Comet Strike, Harbinger or Quarry's Wake). East wall (20 feet) attempts: about 10 feet, then about 15 feet with hands, then Arc Step to the top. Rufus: stealth comes from climbing with hands and feet. Invictus and the empty leather travel pack in Pocket Space. Wearing the First look outfit; Gilbert's armour set in the wardrobe. Harbinger restrained, Veil off. Late afternoon, day 92.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Grinding the Stone",
-      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started. Morning day 88: Grinding Wheel full shape learned with the practice hammer (low, high, low circles, rising strike, two-hand catch, back into circles); drilled a few hundred reps, then tracked Rufus as he circled (feet leading) for nearly two hours; after Moonwell and a water break, about an hour and a half with Rufus stepping in and reaching: strikes find him, turns carry Nate around his reach, form held until it slipped at noon. Wheel nearly there. Afternoon session: held aura restraint under Farrah's aura pressure, then learned to save the hammer when Rufus deflects, jams, or shoves it back (turn with it so the circle swallows the mistake). Late afternoon day 88: Empty Hand found unarmed after Gary tripped him mid-run (rolled out of it, then cartwheel, round-off, back flip); repeated slowly from a leg swing into spin and cartwheel, and Rufus named it Empty Hand. First success, not mastered; remaining: show Hollis at her forge, plus the Invictus spar bonus. Night day 88: Grinding Wheel and Empty Hand consolidated in meditation. Dawn to early morning day 89: Grinding Wheel with Invictus at the Society field. Clean solo runs (the heavier head pulls the circle a hand's width wider). Ten runs with Rufus deflecting (palm, forearm, stepping into the line): two self-hits (hip with Invictus's charge, shoulder clip), eight held by going with the late swing. Rufus: keep telling yourself whatever you told yourself. Not yet a spar, so the bonus stays open.",
+      "detail": "Landed late morning day 87. Objectives: drill all three Turning Millstone forms (Millstone Turn, Grinding Wheel, Empty Hand) with Rufus; return to Hollis's forge and show her the style. Bonus: land a full Grinding Wheel chain with Invictus in a spar with Rufus. Rewards: 80 iron, 1 Earth Quintessence; bonus 1 Wind Quintessence. Progress (early evening day 87): Millstone Turn consolidated in meditation, holds at medium speed, still needs work at full speed; Grinding Wheel and Empty Hand not started. Morning day 88: Grinding Wheel full shape learned with the practice hammer (low, high, low circles, rising strike, two-hand catch, back into circles); drilled a few hundred reps, then tracked Rufus as he circled (feet leading) for nearly two hours; after Moonwell and a water break, about an hour and a half with Rufus stepping in and reaching: strikes find him, turns carry Nate around his reach, form held until it slipped at noon. Wheel nearly there. Afternoon session: held aura restraint under Farrah's aura pressure, then learned to save the hammer when Rufus deflects, jams, or shoves it back (turn with it so the circle swallows the mistake). Late afternoon day 88: Empty Hand found unarmed after Gary tripped him mid-run (rolled out of it, then cartwheel, round-off, back flip); repeated slowly from a leg swing into spin and cartwheel, and Rufus named it Empty Hand. First success, not mastered; remaining: show Hollis at her forge, plus the Invictus spar bonus. Night day 88: Grinding Wheel and Empty Hand consolidated in meditation. Dawn to early morning day 89: Grinding Wheel with Invictus at the Society field. Clean solo runs (the heavier head pulls the circle a hand's width wider). Ten runs with Rufus deflecting (palm, forearm, stepping into the line): two self-hits (hip with Invictus's charge, shoulder clip), eight held by going with the late swing. Rufus: keep telling yourself whatever you told yourself. Not yet a spar, so the bonus stays open. Days 89-92: more Invictus Wheel reps alongside mark-chain drills; still no spar, bonus open.",
       "status": "ACTIVE"
     },
     {
@@ -4612,7 +4612,7 @@
       },
       "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 3,300 feet (0.6 miles) at Iron 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown. DM ruling day 88: works on any visible target, objects included. First object mark: an iron fork at lunch in Sailor's Watch, afternoon day 88.",
       "essence": "Star",
-      "progress": 5
+      "progress": 8
     },
     {
       "tag": "Wind · Special · Defense",
@@ -4702,14 +4702,14 @@
       "rank": "Iron 0",
       "detail": "Nate's movement speed increases while he moves toward a target he has marked with Star Mark. Cost: none. Cooldown: none. From the Awakening Stone of the Hunt. Absorbed day 79 evening in Rufus's suite. DM-made.",
       "essence": "Comet",
-      "progress": 3
+      "progress": 7
     }
   ],
   "worldTime": {
-    "day": 89,
-    "time": "Mid-morning",
-    "detail": "At the Magic Society to look up ability records",
-    "dayLabel": "89 days in this world"
+    "day": 92,
+    "time": "Late afternoon",
+    "detail": "Mastered the mark-chain turn technique",
+    "dayLabel": "92 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 3/5 · COMET 3/5 AWAKENED",
