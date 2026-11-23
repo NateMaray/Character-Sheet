@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-359",
+  "rev": "2026-11-23-aether-362",
   "gear": {
     "doll": [
       [
@@ -3650,6 +3650,12 @@
         "qty": 1,
         "name": "Lightning Essence",
         "note": "Unranked, uncommon. A 6-inch storm-blue cube pulled from the lightning upwelling crack under the Old City drains, night day 92. Nate already has 4/4 essences, so he can't absorb it. Options per Rufus: sell, trade, or keep for someone; mention it only to Director Arella.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Sealed contract envelope (Director Arella)",
+        "note": "Heavy cream paper, Society crest in grey wax, addressed N. Maray. Terms inside; to be opened privately. Collected day 93.",
         "slot": ""
       }
     ],
@@ -4173,7 +4179,7 @@
       }
     ]
   },
-  "next": "Afternoon day 93: collect the drain-work contract at the jobs hall desk. Dawn day 94: meet Arella's crew and Rufus's team at the Wet Barrel and guide them to the upwelling (Putting a Lid on It; also finishes the Cellar Dwellers bonus). Day 95: rest day (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. North road hedgehog contract still open.",
+  "next": "Read the sealed drain-work contract terms privately. Dawn day 94: meet Arella's crew and Rufus's team at the Wet Barrel and guide them to the upwelling (Putting a Lid on It; also finishes the Cellar Dwellers bonus). Day 95: rest day (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1249 iron · 870 lesser",
   "racial": [
@@ -4343,7 +4349,7 @@
     }
   ],
   "identity": {
-    "asOf": "Noon, day 93 in this world, noodle shop near the trade hall",
+    "asOf": "Afternoon, day 93 in this world, Adventure Society reading room",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4371,7 +4377,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "At the counter of a noodle shop three streets from the trade hall with Gary, Rufus and Farrah, about noon day 93.",
+  "location": "In an empty upstairs reading room at the Adventure Society with Rufus, Gary and Farrah, early afternoon day 93, about to open the sealed contract.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4382,7 +4388,7 @@
     {
       "kind": "CONTRACT",
       "name": "Drain work (Director Arella)",
-      "detail": "Quiet Adventure Society contract filed under a dull drain-work name: guide Arella's sealing crew to the Cistern 3 upwelling under the Wet Barrel, Rufus's team escorting. Collect the contract at the jobs hall desk afternoon day 93; meet at the Wet Barrel at dawn day 94. Pay to be set by the Society.",
+      "detail": "Quiet Adventure Society contract filed under a dull drain-work name: guide Arella's sealing crew to the Cistern 3 upwelling under the Wet Barrel, Rufus's team escorting. Contract collected and signed for at the jobs hall desk, early afternoon day 93 (sealed envelope from the Director's office, terms inside, unopened). Meet at the Wet Barrel at dawn day 94. Pay to be set by the Society.",
       "status": "ACTIVE"
     },
     {
@@ -4749,8 +4755,8 @@
   ],
   "worldTime": {
     "day": 93,
-    "time": "Noon",
-    "detail": "Noon, lunch at the noodle shop near the trade hall; the drain-work contract after.",
+    "time": "Afternoon",
+    "detail": "Early afternoon, upstairs reading room at the Adventure Society, reading the drain-work contract.",
     "dayLabel": "93 days in this world"
   },
   "abilityMeta": {
