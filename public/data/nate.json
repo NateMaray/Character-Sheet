@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-383",
+  "rev": "2026-11-23-aether-389",
   "gear": {
     "doll": [
       [
@@ -4267,11 +4267,11 @@
       "value": "100%"
     },
     {
-      "pct": 100,
-      "note": "Full after sleep, dawn day 94.",
+      "pct": 97,
+      "note": "Sky Stair across the drain channel (3%), mid-morning day 94.",
       "tone": "mana",
       "label": "MANA",
-      "value": "100%"
+      "value": "97%"
     },
     {
       "pct": 100,
@@ -4350,7 +4350,7 @@
     }
   ],
   "identity": {
-    "asOf": "Mid-morning, day 94 in this world, the old drain",
+    "asOf": "Mid-morning, day 94 in this world, the grate above Cistern 3",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4378,12 +4378,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "At the lip of the 8-foot drop over the old drain channel, mid-morning day 94, with fresh ratling tracks on the far ledge and a stronger green glow past the grate.",
+  "location": "On the platform at the torn grate above the domed chamber (Cistern 3), mid-morning day 94, scouting alone while Hesk raises a footing across the water.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Putting a Lid on It",
-      "detail": "Landed and accepted morning day 93 in Director Arella's office (quiet Adventure Society contract, Rufus's team escorting). Objectives: guide the Society's capping crew to the upwelling chamber under the Old City 0/1; see the upwelling properly capped 0/1. Bonus: bring the whole crew back up with no serious injuries 0/1. Optional: find out where the freshly bricked-up archway leads 0/1. Rewards: 150 iron spirit coins, 1 Earth Quintessence, 1 Lightning Quintessence. Bonus: 1 common awakening stone. Optional: 50 iron spirit coins.",
+      "detail": "Landed and accepted morning day 93 in Director Arella's office (quiet Adventure Society contract, Rufus's team escorting). Objectives: guide the Society's capping crew to the upwelling chamber under the Old City 1/1 (crew reached the Cistern 3 grate, mid-morning day 94); see the upwelling properly capped 0/1. Bonus: bring the whole crew back up with no serious injuries 0/1. Optional: find out where the freshly bricked-up archway leads 0/1. Rewards: 150 iron spirit coins, 1 Earth Quintessence, 1 Lightning Quintessence. Bonus: 1 common awakening stone. Optional: 50 iron spirit coins.",
       "status": "ACTIVE"
     },
     {
@@ -4685,7 +4685,7 @@
       },
       "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost: Low mana (3%). Cooldown: 5 seconds. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. Rank records (Magic Society nearest match, not guaranteed): Bronze shared footing, Silver continuous air-walking. Each rank adds its effect; earlier effects stay. The real effect is revealed at rank-up.",
       "essence": "Wind",
-      "progress": 7
+      "progress": 8
     },
     {
       "tag": "Wind · Special · Attack",
@@ -4757,7 +4757,7 @@
   "worldTime": {
     "day": 94,
     "time": "Mid-morning",
-    "detail": "Mid-morning, the drop into the old drain beyond the Wet Barrel cellar; fresh claw tracks and skittering ahead.",
+    "detail": "Mid-morning, the grate platform above Cistern 3; Nate scouting ahead, crew and team at the passage lip.",
     "dayLabel": "94 days in this world"
   },
   "abilityMeta": {
