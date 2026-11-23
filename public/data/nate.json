@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-362",
+  "rev": "2026-11-23-aether-383",
   "gear": {
     "doll": [
       [
@@ -3519,11 +3519,6 @@
         "qty": "x2",
         "name": "Waterskins",
         "note": "Full"
-      },
-      {
-        "qty": "",
-        "name": "Drowned map",
-        "note": "Hand-drawn map of the drains under the Old City. A tunnel past the cistern is marked Vault. Signed Tomas Reeve, Greenstone Waterworks."
       },
       {
         "qty": "",
@@ -3654,8 +3649,14 @@
       },
       {
         "qty": 1,
-        "name": "Sealed contract envelope (Director Arella)",
-        "note": "Heavy cream paper, Society crest in grey wax, addressed N. Maray. Terms inside; to be opened privately. Collected day 93.",
+        "name": "Arella's contract packet",
+        "note": "3 sheets from the Director's office, opened day 93: the private contract, the crew list (4 earth specialists and a crew chief), and a Society pass for Mags at the Wet Barrel. Confidential.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Basket of fried-dough twists",
+        "note": "About two dozen less two (about 22) sugar-and-red-spice twists in a woven reed basket, stored hot (held in stasis). Nate's half of the stall's whole stock, bought for 5 iron at the dock-road corner, dawn day 94; Gary ate the other basket. Gave Gary one twist and Farrah one in the Wet Barrel cellar, morning day 94.",
         "slot": ""
       }
     ],
@@ -3761,8 +3762,8 @@
       },
       {
         "qty": "",
-        "name": "",
-        "note": "",
+        "name": "Reeve drowned map",
+        "note": "Tomas Reeve's water-warped route map, with Nate's marks and Rufus's new pencil notes (both drop and surge risks). Handed back by Rufus at dawn day 94: Nate is the guide. A Waterworks find under contract condition two: it stays in Nate's hands and goes back to Arella when the job is done. Dunmore copied the route, day 94.",
         "slot": "Off hand",
         "empty": "empty"
       },
@@ -4179,9 +4180,9 @@
       }
     ]
   },
-  "next": "Read the sealed drain-work contract terms privately. Dawn day 94: meet Arella's crew and Rufus's team at the Wet Barrel and guide them to the upwelling (Putting a Lid on It; also finishes the Cellar Dwellers bonus). Day 95: rest day (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. North road hedgehog contract still open.",
+  "next": "Now: meet Arella's crew and Rufus's team at the Wet Barrel and guide them to the upwelling (Putting a Lid on It; also finishes the Cellar Dwellers bonus). Day 95: rest day (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1249 iron · 870 lesser",
+  "coins": "1 silver · 1244 iron · 870 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4259,22 +4260,22 @@
   },
   "vitals": [
     {
-      "pct": 98,
-      "note": "Claw scratches on the right forearm healing; bracer still torn.",
+      "pct": 100,
+      "note": "Full after sleep, dawn day 94.",
       "tone": "health",
       "label": "HEALTH",
-      "value": "98%"
-    },
-    {
-      "pct": 95,
-      "note": "Nearly refilled after the morning Squall tests, walking into the city, late morning day 93.",
-      "tone": "mana",
-      "label": "MANA",
-      "value": "95%"
+      "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full after a night's rest, day 93.",
+      "note": "Full after sleep, dawn day 94.",
+      "tone": "mana",
+      "label": "MANA",
+      "value": "100%"
+    },
+    {
+      "pct": 100,
+      "note": "Full after sleep, dawn day 94.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4349,7 +4350,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 93 in this world, Adventure Society reading room",
+    "asOf": "Mid-morning, day 94 in this world, the old drain",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4377,7 +4378,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In an empty upstairs reading room at the Adventure Society with Rufus, Gary and Farrah, early afternoon day 93, about to open the sealed contract.",
+  "location": "At the lip of the 8-foot drop over the old drain channel, mid-morning day 94, with fresh ratling tracks on the far ledge and a stronger green glow past the grate.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4388,7 +4389,7 @@
     {
       "kind": "CONTRACT",
       "name": "Drain work (Director Arella)",
-      "detail": "Quiet Adventure Society contract filed under a dull drain-work name: guide Arella's sealing crew to the Cistern 3 upwelling under the Wet Barrel, Rufus's team escorting. Contract collected and signed for at the jobs hall desk, early afternoon day 93 (sealed envelope from the Director's office, terms inside, unopened). Meet at the Wet Barrel at dawn day 94. Pay to be set by the Society.",
+      "detail": "Private Adventure Society contract (not posted), collected and signed for early afternoon day 93; read in the Society reading room. Task: guide a Society capping crew (4 earth specialists under a crew chief, who has authority over the capping) to the upwelling beneath the Old City drains by the known route, and stay until it is sealed. Rufus's team escorts and has authority from street to chamber. Assembly: the Wet Barrel, Old City docks, dawn day 94; bring the Reeve map. Fee: 40 iron on completion, paid at the jobs hall desk. Conditions: the bricked archway may be examined from outside only, and nobody goes through unless the crew chief judges it safe; any Waterworks finds stay where they lie or go to Arella's office, never sold or shown elsewhere; the contract is confidential.",
       "status": "ACTIVE"
     },
     {
@@ -4629,7 +4630,7 @@
       },
       "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Cost: Low mana (5%). Cooldown: 5 seconds. Cannot carry passengers.",
       "essence": "Lightning",
-      "progress": 19
+      "progress": 20
     },
     {
       "tag": "Star · Special · Mark",
@@ -4684,7 +4685,7 @@
       },
       "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost: Low mana (3%). Cooldown: 5 seconds. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. Rank records (Magic Society nearest match, not guaranteed): Bronze shared footing, Silver continuous air-walking. Each rank adds its effect; earlier effects stay. The real effect is revealed at rank-up.",
       "essence": "Wind",
-      "progress": 6
+      "progress": 7
     },
     {
       "tag": "Wind · Special · Attack",
@@ -4693,9 +4694,9 @@
       "ranks": {
         "Bronze": "Anything shoved into a wall, tree or other solid object takes impact damage and is briefly dazed. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Release a sudden blast of storm wind in a cone in front of you, out to about 15 feet. Anything caught is shoved back and thrown off balance, and lighter targets are knocked off their feet. Cost: Low mana (5%). Cooldown: 15 seconds. From the Awakening Stone of the Storm found beside the Cistern 3 upwelling; absorbed near midnight day 92 in Rufus's suite. DM-made.",
+      "detail": "Release a sudden blast of storm wind in a cone in front of you, out to about 15 feet. Anything caught is shoved back and thrown off balance, and lighter targets are knocked off their feet. Cost: Low mana (5%). Cooldown: 15 seconds. From the Awakening Stone of the Storm found beside the Cistern 3 upwelling; absorbed near midnight day 92 in Rufus's suite. DM-made. Tested afternoon day 93: hits everything in the cone; knocks thrown objects off course at close range (heavy ones are only slowed); works straight out of Arc Step and from a Sky Stair step.",
       "essence": "Wind",
-      "progress": 2
+      "progress": 5
     },
     {
       "tag": "Comet · Aura · Special",
@@ -4754,10 +4755,10 @@
     }
   ],
   "worldTime": {
-    "day": 93,
-    "time": "Afternoon",
-    "detail": "Early afternoon, upstairs reading room at the Adventure Society, reading the drain-work contract.",
-    "dayLabel": "93 days in this world"
+    "day": 94,
+    "time": "Mid-morning",
+    "detail": "Mid-morning, the drop into the old drain beyond the Wet Barrel cellar; fresh claw tracks and skittering ahead.",
+    "dayLabel": "94 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 4/5 · COMET 3/5 AWAKENED",
