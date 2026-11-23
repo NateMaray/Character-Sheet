@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-22-aether-334",
+  "rev": "2026-11-23-aether-349",
   "gear": {
     "doll": [
       [
@@ -3639,7 +3639,8 @@
       {
         "qty": "",
         "name": "Leather travel pack",
-        "note": "Sturdy, worn leather pack with double-stitched seams and metal buckles, from a Vane manor wardrobe. Empty."
+        "note": "Sturdy, worn leather pack with double-stitched seams and metal buckles, from a Vane manor wardrobe. Empty.",
+        "slot": ""
       },
       {
         "qty": 9,
@@ -3704,6 +3705,12 @@
         "qty": 1,
         "name": "Dead upwelling-crystal slab",
         "note": "About a foot across, chiselled off the crust beside the upwelling crack, night day 92. Inert, no value; failed as a cap over the crack.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Lightning Essence",
+        "note": "Unranked, uncommon. A 6-inch storm-blue cube pulled from the lightning upwelling crack under the Old City drains, night day 92. Nate already has 4/4 essences, so he can't absorb it. Options per Rufus: sell, trade, or keep for someone; mention it only to Director Arella.",
         "slot": ""
       }
     ],
@@ -3808,11 +3815,11 @@
         "empty": ""
       },
       {
-        "qty": 1,
-        "name": "Lightning Essence",
-        "note": "Unranked, uncommon. A 6-inch storm-blue cube pulled from the lightning upwelling crack under the Old City drains, night day 92. Nate already has 4/4 essences, so he can't absorb it. Out of Pocket Space in Rufus's suite; Rufus advised storing it until Nate decides to sell, trade, or keep it for someone.",
+        "qty": "",
+        "name": "",
+        "note": "",
         "slot": "Off hand",
-        "empty": ""
+        "empty": "empty"
       },
       {
         "qty": "",
@@ -4227,7 +4234,7 @@
       }
     ]
   },
-  "next": "Morning: go with Rufus to Director Arella with the Cistern 3 evidence (brass tag and G.W. chisel, now with Rufus on the suite rug, plus Halvard's payment slip). Seal the upwelling under the Wet Barrel (Cellar Dwellers bonus). Show Hollis the Turning Millstone (Grinding the Stone). Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. North road hedgehog contract still open.",
+  "next": "Afternoon day 93: collect the drain-work contract at the jobs hall desk. Dawn day 94: meet Arella's crew and Rufus's team at the Wet Barrel and guide them to the upwelling (Putting a Lid on It; also finishes the Cellar Dwellers bonus). Day 95: rest day (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1220 iron · 795 lesser",
   "racial": [
@@ -4307,25 +4314,25 @@
   },
   "vitals": [
     {
-      "pct": 95,
-      "note": "Three shallow claw scratches on the right forearm above the torn bracer (manifested ratlings), plus earlier bite pinpricks, night day 92.",
+      "pct": 98,
+      "note": "Claw scratches on the right forearm healing; bracer still torn.",
       "tone": "health",
       "label": "HEALTH",
-      "value": "95%"
+      "value": "98%"
     },
     {
-      "pct": 46,
-      "note": "Star Mark chain across the city (~8 marks at 2% each).",
+      "pct": 85,
+      "note": "Three Squall casts in training (Gary, jump test, Rufus spar), morning day 93.",
       "tone": "mana",
       "label": "MANA",
-      "value": "46%"
+      "value": "85%"
     },
     {
-      "pct": 74,
-      "note": "Tired; sprinted across the city on Quarry's Wake.",
+      "pct": 100,
+      "note": "Full after a night's rest, day 93.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "74%"
+      "value": "100%"
     }
   ],
   "profile": [
@@ -4397,7 +4404,7 @@
     }
   ],
   "identity": {
-    "asOf": "Midnight, day 92 in this world, Sailor's Watch",
+    "asOf": "Morning, day 93 in this world, training field",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4425,8 +4432,20 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In Rufus's suite at Sailor's Watch with Rufus, near midnight, day 92.",
+  "location": "On the empty training field with Rufus, Gary and Farrah, morning day 93.",
   "missions": [
+    {
+      "kind": "SYSTEM",
+      "name": "Putting a Lid on It",
+      "detail": "Landed and accepted morning day 93 in Director Arella's office (quiet Adventure Society contract, Rufus's team escorting). Objectives: guide the Society's capping crew to the upwelling chamber under the Old City 0/1; see the upwelling properly capped 0/1. Bonus: bring the whole crew back up with no serious injuries 0/1. Optional: find out where the freshly bricked-up archway leads 0/1. Rewards: 150 iron spirit coins, 1 Earth Quintessence, 1 Lightning Quintessence. Bonus: 1 common awakening stone. Optional: 50 iron spirit coins.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "CONTRACT",
+      "name": "Drain work (Director Arella)",
+      "detail": "Quiet Adventure Society contract filed under a dull drain-work name: guide Arella's sealing crew to the Cistern 3 upwelling under the Wet Barrel, Rufus's team escorting. Collect the contract at the jobs hall desk afternoon day 93; meet at the Wet Barrel at dawn day 94. Pay to be set by the Society.",
+      "status": "ACTIVE"
+    },
     {
       "kind": "SYSTEM",
       "name": "Grinding the Stone",
@@ -4665,7 +4684,7 @@
       },
       "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Cost: Low mana (5%). Cooldown: 5 seconds. Cannot carry passengers.",
       "essence": "Lightning",
-      "progress": 18
+      "progress": 19
     },
     {
       "tag": "Star · Special · Mark",
@@ -4676,7 +4695,7 @@
       },
       "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 3,300 feet (0.6 miles) at Iron 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown. DM ruling day 88: works on any visible target, objects included. First object mark: an iron fork at lunch in Sailor's Watch, afternoon day 88.",
       "essence": "Star",
-      "progress": 8
+      "progress": 10
     },
     {
       "tag": "Wind · Special · Defense",
@@ -4695,7 +4714,7 @@
       "rank": "Iron 0",
       "detail": "Your weapon or fist ignites with a white-gold comet trail. The strike hits harder the more you moved just before it and leaves a burning wound that deals damage over time. Cost: Moderate mana (10%) + 5% stamina per strike. Cooldown 10 seconds.",
       "essence": "Comet",
-      "progress": 12
+      "progress": 13
     },
     {
       "tag": "Star · Spell · Healing, Support",
@@ -4712,12 +4731,12 @@
       "name": "Sky Stair",
       "rank": "Iron 0",
       "ranks": {
-        "Bronze": "More steps. (Magic Society record, nearest match.)",
+        "Bronze": "Shared footing: allies can use your air steps too, so you can lay a path for the team. (Chosen by Nathan, day 93.)",
         "Silver": "Continuous air-walking (flight). (Magic Society record, nearest match.)"
       },
-      "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost: Low mana (3%). Cooldown: 5 seconds. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. On the recorded wind flight-ability list: more steps at bronze, continuous air-walking (flight) at silver.",
+      "detail": "Wind (from Awakening Stone of the Sky). Special ability (movement). Cost: Low mana (3%). Cooldown: 5 seconds. For 5 seconds, the air beneath your feet becomes solid footing for up to 3 steps; each step can launch you up or forward like pushing off ground. Counts as movement for Momentum Affinity and Comet Strike. Bronze: Shared footing (allies can use your air steps too). Silver: continuous air-walking (flight). Each rank adds its effect; earlier effects stay.",
       "essence": "Wind",
-      "progress": 5
+      "progress": 6
     },
     {
       "tag": "Wind · Special · Attack",
@@ -4755,7 +4774,7 @@
       },
       "detail": "A burst of storm-lightning rips outward about 10 feet from Nate, shocking every enemy caught in it and briefly jolting them (staggered, slowed reactions for a moment). Cost: 15% mana. Cooldown: 30 seconds. From the Awakening Stone of the Storm. Absorbed day 79 evening in Rufus's suite. DM-made.",
       "essence": "Lightning",
-      "progress": 5
+      "progress": 6
     },
     {
       "tag": "Wind · Special · Recovery",
@@ -4774,14 +4793,14 @@
       "rank": "Iron 0",
       "detail": "Nate's movement speed increases while he moves toward a target he has marked with Star Mark. Cost: none. Cooldown: none. From the Awakening Stone of the Hunt. Absorbed day 79 evening in Rufus's suite. DM-made.",
       "essence": "Comet",
-      "progress": 7
+      "progress": 8
     }
   ],
   "worldTime": {
-    "day": 92,
-    "time": "Midnight",
-    "detail": "Near midnight, in Rufus's suite at Sailor's Watch.",
-    "dayLabel": "92 days in this world"
+    "day": 93,
+    "time": "Morning",
+    "detail": "Morning, on the training field after second breakfast.",
+    "dayLabel": "93 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 4/5 · COMET 3/5 AWAKENED",
