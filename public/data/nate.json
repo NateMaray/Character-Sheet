@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-22-aether-319",
+  "rev": "2026-11-22-aether-334",
   "gear": {
     "doll": [
       [
@@ -3642,9 +3642,9 @@
         "note": "Sturdy, worn leather pack with double-stitched seams and metal buckles, from a Vane manor wardrobe. Empty."
       },
       {
-        "qty": 7,
+        "qty": 9,
         "name": "Monster core (normal rank)",
-        "note": "Six from the Wet Barrel cellar ratlings, one from the ratling that manifested at the upwelling, night day 92.",
+        "note": "Six from the Wet Barrel cellar ratlings, three from ratlings that manifested at the upwelling, night day 92.",
         "slot": ""
       },
       {
@@ -3667,12 +3667,6 @@
       },
       {
         "qty": 1,
-        "name": "Lightning Essence",
-        "note": "Unranked, uncommon. A 6-inch storm-blue cube pulled from the lightning upwelling crack under the Old City drains, night day 92. Nate already has 4/4 essences, so he can't absorb it.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
         "name": "[Manifestation] (incomplete)",
         "note": "Fist-sized lump of green crystal with a walnut-sized dark square core, pried from the upwelling rim under the Old City drains, night day 92. Frozen mid-formation by Pocket Space stasis (neither finished nor failed; DM ruling)."
       },
@@ -3684,20 +3678,32 @@
       },
       {
         "qty": 1,
-        "name": "Cold chisel (rusted, \"G.W.\" on the handle)",
-        "note": "Short, heavy cold chisel with a pitted blade and a swollen black grip; \"G.W.\" burned into the handle end (likely Greenstone Waterworks). Pried from the crystal crust mid-crack at the upwelling under the Old City drains, night day 92. It was there before the crystal regrew, and there's old mortar beneath it.",
+        "name": "Mags's old lantern",
+        "note": "Paid Mags 50 iron for a new one plus cellar damages; this one is Nate's now. Stored lit.",
+        "slot": ""
+      },
+      {
+        "qty": 4,
+        "name": "Snapped iron anchor bolts",
+        "note": "About 1 foot each, rusted, snapped below the head; from the Waterworks crate at the upwelling (fit the anchor holes by the crack), night day 92.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Set-solid mortar boulder",
+        "note": "The old Waterworks mortar sack, set solid years ago; unusable as mortar. From the upwelling chamber, night day 92.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Rusted trowel blade",
+        "note": "Mason's trowel blade from the Waterworks crate; handle rotted away, night day 92.",
         "slot": ""
       },
       {
         "qty": 1,
         "name": "Dead upwelling-crystal slab",
-        "note": "About a foot across, chiselled off the crust beside the upwelling crack, night day 92. Inert, no value.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "[Awakening Stone of the Storm]",
-        "note": "Unranked, uncommon (DM-made). Round, smooth storm-grey crystal with threads of light that flicker and fork inside. 'Unlocks the power of the storm.' Found in an old fist-sized hollow worn into the stone under the crust beside the upwelling crack, night day 92. Not absorbed; Nate chose to keep it.",
+        "note": "About a foot across, chiselled off the crust beside the upwelling crack, night day 92. Inert, no value; failed as a cap over the crack.",
         "slot": ""
       }
     ],
@@ -3802,11 +3808,11 @@
         "empty": ""
       },
       {
-        "qty": "",
-        "name": "",
-        "note": "",
+        "qty": 1,
+        "name": "Lightning Essence",
+        "note": "Unranked, uncommon. A 6-inch storm-blue cube pulled from the lightning upwelling crack under the Old City drains, night day 92. Nate already has 4/4 essences, so he can't absorb it. Out of Pocket Space in Rufus's suite; Rufus advised storing it until Nate decides to sell, trade, or keep it for someone.",
         "slot": "Off hand",
-        "empty": "empty"
+        "empty": ""
       },
       {
         "qty": "",
@@ -4221,9 +4227,9 @@
       }
     ]
   },
-  "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
+  "next": "Morning: go with Rufus to Director Arella with the Cistern 3 evidence (brass tag and G.W. chisel, now with Rufus on the suite rug, plus Halvard's payment slip). Seal the upwelling under the Wet Barrel (Cellar Dwellers bonus). Show Hollis the Turning Millstone (Grinding the Stone). Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1270 iron · 791 lesser",
+  "coins": "1 silver · 1220 iron · 795 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4301,25 +4307,25 @@
   },
   "vitals": [
     {
-      "pct": 98,
-      "note": "Manifested ratling bit his right forearm through the leather bracer (row of punctures); a couple of minor pinpricks reached the skin, night day 92.",
+      "pct": 95,
+      "note": "Three shallow claw scratches on the right forearm above the torn bracer (manifested ratlings), plus earlier bite pinpricks, night day 92.",
       "tone": "health",
       "label": "HEALTH",
-      "value": "98%"
+      "value": "95%"
     },
     {
-      "pct": 65,
-      "note": "Thrown Comet Strike (10%) finished the huge ratling, after Arc Step, Sky Stair, Thunderhead and Star Mark, night day 92.",
+      "pct": 46,
+      "note": "Star Mark chain across the city (~8 marks at 2% each).",
       "tone": "mana",
       "label": "MANA",
-      "value": "65%"
+      "value": "46%"
     },
     {
-      "pct": 82,
-      "note": "Repeated Invictus throws on the move plus Comet Strike (5% stamina) against the huge ratling, night day 92.",
+      "pct": 74,
+      "note": "Tired; sprinted across the city on Quarry's Wake.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "82%"
+      "value": "74%"
     }
   ],
   "profile": [
@@ -4391,7 +4397,7 @@
     }
   ],
   "identity": {
-    "asOf": "Night, day 92 in this world, domed chamber under the Old City drains",
+    "asOf": "Midnight, day 92 in this world, Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4419,7 +4425,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Standing over the middle of the 6-foot upwelling crack (2 feet wide there, dropping straight down into the green light) in a round domed chamber about 30 feet across at the bottom of the 20-foot passage past the ruined sewer grate, night day 92. Invictus in hand; Mags's lantern (borrowed, lit) set on the floor beside him. Looted the manifested ratling (body dissolved) and gathered about 12 inert crystal chips; the incomplete [Manifestation] is in Pocket Space, and fresh crystal is regrowing over the scar. Crack once sealed with mortar and chiselled open again; Greenstone Waterworks crate and circle-with-wavy-line symbol on the wall. Clues: four rusted 1-inch square anchor holes (two at each end) and the mortar ring show a big iron cover was once bolted and mortared over the crack; pried a G.W. cold chisel from the crust. Under a chiselled-off slab of crust he found an old fist-sized hollow worn into the stone and took an [Awakening Stone of the Storm] from it (kept, not absorbed). EARLIER: Looted all 6 ratlings by touch (bodies dissolved into rainbow smoke): 6 normal-rank monster cores, 12 lesser spirit coins, 1 ratling pelt. Asked Mags to tell his friends where he went. Mags: the old drains run under half the Old City; only Waterworks men go down there. EARLIER: In the Wet Barrel cellar (down Mags's trapdoor), night, alone, Invictus in hand; Mags's borrowed lantern in his off hand. Crouched at the 2-foot hole: the tunnel stays crawl-sized (belly-flat, arms forward), sloping down into packed earth and rubble past lantern range, cool draught smelling of wet stone and old still water; no room to swing or turn. Mags at the trapdoor, unimpressed. Threw Invictus down the hole: it skipped down the slope and splashed into deep water in a big enclosed space about 30 feet in, then returned to his hand dripping brackish water and black silt (smells like a drain). Mags knows of no water under her bar. Spotted a ratling through a finger-wide gap a foot off the floor with Starward Gaze and marked it (Star Mark now on that ratling); at least three squealing, the marked one bolting right toward the corner seam between the wall end and old crates, about 15 feet to his right. Smashed the crate stack and found a gnawed hole about 2 feet across at the base of the far wall; clipped one ratling, then killed it in the hole mouth with Invictus (1 ratling dead). Five more rushed him; Thunderhead killed three (two on the floor, one in the hole mouth); 4 ratlings dead total. Finished the last two with Invictus: 6 ratlings dead, bodies on the cellar floor, not looted. Star Mark gone (its target died). The 2-foot hole leads into a draughty tunnel; entry point not found yet. Mags is at the trapdoor. The old brickwork in the burrow mouth (left) holds. Scratching and chittering squeaks from inside the far wall (about 30 feet back), low near the floor, at least two sources. Before that: helped Mags seat a keg at the bar; she has heard scratching for a couple of weeks. Left Rufus a note saying where he went, then walked from Sailor's Watch after about an hour of meditation in Rufus's suite (fully refreshed). Dusk day 92: dinner with Rufus, Farrah and Gary at Gary's favourite waterfront eatery on the harbour boardwalk (big platter; Rufus paid the bill). Days 89-92: drilled mark-chain direction changes (Star Mark switching with Quarry's Wake) every day with Gary calling marks; Rufus coached mornings, then left on his own business. Some Invictus Wheel reps. Meditated each night at Sailor's Watch, meals there. Day 92: mastered the technique with a clean four-corner chain lap with no skids, and a reactive chain to Gary's calls. Earlier, day 89: Magic Society records visit (bronze effects for 8 abilities on the ranks ladder; none for Comet Strike, Harbinger or Quarry's Wake). East wall (20 feet) attempts: about 10 feet, then about 15 feet with hands, then Arc Step to the top. Rufus: stealth comes from climbing with hands and feet. Invictus drawn from Pocket Space into main hand to check the cellar; empty leather travel pack in Pocket Space. Mags offered a heavy iron key to the cellar's alley door (left on the bar). Wearing Gilbert's bespoke armour set with socks and running shoes (changed outside the Wet Barrel, night day 92); First look garments back in the wardrobe. Harbinger restrained, Veil off. Walked from the field to the harbour with Rufus at dusk (talked about break dancing and smooth transitions). Night, day 92.",
+  "location": "In Rufus's suite at Sailor's Watch with Rufus, near midnight, day 92.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4714,6 +4720,14 @@
       "progress": 5
     },
     {
+      "tag": "Wind · Special · Attack",
+      "name": "Squall",
+      "rank": "Iron 0",
+      "detail": "Release a sudden blast of storm wind in a cone in front of you, out to about 15 feet. Anything caught is shoved back and thrown off balance, and lighter targets are knocked off their feet. Cost: Low mana (5%). Cooldown: 15 seconds. From the Awakening Stone of the Storm found beside the Cistern 3 upwelling; absorbed near midnight day 92 in Rufus's suite. DM-made.",
+      "essence": "Wind",
+      "progress": 0
+    },
+    {
       "tag": "Comet · Aura · Special",
       "name": "Harbinger",
       "rank": "Iron 0",
@@ -4765,12 +4779,12 @@
   ],
   "worldTime": {
     "day": 92,
-    "time": "Night",
-    "detail": "In a domed chamber under the Old City drains, by a glowing green crack",
+    "time": "Midnight",
+    "detail": "Near midnight, in Rufus's suite at Sailor's Watch.",
     "dayLabel": "92 days in this world"
   },
   "abilityMeta": {
-    "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 3/5 · COMET 3/5 AWAKENED",
+    "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 4/5 · COMET 3/5 AWAKENED",
     "racialLabel": "RACIAL (OUTWORLDER)"
   },
   "achievements": [
