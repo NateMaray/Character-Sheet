@@ -114,6 +114,22 @@
         {
           "x": 126,
           "y": 121
+        },
+        {
+          "x": 264,
+          "y": 208
+        },
+        {
+          "x": 520,
+          "y": 268
+        },
+        {
+          "x": 600,
+          "y": 330
+        },
+        {
+          "x": 640,
+          "y": 413
         }
       ],
       "blocks": [
@@ -3474,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-22-aether-286",
+  "rev": "2026-11-22-aether-304",
   "gear": {
     "doll": [
       [
@@ -3568,9 +3584,9 @@
         "note": "2 honey-glazed oat cakes with currants, wrapped in a blue cloth. A gift from Bess Hale; stasis keeps them warm."
       },
       {
-        "qty": 8,
+        "qty": 9,
         "name": "Healing potion (everyday, iron rank)",
-        "note": "From Jory Tillman, 5 iron each. Space them out; no mana potion while coin magic is still in you.",
+        "note": "From Jory Tillman, 5 iron each. Space them out; no mana potion while coin magic is still in you. +1 from Cellar Dwellers reward, night day 92.",
         "slot": ""
       },
       {
@@ -3628,7 +3644,20 @@
       {
         "qty": "",
         "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style)."
+        "note": "War hammer (iron rank, rare). Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style). Stored after the cellar fight; still wet and silty from the drain throw.",
+        "slot": ""
+      },
+      {
+        "qty": 6,
+        "name": "Monster core (normal rank)",
+        "note": "From the six Wet Barrel cellar ratlings, night day 92.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Ratling pelt",
+        "note": "Looted from the Wet Barrel cellar ratlings, night day 92.",
+        "slot": ""
       }
     ],
     "outfits": [
@@ -3695,8 +3724,8 @@
       },
       {
         "qty": "",
-        "name": "",
-        "note": "",
+        "name": "Gilbert's bespoke armour set",
+        "note": "Bespoke by Bert at Gilbert's Resilient Attire. Heat and shock resistant, self-mending, near coat-level protection. Changed into outside the Wet Barrel, night day 92.",
         "slot": "Armour",
         "empty": "none"
       },
@@ -3707,18 +3736,6 @@
         "slot": "Body",
         "empty": "empty",
         "clothes": [
-          {
-            "name": "Slate-blue shirt with silver vine embroidery",
-            "slot": "Torso"
-          },
-          {
-            "name": "Red sash",
-            "slot": "Waist"
-          },
-          {
-            "name": "Sky blue wrap trousers",
-            "slot": "Legs"
-          },
           {
             "name": "Socks",
             "slot": "Shoes"
@@ -3744,11 +3761,11 @@
         "empty": "empty"
       },
       {
-        "qty": "",
-        "name": "",
-        "note": "",
+        "qty": "1",
+        "name": "Mags's lantern (borrowed)",
+        "note": "Borrowed from Mags at the Wet Barrel; return it. Still burning after Pocket Space.",
         "slot": "Off hand",
-        "empty": "empty"
+        "empty": ""
       },
       {
         "qty": "",
@@ -4165,7 +4182,7 @@
   },
   "next": "Day 78 mid-afternoon: absorbed the Awakening Stone of Omens into Comet in Rufus's suite at Sailor's Watch; awakened [Harbinger] (Comet aura). Next stone: Eyes (perception). Day 78 afternoon: ordered an evening set from Bert at Gilbert's (midnight-black frock coat to the knee with silver-blue pinstripe, matching waistcoat, dove-grey shirt, dark trousers; no enchantments). 60 iron total: 30 paid as deposit, 30 due on collection, ready by the second bell after noon on day 79 (Bert will send a boy to Sailor's Watch). Coins 1046 iron · 560 lesser. Holding in hand a calling card from 'Number Seven' (no crest): invitation to the Gilded Heron, day 79 at the sixth bell, 'Ask for Seven.' Her cousin (the Foot and Eyes buyer) refused Rufus's offer to buy both stones at cost. Day 78 morning: at the Ostrander & Vey joint stone auction, won the Awakening Stone of Omens (epic, Lot 8) for 111 bronze; lost Foot (16) and Eyes (45) to other bidders. Coins 1076 iron · 560 lesser. Still need a perception stone (Eyes and Aura). Days 69-77 were daily contracts; Hunter's Road II and Nest Egg complete, northern frogs and barn nest contracts closed, hedgehog contract still open. Rufus delivered the Vane signet to Arella on day 69. Collected the bespoke armour set from Bert at Gilbert's on day 68 morning and paid 50 iron (47 balance plus a 3 iron tip; 98 iron total). Bert added the leather bracers free. Now worn in the Armour slot. Handed the Vane ledger (cellar-delivery evidence) to Rufus at Sailor's Watch, day 68 noon. Bert offers Nate personal priority service for repairs and alterations. Bought 28 pieces of everyday clothes at the arcade clothier (5 iron, tip included); stored them himself in the Wardrobe (Outfits tab), declining delivery. Trained days 63-67: Farrah (footwork, reading tells) days 63-64, Rufus (precision) days 65-66, Gary sparring in between; day 67 it came together (Rufus: \"Better\"). Open contracts: north road hedgehogs, northern frogs, west barn nest (30 iron, not started). Find an aura-power awakening stone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1218 iron · 777 lesser",
+  "coins": "1 silver · 1266 iron · 789 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4243,25 +4260,25 @@
   },
   "vitals": [
     {
-      "pct": 95,
-      "note": "Minor bruises from three days of turn drills and Invictus Wheel reps, days 89-92.",
+      "pct": 100,
+      "note": "Claws skidded off the armour in the cellar fight, night day 92.",
       "tone": "health",
       "label": "HEALTH",
-      "value": "95%"
+      "value": "100%"
     },
     {
-      "pct": 70,
-      "note": "Star Mark switching for mark-chain turn drills (2% per mark), late afternoon day 92; recovered each night in meditation.",
+      "pct": 80,
+      "note": "Sky Stair (3%) across the drain channel, after Thunderhead (15%) and Star Mark (2%) in the cellar, night day 92.",
       "tone": "mana",
       "label": "MANA",
-      "value": "70%"
+      "value": "80%"
     },
     {
-      "pct": 60,
-      "note": "Daily mark-chain sprint and direction-change drills, days 89-92.",
+      "pct": 93,
+      "note": "Cellar fight with six ratlings, then crawling into the ratling tunnel, night day 92.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "60%"
+      "value": "93%"
     }
   ],
   "profile": [
@@ -4333,7 +4350,7 @@
     }
   ],
   "identity": {
-    "asOf": "Late afternoon, day 92 in this world, Society training field after mastering the mark-chain turns",
+    "asOf": "Night, day 92 in this world, Old City drains under the Wet Barrel",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4361,7 +4378,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "At the Society campus training field by the east wall, late afternoon, with Rufus, Farrah and Gary. Days 89-92: drilled mark-chain direction changes (Star Mark switching with Quarry's Wake) every day with Gary calling marks; Rufus coached mornings, then left on his own business. Some Invictus Wheel reps. Meditated each night at Sailor's Watch, meals there. Day 92: mastered the technique with a clean four-corner chain lap with no skids, and a reactive chain to Gary's calls. Earlier, day 89: Magic Society records visit (bronze effects for 8 abilities on the ranks ladder; none for Comet Strike, Harbinger or Quarry's Wake). East wall (20 feet) attempts: about 10 feet, then about 15 feet with hands, then Arc Step to the top. Rufus: stealth comes from climbing with hands and feet. Invictus and the empty leather travel pack in Pocket Space. Wearing the First look outfit; Gilbert's armour set in the wardrobe. Harbinger restrained, Veil off. Late afternoon, day 92.",
+  "location": "On the slimy 2-foot ledge along the far wall of a big Old City drain, night day 92: dropped from the ratling hole and crossed the channel with Sky Stair (3 steps), nearly slipped on landing. Mags's lantern in hand (guttered, still lit). Ratling trail (claw scuffs, greasy fur, thick musk) runs along the ledge about 40 feet to a platform with a rusted iron grate whose bottom bars are bent outward. The ratling hole is 8 feet up the opposite wall. Invictus in Pocket Space. EARLIER: Looted all 6 ratlings by touch (bodies dissolved into rainbow smoke): 6 normal-rank monster cores, 12 lesser spirit coins, 1 ratling pelt. Asked Mags to tell his friends where he went. Mags: the old drains run under half the Old City; only Waterworks men go down there. EARLIER: In the Wet Barrel cellar (down Mags's trapdoor), night, alone, Invictus in hand; Mags's borrowed lantern in his off hand. Crouched at the 2-foot hole: the tunnel stays crawl-sized (belly-flat, arms forward), sloping down into packed earth and rubble past lantern range, cool draught smelling of wet stone and old still water; no room to swing or turn. Mags at the trapdoor, unimpressed. Threw Invictus down the hole: it skipped down the slope and splashed into deep water in a big enclosed space about 30 feet in, then returned to his hand dripping brackish water and black silt (smells like a drain). Mags knows of no water under her bar. Spotted a ratling through a finger-wide gap a foot off the floor with Starward Gaze and marked it (Star Mark now on that ratling); at least three squealing, the marked one bolting right toward the corner seam between the wall end and old crates, about 15 feet to his right. Smashed the crate stack and found a gnawed hole about 2 feet across at the base of the far wall; clipped one ratling, then killed it in the hole mouth with Invictus (1 ratling dead). Five more rushed him; Thunderhead killed three (two on the floor, one in the hole mouth); 4 ratlings dead total. Finished the last two with Invictus: 6 ratlings dead, bodies on the cellar floor, not looted. Star Mark gone (its target died). The 2-foot hole leads into a draughty tunnel; entry point not found yet. Mags is at the trapdoor. The old brickwork in the burrow mouth (left) holds. Scratching and chittering squeaks from inside the far wall (about 30 feet back), low near the floor, at least two sources. Before that: helped Mags seat a keg at the bar; she has heard scratching for a couple of weeks. Left Rufus a note saying where he went, then walked from Sailor's Watch after about an hour of meditation in Rufus's suite (fully refreshed). Dusk day 92: dinner with Rufus, Farrah and Gary at Gary's favourite waterfront eatery on the harbour boardwalk (big platter; Rufus paid the bill). Days 89-92: drilled mark-chain direction changes (Star Mark switching with Quarry's Wake) every day with Gary calling marks; Rufus coached mornings, then left on his own business. Some Invictus Wheel reps. Meditated each night at Sailor's Watch, meals there. Day 92: mastered the technique with a clean four-corner chain lap with no skids, and a reactive chain to Gary's calls. Earlier, day 89: Magic Society records visit (bronze effects for 8 abilities on the ranks ladder; none for Comet Strike, Harbinger or Quarry's Wake). East wall (20 feet) attempts: about 10 feet, then about 15 feet with hands, then Arc Step to the top. Rufus: stealth comes from climbing with hands and feet. Invictus drawn from Pocket Space into main hand to check the cellar; empty leather travel pack in Pocket Space. Mags offered a heavy iron key to the cellar's alley door (left on the bar). Wearing Gilbert's bespoke armour set with socks and running shoes (changed outside the Wet Barrel, night day 92); First look garments back in the wardrobe. Harbinger restrained, Veil off. Walked from the field to the harbour with Rufus at dusk (talked about break dancing and smooth transitions). Night, day 92.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4477,8 +4494,8 @@
     },
     {
       "name": "Cellar Dwellers",
-      "detail": "Wet Barrel tavern, Old City docks. One ratling escaped down a burrow, now bricked up. Mags expects you back once you're a real adventurer.",
-      "filler": true,
+      "detail": "Wet Barrel tavern, Old City docks. Earlier: one ratling escaped down a burrow, now bricked up; Mags expected Nate back once he was a real adventurer. Updated night day 92: Nate came back at iron rank. The old brickwork held, but for a couple of weeks Mags has heard scratching behind the far cellar wall, likely more than one. Objectives: find what is behind the far wall; clear the cellar. Bonus: find where they are getting in and close it for good. Rewards: 40 iron, 1 iron-rank healing potion; bonus 1 Earth Quintessence. Progress: behind the far wall is a gnawed tunnel hole about 2 feet across, hidden behind crates in the corner; 6 ratlings killed (1 by Invictus, 3 by Thunderhead, 2 finished with Invictus); cellar clear for now. Main objectives COMPLETE night day 92: 40 iron + 8 iron unlisted spirit coins and 1 iron-rank healing potion auto-deposited. Bonus still OPEN: the hole leads into a draughty tunnel; find where they are getting in and close it for good (1 Earth Quintessence).",
+      "filler": false,
       "status": "ACTIVE"
     },
     {
@@ -4707,8 +4724,8 @@
   ],
   "worldTime": {
     "day": 92,
-    "time": "Late afternoon",
-    "detail": "Mastered the mark-chain turn technique",
+    "time": "Night",
+    "detail": "On a drain ledge in the Old City sewers, following the ratling trail",
     "dayLabel": "92 days in this world"
   },
   "abilityMeta": {
