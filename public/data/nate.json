@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-355",
+  "rev": "2026-11-23-aether-356",
   "gear": {
     "doll": [
       [
@@ -4321,11 +4321,11 @@
       "value": "98%"
     },
     {
-      "pct": 80,
-      "note": "Four Squall casts in training (Gary, jump test, two on Rufus), morning day 93.",
+      "pct": 95,
+      "note": "Nearly refilled after the morning Squall tests, walking into the city, late morning day 93.",
       "tone": "mana",
       "label": "MANA",
-      "value": "80%"
+      "value": "95%"
     },
     {
       "pct": 100,
@@ -4404,7 +4404,7 @@
     }
   ],
   "identity": {
-    "asOf": "Late morning, day 93 in this world, training field",
+    "asOf": "Late morning, day 93 in this world, on the way to the trade hall",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4432,7 +4432,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "On the training field with Rufus, Gary and Farrah, late morning day 93, about to break for lunch.",
+  "location": "Walking the dirt track from the training field into the city with Rufus, Gary and Farrah, heading for the trade hall stalls, late morning day 93.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4811,7 +4811,7 @@
   "worldTime": {
     "day": 93,
     "time": "Late morning",
-    "detail": "Late morning, on the training field, sun climbing toward midday; lunch next, then the contract.",
+    "detail": "Late morning, walking into the city toward the trade hall; selling, then lunch, then the contract.",
     "dayLabel": "93 days in this world"
   },
   "abilityMeta": {
