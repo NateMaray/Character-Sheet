@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-358",
+  "rev": "2026-11-23-aether-359",
   "gear": {
     "doll": [
       [
@@ -4343,7 +4343,7 @@
     }
   ],
   "identity": {
-    "asOf": "Late morning, day 93 in this world, trade hall",
+    "asOf": "Noon, day 93 in this world, noodle shop near the trade hall",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4371,7 +4371,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Leaving the trade hall ground floor with Gary, Rufus and Farrah, heading to lunch, late morning day 93.",
+  "location": "At the counter of a noodle shop three streets from the trade hall with Gary, Rufus and Farrah, about noon day 93.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4749,8 +4749,8 @@
   ],
   "worldTime": {
     "day": 93,
-    "time": "Late morning",
-    "detail": "Late morning, leaving the trade hall for lunch; the drain-work contract after.",
+    "time": "Noon",
+    "detail": "Noon, lunch at the noodle shop near the trade hall; the drain-work contract after.",
     "dayLabel": "93 days in this world"
   },
   "abilityMeta": {
