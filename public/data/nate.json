@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-398",
+  "rev": "2026-11-23-aether-400",
   "gear": {
     "doll": [
       [
@@ -3671,6 +3671,12 @@
         "name": "Invictus",
         "note": "War hammer (iron rank, rare). Bonded. Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style). Stored in Pocket Space after Arc Step back to Bram, early afternoon day 94.",
         "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Henri's 'Lights' chart",
+        "note": "Old canvas chart of the coast south of Greenstone, a circle past the outer reef marked 'Lights' (blue-green lights under the water on calm nights). Gift from Odile, day 94. She asks Nate to take strong friends.",
+        "slot": ""
       }
     ],
     "outfits": [
@@ -3725,7 +3731,8 @@
       }
     ],
     "borrowed": [
-      "Foreman's lamp"
+      "Foreman's lamp",
+      "Shimmering Scale"
     ],
     "equipped": [
       {
@@ -3775,10 +3782,10 @@
       },
       {
         "qty": "",
-        "name": "",
-        "note": "",
+        "name": "Shimmering Scale (on loan from Odile)",
+        "note": "Bronze rank, uncommon. A palm-sized, diamond-shaped aquatic monster scale, iridescent blue-green; crafting material with a dense, cold aura. LENT by Odile, day 94: it is not Nate's to sell and must go back to her after the reef monster dies.",
         "slot": "Off hand",
-        "empty": "empty"
+        "empty": "none"
       },
       {
         "qty": "",
@@ -4193,9 +4200,9 @@
       }
     ]
   },
-  "next": "Sort Henri's crates for Odile. Bram: aura lessons at dawn on the sea wall (bring food). Day 95: day off (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "The Drowned Lamps: Henri's reef lights, with strong friends; return the scale to Odile. Bram: aura lessons at dawn on the sea wall (bring food). Day 95: day off (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1340 iron · 897 lesser",
+  "coins": "1 silver · 1447 iron · 897 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4266,7 +4273,7 @@
       }
     ],
     "missionNames": [
-      "Henri's Nets",
+      "The Drowned Lamps",
       "Putting a Lid on It",
       "Grinding the Stone",
       "North road hedgehogs"
@@ -4281,11 +4288,11 @@
       "value": "100%"
     },
     {
-      "pct": 66,
-      "note": "Refilling after Moonwell and Arc Step, early afternoon day 94.",
+      "pct": 64,
+      "note": "Regenerating after Moonwell and Arc Step, afternoon day 94.",
       "tone": "mana",
       "label": "MANA",
-      "value": "66%"
+      "value": "64%"
     },
     {
       "pct": 100,
@@ -4392,13 +4399,19 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In the back room of Odile's Curiosities shop off the market streets, sorting Henri's crates, early afternoon day 94.",
+  "location": "In the back room of Odile's Curiosities shop off the market streets, the crates sorted, afternoon day 94.",
   "missions": [
+    {
+      "kind": "PRIVATE",
+      "name": "The Drowned Lamps",
+      "detail": "Landed afternoon day 94 at Odile's Curiosities after Odile lent Nate Henri's Shimmering Scale. Find the source of the blue-green lights past the outer reef south of Greenstone (Henri's chart) and end the threat. Objectives: find the source of the lights 0/1; return the Shimmering Scale to Odile 0/1. Condition: Nate and his companions must return alive. Rewards: 400 iron spirit coins, 1 awakening stone.",
+      "status": "ACTIVE"
+    },
     {
       "kind": "SYSTEM",
       "name": "Henri's Nets",
-      "detail": "Landed early afternoon day 94 at Odile's Curiosities shop (side lane off the Greenstone market streets). Odile has crates of things her late husband Henri pulled from his fishing nets. Sort through them honestly and tell her what's junk and what isn't. Objective: Sort Henri's crates 0/1. Rewards: 50 iron spirit coins, plus a chance at an item.",
-      "status": "ACTIVE"
+      "detail": "Landed early afternoon day 94 at Odile's Curiosities shop (side lane off the Greenstone market streets). Odile has crates of things her late husband Henri pulled from his fishing nets. Sort through them honestly and tell her what's junk and what isn't. Objective: Sort Henri's crates 1/1. Rewards: 50 iron spirit coins, plus a chance at an item. COMPLETE afternoon day 94: all 7 crates sorted. 50 iron + 57 iron unlisted auto-deposited (+107); item roll missed, no item.",
+      "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
@@ -4791,7 +4804,7 @@
   "worldTime": {
     "day": 94,
     "time": "Afternoon",
-    "detail": "Early afternoon, Odile's Curiosities shop.",
+    "detail": "Afternoon, Odile's Curiosities shop.",
     "dayLabel": "94 days in this world"
   },
   "abilityMeta": {
