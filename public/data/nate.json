@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-400",
+  "rev": "2026-11-23-aether-404",
   "gear": {
     "doll": [
       [
@@ -3590,12 +3590,6 @@
         "slot": ""
       },
       {
-        "qty": 1,
-        "name": "Callow Farm Food Bundle",
-        "note": "From Wenna Callow: crusty bread, cold mutton, hard yellow cheese. Still warm.",
-        "slot": ""
-      },
-      {
         "qty": "",
         "name": "Light stone lantern",
         "note": "Brass; twist the top to brighten or dim. Gift from Rufus."
@@ -3675,8 +3669,14 @@
       {
         "qty": 1,
         "name": "Henri's 'Lights' chart",
-        "note": "Old canvas chart of the coast south of Greenstone, a circle past the outer reef marked 'Lights' (blue-green lights under the water on calm nights). Gift from Odile, day 94. She asks Nate to take strong friends.",
+        "note": "Old canvas chart of the coast south of Greenstone, a circle past the outer reef marked 'Lights' (blue-green lights under the water on calm nights). Gift from Odile, day 94. She asks Nate to take strong friends. Rolled and tied with string by Rufus, dusk day 94.",
         "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Shimmering Scale (on loan from Odile)",
+        "note": "Bronze rank, uncommon. A palm-sized, diamond-shaped aquatic monster scale, iridescent blue-green; crafting material with a dense, cold aura. LENT by Odile, day 94: it is not Nate's to sell and must go back to her after the reef monster dies. Moved to Pocket Space in the Society records room, morning day 95.",
+        "slot": 30
       }
     ],
     "outfits": [
@@ -3782,10 +3782,10 @@
       },
       {
         "qty": "",
-        "name": "Shimmering Scale (on loan from Odile)",
-        "note": "Bronze rank, uncommon. A palm-sized, diamond-shaped aquatic monster scale, iridescent blue-green; crafting material with a dense, cold aura. LENT by Odile, day 94: it is not Nate's to sell and must go back to her after the reef monster dies.",
+        "name": "",
+        "note": "",
         "slot": "Off hand",
-        "empty": "none"
+        "empty": "empty"
       },
       {
         "qty": "",
@@ -4200,7 +4200,7 @@
       }
     ]
   },
-  "next": "The Drowned Lamps: Henri's reef lights, with strong friends; return the scale to Odile. Bram: aura lessons at dawn on the sea wall (bring food). Day 95: day off (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Drowned Lamps research in the Society records room (with Jason, who has a jobs-hall commitment this afternoon); return the scale to Odile after. Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1447 iron · 897 lesser",
   "racial": [
@@ -4282,21 +4282,21 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Full after sleep, dawn day 94.",
+      "note": "Full after sleep, dawn day 95.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
-      "pct": 64,
-      "note": "Regenerating after Moonwell and Arc Step, afternoon day 94.",
+      "pct": 100,
+      "note": "Full after sleep, dawn day 95.",
       "tone": "mana",
       "label": "MANA",
-      "value": "64%"
+      "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full after sleep, dawn day 94.",
+      "note": "Full after sleep, dawn day 95.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4371,7 +4371,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 94 in this world, Odile's Curiosities shop",
+    "asOf": "Morning, day 95 in this world, Adventure Society records room",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4399,12 +4399,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In the back room of Odile's Curiosities shop off the market streets, the crates sorted, afternoon day 94.",
+  "location": "In the Adventure Society records room on the Island, morning of day 95, with Rufus, Farrah, Gary and Jason, going through reef-light reports with the clerk.",
   "missions": [
     {
       "kind": "PRIVATE",
       "name": "The Drowned Lamps",
-      "detail": "Landed afternoon day 94 at Odile's Curiosities after Odile lent Nate Henri's Shimmering Scale. Find the source of the blue-green lights past the outer reef south of Greenstone (Henri's chart) and end the threat. Objectives: find the source of the lights 0/1; return the Shimmering Scale to Odile 0/1. Condition: Nate and his companions must return alive. Rewards: 400 iron spirit coins, 1 awakening stone.",
+      "detail": "Landed afternoon day 94 at Odile's Curiosities after Odile lent Nate Henri's Shimmering Scale. Find the source of the blue-green lights past the outer reef south of Greenstone (Henri's chart) and end the threat. Objectives: find the source of the lights 0/1; return the Shimmering Scale to Odile 0/1. Condition: Nate and his companions must return alive. Rewards: 400 iron spirit coins, 1 awakening stone. Leads (Society records, morning day 95): harbour log ~20 years ago of Henri's sighting, marked 'no action'; an iron two-star Society contract 41 years ago searched 3 days and found nothing; a pearl diver vanished at dusk on the outer reef edge 8 years ago when the water 'lit up green'. Jason has joined for the research.",
       "status": "ACTIVE"
     },
     {
@@ -4663,7 +4663,7 @@
       },
       "detail": "Dissolve into a streak of lightning and reappear a short distance away along a line of sight. Anything in the path takes a jolt of lightning damage. Cost: Low mana (5%). Cooldown: 5 seconds. Cannot carry passengers.",
       "essence": "Lightning",
-      "progress": 20
+      "progress": 21
     },
     {
       "tag": "Star · Special · Mark",
@@ -4674,7 +4674,7 @@
       },
       "detail": "Mark a target you can see with a point of starlight only you can perceive. You always know the marked target's direction and distance (felt, not seen). One target at a time. Low mana, no cooldown. Passes through walls and floors. Tested range: about 3,300 feet (0.6 miles) at Iron 0, fading near the edge. Cost: 2% mana per mark; no upkeep, no cooldown. DM ruling day 88: works on any visible target, objects included. First object mark: an iron fork at lunch in Sailor's Watch, afternoon day 88.",
       "essence": "Star",
-      "progress": 10
+      "progress": 11
     },
     {
       "tag": "Wind · Special · Defense",
@@ -4707,7 +4707,7 @@
       },
       "detail": "Conjure a pool of starlit water on the ground for 1 minute. Allies in it regain 2% health, 2% stamina, and 1% mana every few seconds (about 20% health and stamina over the full minute) and minor afflictions are washed away. Cost: 30% mana. Cooldown 10 minutes. From the Awakening Stone of the Undertow. First used day 80 afternoon, mid lap 12 of Farrah's test run, again early lap 19 (consolidated in meditation day 80 night: 0 to 4). Used late morning day 87 at the training field to clear the skill-book headache; meditation early evening day 87: 4 to 5. Used mid-morning day 88 on the training-field bench during a water break to ease drill-sore arms (Gary in the pool too). Used again at lunch in Sailor's Watch, afternoon day 88, before the afternoon session; cast again late afternoon after the session (3 uses on day 88).",
       "essence": "Star",
-      "progress": 7
+      "progress": 8
     },
     {
       "name": "Sky Stair",
@@ -4802,10 +4802,10 @@
     }
   ],
   "worldTime": {
-    "day": 94,
-    "time": "Afternoon",
-    "detail": "Afternoon, Odile's Curiosities shop.",
-    "dayLabel": "94 days in this world"
+    "day": 95,
+    "time": "Morning",
+    "detail": "Morning, Adventure Society records room on the Island.",
+    "dayLabel": "95 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 4/5 · COMET 4/5 AWAKENED",
