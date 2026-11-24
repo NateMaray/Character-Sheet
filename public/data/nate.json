@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-405",
+  "rev": "2026-11-23-aether-408",
   "gear": {
     "doll": [
       [
@@ -3662,8 +3662,8 @@
       },
       {
         "qty": 1,
-        "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Bonded. Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style). Stored in Pocket Space after Arc Step back to Bram, early afternoon day 94.",
+        "name": "Boat shed key (on loan from Odile)",
+        "note": "Old iron key on tarred cord for Odile's boat shed (green door, third along behind the fish steps). Lent with Marta's Luck, morning day 95.",
         "slot": ""
       },
       {
@@ -3777,8 +3777,8 @@
       },
       {
         "qty": "",
-        "name": "Boat shed key (on loan from Odile)",
-        "note": "Old iron key on tarred cord for Odile's boat shed (green door, third along behind the fish steps). Lent with Marta's Luck, morning day 95.",
+        "name": "Invictus",
+        "note": "War hammer (iron rank, rare). Bonded. Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style). Stored in Pocket Space after Arc Step back to Bram, early afternoon day 94.",
         "slot": "Main hand",
         "empty": "none"
       },
@@ -4202,7 +4202,7 @@
       }
     ]
   },
-  "next": "Ready Marta's Luck (Gary on the seams, pine tar and oakum) for a dusk scouting trip past the outer reef (The Drowned Lamps; nobody goes in the water). Return the boat, key and scale to Odile after. Jason has a jobs-hall commitment this afternoon. Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Marta's Luck is swelling at the slipway; meet Jason at the fish steps 1 hr before sunset for the dusk scout past the outer reef (The Drowned Lamps; nobody goes in the water). Plan reef approach and retreat signals with Rufus. Return the boat, key and scale to Odile after. Gauntlet idea for Gary (slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1447 iron · 897 lesser",
   "racial": [
@@ -4290,11 +4290,11 @@
       "value": "100%"
     },
     {
-      "pct": 100,
-      "note": "Full after sleep, dawn day 95.",
+      "pct": 85,
+      "note": "Squall used three times for hammer-throw tests, early afternoon day 95.",
       "tone": "mana",
       "label": "MANA",
-      "value": "100%"
+      "value": "85%"
     },
     {
       "pct": 100,
@@ -4373,7 +4373,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 95 in this world, Odile's boat shed behind the fish steps",
+    "asOf": "Early afternoon, day 95 in this world, harbour shingle outside Odile's boat shed",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4401,7 +4401,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In Odile's boat shed behind the fish steps, Greenstone harbour, morning of day 95, with Rufus, Farrah, Gary and Jason and Marta's Luck on blocks under a tarp.",
+  "location": "On the harbour shingle outside Odile's boat shed, Greenstone, early afternoon of day 95, testing hammer throws with Rufus, Farrah and Gary watching; Marta's Luck tied at the slipway ring.",
   "missions": [
     {
       "kind": "PRIVATE",
@@ -4805,8 +4805,8 @@
   ],
   "worldTime": {
     "day": 95,
-    "time": "Morning",
-    "detail": "Morning, Odile's boat shed behind the fish steps.",
+    "time": "Afternoon",
+    "detail": "Early afternoon, harbour shingle outside Odile's boat shed.",
     "dayLabel": "95 days in this world"
   },
   "abilityMeta": {
