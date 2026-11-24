@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-393",
+  "rev": "2026-11-23-aether-396",
   "gear": {
     "doll": [
       [
@@ -3650,13 +3650,7 @@
       {
         "qty": 1,
         "name": "Arella's contract packet",
-        "note": "3 sheets from the Director's office, opened day 93: the private contract, the crew list (4 earth specialists and a crew chief), and a Society pass for Mags at the Wet Barrel. Confidential.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Basket of fried-dough twists",
-        "note": "About two dozen less two (about 22) sugar-and-red-spice twists in a woven reed basket, stored hot (held in stasis). Nate's half of the stall's whole stock, bought for 5 iron at the dock-road corner, dawn day 94; Gary ate the other basket. Gave Gary one twist and Farrah one in the Wet Barrel cellar, morning day 94.",
+        "note": "3 sheets from the Director's office, opened day 93: the private contract, the crew list (4 earth specialists and a crew chief), and a Society pass for Mags at the Wet Barrel. Confidential. Dunmore signed the completion slip at the Wet Barrel, day 94 (capped and chained, crew whole, archway not entered).",
         "slot": ""
       },
       {
@@ -3669,6 +3663,18 @@
         "qty": 1,
         "name": "Lightning Quintessence",
         "note": "From Putting a Lid on It, mid-morning day 94.",
+        "slot": ""
+      },
+      {
+        "qty": 14,
+        "name": "Normal monster cores",
+        "note": "From 14 ratlings at Cistern 3 (12 Nate, 1 Gary, 1 Rufus), day 94.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Ratling pelt",
+        "note": "Cistern 3, day 94.",
         "slot": ""
       }
     ],
@@ -4192,9 +4198,9 @@
       }
     ]
   },
-  "next": "Now: meet Arella's crew and Rufus's team at the Wet Barrel and guide them to the upwelling (Putting a Lid on It; also finishes the Cellar Dwellers bonus). Day 95: rest day (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. North road hedgehog contract still open.",
+  "next": "Jobs hall: collect the 40 iron drain-work fee with Dunmore's signed slip. Return the Reeve map to Arella. Day 95: rest day (Gary's orders). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional) still open. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1454 iron · 870 lesser",
+  "coins": "1 silver · 1469 iron · 897 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4362,7 +4368,7 @@
     }
   ],
   "identity": {
-    "asOf": "Mid-morning, day 94 in this world, the grate above Cistern 3",
+    "asOf": "Late morning, day 94 in this world, Rufus's suite at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4390,12 +4396,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "On the grate platform above Cistern 3, mid-morning day 94, the upwelling freshly capped and the crew still down in the chamber.",
+  "location": "In Rufus's suite at Sailor's Watch, late morning day 94, with Rufus, Gary, and Farrah.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Putting a Lid on It",
-      "detail": "Landed and accepted morning day 93 in Director Arella's office (quiet Adventure Society contract, Rufus's team escorting). Objectives: guide the Society's capping crew to the upwelling chamber under the Old City 1/1 (crew reached the Cistern 3 grate, mid-morning day 94); see the upwelling properly capped 1/1 (Hesk's stone lid, chained and bolted, mid-morning day 94). Bonus: bring the whole crew back up with no serious injuries 0/1. Optional: find out where the freshly bricked-up archway leads 0/1. Rewards: 150 iron spirit coins, 1 Earth Quintessence, 1 Lightning Quintessence. Bonus: 1 common awakening stone. Optional: 50 iron spirit coins. MAIN OBJECTIVES COMPLETE mid-morning day 94: 150 iron + 50 iron unlisted, 1 Earth Quintessence, 1 Lightning Quintessence auto-deposited. Bonus (crew back up unhurt) and optional (bricked archway) still OPEN.",
+      "detail": "Landed and accepted morning day 93 in Director Arella's office (quiet Adventure Society contract, Rufus's team escorting). Objectives: guide the Society's capping crew to the upwelling chamber under the Old City 1/1 (crew reached the Cistern 3 grate, mid-morning day 94); see the upwelling properly capped 1/1 (Hesk's stone lid, chained and bolted, mid-morning day 94). Bonus: bring the whole crew back up with no serious injuries 1/1 (all back in the Wet Barrel unhurt, day 94). Optional: find out where the freshly bricked-up archway leads 0/1. Rewards: 150 iron spirit coins, 1 Earth Quintessence, 1 Lightning Quintessence. Bonus: 1 common awakening stone. Optional: 50 iron spirit coins. MAIN OBJECTIVES COMPLETE mid-morning day 94: 150 iron + 50 iron unlisted, 1 Earth Quintessence, 1 Lightning Quintessence auto-deposited. BONUS COMPLETE day 94: 1 common awakening stone + 15 iron unlisted auto-deposited. Optional (bricked archway) skipped for now by Nate's choice, still OPEN.",
       "status": "ACTIVE"
     },
     {
@@ -4764,16 +4770,30 @@
       "detail": "Nate's movement speed increases while he moves toward a target he has marked with Star Mark. Cost: none. Cooldown: none. From the Awakening Stone of the Hunt. Absorbed day 79 evening in Rufus's suite. DM-made.",
       "essence": "Comet",
       "progress": 8
+    },
+    {
+      "tag": "Comet · Spell · Drain, Dark-light",
+      "name": "Feast of the Falling Star",
+      "rank": "Iron 0",
+      "ranks": {
+        "Gold": "Sealed.",
+        "Bronze": "Sealed (no Magic Society record; revealed at rank-up).",
+        "Silver": "Sealed.",
+        "Diamond": "Sealed."
+      },
+      "detail": "A falling-star mote strikes a target within about 30 ft and marks it with a fading trail of light. For 10 seconds the trail drains the target's life force and feeds it back to Nate as health and stamina. Ending it early, or the target dying, releases what was taken at once. Cost: low mana (4%). Cooldown: 20 seconds. From the Awakening Stone of the Feast (Putting a Lid on It bonus). Absorbed late morning day 94 in Rufus's suite at Sailor's Watch. DM-made.",
+      "essence": "Comet",
+      "progress": 0
     }
   ],
   "worldTime": {
     "day": 94,
-    "time": "Mid-morning",
-    "detail": "Mid-morning, the grate platform above Cistern 3; Nate scouting ahead, crew and team at the passage lip.",
+    "time": "Late morning",
+    "detail": "Late morning, Rufus's suite at Sailor's Watch.",
     "dayLabel": "94 days in this world"
   },
   "abilityMeta": {
-    "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 4/5 · COMET 3/5 AWAKENED",
+    "slotsLabel": "LIGHTNING 2/5 · STAR 3/5 · WIND 4/5 · COMET 4/5 AWAKENED",
     "racialLabel": "RACIAL (OUTWORLDER)"
   },
   "achievements": [
