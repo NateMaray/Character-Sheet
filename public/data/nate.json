@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-408",
+  "rev": "2026-11-23-aether-413",
   "gear": {
     "doll": [
       [
@@ -4202,7 +4202,7 @@
       }
     ]
   },
-  "next": "Marta's Luck is swelling at the slipway; meet Jason at the fish steps 1 hr before sunset for the dusk scout past the outer reef (The Drowned Lamps; nobody goes in the water). Plan reef approach and retreat signals with Rufus. Return the boat, key and scale to Odile after. Gauntlet idea for Gary (slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Watch for the lights past the outer reef (The Drowned Lamps; nobody goes in the water; Nate is lookout and lends his aura if a fight starts). Return the boat, key and scale to Odile after. Gauntlet idea for Gary (slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1447 iron · 897 lesser",
   "racial": [
@@ -4284,21 +4284,21 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Full after sleep, dawn day 95.",
+      "note": "Full after meditating under the sea grape tree, late afternoon day 95.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
-      "pct": 85,
-      "note": "Squall used three times for hammer-throw tests, early afternoon day 95.",
+      "pct": 100,
+      "note": "Full after meditating under the sea grape tree, late afternoon day 95.",
       "tone": "mana",
       "label": "MANA",
-      "value": "85%"
+      "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full after sleep, dawn day 95.",
+      "note": "Full after meditating under the sea grape tree, late afternoon day 95.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4373,7 +4373,7 @@
     }
   ],
   "identity": {
-    "asOf": "Early afternoon, day 95 in this world, harbour shingle outside Odile's boat shed",
+    "asOf": "Dusk, day 95 in this world, aboard Marta's Luck at the outer reef",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4401,12 +4401,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "On the harbour shingle outside Odile's boat shed, Greenstone, early afternoon of day 95, testing hammer throws with Rufus, Farrah and Gary watching; Marta's Luck tied at the slipway ring.",
+  "location": "Aboard Marta's Luck, sail spilled, on the edge of the outer reef shallows south of Greenstone at dusk on day 95, keeping lookout with Rufus, Jason, Farrah and Gary.",
   "missions": [
     {
       "kind": "PRIVATE",
       "name": "The Drowned Lamps",
-      "detail": "Landed afternoon day 94 at Odile's Curiosities after Odile lent Nate Henri's Shimmering Scale. Find the source of the blue-green lights past the outer reef south of Greenstone (Henri's chart) and end the threat. Objectives: find the source of the lights 0/1; return the Shimmering Scale to Odile 0/1. Condition: Nate and his companions must return alive. Rewards: 400 iron spirit coins, 1 awakening stone. Leads (Society records, morning day 95): harbour log ~20 years ago of Henri's sighting, marked 'no action'; an iron two-star Society contract 41 years ago searched 3 days and found nothing; a pearl diver vanished at dusk on the outer reef edge 8 years ago when the water 'lit up green'. Jason has joined for the research. Report filed at the Society records room (Coastal, pending review). Odile lent Marta's Luck and the shed key, morning day 95: return the boat and all five alive. Plan: dusk scouting trip, stay above water.",
+      "detail": "Landed afternoon day 94 at Odile's Curiosities after Odile lent Nate Henri's Shimmering Scale. Find the source of the blue-green lights past the outer reef south of Greenstone (Henri's chart) and end the threat. Objectives: find the source of the lights 0/1; return the Shimmering Scale to Odile 0/1. Condition: Nate and his companions must return alive. Rewards: 400 iron spirit coins, 1 awakening stone. Leads (Society records, morning day 95): harbour log ~20 years ago of Henri's sighting, marked 'no action'; an iron two-star Society contract 41 years ago searched 3 days and found nothing; a pearl diver vanished at dusk on the outer reef edge 8 years ago when the water 'lit up green'. Jason has joined for the research. Report filed at the Society records room (Coastal, pending review). Odile lent Marta's Luck and the shed key, morning day 95: return the boat and all five alive. Plan: dusk scouting trip, stay above water. Progress dusk day 95: find the source of the lights 1/1. Nate spotted it with Starward Gaze from the reef edge: the 40 ft row of pulsing blue-green lights (about 25 ft down, 200 ft out past the drop-off) is a lure on pale stalks rising from the real creature below, a broad, flattened mass about 60 ft long and 20 ft wide lying still on the sand about 45 ft down. Colin scouted and came back without touching it. Still open: end the threat; return the scale 0/1.",
       "status": "ACTIVE"
     },
     {
@@ -4805,8 +4805,8 @@
   ],
   "worldTime": {
     "day": 95,
-    "time": "Afternoon",
-    "detail": "Early afternoon, harbour shingle outside Odile's boat shed.",
+    "time": "Dusk",
+    "detail": "Dusk, aboard Marta's Luck at the outer reef.",
     "dayLabel": "95 days in this world"
   },
   "abilityMeta": {
