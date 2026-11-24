@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-404",
+  "rev": "2026-11-23-aether-405",
   "gear": {
     "doll": [
       [
@@ -3732,7 +3732,9 @@
     ],
     "borrowed": [
       "Foreman's lamp",
-      "Shimmering Scale"
+      "Shimmering Scale",
+      "Boat shed key (old iron key on tarred cord), on loan from Odile",
+      "Marta's Luck (26 ft single-mast clinker boat, lent by Odile; terms: return boat + all five alive)"
     ],
     "equipped": [
       {
@@ -3775,10 +3777,10 @@
       },
       {
         "qty": "",
-        "name": "",
-        "note": "",
+        "name": "Boat shed key (on loan from Odile)",
+        "note": "Old iron key on tarred cord for Odile's boat shed (green door, third along behind the fish steps). Lent with Marta's Luck, morning day 95.",
         "slot": "Main hand",
-        "empty": "empty"
+        "empty": "none"
       },
       {
         "qty": "",
@@ -4200,7 +4202,7 @@
       }
     ]
   },
-  "next": "Drowned Lamps research in the Society records room (with Jason, who has a jobs-hall commitment this afternoon); return the scale to Odile after. Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Ready Marta's Luck (Gary on the seams, pine tar and oakum) for a dusk scouting trip past the outer reef (The Drowned Lamps; nobody goes in the water). Return the boat, key and scale to Odile after. Jason has a jobs-hall commitment this afternoon. Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1447 iron · 897 lesser",
   "racial": [
@@ -4371,7 +4373,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 95 in this world, Adventure Society records room",
+    "asOf": "Morning, day 95 in this world, Odile's boat shed behind the fish steps",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4399,12 +4401,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In the Adventure Society records room on the Island, morning of day 95, with Rufus, Farrah, Gary and Jason, going through reef-light reports with the clerk.",
+  "location": "In Odile's boat shed behind the fish steps, Greenstone harbour, morning of day 95, with Rufus, Farrah, Gary and Jason and Marta's Luck on blocks under a tarp.",
   "missions": [
     {
       "kind": "PRIVATE",
       "name": "The Drowned Lamps",
-      "detail": "Landed afternoon day 94 at Odile's Curiosities after Odile lent Nate Henri's Shimmering Scale. Find the source of the blue-green lights past the outer reef south of Greenstone (Henri's chart) and end the threat. Objectives: find the source of the lights 0/1; return the Shimmering Scale to Odile 0/1. Condition: Nate and his companions must return alive. Rewards: 400 iron spirit coins, 1 awakening stone. Leads (Society records, morning day 95): harbour log ~20 years ago of Henri's sighting, marked 'no action'; an iron two-star Society contract 41 years ago searched 3 days and found nothing; a pearl diver vanished at dusk on the outer reef edge 8 years ago when the water 'lit up green'. Jason has joined for the research.",
+      "detail": "Landed afternoon day 94 at Odile's Curiosities after Odile lent Nate Henri's Shimmering Scale. Find the source of the blue-green lights past the outer reef south of Greenstone (Henri's chart) and end the threat. Objectives: find the source of the lights 0/1; return the Shimmering Scale to Odile 0/1. Condition: Nate and his companions must return alive. Rewards: 400 iron spirit coins, 1 awakening stone. Leads (Society records, morning day 95): harbour log ~20 years ago of Henri's sighting, marked 'no action'; an iron two-star Society contract 41 years ago searched 3 days and found nothing; a pearl diver vanished at dusk on the outer reef edge 8 years ago when the water 'lit up green'. Jason has joined for the research. Report filed at the Society records room (Coastal, pending review). Odile lent Marta's Luck and the shed key, morning day 95: return the boat and all five alive. Plan: dusk scouting trip, stay above water.",
       "status": "ACTIVE"
     },
     {
@@ -4804,7 +4806,7 @@
   "worldTime": {
     "day": 95,
     "time": "Morning",
-    "detail": "Morning, Adventure Society records room on the Island.",
+    "detail": "Morning, Odile's boat shed behind the fish steps.",
     "dayLabel": "95 days in this world"
   },
   "abilityMeta": {
