@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-428",
+  "rev": "2026-11-23-aether-429",
   "gear": {
     "doll": [
       [
@@ -4289,11 +4289,11 @@
       "value": "100%"
     },
     {
-      "pct": 100,
-      "note": "Refilled over the week asleep. Soul tender for a few days after integration, so mana and recovery are a little shaky.",
+      "pct": 95,
+      "note": "Stormveil raised outside Sailor's Watch (5%, then 1% per minute). Soul still tender after integration, so mana and recovery are a little shaky.",
       "tone": "mana",
       "label": "MANA",
-      "value": "100%"
+      "value": "95%"
     },
     {
       "pct": 100,
@@ -4372,7 +4372,7 @@
     }
   ],
   "identity": {
-    "asOf": "Dawn, day 102 in this world, Sailor's Watch common room",
+    "asOf": "Dawn, day 102 in this world, outside Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4400,7 +4400,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In the Sailor's Watch common room in the grey early morning of day 102, just reunited with Gary, Rufus, Jason and Farrah and about to head outside to show them Stormveil.",
+  "location": "On the front step of Sailor's Watch in the grey early morning of day 102, Stormveil raised for the first time while Gary, Rufus, Jason and Farrah look on.",
   "missions": [
     {
       "kind": "PRIVATE",
@@ -4821,7 +4821,7 @@
   "worldTime": {
     "day": 102,
     "time": "Dawn",
-    "detail": "Early grey morning in the Sailor's Watch common room, first time downstairs after a week unconscious from soul integration.",
+    "detail": "Early grey morning on the street outside Sailor's Watch, first time outdoors after a week unconscious from soul integration.",
     "dayLabel": "102 days in this world"
   },
   "abilityMeta": {
