@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-415",
+  "rev": "2026-11-23-aether-420",
   "gear": {
     "doll": [
       [
@@ -3663,7 +3663,7 @@
       {
         "qty": 1,
         "name": "Boat shed key (on loan from Odile)",
-        "note": "Old iron key on tarred cord for Odile's boat shed (green door, third along behind the fish steps). Lent with Marta's Luck, morning day 95.",
+        "note": "Old iron key on tarred cord for Odile's boat shed (green door, third along behind the fish steps). Lent with Marta's Luck, morning day 95. Night day 95: Odile says keep it until Marta's Luck is mended; the shed and Henri's tools on the back wall are the team's to use.",
         "slot": ""
       },
       {
@@ -3674,9 +3674,15 @@
       },
       {
         "qty": 1,
-        "name": "Shimmering Scale (on loan from Odile)",
-        "note": "Bronze rank, uncommon. A palm-sized, diamond-shaped aquatic monster scale, iridescent blue-green; crafting material with a dense, cold aura. LENT by Odile, day 94: it is not Nate's to sell and must go back to her after the reef monster dies. Moved to Pocket Space in the Society records room, morning day 95.",
-        "slot": 30
+        "name": "Monster Core (Bronze)",
+        "note": "From the Drowned Lantern (the Drowned Lamps creature), looted at the outer reef, end of dusk day 95. Nate's pick in the loot split; Gary says it could power a bronze-rank gauntlet (unusable until Nate is bronze). Nate is thinking it over.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Awakening Stone of the Deep",
+        "note": "Reward from The Drowned Lamps, nightfall day 95. DM-made; its awakened ability is unknown until Nate absorbs it.",
+        "slot": ""
       }
     ],
     "outfits": [
@@ -3732,7 +3738,6 @@
     ],
     "borrowed": [
       "Foreman's lamp",
-      "Shimmering Scale",
       "Boat shed key (old iron key on tarred cord), on loan from Odile",
       "Marta's Luck (26 ft single-mast clinker boat, lent by Odile; terms: return boat + all five alive)"
     ],
@@ -4202,9 +4207,9 @@
       }
     ]
   },
-  "next": "Loot the dead lure creature (likely core near its center) and check Marta's Luck for leaks. Return the boat, key and scale to Odile (mention the damage). Gauntlet idea for Gary (slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Visit Odile's shop mid-morning tomorrow with the team (she wants to thank them). Repair Marta's Luck's bow with proper timber (Gary), using the shed and Henri's tools, then return the boat and shed key. Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1447 iron · 897 lesser",
+  "coins": "1 silver · 1947 iron · 897 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4373,7 +4378,7 @@
     }
   ],
   "identity": {
-    "asOf": "End of dusk, day 95 in this world, aboard Marta's Luck at the outer reef",
+    "asOf": "Night, day 95 in this world, on Greenstone's fish steps",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4401,13 +4406,13 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Aboard Marta's Luck at the outer reef edge south of Greenstone as dusk ends on day 95, the dead lure creature floating against the port hull.",
+  "location": "On the landing at the bottom of Greenstone's fish steps at night on day 95, Marta's Luck moored below and leaking from the cracked bow, Odile gone home.",
   "missions": [
     {
       "kind": "PRIVATE",
       "name": "The Drowned Lamps",
-      "detail": "Landed afternoon day 94 at Odile's Curiosities after Odile lent Nate Henri's Shimmering Scale. Find the source of the blue-green lights past the outer reef south of Greenstone (Henri's chart) and end the threat. Objectives: find the source of the lights 0/1; return the Shimmering Scale to Odile 0/1. Condition: Nate and his companions must return alive. Rewards: 400 iron spirit coins, 1 awakening stone. Leads (Society records, morning day 95): harbour log ~20 years ago of Henri's sighting, marked 'no action'; an iron two-star Society contract 41 years ago searched 3 days and found nothing; a pearl diver vanished at dusk on the outer reef edge 8 years ago when the water 'lit up green'. Jason has joined for the research. Report filed at the Society records room (Coastal, pending review). Odile lent Marta's Luck and the shed key, morning day 95: return the boat and all five alive. Plan: dusk scouting trip, stay above water. Progress dusk day 95: find the source of the lights 1/1. Nate spotted it with Starward Gaze from the reef edge: the 40 ft row of pulsing blue-green lights (about 25 ft down, 200 ft out past the drop-off) is a lure on pale stalks rising from the real creature below, a broad, flattened mass about 60 ft long and 20 ft wide lying still on the sand about 45 ft down. Colin scouted and came back without touching it. End the threat 1/1: end of dusk day 95, the creature lunged at Farrah; Nate's Squall threw her clear, then Gatling Hammer with Comet Strike and a final Comet Strike throw into its exposed belly killed it (Nate's killing blow, with Farrah's lava burns). All five alive. The body floats half-submerged against Marta's Luck's port hull, unlooted, with a dense glowing object (likely its core) near the center. Marta's Luck took damage: splintered bow planks, gouged port gunwale, hull struck. Still open: return the Shimmering Scale to Odile 0/1.",
-      "status": "ACTIVE"
+      "detail": "Landed afternoon day 94 at Odile's Curiosities after Odile lent Nate Henri's Shimmering Scale. Find the source of the blue-green lights past the outer reef south of Greenstone (Henri's chart) and end the threat. Objectives: find the source of the lights 0/1; return the Shimmering Scale to Odile 0/1. Condition: Nate and his companions must return alive. Rewards: 400 iron spirit coins, 1 awakening stone. Leads (Society records, morning day 95): harbour log ~20 years ago of Henri's sighting, marked 'no action'; an iron two-star Society contract 41 years ago searched 3 days and found nothing; a pearl diver vanished at dusk on the outer reef edge 8 years ago when the water 'lit up green'. Jason has joined for the research. Report filed at the Society records room (Coastal, pending review). Odile lent Marta's Luck and the shed key, morning day 95: return the boat and all five alive. Plan: dusk scouting trip, stay above water. Progress dusk day 95: find the source of the lights 1/1. Nate spotted it with Starward Gaze from the reef edge: the 40 ft row of pulsing blue-green lights (about 25 ft down, 200 ft out past the drop-off) is a lure on pale stalks rising from the real creature below, a broad, flattened mass about 60 ft long and 20 ft wide lying still on the sand about 45 ft down. Colin scouted and came back without touching it. End the threat 1/1: end of dusk day 95, the creature lunged at Farrah; Nate's Squall threw her clear, then Gatling Hammer with Comet Strike and a final Comet Strike throw into its exposed belly killed it (Nate's killing blow, with Farrah's lava burns). All five alive. The creature was a Drowned Lantern; Nate looted it from the port rail (body dissolved into rainbow smoke): Monster Core (Bronze), Drowned Lantern Lure, 8 bronze and 60 iron spirit coins. Marta's Luck took damage: splintered bow planks, gouged port gunwale, hull struck; Gary says she's taking a little water but will get them home. Return the Shimmering Scale to Odile 1/1: handed back on the fish steps at nightfall day 95, all five alive. Paid on completion: 400 iron spirit coins, 1 Awakening Stone of the Deep, plus 100 iron unlisted. Loot split on the fish steps, night day 95: Nate kept the core; the lure went to Rufus (to send to his family's academy); Gary, Farrah and Jason got 2 bronze and 20 iron each; Rufus took the last 2 bronze.",
+      "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
@@ -4805,8 +4810,8 @@
   ],
   "worldTime": {
     "day": 95,
-    "time": "Dusk",
-    "detail": "End of dusk, aboard Marta's Luck at the outer reef, the creature dead.",
+    "time": "Night",
+    "detail": "Night, on the fish steps with Odile after the Drowned Lamps.",
     "dayLabel": "95 days in this world"
   },
   "abilityMeta": {
