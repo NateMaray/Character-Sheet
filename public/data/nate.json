@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-447",
+  "rev": "2026-11-23-aether-451",
   "gear": {
     "doll": [
       [
@@ -4198,7 +4198,7 @@
       }
     ]
   },
-  "next": "Soul aftershocks run days 102 to 132: any ability may be rebuilt at random (Stormveil rebuilt into a cloud scarf on day 102). Soul tender for a few days. Marta's Luck returned to Odile, repaired and painted. Odile's tonic: one spoon in hot water, morning and night (not from the jar). Rest, then visit Odile once properly on his feet. Farrah offered a wrestling bout tomorrow (day 103). Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Soul aftershocks run days 102 to 132: any ability may be rebuilt at random (Stormveil rebuilt into a cloud scarf on day 102). Soul tender for a few days. Marta's Luck returned to Odile, repaired and painted. Odile's tonic: one spoon in hot water, morning and night (not from the jar); first dose taken night of day 102. Odile's tonic jar and note, and Jory's green sleep vial (unused; take half, not all), are on the bedside table. Jory: write down any ability change (what, when, what he was doing). Rufus writing letters to find someone to examine his soul. Jory came the evening of day 102: body sound, aura unsettled; his advice is rest, eat properly, and don't push abilities hard until the changes settle. Rest, then visit Odile once properly on his feet. Farrah offered a wrestling bout today (day 103). Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1947 iron · 897 lesser",
   "racial": [
@@ -4280,24 +4280,24 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Body rested after a week unconscious (night day 95 to morning day 102). Heavy and slow on waking.",
+      "note": "Rested after a deep night's sleep; legs feel like legs again.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
-      "pct": 95,
-      "note": "Stormveil raised (5%) to lighten the climb up Sailor's Watch's stairs; upkeep trickling at 1%/min. Soul still tender, and aftershocks have begun.",
+      "pct": 100,
+      "note": "Full. Soul still tender but quieter, like a healing bruise; aftershocks ongoing.",
       "tone": "mana",
       "label": "MANA",
-      "value": "95%"
+      "value": "100%"
     },
     {
-      "pct": 85,
-      "note": "Tired after painting Marta's Luck and the walks to the harbour and back; legs like wet rope from a week in bed.",
+      "pct": 100,
+      "note": "Fully rested after a full night's sleep on day 102.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "85%"
+      "value": "100%"
     }
   ],
   "profile": [
@@ -4369,7 +4369,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 102 in this world, upper landing of Sailor's Watch",
+    "asOf": "Morning, day 103 in this world, bedroom in Rufus's suite at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4397,7 +4397,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Three steps from the upper landing of Sailor's Watch in the afternoon of day 102, Stormveil just rebuilt into a scarf, with Farrah, Gary, Rufus and Jason.",
+  "location": "Waking in his bedroom in Rufus's suite at Sailor's Watch on the morning of day 103, Rufus and Gary writing letters in the sitting room.",
   "missions": [
     {
       "kind": "PRIVATE",
@@ -4816,10 +4816,10 @@
     }
   ],
   "worldTime": {
-    "day": 102,
-    "time": "Afternoon",
-    "detail": "Sailor's Watch, back from Odile's shop.",
-    "dayLabel": "102 days in this world"
+    "day": 103,
+    "time": "Morning",
+    "detail": "Rufus's suite, just woke.",
+    "dayLabel": "103 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 2/5 · STAR 4/5 · WIND 4/5 · COMET 4/5 AWAKENED",
