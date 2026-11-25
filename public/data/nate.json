@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-436",
+  "rev": "2026-11-23-aether-439",
   "gear": {
     "doll": [
       [
@@ -3662,12 +3662,6 @@
       },
       {
         "qty": 1,
-        "name": "Boat shed key (on loan from Odile)",
-        "note": "Old iron key on tarred cord for Odile's boat shed (green door, third along behind the fish steps). Lent with Marta's Luck, morning day 95. Night day 95: Odile says keep it until Marta's Luck is mended; the shed and Henri's tools on the back wall are the team's to use. Marta's Luck hauled up onto her blocks in the shed and the door locked, night day 95.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
         "name": "Henri's 'Lights' chart",
         "note": "Old canvas chart of the coast south of Greenstone, a circle past the outer reef marked 'Lights' (blue-green lights under the water on calm nights). Gift from Odile, day 94. She asks Nate to take strong friends. Rolled and tied with string by Rufus, dusk day 94.",
         "slot": ""
@@ -3737,7 +3731,7 @@
     ],
     "borrowed": [
       "Foreman's lamp",
-      "Boat shed key (old iron key on tarred cord), on loan from Odile",
+      "Boat shed key (old iron key on tarred cord), on loan from Odile; in Nate's hand, about to open the shed",
       "Marta's Luck (26 ft single-mast clinker boat, lent by Odile; on her blocks in Odile's shed awaiting bow repair)"
     ],
     "equipped": [
@@ -4206,7 +4200,7 @@
       }
     ]
   },
-  "next": "Soul is tender for a few days: go gently while the new abilities settle. Marta's Luck is repaired (only paint on the new bow planks left): return the boat and the shed key (still in Pocket Space) to Odile in person; she asked after Nate daily. Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Soul is tender for a few days: go gently while the new abilities settle. Marta's Luck is repaired and painted (sea-blue bow, white line): hand the shed key back to Odile (her hand is out for it), then pick up her salt-root and kelp-honey jar from the shop counter and go home to rest. Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1947 iron · 897 lesser",
   "racial": [
@@ -4377,7 +4371,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 102 in this world, Odile's Curiosities shop",
+    "asOf": "Late morning, day 102 in this world, Odile's boat shed",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4405,7 +4399,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Just inside Odile's Curiosities shop off the Greenstone market in the early morning of day 102, with Farrah, Gary, Rufus and Jason, as Odile sees him up and walking.",
+  "location": "Standing in Odile's boat shed in the late morning of day 102 beside the freshly painted Marta's Luck, key in hand, as Odile holds out her palm for it.",
   "missions": [
     {
       "kind": "PRIVATE",
@@ -4825,8 +4819,8 @@
   ],
   "worldTime": {
     "day": 102,
-    "time": "Morning",
-    "detail": "Odile's Curiosities shop, in a side lane off the half-set-up Greenstone market.",
+    "time": "Late morning",
+    "detail": "Odile's boat shed (green door) on the Greenstone harbour shingle.",
     "dayLabel": "102 days in this world"
   },
   "abilityMeta": {
