@@ -1,7 +1,7 @@
 import backup from "../public/data/nate.json";
 import sheet from "./fixtures/campaign.json";
 import { describe, expect, it } from "vitest";
-import { ESSENCE_ORDER, abilityEssence, essenceCountLabel, groupAbilities, rankFromLabel, rankLadder } from "./abilities";
+import { ESSENCE_ORDER, abilityEssence, essenceCountLabel, groupAbilities, parseAbilityDetail, rankFromLabel, rankLadder } from "./abilities";
 import { parseSheet, validateSheet } from "./sheet";
 import type { Ability } from "./types";
 
@@ -88,6 +88,40 @@ describe("groupAbilities", () => {
   });
 });
 
+describe("parseAbilityDetail", () => {
+  it("splits effect, cost, and cooldown", () => {
+    expect(
+      parseAbilityDetail(
+        "Your weapon ignites with a white-gold comet trail. Cost: Low mana [6%] and low stamina [5%]. Cooldown: 6 seconds.",
+      ),
+    ).toEqual({
+      effect: "Your weapon ignites with a white-gold comet trail.",
+      cost: "Low mana [6%] and low stamina [5%].",
+      cooldown: "6 seconds.",
+    });
+  });
+
+  it("keeps an extra cost sentence between Cost and Cooldown", () => {
+    expect(
+      parseAbilityDetail(
+        "Conjures three motes of starlight. Cost: Moderate mana [10%] to conjure. Each spent mote re-forms after 20 seconds at very low mana [1%]. Cooldown: None.",
+      ),
+    ).toEqual({
+      effect: "Conjures three motes of starlight.",
+      cost: "Moderate mana [10%] to conjure. Each spent mote re-forms after 20 seconds at very low mana [1%].",
+      cooldown: "None.",
+    });
+  });
+
+  it("returns the whole string as the effect when neither marker is present", () => {
+    expect(parseAbilityDetail("A short streak.")).toEqual({
+      effect: "A short streak.",
+      cost: "",
+      cooldown: "",
+    });
+  });
+});
+
 describe("rankLadder", () => {
   it("reads the rank word from the label", () => {
     expect(rankFromLabel("Iron 0")).toBe("Iron");
@@ -109,6 +143,19 @@ describe("rankLadder", () => {
       ["Gold", "sealed", "Sealed: revealed on reaching Gold"],
       ["Diamond", "sealed", "Sealed: revealed on reaching Diamond"],
     ]);
+  });
+
+  it("uses only the effect when Iron falls back to detail", () => {
+    expect(
+      rankLadder({
+        rank: "Iron 0",
+        detail: "A short streak. Cost: Low mana [4%]. Cooldown: None. Reshaped later.",
+      })[0],
+    ).toEqual({
+      name: "Iron",
+      state: "current",
+      text: "A short streak.",
+    });
   });
 
   it("uses ranks.Iron when present, and detail when it is missing", () => {

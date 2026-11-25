@@ -16,7 +16,7 @@ import {
   writeSellList,
   type SellEntry,
 } from "../sell";
-import { essenceCountLabel, groupAbilities, rankLadder } from "../abilities";
+import { essenceCountLabel, groupAbilities, parseAbilityDetail, rankLadder } from "../abilities";
 import type { Ability, GearItem, GearSource, PocketAction, SheetData } from "../types";
 import { Button, Card, Pill } from "./Bits";
 import { WardrobeView } from "./WardrobeView";
@@ -134,6 +134,25 @@ function abilityMetaLine(ability: Ability): string {
   return ability.tag ? `${ability.tag} · ${progress}` : progress;
 }
 
+function AbilityDetail({ detail }: { detail: string }) {
+  const { effect, cost, cooldown } = parseAbilityDetail(detail);
+  return (
+    <>
+      {effect ? <div className="ability-detail">{effect}</div> : null}
+      {cost ? (
+        <div className="ability-stat">
+          <strong>Cost:</strong> {cost}
+        </div>
+      ) : null}
+      {cooldown ? (
+        <div className="ability-stat">
+          <strong>Cooldown:</strong> {cooldown}
+        </div>
+      ) : null}
+    </>
+  );
+}
+
 function AbilityCard({ ability, panelId }: { ability: Ability; panelId: string }) {
   const rungs = rankLadder(ability);
   return (
@@ -146,7 +165,7 @@ function AbilityCard({ ability, panelId }: { ability: Ability; panelId: string }
       <div className="track" style={{ height: 8 }}>
         <span style={{ width: `${Math.max(ability.progress, 2)}%`, ["--bar" as string]: "var(--accent)" }} />
       </div>
-      <div className="body">{ability.detail}</div>
+      <AbilityDetail detail={ability.detail} />
       <details className="rank-details" name="ability-ranks">
         <summary aria-controls={panelId}>
           <span>Ranks</span>
