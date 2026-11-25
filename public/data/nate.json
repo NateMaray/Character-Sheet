@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-429",
+  "rev": "2026-11-23-aether-436",
   "gear": {
     "doll": [
       [
@@ -3677,6 +3677,11 @@
         "name": "Monster Core (Bronze)",
         "note": "From the Drowned Lantern (the Drowned Lamps creature), looted at the outer reef, end of dusk day 95. Nate's pick in the loot split; Gary says it could power a bronze-rank gauntlet (unusable until Nate is bronze). Nate is thinking it over.",
         "slot": ""
+      },
+      {
+        "qty": "",
+        "name": "Invictus",
+        "note": "War hammer (iron rank, rare). Bonded. Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style). Stored in Pocket Space after Arc Step back to Bram, early afternoon day 94."
       }
     ],
     "outfits": [
@@ -3776,10 +3781,10 @@
       },
       {
         "qty": "",
-        "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Bonded. Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style). Stored in Pocket Space after Arc Step back to Bram, early afternoon day 94.",
+        "name": "",
+        "note": "",
         "slot": "Main hand",
-        "empty": "none"
+        "empty": "empty"
       },
       {
         "qty": "",
@@ -4201,7 +4206,7 @@
       }
     ]
   },
-  "next": "Read Rufus's note on the side table and find out what happened during the week (healer, Marta's Luck, Odile's thank-you visit). Soul is tender for a few days: go gently while the new abilities settle. Marta's Luck bow repair and returning the boat and shed key (status unknown, ask the team). Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Soul is tender for a few days: go gently while the new abilities settle. Marta's Luck is repaired (only paint on the new bow planks left): return the boat and the shed key (still in Pocket Space) to Odile in person; she asked after Nate daily. Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1947 iron · 897 lesser",
   "racial": [
@@ -4289,18 +4294,18 @@
       "value": "100%"
     },
     {
-      "pct": 95,
-      "note": "Stormveil raised outside Sailor's Watch (5%, then 1% per minute). Soul still tender after integration, so mana and recovery are a little shaky.",
+      "pct": 83,
+      "note": "Spent on the ability demo outside Sailor's Watch (Stormveil raise, upkeep and lightening, Squall, Arc Step); Stormveil now dropped while he rests on the front step. Soul still tender after integration, so mana and recovery are a little shaky.",
       "tone": "mana",
       "label": "MANA",
-      "value": "95%"
+      "value": "83%"
     },
     {
-      "pct": 100,
-      "note": "Rested over the week asleep, but the body feels heavy and slow on waking, morning day 102.",
+      "pct": 97,
+      "note": "A little winded after running laps outside Sailor's Watch; legs still weak from a week in bed.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "100%"
+      "value": "97%"
     }
   ],
   "profile": [
@@ -4372,7 +4377,7 @@
     }
   ],
   "identity": {
-    "asOf": "Dawn, day 102 in this world, outside Sailor's Watch",
+    "asOf": "Morning, day 102 in this world, Odile's Curiosities shop",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4400,7 +4405,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "On the front step of Sailor's Watch in the grey early morning of day 102, Stormveil raised for the first time while Gary, Rufus, Jason and Farrah look on.",
+  "location": "Just inside Odile's Curiosities shop off the Greenstone market in the early morning of day 102, with Farrah, Gary, Rufus and Jason, as Odile sees him up and walking.",
   "missions": [
     {
       "kind": "PRIVATE",
@@ -4662,7 +4667,7 @@
       "ranks": {
         "Bronze": "Can carry one willing ally in physical contact. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Dissolve into a streak of lightning and reappear at a point along a line of sight, up to about 60 feet away. Anything in the path takes lightning damage and an instance of [Static Charge]. Each Arc Step grants an instance of [Momentum]. You can arrive in contact with your [Starlit] target or with Invictus (in flight or where it landed) if it is in line of sight, ready to strike or catch it. While you hold 3 or more instances of [Momentum], Invictus's charged hits also inflict [Static Charge]. Cannot carry passengers. Cost: Low mana [4%]. Cooldown: None. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Arc Step (same name). What it does differently: no cooldown (Path of Shadows pattern, B1 l.5192) at 4% instead of 5%/5 s; builds Momentum and Static; can land on the mark or on a thrown Invictus, which is the Gatling Hammer link. Bronze record (kept, fits): carry one willing ally in contact. DM-made.",
+      "detail": "Dissolve into a streak of lightning and reappear at a point along a line of sight, up to about 60 feet away. Anything in the path takes lightning damage and an instance of [Static Charge]. Each Arc Step grants an instance of [Momentum]. You can arrive in contact with your [Starlit] target or with Invictus (in flight or where it landed) if it is in line of sight, ready to strike or catch it. While you hold 3 or more instances of [Momentum], Invictus's charged hits also inflict [Static Charge]. Cannot carry passengers. Cost: Low mana [4%]. Cooldown: None.",
       "essence": "Lightning",
       "progress": 21
     },
@@ -4673,7 +4678,7 @@
       "ranks": {
         "Bronze": "Two marks at once. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Mark a creature or object you can see with [Starlit]. You always feel its direction and distance, through walls and floors, out to about 3,300 feet at iron rank, fading near the edge. One mark at a time; no upkeep. You see your afflictions on the target as faint stars. Weapons you throw at the marked target curve toward it, enough to bend around minor cover or correct a near miss, and strike with added weight: each thrown hit on it inflicts an instance of [Starweight]. Cost: Very low mana [2%]. Cooldown: None. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Star Mark (same name). What it does differently: keeps tracking, range, cost and the day-88 object ruling; adds homing throws that stack Starweight (the Gatling Hammer engine) and stack-reading. Mark-chain travel works as before. Bronze record (kept): two marks at once. DM-made.",
+      "detail": "Mark a creature or object you can see with [Starlit]. You always feel its direction and distance, through walls and floors, out to about 3,300 feet at iron rank, fading near the edge. One mark at a time; no upkeep. You see your afflictions on the target as faint stars. Weapons you throw at the marked target curve toward it, enough to bend around minor cover or correct a near miss, and strike with added weight: each thrown hit on it inflicts an instance of [Starweight]. Cost: Very low mana [2%]. Cooldown: None.",
       "essence": "Star",
       "progress": 11
     },
@@ -4685,7 +4690,7 @@
         "Bronze": "Deflected projectiles can be turned back along their path, weakened. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)",
         "Silver": "The cloak's lightening grows from gliding into true flight (Nate's only flight path). (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Wraps you in a cloak of churning storm cloud, grey wind shot through with flickers of lightning that brighten as your [Momentum] builds. It deflects projectiles and blunts blows, more so for each instance of [Momentum] you hold, and enemies who strike you in melee through it gain an instance of [Static Charge]. While it is up your [Momentum] fades half as fast. Beneath your Storm Front it crackles harder. The cloak can lighten you for a low mana-per-second cost, slowing falls and letting you run across water while you keep moving, or glide on the wind from any height. It cushions your landings, negating falling damage from heights you jump or dive from, and it can hush the sound and scent of your movement. You can extend it over one ally in contact with you, at double upkeep. Cost: Low mana [5%] to raise, then very low mana [1%] per minute. Cooldown: None. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Windward Veil (renamed Stormveil at Nathan's request, Nov 25; storm-cloud look and melee [Static Charge] added, feeding Thunderhead and Comet Strike). Nate's Cloak of Night (B1 l.1876; weight reduction also Leaf on the Wind, B2 l.2814). Bronze record (kept): deflected projectiles can be turned back along their path. Higher-rank record: lightening grows into true flight; Nate's only flight path (no overlap with Storm Front). DM-made.",
+      "detail": "Wraps you in a cloak of churning storm cloud, grey wind shot through with flickers of lightning that brighten as your [Momentum] builds. It deflects projectiles and blunts blows, more so for each instance of [Momentum] you hold, and enemies who strike you in melee through it gain an instance of [Static Charge]. While it is up your [Momentum] fades half as fast. Beneath your Storm Front it crackles harder. The cloak can lighten you for a low mana-per-second cost, slowing falls and letting you run across water while you keep moving, or glide on the wind from any height. It cushions your landings, negating falling damage from heights you jump or dive from, and it can hush the sound and scent of your movement. You can extend it over one ally in contact with you, at double upkeep. Cost: Low mana [5%] to raise, then very low mana [1%] per minute. Cooldown: None.",
       "essence": "Wind",
       "progress": 11
     },
@@ -4696,7 +4701,7 @@
       "ranks": {
         "Bronze": "The movement before your strike leaves a burning comet trail on the ground for a few seconds; enemies who cross it catch the burn. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Your weapon, fist, or a thrown weapon ignites with a white-gold comet trail. The strike consumes all your instances of [Momentum], dealing additional damage for each, and inflicts an instance of [Comet Burn], plus one more for every 2 instances of [Momentum] consumed. If the target carries 3 or more instances of [Static Charge], the strike grounds them: all instances are consumed, the target takes lightning damage for each, and it is stunned for a moment. Cost: Low mana [6%] and low stamina [5%]. Cooldown: 6 seconds. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Comet Strike (same name). What it does differently: cheaper (6% + 5% vs 10% + 5%) and faster (6 s vs 10 s); \"hits harder the more you moved\" becomes explicit Momentum consumption; works on thrown Invictus; grounds Static for a stun. With Second Wind, a 4-Momentum strike refunds 8% mana, so it pays for itself. Bronze record (kept, reworded): the run-up leaves a burning trail; enemies crossing it gain [Comet Burn]. DM-made.",
+      "detail": "Your weapon, fist, or a thrown weapon ignites with a white-gold comet trail. The strike consumes all your instances of [Momentum], dealing additional damage for each, and inflicts an instance of [Comet Burn], plus one more for every 2 instances of [Momentum] consumed. If the target carries 3 or more instances of [Static Charge], the strike grounds them: all instances are consumed, the target takes lightning damage for each, and it is stunned for a moment. Cost: Low mana [6%] and low stamina [5%]. Cooldown: 6 seconds.",
       "essence": "Comet",
       "progress": 13
     },
@@ -4707,7 +4712,7 @@
       "ranks": {
         "Bronze": "The pool can be conjured anywhere in line of sight, not just at your feet. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Conjures three motes of starlight that orbit you until dismissed or until you sleep. The motes give off light that you can brighten or dim. You can fling a mote at a target within about 60 feet; it deals star damage, inflicts [Starweight], and curves onto your [Starlit] target. You can set a mote into a weapon as you throw or swing it, adding star damage and an instance of [Starweight] to its next hit. You can ground all three motes to form a well of starlit water about 10 feet across at your feet for 1 minute: allies in it regain 2% health, 2% stamina and 1% mana every few seconds and minor afflictions are washed away. The well can be formed once every 3 minutes, and the motes do not re-form while it lasts. Cost: Moderate mana [10%] to conjure. Each spent mote re-forms after 20 seconds at very low mana [1%]. Cooldown: None. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Moonwell. What it does differently: one conjuration, many uses, the Cloak of Night model (B1 l.1876): light source, three homing star projectiles, weapon infusion, and the same healing well Moonwell made, for about 10% instead of 30% and a 3-minute well limit instead of a 10-minute cooldown. Bronze record (kept, reworded): the well can be formed anywhere in line of sight. DM-made. First used dawn day 102 in Rufus's suite: conjured, then grounded into a well to heal (mana about even).",
+      "detail": "Conjures three motes of starlight that orbit you until dismissed or until you sleep. The motes give off light that you can brighten or dim. You can fling a mote at a target within about 60 feet; it deals star damage, inflicts [Starweight], and curves onto your [Starlit] target. You can set a mote into a weapon as you throw or swing it, adding star damage and an instance of [Starweight] to its next hit. You can ground all three motes to form a well of starlit water about 10 feet across at your feet for 1 minute: allies in it regain 2% health, 2% stamina and 1% mana every few seconds and minor afflictions are washed away. The well can be formed once every 3 minutes, and the motes do not re-form while it lasts. Cost: Moderate mana [10%] to conjure. Each spent mote re-forms after 20 seconds at very low mana [1%]. Cooldown: None.",
       "essence": "Star",
       "progress": 8
     },
@@ -4719,7 +4724,7 @@
         "Bronze": "Allies beneath the storm also gain the wind's favour (faster Momentum-style speed while moving). (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)",
         "Silver": "The storm can cover a much larger area and follow you. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Calls down a low ceiling of storm sky over an area about 30 feet across, centred on a point you can see within about 60 feet; it can be moved at walking pace with focus. Beneath it the wind favours you: you gain [Momentum] from movement twice as fast and it does not fade while you are moving, and your Squall reaches farther and hits harder. Enemies beneath it fight gusts and driving rain: their footing and ranged attacks suffer and their senses are dulled. Your Thunderhead can be called down out of the cloud onto any point beneath it instead of erupting from you. You can launch upward into the cloud ceiling on the wind (up to about 20 feet) and begin a dive from it, which counts as a charge for Comet Strike and as an attack from above for Starward Gaze. Enemies carrying [Static Charge] beneath the storm gain another instance every few seconds. Cost: Moderate mana [10%] to conjure, then very low mana [1%] every 10 seconds to sustain. Cooldown: 30 seconds after it ends. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Sky Stair (sky stone origin; Nathan chose this Nov 25 so Veil and the slot don't overlap). What it does differently: trades personal air-steps for a sustained sky-field that ties Wind, Lightning (Static, Thunderhead from the cloud), Comet (dives) and Star (attacks from above) together. Bronze record (proposed, replaces \"shared footing\"): allies beneath the storm also gain the wind's favour (faster Momentum-style speed while moving). Silver record (proposed, replaces \"continuous air-walking\"): the storm can cover a much larger area and follow you. All Magic Society nearest-match, not guaranteed. DM-made.",
+      "detail": "Calls down a low ceiling of storm sky over an area about 30 feet across, centred on a point you can see within about 60 feet; it can be moved at walking pace with focus. Beneath it the wind favours you: you gain [Momentum] from movement twice as fast and it does not fade while you are moving, and your Squall reaches farther and hits harder. Enemies beneath it fight gusts and driving rain: their footing and ranged attacks suffer and their senses are dulled. Your Thunderhead can be called down out of the cloud onto any point beneath it instead of erupting from you. You can launch upward into the cloud ceiling on the wind (up to about 20 feet) and begin a dive from it, which counts as a charge for Comet Strike and as an attack from above for Starward Gaze. Enemies carrying [Static Charge] beneath the storm gain another instance every few seconds. Cost: Moderate mana [10%] to conjure, then very low mana [1%] every 10 seconds to sustain. Cooldown: 30 seconds after it ends.",
       "essence": "Wind",
       "progress": 8
     },
@@ -4730,7 +4735,7 @@
       "ranks": {
         "Bronze": "Anything shoved into a wall, tree or other solid object takes impact damage and is briefly dazed. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Releases a sudden blast of storm wind in a cone out to about 15 feet, shoving everything caught in it back and off balance; lighter targets are knocked down, and projectiles are knocked off course. Each enemy already carrying [Comet Burn] gains another instance. Enemies shoved into your Abyssal Star's pull gain an instance of [Starweight]. You can instead fire Squall behind you to launch yourself up or forward, gaining an instance of [Momentum]. Cost: Low mana [5%]. Cooldown: 6 seconds. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Squall (same name). What it does differently: cooldown 6 s instead of 15 s (Wind Wave's 6 s, B2 l.18919); fans burns, herds enemies into the Abyssal Star, and doubles as a launch. Bronze record (kept): impact damage and daze against solid objects. DM-made.",
+      "detail": "Releases a sudden blast of storm wind in a cone out to about 15 feet, shoving everything caught in it back and off balance; lighter targets are knocked down, and projectiles are knocked off course. Each enemy already carrying [Comet Burn] gains another instance. Enemies shoved into your Abyssal Star's pull gain an instance of [Starweight]. You can instead fire Squall behind you to launch yourself up or forward, gaining an instance of [Momentum]. Cost: Low mana [5%]. Cooldown: 6 seconds.",
       "essence": "Wind",
       "progress": 6
     },
@@ -4741,7 +4746,7 @@
       "ranks": {
         "Bronze": "Allies in your aura recover stamina faster while they're moving. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Allies within the aura (about 30 feet) have increased movement speed. Enemies within the aura have reduced resistance to afflictions, further reduced for each instance of [Comet Burn] they are suffering from, and your afflictions on them fade more slowly. Cost: None. Cooldown: None. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Harbinger (same name). What it does differently: reworded to the Hegemony pattern (B1 l.9623) so resistance drops scale with burns; \"burns last longer\" widened to all of Nate's afflictions. Aura control unchanged. Bronze record (kept): allies recover stamina faster while moving. DM-made.",
+      "detail": "Allies within the aura (about 30 feet) have increased movement speed. Enemies within it feel the comet coming: their defences are weakened against attacks from anyone who is moving, more so for each instance of [Momentum] you hold. Your afflictions on them fade more slowly. Cost: None. Cooldown: None.",
       "essence": "Comet",
       "progress": 0
     },
@@ -4752,7 +4757,7 @@
       "ranks": {
         "Bronze": "Sense magic: enchantments and active magic show in whatever you magnify. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "See fine detail at great distances as clearly as if it were close; line of sight only. Focusing on a creature for a moment reveals a weak point and inflicts [Exposed]: your next hit on it partially ignores armour or natural plating and deals increased damage, consuming the affliction. One target at a time. Attacks you make from above, whether falling, diving from Storm Front's ceiling or a Veil glide, or throws arcing down, deal increased damage, more with each instance of [Starweight] on the target. [Exposed] (affliction, star): see above. Not stacking. Cost: None. Cooldown: None. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Starward Gaze (same name). What it does differently: keeps the far-sight Nate already uses; adds a weak-point read (Exposed) and a Power payoff for attacking from height (the \"falling star\" identity). Stays Nate's one perception power. Bronze record (kept): sense magic. DM-made.",
+      "detail": "See fine detail at great distances as clearly as if it were close; line of sight only. Focusing on a creature for a moment reveals a weak point and inflicts [Exposed]: your next hit on it partially ignores armour or natural plating and deals increased damage, consuming the affliction. One target at a time. Attacks you make from above, whether falling, diving from Storm Front's ceiling or a Veil glide, or throws arcing down, deal increased damage, more with each instance of [Starweight] on the target. [Exposed] (affliction, star): see above. Not stacking. Cost: None. Cooldown: None.",
       "essence": "Star",
       "progress": 1
     },
@@ -4763,7 +4768,7 @@
       "ranks": {
         "Bronze": "Lightning arcs between enemies caught in the burst and jumps a short way to nearby enemies outside it. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "A burst of storm-lightning rips out about 10 feet, shocking every enemy caught in it, staggering them briefly and inflicting 2 instances of [Static Charge]. The burst can erupt from you, from Invictus wherever it is within 60 feet (it is lightning-attuned), or from your active Abyssal Star, catching everything in its pull. Enemies that already carry [Static Charge] are stunned for a moment instead of staggered. Cost: Moderate mana [12%]. Cooldown: 20 seconds. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Thunderhead (same name). What it does differently: cheaper (12% vs 15%) and faster (20 s vs 30 s); can be cast remotely through Invictus or the Abyssal Star; stacks Static and stuns pre-charged enemies. Bronze record (kept, fits): arcs chain to nearby enemies (they also gain [Static Charge]). DM-made.",
+      "detail": "A burst of storm-lightning rips out about 10 feet, shocking every enemy caught in it, staggering them briefly and inflicting 2 instances of [Static Charge]. The burst can erupt from you, from Invictus wherever it is within 60 feet (it is lightning-attuned), or from your active Abyssal Star, catching everything in its pull. Enemies that already carry [Static Charge] are stunned for a moment instead of staggered. Cost: Moderate mana [12%]. Cooldown: 20 seconds.",
       "essence": "Lightning",
       "progress": 6
     },
@@ -4774,7 +4779,7 @@
       "ranks": {
         "Bronze": "Also restores 10% mana when it triggers. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Whenever you consume instances of [Momentum], recover 2% mana and 2% stamina for each instance consumed. While you are moving, your natural mana and stamina recovery is as fast as it is at rest. When your stamina falls below 25%, the wind fills you and you recover 25% stamina; this can happen once every 10 minutes, and it triggers as soon as that time is up if you are still below 25%. Cost: None. Cooldown: None. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Second Wind (same name). What it does differently: keeps the old emergency trigger and day-80 ruling exactly; adds the Recovery payoff: spending Momentum refunds mana and stamina (Nathan's efficiency ask), and moving no longer slows regeneration. Bronze record (kept): also restores 10% mana when the emergency trigger fires. DM-made.",
+      "detail": "Whenever you consume instances of [Momentum], recover 2% mana and 2% stamina for each instance consumed. While you are moving, your natural mana and stamina recovery is as fast as it is at rest. When your stamina falls below 25%, the wind fills you and you recover 25% stamina; this can happen once every 10 minutes, and it triggers as soon as that time is up if you are still below 25%. Cost: None. Cooldown: None.",
       "essence": "Wind",
       "progress": 6
     },
@@ -4785,7 +4790,7 @@
       "ranks": {
         "Bronze": "Allies moving toward your Star Mark target get the speed boost too. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Your movement speed increases while you move toward your [Starlit] target, and your [Momentum] does not fade while you do. Moving toward it grants an instance of [Momentum] every 2 seconds. Each time a weapon you throw hits your [Starlit] target, gain an instance of [Momentum], and the weapon returns to you faster. Cost: None. Cooldown: None. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Quarry's Wake (same name). What it does differently: keeps the mark-pull speed (and mark-chain travel); now generates and protects Momentum, and the Gatling Hammer feeds Momentum straight into Comet Strike. Bronze record (kept): allies moving toward the mark share the speed. DM-made.",
+      "detail": "Your movement speed increases while you move toward your [Starlit] target, and your [Momentum] does not fade while you do. Moving toward it grants an instance of [Momentum] every 2 seconds. Each time a weapon you throw hits your [Starlit] target, gain an instance of [Momentum], and the weapon returns to you faster. Cost: None. Cooldown: None.",
       "essence": "Comet",
       "progress": 8
     },
@@ -4799,7 +4804,7 @@
         "Silver": "Sealed.",
         "Diamond": "Sealed."
       },
-      "detail": "A falling-star mote strikes a target within about 30 feet (your [Starlit] target within about 60 feet) and trails light from it. For 10 seconds the trail drains health, stamina and a little mana from the target and feeds them to you. The drain is increased for each instance of [Comet Burn] on the target, and those instances do not fade while it lasts. Ending it early, or the target dying, releases what was taken at once. Cost: Low mana [4%]. Cooldown: 15 seconds. Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Feast of the Falling Star (same name). What it does differently: Feast of Blood pattern (B1 l.6725): drinks harder from burning targets; adds a little mana (Spirit bond); 15 s cooldown instead of 20 s; longer reach on the mark. Bronze: sealed, as before. DM-made.",
+      "detail": "A falling-star mote strikes a target within about 30 feet (your [Starlit] target within about 60 feet) and trails light from it. For 10 seconds the trail drains health, stamina and a little mana from the target and feeds them to you. The drain is increased for each instance of [Comet Burn] on the target, and those instances do not fade while it lasts. Ending it early, or the target dying, releases what was taken at once. Cost: Low mana [4%]. Cooldown: 15 seconds.",
       "essence": "Comet",
       "progress": 0
     },
@@ -4813,15 +4818,15 @@
         "Silver": "Sealed.",
         "Diamond": "Sealed."
       },
-      "detail": "Conjures a tiny, dense, dark star at a point you can see within about 60 feet, or binds it to your [Starlit] target so it follows. Enemies within about 15 feet are dragged toward its centre, slowed, take ongoing crushing damage, and gain an instance of [Starweight] every 2 seconds they stay in the pull. Your thrown weapons and your own charges that pass into the pull are accelerated, dealing increased damage; you ignore the drag of your own star. It lasts as long as you sustain it. You can move it up to 15 feet per second, drop it, or collapse it: a burst that strikes everything in the pull, dealing additional damage for each instance of [Starweight] on each target and consuming them. Cost: Moderate mana [10%] to conjure, then low mana per second [about 1% every 2 seconds] to sustain. Cooldown: 20 seconds (starting when the star ends). Reshaped by soul integration (accepted night day 95; Nate woke morning day 102). Replaced: Abyssal Star (as retconned Nov 25). What it does differently: switches from a fixed 5-second, 15%, 1-minute spell to a cheap sustained conjuration you can move, bind to the mark, and collapse on demand; adds stacking and the throw/charge acceleration Nathan accepted as the model. Bronze: sealed, as before. DM-made.",
+      "detail": "Conjures a tiny, dense, dark star at a point you can see within about 60 feet, or binds it to your [Starlit] target so it follows. Enemies within about 15 feet are dragged toward its centre, slowed, take ongoing crushing damage, and gain an instance of [Starweight] every 2 seconds they stay in the pull. Your thrown weapons and your own charges that pass into the pull are accelerated, dealing increased damage; you ignore the drag of your own star. It lasts as long as you sustain it. You can move it up to 15 feet per second, drop it, or collapse it: a burst that strikes everything in the pull, dealing additional damage for each instance of [Starweight] on each target and consuming them. Cost: Moderate mana [10%] to conjure, then low mana per second [about 1% every 2 seconds] to sustain. Cooldown: 20 seconds (starting when the star ends).",
       "essence": "Star",
       "progress": 0
     }
   ],
   "worldTime": {
     "day": 102,
-    "time": "Dawn",
-    "detail": "Early grey morning on the street outside Sailor's Watch, first time outdoors after a week unconscious from soul integration.",
+    "time": "Morning",
+    "detail": "Odile's Curiosities shop, in a side lane off the half-set-up Greenstone market.",
     "dayLabel": "102 days in this world"
   },
   "abilityMeta": {
