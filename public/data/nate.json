@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-439",
+  "rev": "2026-11-23-aether-447",
   "gear": {
     "doll": [
       [
@@ -3730,9 +3730,7 @@
       }
     ],
     "borrowed": [
-      "Foreman's lamp",
-      "Boat shed key (old iron key on tarred cord), on loan from Odile; in Nate's hand, about to open the shed",
-      "Marta's Luck (26 ft single-mast clinker boat, lent by Odile; on her blocks in Odile's shed awaiting bow repair)"
+      "Foreman's lamp"
     ],
     "equipped": [
       {
@@ -4200,7 +4198,7 @@
       }
     ]
   },
-  "next": "Soul is tender for a few days: go gently while the new abilities settle. Marta's Luck is repaired and painted (sea-blue bow, white line): hand the shed key back to Odile (her hand is out for it), then pick up her salt-root and kelp-honey jar from the shop counter and go home to rest. Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Soul aftershocks run days 102 to 132: any ability may be rebuilt at random (Stormveil rebuilt into a cloud scarf on day 102). Soul tender for a few days. Marta's Luck returned to Odile, repaired and painted. Odile's tonic: one spoon in hot water, morning and night (not from the jar). Rest, then visit Odile once properly on his feet. Farrah offered a wrestling bout tomorrow (day 103). Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1947 iron · 897 lesser",
   "racial": [
@@ -4288,18 +4286,18 @@
       "value": "100%"
     },
     {
-      "pct": 83,
-      "note": "Spent on the ability demo outside Sailor's Watch (Stormveil raise, upkeep and lightening, Squall, Arc Step); Stormveil now dropped while he rests on the front step. Soul still tender after integration, so mana and recovery are a little shaky.",
+      "pct": 95,
+      "note": "Stormveil raised (5%) to lighten the climb up Sailor's Watch's stairs; upkeep trickling at 1%/min. Soul still tender, and aftershocks have begun.",
       "tone": "mana",
       "label": "MANA",
-      "value": "83%"
+      "value": "95%"
     },
     {
-      "pct": 97,
-      "note": "A little winded after running laps outside Sailor's Watch; legs still weak from a week in bed.",
+      "pct": 85,
+      "note": "Tired after painting Marta's Luck and the walks to the harbour and back; legs like wet rope from a week in bed.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "97%"
+      "value": "85%"
     }
   ],
   "profile": [
@@ -4371,7 +4369,7 @@
     }
   ],
   "identity": {
-    "asOf": "Late morning, day 102 in this world, Odile's boat shed",
+    "asOf": "Afternoon, day 102 in this world, upper landing of Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4399,7 +4397,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Standing in Odile's boat shed in the late morning of day 102 beside the freshly painted Marta's Luck, key in hand, as Odile holds out her palm for it.",
+  "location": "Three steps from the upper landing of Sailor's Watch in the afternoon of day 102, Stormveil just rebuilt into a scarf, with Farrah, Gary, Rufus and Jason.",
   "missions": [
     {
       "kind": "PRIVATE",
@@ -4677,14 +4675,14 @@
       "progress": 11
     },
     {
-      "tag": "Wind · Conjuration (wind, storm, protection, movement)",
+      "tag": "Wind · Conjuration (wind, storm, lightning, movement)",
       "name": "Stormveil",
       "rank": "Iron 0",
       "ranks": {
         "Bronze": "Deflected projectiles can be turned back along their path, weakened. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)",
-        "Silver": "The cloak's lightening grows from gliding into true flight (Nate's only flight path). (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
+        "Silver": "The scarf's lightening grows from gliding into true flight (Nate's only flight path). (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
       },
-      "detail": "Wraps you in a cloak of churning storm cloud, grey wind shot through with flickers of lightning that brighten as your [Momentum] builds. It deflects projectiles and blunts blows, more so for each instance of [Momentum] you hold, and enemies who strike you in melee through it gain an instance of [Static Charge]. While it is up your [Momentum] fades half as fast. Beneath your Storm Front it crackles harder. The cloak can lighten you for a low mana-per-second cost, slowing falls and letting you run across water while you keep moving, or glide on the wind from any height. It cushions your landings, negating falling damage from heights you jump or dive from, and it can hush the sound and scent of your movement. You can extend it over one ally in contact with you, at double upkeep. Cost: Low mana [5%] to raise, then very low mana [1%] per minute. Cooldown: None.",
+      "detail": "Conjures a long scarf of storm cloud, soft as harbour fog, with threads of blue lightning running through it. Its loose end trails behind you, growing longer the faster you move. Worn: it deflects projectiles and blunts blows, more so for each instance of [Momentum] you hold, and enemies who strike you in melee gain [Static Charge]. Your [Momentum] fades half as fast. It makes you lighter, so you fall slowly, can glide down from heights and land safely. You can't stand on water, but you can run across it while you keep up your speed. Shed: the scarf unravels into lightning that crawls over your body, sharply raising your movement speed. You lose its defence until it reweaves. Cost: Low mana [5%] to raise, then very low mana [1%] per minute; shedding costs low mana per second. Cooldown: None; after a Shed ends, the scarf takes 10 seconds to reweave before you can shed again.",
       "essence": "Wind",
       "progress": 11
     },
@@ -4819,8 +4817,8 @@
   ],
   "worldTime": {
     "day": 102,
-    "time": "Late morning",
-    "detail": "Odile's boat shed (green door) on the Greenstone harbour shingle.",
+    "time": "Afternoon",
+    "detail": "Sailor's Watch, back from Odile's shop.",
     "dayLabel": "102 days in this world"
   },
   "abilityMeta": {
