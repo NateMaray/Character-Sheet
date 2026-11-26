@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-453",
+  "rev": "2026-11-23-aether-455",
   "gear": {
     "doll": [
       [
@@ -4198,7 +4198,7 @@
       }
     ]
   },
-  "next": "Day 103: Rufus is delivering his Magic Society letter about Nate's soul and will meet the team at the shed. Marta's Luck's paint checked and perfect. Now aura work on the sea wall while Farrah writes Jory's list of ability changes; gauntlet talk in the afternoon. Soul aftershocks run days 102 to 132: any ability may be rebuilt at random (Stormveil rebuilt into a cloud scarf on day 102). Soul tender for a few days. Marta's Luck returned to Odile, repaired and painted. Odile's tonic: one spoon in hot water, morning and night (not from the jar); first dose taken night of day 102. Odile's tonic jar and note, and Jory's green sleep vial (unused; take half, not all), are on the bedside table. Jory: write down any ability change (what, when, what he was doing). Rufus writing letters to find someone to examine his soul. Jory came the evening of day 102: body sound, aura unsettled; his advice is rest, eat properly, and don't push abilities hard until the changes settle. Rest, then visit Odile once properly on his feet. Farrah offered a wrestling bout today (day 103). Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Day 103: Rufus delivered his Magic Society letter (senior soul-magic specialist reply expected at Sailor's Watch in 1-2 days) and has Farrah's list of all ability changes. Sea wall aura work done cleanly. Gauntlets put on hold until the soul aftershocks settle (bronze core stays tucked away). Now doing pure physical drills and a three-round no-mana spar with Jason on the campus training field (loser buys drinks). Soul aftershocks run days 102 to 132: any ability may be rebuilt at random (Stormveil rebuilt into a cloud scarf on day 102). Soul tender for a few days. Marta's Luck returned to Odile, repaired and painted. Odile's tonic: one spoon in hot water, morning and night (not from the jar); first dose taken night of day 102. Odile's tonic jar and note, and Jory's green sleep vial (unused; take half, not all), are on the bedside table. Jory: write down any ability change (what, when, what he was doing). Rufus writing letters to find someone to examine his soul. Jory came the evening of day 102: body sound, aura unsettled; his advice is rest, eat properly, and don't push abilities hard until the changes settle. Rest, then visit Odile once properly on his feet. Farrah offered a wrestling bout today (day 103). Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 1947 iron · 897 lesser",
   "racial": [
@@ -4293,11 +4293,11 @@
       "value": "100%"
     },
     {
-      "pct": 100,
-      "note": "Fully rested after a full night's sleep on day 102.",
+      "pct": 90,
+      "note": "Warmed up and lightly sweating after twenty minutes of footwork drills; starting a no-mana spar with Jason.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "100%"
+      "value": "90%"
     }
   ],
   "profile": [
@@ -4369,7 +4369,7 @@
     }
   ],
   "identity": {
-    "asOf": "Mid-morning, day 103 in this world, harbour sea wall",
+    "asOf": "Afternoon, day 103 in this world, campus training field",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4397,7 +4397,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Sitting on a sun-warmed platform on the harbour sea wall on the morning of day 103 with Farrah, Gary and Jason, starting aura work.",
+  "location": "In a fifteen-foot dirt ring on the campus training field in the afternoon of day 103, sparring Jason hand-to-hand (no mana or abilities) with Rufus, Farrah and Gary watching.",
   "missions": [
     {
       "kind": "PRIVATE",
@@ -4817,8 +4817,8 @@
   ],
   "worldTime": {
     "day": 103,
-    "time": "Mid-morning",
-    "detail": "Harbour sea wall, aura work with Farrah.",
+    "time": "Afternoon",
+    "detail": "Campus training field, no-mana sparring with Jason.",
     "dayLabel": "103 days in this world"
   },
   "abilityMeta": {
