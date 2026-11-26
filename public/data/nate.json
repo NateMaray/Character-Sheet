@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-460",
+  "rev": "2026-11-23-aether-461",
   "gear": {
     "doll": [
       [
@@ -3676,6 +3676,18 @@
         "qty": "",
         "name": "Invictus",
         "note": "War hammer (iron rank, rare). Bonded. Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style). Stored in Pocket Space after Arc Step back to Bram, early afternoon day 94."
+      },
+      {
+        "qty": 1,
+        "name": "Wind Quintessence",
+        "note": "Iron rank, common. Crafting material: magic condensed into the essence of wind; a component for ritual magic, alchemy, and forging. Reward from Rearranged Furniture, morning day 104.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Awakening Stone of the Rain",
+        "note": "Unranked, common. An awakening stone containing the power of rain (consumable, awakening stone). Effect: awakens an unawakened essence ability (6 unawakened remaining: 3 Lightning, 1 Star, 1 Wind, 1 Comet). Optional reward from Rearranged Furniture, morning day 104.",
+        "slot": ""
       }
     ],
     "outfits": [
@@ -4198,9 +4210,9 @@
       }
     ]
   },
-  "next": "This morning (day 104, second bell): private appointment at the Magic Society East Annex with Magister Halen Vance (silver-rank soul-anchoring and aura-stability specialist; discreet); keep mana quiet until he looks. Gauntlets on hold until soul aftershocks settle (bronze core tucked away). Soul aftershocks run days 102 to 132: any ability may be rebuilt at random (Stormveil rebuilt into a cloud scarf on day 102). Marta's Luck returned to Odile, repaired and painted. Odile's tonic: one spoon in hot water, morning and night (not from the jar); doses taken nights of days 102 and 103. Odile's tonic jar and note, and Jory's green sleep vial (unused; take half, not all), are on the bedside table. Jory: write down any ability change (what, when, what he was doing). Rufus writing letters to find someone to examine his soul. Jory came the evening of day 102: body sound, aura unsettled; his advice is rest, eat properly, and don't push abilities hard until the changes settle. Rest, then visit Odile once properly on his feet. Gauntlet idea for Gary (Drowned Lantern bronze core would make a bronze-rank piece; slow left, burn right; needs affliction materials, check with Gilbert). Show Hollis the Turning Millstone. Collect Rufus's cut of the blood-cult payout. Return the Foreman's lamp. Bricked archway (optional): tell Arella first. North road hedgehog contract still open.",
+  "next": "Magister Halen Vance examined Nate's soul at the East Annex: soul is sound and knitting cleanly (no curse, parasite, or breach), but a deliberate mark of permission (an open accord) sits on the integration seam, touched by something non-mortal and non-divine outside the rank ladder, still warm; Vance has two reference texts on non-mortal accords and asked whether Nate remembers agreeing to anything right before going under. Odile's tonic: morning day 104 dose taken (night dose tonight; jar, note, and unused green sleep vial on bedside table at Sailor's Watch). Gauntlets on hold until aftershocks settle (Drowned Lantern bronze core tucked away). Open threads: visit Odile once back on his feet; show Hollis the Turning Millstone; collect Rufus's cut of the blood-cult payout; return Foreman's lamp; bricked archway (tell Arella first); north road hedgehog contract.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1947 iron · 897 lesser",
+  "coins": "1 silver · 2097 iron · 897 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4369,7 +4381,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 104 in this world, sitting room of Rufus's suite at Sailor's Watch",
+    "asOf": "Morning, day 104 in this world, Examination Room Four at the Magic Society East Annex",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4397,13 +4409,13 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In the sitting room of Rufus's suite at Sailor's Watch on the morning of day 104 as the first bell rings, with Rufus, Gary and Farrah (Jason still asleep).",
+  "location": "In Examination Room Four at the Magic Society East Annex on the morning of day 104, sitting inside the silver-wire circle with Magister Halen Vance, Rufus, Farrah, Gary and Jason.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Rearranged Furniture",
-      "detail": "Landed morning day 104 in Rufus's suite at Sailor's Watch before the East Annex appointment. Your abilities are rewriting themselves and no one can say why. Objectives: have Magister Halen Vance examine your soul at the Magic Society East Annex 0/1. Optional: uncover a concrete lead on what is causing the changes 0/1. Rewards: 100 iron spirit coins, 1 Wind Quintessence; optional: 1 common awakening stone (plus unlisted spirit coins). Can be rejected.",
-      "status": "ACTIVE"
+      "detail": "Have Magister Halen Vance examine your soul at the Magic Society East Annex 1/1. Optional: uncover a concrete lead on what is causing the changes 1/1 (Vance found an open accord—a clean mark of permission along the integration seam—touched by something non-mortal and non-divine outside the mortal rank ladder). Paid on completion: 100 iron spirit coins, 1 Wind Quintessence, 1 Awakening Stone of the Rain (unranked, common), plus 50 iron spirit coins unlisted.",
+      "status": "COMPLETE"
     },
     {
       "kind": "PRIVATE",
@@ -4824,7 +4836,7 @@
   "worldTime": {
     "day": 104,
     "time": "Morning",
-    "detail": "Rufus's suite sitting room, first bell ringing.",
+    "detail": "Magic Society East Annex, Examination Room Four, second bell.",
     "dayLabel": "104 days in this world"
   },
   "abilityMeta": {
