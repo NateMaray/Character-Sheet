@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-459",
+  "rev": "2026-11-23-aether-460",
   "gear": {
     "doll": [
       [
@@ -4369,7 +4369,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 104 in this world, bedroom in Rufus's suite at Sailor's Watch",
+    "asOf": "Morning, day 104 in this world, sitting room of Rufus's suite at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4397,8 +4397,14 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Waking in his bedroom in Rufus's suite at Sailor's Watch on the morning of day 104 before the first bell, Rufus already up in the sitting room.",
+  "location": "In the sitting room of Rufus's suite at Sailor's Watch on the morning of day 104 as the first bell rings, with Rufus, Gary and Farrah (Jason still asleep).",
   "missions": [
+    {
+      "kind": "SYSTEM",
+      "name": "Rearranged Furniture",
+      "detail": "Landed morning day 104 in Rufus's suite at Sailor's Watch before the East Annex appointment. Your abilities are rewriting themselves and no one can say why. Objectives: have Magister Halen Vance examine your soul at the Magic Society East Annex 0/1. Optional: uncover a concrete lead on what is causing the changes 0/1. Rewards: 100 iron spirit coins, 1 Wind Quintessence; optional: 1 common awakening stone (plus unlisted spirit coins). Can be rejected.",
+      "status": "ACTIVE"
+    },
     {
       "kind": "PRIVATE",
       "name": "The Drowned Lamps",
@@ -4818,7 +4824,7 @@
   "worldTime": {
     "day": 104,
     "time": "Morning",
-    "detail": "Rufus's suite, Sailor's Watch, before the first bell.",
+    "detail": "Rufus's suite sitting room, first bell ringing.",
     "dayLabel": "104 days in this world"
   },
   "abilityMeta": {
