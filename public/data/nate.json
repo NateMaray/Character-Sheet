@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-462",
+  "rev": "2026-11-23-aether-463",
   "gear": {
     "doll": [
       [
@@ -3681,12 +3681,6 @@
         "qty": 1,
         "name": "Wind Quintessence",
         "note": "Iron rank, common. Crafting material: magic condensed into the essence of wind; a component for ritual magic, alchemy, and forging. Reward from Rearranged Furniture, morning day 104.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Awakening Stone of the Rain",
-        "note": "Unranked, common. An awakening stone containing the power of rain (consumable, awakening stone). Effect: awakens an unawakened essence ability (6 unawakened remaining: 3 Lightning, 1 Star, 1 Wind, 1 Comet). Optional reward from Rearranged Furniture, morning day 104.",
         "slot": ""
       }
     ],
@@ -4210,7 +4204,7 @@
       }
     ]
   },
-  "next": "Vance's guidance (notes in Rufus's folio): avoid loose open-ended agreements aloud while aura is flared or half-asleep; do 10 min gentle inward aura-holding morning and night so the seam knits smooth; return to Room Four if anything aches, pulls, or feels like a command; optional re-check in 3 weeks. Discussing whether the Astral Compass Shard feels different after the coma (keep secret from the Magic Society). Awakening Stone of the Rain in Pocket Space (6 unawakened essence slots left). Odile's tonic: morning day 104 dose taken (night dose tonight; jar, note, and unused green sleep vial on bedside table). Gauntlets on hold until aftershocks settle (Drowned Lantern bronze core tucked away). Open threads: visit Odile once back on his feet; show Hollis the Turning Millstone; collect Rufus's cut of the blood-cult payout; return Foreman's lamp; bricked archway (tell Arella first); north road hedgehog contract.",
+  "next": "Just awakened [Cloudburst] (Lightning, Iron 0) from the Awakening Stone of the Rain to test the astral being; felt a cool, weightless nudge smoothing the ability into place and a faint flicker of dry amusement, with no pain or glitch. Vance's guidance (notes in Rufus's folio): avoid loose open-ended agreements aloud while aura is flared or half-asleep; do 10 min gentle inward aura-holding morning and night; return to Room Four if anything aches, pulls, or feels like a command; optional re-check in 3 weeks. Astral Compass Shard checked: steady east, no change (keep secret from the Magic Society). Odile's tonic: morning day 104 dose taken (night dose tonight; jar, note, and unused green sleep vial on bedside table). Gauntlets on hold until aftershocks settle (Drowned Lantern bronze core tucked away). Open threads: visit Odile once back on his feet; show Hollis the Turning Millstone; collect Rufus's cut of the blood-cult payout; return Foreman's lamp; bricked archway (tell Arella first); north road hedgehog contract.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 2097 iron · 897 lesser",
   "racial": [
@@ -4409,7 +4403,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In the sitting room of Rufus's suite at Sailor's Watch on mid-morning of day 104, behind a closed door with Rufus, Farrah, Gary and Jason, discussing the Astral Compass Shard.",
+  "location": "In the sitting room of Rufus's suite at Sailor's Watch on mid-morning of day 104, with Rufus, Farrah, Gary and Jason, having just absorbed the Awakening Stone of the Rain to awaken Cloudburst.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4831,6 +4825,14 @@
       "detail": "Conjures a tiny, dense, dark star at a point you can see within about 60 feet, or binds it to your [Starlit] target so it follows. Enemies within about 15 feet are dragged toward its centre, slowed, take ongoing crushing damage, and gain an instance of [Starweight] every 2 seconds they stay in the pull. Your thrown weapons and your own charges that pass into the pull are accelerated, dealing increased damage; you ignore the drag of your own star. It lasts as long as you sustain it. You can move it up to 15 feet per second, drop it, or collapse it: a burst that strikes everything in the pull, dealing additional damage for each instance of [Starweight] on each target and consuming them. Cost: Moderate mana [10%] to conjure, then low mana per second [about 1% every 2 seconds] to sustain. Cooldown: 20 seconds (starting when the star ends).",
       "essence": "Star",
       "progress": 0
+    },
+    {
+      "tag": "Lightning · Spell (lightning, area, duration)",
+      "name": "Cloudburst",
+      "rank": "Iron 0",
+      "detail": "Call down a brisk, crackling rain of charged droplets over a 20-foot radius (centred on you, on your [Starlit] target within 60 feet, or directly beneath an active Storm Front) for 10 seconds. Enemies in the rain take minor lightning damage and gain an instance of [Static Charge] every 3 seconds. Lightning damage dealt to an enemy inside the rain arcs lightly to one nearby enemy in the rain. While you are inside the rain, your movement and attack speed are slightly increased, and Arc Step can jump to any point within the rain even without clear line of sight. Cost: Low mana [6%]. Cooldown: 15 seconds.",
+      "essence": "Lightning",
+      "progress": 0
     }
   ],
   "worldTime": {
@@ -4840,7 +4842,7 @@
     "dayLabel": "104 days in this world"
   },
   "abilityMeta": {
-    "slotsLabel": "LIGHTNING 2/5 · STAR 4/5 · WIND 4/5 · COMET 4/5 AWAKENED",
+    "slotsLabel": "LIGHTNING 3/5 · STAR 4/5 · WIND 4/5 · COMET 4/5 AWAKENED",
     "racialLabel": "RACIAL (OUTWORLDER)"
   },
   "achievements": [
