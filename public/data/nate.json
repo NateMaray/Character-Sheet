@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-461",
+  "rev": "2026-11-23-aether-462",
   "gear": {
     "doll": [
       [
@@ -4210,7 +4210,7 @@
       }
     ]
   },
-  "next": "Magister Halen Vance examined Nate's soul at the East Annex: soul is sound and knitting cleanly (no curse, parasite, or breach), but a deliberate mark of permission (an open accord) sits on the integration seam, touched by something non-mortal and non-divine outside the rank ladder, still warm; Vance has two reference texts on non-mortal accords and asked whether Nate remembers agreeing to anything right before going under. Odile's tonic: morning day 104 dose taken (night dose tonight; jar, note, and unused green sleep vial on bedside table at Sailor's Watch). Gauntlets on hold until aftershocks settle (Drowned Lantern bronze core tucked away). Open threads: visit Odile once back on his feet; show Hollis the Turning Millstone; collect Rufus's cut of the blood-cult payout; return Foreman's lamp; bricked archway (tell Arella first); north road hedgehog contract.",
+  "next": "Vance's guidance (notes in Rufus's folio): avoid loose open-ended agreements aloud while aura is flared or half-asleep; do 10 min gentle inward aura-holding morning and night so the seam knits smooth; return to Room Four if anything aches, pulls, or feels like a command; optional re-check in 3 weeks. Discussing whether the Astral Compass Shard feels different after the coma (keep secret from the Magic Society). Awakening Stone of the Rain in Pocket Space (6 unawakened essence slots left). Odile's tonic: morning day 104 dose taken (night dose tonight; jar, note, and unused green sleep vial on bedside table). Gauntlets on hold until aftershocks settle (Drowned Lantern bronze core tucked away). Open threads: visit Odile once back on his feet; show Hollis the Turning Millstone; collect Rufus's cut of the blood-cult payout; return Foreman's lamp; bricked archway (tell Arella first); north road hedgehog contract.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 2097 iron · 897 lesser",
   "racial": [
@@ -4381,7 +4381,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 104 in this world, Examination Room Four at the Magic Society East Annex",
+    "asOf": "Mid-morning, day 104 in this world, sitting room of Rufus's suite at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4409,7 +4409,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In Examination Room Four at the Magic Society East Annex on the morning of day 104, sitting inside the silver-wire circle with Magister Halen Vance, Rufus, Farrah, Gary and Jason.",
+  "location": "In the sitting room of Rufus's suite at Sailor's Watch on mid-morning of day 104, behind a closed door with Rufus, Farrah, Gary and Jason, discussing the Astral Compass Shard.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4835,8 +4835,8 @@
   ],
   "worldTime": {
     "day": 104,
-    "time": "Morning",
-    "detail": "Magic Society East Annex, Examination Room Four, second bell.",
+    "time": "Mid-morning",
+    "detail": "Rufus's suite sitting room at Sailor's Watch, back from the East Annex.",
     "dayLabel": "104 days in this world"
   },
   "abilityMeta": {
