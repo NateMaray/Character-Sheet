@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-494",
+  "rev": "2026-11-23-aether-496",
   "gear": {
     "doll": [
       [
@@ -3567,11 +3567,6 @@
         "slot": ""
       },
       {
-        "qty": 2,
-        "name": "Bess's honey oat cakes",
-        "note": "2 honey-glazed oat cakes with currants, wrapped in a blue cloth. A gift from Bess Hale; stasis keeps them warm."
-      },
-      {
         "qty": 9,
         "name": "Healing potion (everyday, iron rank)",
         "note": "From Jory Tillman, 5 iron each. Space them out; no mana potion while coin magic is still in you. +1 from Cellar Dwellers reward, night day 92.",
@@ -3595,21 +3590,9 @@
         "note": "Brass; twist the top to brighten or dim. Gift from Rufus."
       },
       {
-        "qty": 12,
-        "name": "Inert upwelling crystal chips",
-        "note": "Dead green glass, thumb-sized or smaller, from the upwelling crack's crust under the Old City drains, night day 92. No value; went dead when pulled loose.",
-        "slot": ""
-      },
-      {
         "qty": 1,
         "name": "Mags's old lantern",
         "note": "Paid Mags 50 iron for a new one plus cellar damages; this one is Nate's now. Stored lit.",
-        "slot": ""
-      },
-      {
-        "qty": 4,
-        "name": "Snapped iron anchor bolts",
-        "note": "About 1 foot each, rusted, snapped below the head; from the Waterworks crate at the upwelling (fit the anchor holes by the crack), night day 92.",
         "slot": ""
       },
       {
@@ -3625,15 +3608,15 @@
         "slot": ""
       },
       {
-        "qty": 4,
+        "qty": 6,
         "name": "Earth Quintessence",
-        "note": "Iron rank, common. 2 from day 94 rewards, 1 from 9-ft Mire Snapper (day 106), 1 from 14-ft Alpha Mangrove Snatcher (day 106).",
+        "note": "Iron rank, common. 4 prior + 1 from Something in the Cellar reward + 1 looted from the 7-foot Rat Gorger (midday day 107).",
         "slot": ""
       },
       {
-        "qty": 2,
+        "qty": 3,
         "name": "Lightning Quintessence",
-        "note": "Iron rank, common. 1 from Putting a Lid on It (day 94), 1 from Mud and Teeth main reward (day 106).",
+        "note": "Iron rank, common. 2 prior + 1 from Something in the Cellar reward (midday day 107).",
         "slot": ""
       },
       {
@@ -3666,9 +3649,9 @@
         "slot": ""
       },
       {
-        "qty": 4,
+        "qty": 5,
         "name": "Cleansing potion (iron rank)",
-        "note": "Clear-amber, from Jory Tillman (5 iron each, day 104). Clears marsh venoms and swamp rot.",
+        "note": "Iron rank. 4 from Jory Tillman / stock; +1 free from Jory Tillman on morning day 107.",
         "slot": ""
       },
       {
@@ -3678,33 +3661,27 @@
         "slot": ""
       },
       {
-        "qty": 5,
+        "qty": 1,
         "name": "Monster Core (Iron)",
-        "note": "Iron rank. 5 looted on day 106 outer-delta loop: 10-ft Bull Marsh Snatcher, 9-ft Mire Snapper, Whip-Fin Eel #2, Lead Whip-Fin Eel, and 14-ft Alpha Mangrove Snatcher.",
+        "note": "Iron rank. Looted from the 7-foot Rat Gorger in Old Marta's bakery cellar, midday day 107 (previous 5 sold at Trade Hall).",
         "slot": ""
       },
       {
         "qty": 1,
-        "name": "Marsh Snatcher pale ridge-plate",
-        "note": "Iron rank monster part. Jagged pale-bone dorsal plate looted from the 10-foot Bull Marsh Snatcher, mid-morning day 106.",
+        "name": "Lesser Monster Core",
+        "note": "Normal rank. Looted from a ratling in Old Marta's bakery cellar, midday day 107.",
         "slot": ""
       },
       {
         "qty": 1,
-        "name": "Mire Snapper bark-plate",
-        "note": "Iron rank monster part. Heavy slab of mossy bark-like armored carapace looted from the 9-foot Mire Snapper, noon day 106.",
+        "name": "Rat Gorger Stone-Gnawer Claws",
+        "note": "Iron-rank crafting material. Looted from the 7-foot Rat Gorger in Old Marta's bakery cellar, midday day 107.",
         "slot": ""
       },
       {
-        "qty": 1,
-        "name": "Whip-Fin Eel Razor Spine",
-        "note": "Iron rank crafting material. Looted from the Lead Whip-Fin Eel at Reed-Weir Ferry, afternoon day 106.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Alpha Mangrove Snatcher Hide-Plate",
-        "note": "Iron rank, uncommon crafting material. Looted from the 14-ft Alpha Mangrove Snatcher (2-star boss) at Mudbank Crossing, late afternoon day 106.",
+        "qty": 2,
+        "name": "Warm cinnamon-apple hand pies",
+        "note": "Wrapped in brown paper. Gift from Old Marta after clearing her bakery cellar on Millers' Row, midday day 107.",
         "slot": ""
       }
     ],
@@ -4244,7 +4221,7 @@
   },
   "next": "Visit Haddon Pell's lemonade cart outside the Trade Hall and Jory's clinic in the Old City with Jason today (Day 107); Geller desert day-trip tomorrow (Day 108, first bell) with Humphrey, Jason, and Clive; show Hollis Turning Millstone; decide on Lightning Essence auction or buyout.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1885 iron · 897 lesser",
+  "coins": "1 silver · 2146 iron · 925 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4324,21 +4301,21 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Rested and full after a clean night's sleep.",
+      "note": "Full.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full after a clean night's sleep. Aftershocks still possible (days 102 to 132).",
+      "note": "Full. Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Rested and full on Day 107 morning.",
+      "note": "Full.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4413,7 +4390,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 107 in this world, Sailor's Watch",
+    "asOf": "Noon, day 107 in this world, Sailor's Watch roof garden",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4441,8 +4418,14 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Waking refreshed in his room at Sailor's Watch on the morning of day 107; meeting Jason in the courtyard after breakfast to visit Haddon Pell's lemonade cart and Jory's clinic.",
+  "location": "On the Sailor's Watch roof garden at midday on day 107 with Jason Asano, having just absorbed the Awakening Stone of the Surge to awaken Overcharge (slot 16/20).",
   "missions": [
+    {
+      "kind": "SYSTEM",
+      "name": "Something in the Cellar",
+      "detail": "Landed and completed midday day 107 on Millers' Row (Old City). Investigated Old Marta's bakery cellar 1/1; killed the 7-foot iron-rank Rat Gorger (Starfall Feast debut) and 5 ratlings with Jason Asano 1/1; kept every Old City resident on Millers' Row unharmed 1/1. Paid on completion: 150 iron spirit coins + 40 iron unlisted (+190 iron), 1 Earth Quintessence, 1 Lightning Quintessence, bonus 1 Awakening Stone (Common, unranked).",
+      "status": "COMPLETE"
+    },
     {
       "kind": "SYSTEM",
       "name": "Mud and Teeth",
@@ -4883,16 +4866,27 @@
       "detail": "Call down a brisk, crackling rain of charged droplets over a 20-foot radius (centred on you, on your [Starlit] target within 60 feet, or directly beneath an active Storm Front) for 10 seconds. Enemies in the rain take minor lightning damage and gain an instance of [Static Charge] every 3 seconds. Lightning damage dealt to an enemy inside the rain arcs lightly to one nearby enemy in the rain. While you are inside the rain, your movement and attack speed are slightly increased, and Arc Step can jump to any point within the rain even without clear line of sight. Cost: Low mana [6%]. Cooldown: 15 seconds.",
       "essence": "Lightning",
       "progress": 4
+    },
+    {
+      "tag": "Lightning · Special ability (speed, lightning, stance)",
+      "name": "Overcharge",
+      "rank": "Iron 0",
+      "ranks": {
+        "Bronze": "Lightning arcs from your strikes to a second nearby enemy carrying [Static Charge]. (Magic Society record, nearest match; not guaranteed, revealed at rank-up.)"
+      },
+      "detail": "Channel live lightning through your nerves and muscles, surrounding yourself in a crackling blue-white nimbus for as long as you sustain it. Sharply increases your movement speed, reflexes, and attack speed, and adds extra lightning damage to your weapon and unarmed strikes. While active, you build [Momentum] faster (every third strike or dodge also grants a stack) and your [Momentum] cap rises by 1. Enemies who strike you in melee take minor shock damage, and ending Overcharge early discharges built-up current in a quick 5-foot shockwave that shoves nearby foes back. Cost: Low mana [5%] to activate, then low mana [3%] and very low stamina [2%] every 10 seconds to sustain. Cooldown: 30 seconds after it ends.",
+      "essence": "Lightning",
+      "progress": 0
     }
   ],
   "worldTime": {
     "day": 107,
-    "time": "Morning",
-    "detail": "Waking refreshed at Sailor's Watch; meeting Jason after breakfast for Haddon Pell's cart and Jory's clinic.",
+    "time": "Noon",
+    "detail": "Sailor's Watch roof garden with Jason Asano, just awakened Overcharge.",
     "dayLabel": "107 days in this world"
   },
   "abilityMeta": {
-    "slotsLabel": "LIGHTNING 3/5 · STAR 4/5 · WIND 4/5 · COMET 4/5 AWAKENED",
+    "slotsLabel": "LIGHTNING 4/5 · STAR 4/5 · WIND 4/5 · COMET 4/5 AWAKENED",
     "racialLabel": "RACIAL (OUTWORLDER)"
   },
   "achievements": [
