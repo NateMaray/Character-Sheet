@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-490",
+  "rev": "2026-11-23-aether-491",
   "gear": {
     "doll": [
       [
@@ -4401,7 +4401,7 @@
     }
   ],
   "identity": {
-    "asOf": "Noon, day 106 in this world, flooded cypress hollow",
+    "asOf": "Afternoon, day 106 in this world, Reed-Weir Ferry",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4429,7 +4429,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Walking back up the south skidway to the outer-delta timber camp dock at noon on day 106 with Humphrey, Jason, Clive, and Onslow after clearing and looting the 9-foot Mire Snapper.",
+  "location": "Aboard Clive's airboat 150 feet shy of Reed-Weir Ferry (stop 3 of 4) on the early afternoon of day 106; three sinuous pale-finned water monsters are churning the lily-choked basin downstream of the ferry rope.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4875,8 +4875,8 @@
   ],
   "worldTime": {
     "day": 106,
-    "time": "Noon",
-    "detail": "Fighting a 9-foot Mire Snapper in the flooded hollow south of the timber camp.",
+    "time": "Afternoon",
+    "detail": "Approaching Reed-Weir Ferry (stop 3 of 4) aboard Clive's airboat.",
     "dayLabel": "106 days in this world"
   },
   "abilityMeta": {
