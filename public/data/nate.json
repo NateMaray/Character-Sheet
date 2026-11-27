@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-498",
+  "rev": "2026-11-23-aether-502",
   "gear": {
     "doll": [
       [
@@ -4325,18 +4325,18 @@
       "value": "100%"
     },
     {
-      "pct": 100,
-      "note": "Full after a full night's rest at Sailor's Watch. Aftershocks still possible (days 102 to 132).",
+      "pct": 84,
+      "note": "Mid-fight in the dry-wash canyon (full aura, two Arc Steps, Comet Strike). Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
-      "value": "100%"
+      "value": "84%"
     },
     {
-      "pct": 100,
-      "note": "Full after a full night's rest at Sailor's Watch.",
+      "pct": 91,
+      "note": "Mid-fight in the dry-wash canyon (hammer throw, aerial catch-spin, Comet Strike finisher).",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "100%"
+      "value": "91%"
     }
   ],
   "profile": [
@@ -4408,7 +4408,7 @@
     }
   ],
   "identity": {
-    "asOf": "Dawn, day 108 in this world, Geller estate west gate",
+    "asOf": "Mid-morning, day 108 in this world, dry-wash canyon west of Greenstone",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4436,8 +4436,14 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "At the Geller estate west gate at dawn (first bell) on day 108, boarding the Geller family sand-skimmer for the desert day-trip with Lady Danielle Geller, Humphrey Geller, Clive Standish, Jason Asano, and two Geller retainers.",
+  "location": "Inside the dry-wash canyon west of Greenstone, mid-morning day 108, crouched in a fresh crater after killing the second iron-rank Sand-Scorpion; Humphrey is pressing the last one as it tries to bolt for the overhang.",
   "missions": [
+    {
+      "kind": "SYSTEM",
+      "name": "Under the Overhangs",
+      "detail": "Landed mid-morning day 108 at the dry-wash canyon west of Greenstone. Main: sweep the dry-wash canyon and keep Clive Standish safe while he finishes his readings (0/1). Optional: clear out any sand-scorpions nesting beneath the canyon overhangs (2/? — Nate killed the third Sand-Scorpion beside the ruin-stones and the second with a thrown-Invictus Arc Step Comet Strike). Bonus: finish the sweep without Danielle Geller or her retainers having to intervene from the ridge (0/1). Rewards: 120 iron spirit coins, 1 Water Quintessence (main); 1 Cleansing Potion (iron-rank) (optional); 50 iron spirit coins (bonus).",
+      "status": "ACTIVE"
+    },
     {
       "kind": "SYSTEM",
       "name": "Something in the Cellar",
@@ -4899,8 +4905,8 @@
   ],
   "worldTime": {
     "day": 108,
-    "time": "Dawn",
-    "detail": "Geller estate west gate, boarding the Geller family sand-skimmer for the desert day-trip.",
+    "time": "Mid-morning",
+    "detail": "Dry-wash canyon west of Greenstone; Geller sand-skimmer parked on the pale sandstone shelf fifty yards from the mouth.",
     "dayLabel": "108 days in this world"
   },
   "abilityMeta": {
