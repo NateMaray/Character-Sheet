@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-470",
+  "rev": "2026-11-23-aether-472",
   "gear": {
     "doll": [
       [
@@ -4374,7 +4374,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 105 in this world, Sailor's Watch",
+    "asOf": "Mid-morning, day 105 in this world, Adventure Society jobs hall",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4402,7 +4402,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In the sitting room at Sailor's Watch on the morning of day 105 with Jason and Humphrey Geller, catching up before tomorrow's outer-delta departure.",
+  "location": "In the Adventure Society jobs hall on mid-morning of day 105 with Humphrey Geller, Jason Asano, and Clive Standish, after Humphrey signed onto the outer-delta contract.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4843,13 +4843,13 @@
       "rank": "Iron 0",
       "detail": "Call down a brisk, crackling rain of charged droplets over a 20-foot radius (centred on you, on your [Starlit] target within 60 feet, or directly beneath an active Storm Front) for 10 seconds. Enemies in the rain take minor lightning damage and gain an instance of [Static Charge] every 3 seconds. Lightning damage dealt to an enemy inside the rain arcs lightly to one nearby enemy in the rain. While you are inside the rain, your movement and attack speed are slightly increased, and Arc Step can jump to any point within the rain even without clear line of sight. Cost: Low mana [6%]. Cooldown: 15 seconds.",
       "essence": "Lightning",
-      "progress": 2
+      "progress": 4
     }
   ],
   "worldTime": {
     "day": 105,
-    "time": "Morning",
-    "detail": "Sailor's Watch sitting room, just after first bell.",
+    "time": "Mid-morning",
+    "detail": "Adventure Society jobs hall, with Humphrey, Jason, and Clive.",
     "dayLabel": "105 days in this world"
   },
   "abilityMeta": {
