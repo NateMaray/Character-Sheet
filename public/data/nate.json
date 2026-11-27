@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-479",
+  "rev": "2026-11-23-aether-490",
   "gear": {
     "doll": [
       [
@@ -3625,9 +3625,9 @@
         "slot": ""
       },
       {
-        "qty": 2,
+        "qty": 3,
         "name": "Earth Quintessence",
-        "note": "1 from Putting a Lid on It, 1 from the Cellar Dwellers bonus, mid-morning day 94.",
+        "note": "1 from Putting a Lid on It, 1 from Cellar Dwellers bonus (day 94); 1 looted from the 9-foot Mire Snapper (noon day 106).",
         "slot": ""
       },
       {
@@ -3637,9 +3637,9 @@
         "slot": ""
       },
       {
-        "qty": 2,
+        "qty": 3,
         "name": "Water Quintessence",
-        "note": "Iron rank, common. Crafting material: magic condensed into the essence of water; also recharges the Desert-Walker's Cooling Band. 1 bought from Odile's Curiosities (5 iron, day 94); 1 included with the Desert-Walker's Cooling Band (Trade Hall, afternoon day 105).",
+        "note": "Iron rank, common. Crafting material: magic condensed into the essence of water; also recharges the Desert-Walker's Cooling Band. 1 bought from Odile's Curiosities (day 94); 1 with Cooling Band (day 105); 1 looted from the Bull Marsh Snatcher (mid-morning day 106).",
         "slot": ""
       },
       {
@@ -3675,6 +3675,24 @@
         "qty": 1,
         "name": "Herbal antiseptic salve",
         "note": "Palm-sized tin from Jory Tillman (day 104).",
+        "slot": ""
+      },
+      {
+        "qty": 2,
+        "name": "Monster Core (Iron)",
+        "note": "Iron rank. 1 from the 10-foot Bull Marsh Snatcher (mid-morning day 106); 1 from the 9-foot Mire Snapper (noon day 106).",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Marsh Snatcher pale ridge-plate",
+        "note": "Iron rank monster part. Jagged pale-bone dorsal plate looted from the 10-foot Bull Marsh Snatcher, mid-morning day 106.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Mire Snapper bark-plate",
+        "note": "Iron rank monster part. Heavy slab of mossy bark-like armored carapace looted from the 9-foot Mire Snapper, noon day 106.",
         "slot": ""
       }
     ],
@@ -4214,7 +4232,7 @@
   },
   "next": "Catch up and plan with Humphrey Geller and Jason today (day 105); depart day 106 after first bell from Magic Society south river pier on Mud and Teeth (with Clive, Jason, Humphrey); show Hollis Turning Millstone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1581 iron · 897 lesser",
+  "coins": "1 silver · 1608 iron · 897 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4294,21 +4312,21 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Rested and strong after an undisturbed night's sleep.",
+      "note": "Fully restored by Feast of the Falling Star kill surge.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full after meditation and a full night's sleep. Aftershocks still possible (days 102 to 132).",
+      "note": "Full as the party walks back up the skidway to the timber camp dock. Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Fully rested and ready for the outer-delta contract.",
+      "note": "Fully restored by Feast of the Falling Star kill surge.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4383,7 +4401,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 106 in this world, Magic Society south river pier",
+    "asOf": "Noon, day 106 in this world, flooded cypress hollow",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4411,12 +4429,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "At Magic Society south river pier, berth three, just after first bell on day 106, boarding Clive Standish's four-seat airboat with Clive, Onslow, Humphrey Geller, and Jason Asano.",
+  "location": "Walking back up the south skidway to the outer-delta timber camp dock at noon on day 106 with Humphrey, Jason, Clive, and Onslow after clearing and looting the 9-foot Mire Snapper.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Mud and Teeth",
-      "detail": "Landed noon day 104 in Rufus's suite after Nate signed on for Clive Standish's outer-delta loop. Objective: eliminate the aggressive mangrove snatcher threatening the outer-delta villages 0/1. Bonus: clear the lingering village-board postings along the delta loop. Optional: bring Clive Standish back to Greenstone in one piece 0/1. Rewards: 100 iron spirit coins, 1 Lightning Quintessence; bonus: 1 Water Quintessence; optional: 50 iron spirit coins (plus unlisted spirit coins). Can be rejected.",
+      "detail": "Landed noon day 104 in Rufus's suite after Nate signed on for Clive Standish's outer-delta loop. Objective: eliminate the aggressive mangrove snatcher threatening the outer-delta villages 0/1. Bonus: clear the lingering village-board postings along the delta loop (village 1 cleared: two Marsh Snatchers; village 2 timber camp cleared: 9-foot Mire Snapper, noon day 106). Optional: bring Clive Standish back to Greenstone in one piece 0/1. Rewards: 100 iron spirit coins, 1 Lightning Quintessence; bonus: 1 Water Quintessence; optional: 50 iron spirit coins (plus unlisted spirit coins). Can be rejected.",
       "status": "ACTIVE"
     },
     {
@@ -4857,8 +4875,8 @@
   ],
   "worldTime": {
     "day": 106,
-    "time": "Morning",
-    "detail": "Boarding Clive's Magic Society airboat at berth three for the outer delta.",
+    "time": "Noon",
+    "detail": "Fighting a 9-foot Mire Snapper in the flooded hollow south of the timber camp.",
     "dayLabel": "106 days in this world"
   },
   "abilityMeta": {
