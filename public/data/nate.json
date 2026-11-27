@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-472",
+  "rev": "2026-11-23-aether-479",
   "gear": {
     "doll": [
       [
@@ -3637,9 +3637,9 @@
         "slot": ""
       },
       {
-        "qty": 1,
+        "qty": 2,
         "name": "Water Quintessence",
-        "note": "Iron rank, common. Crafting material: magic condensed into the essence of water; a component for ritual magic, alchemy, and forging. Bought from Odile's Curiosities shop for 5 iron, early afternoon day 94.",
+        "note": "Iron rank, common. Crafting material: magic condensed into the essence of water; also recharges the Desert-Walker's Cooling Band. 1 bought from Odile's Curiosities (5 iron, day 94); 1 included with the Desert-Walker's Cooling Band (Trade Hall, afternoon day 105).",
         "slot": ""
       },
       {
@@ -3761,6 +3761,10 @@
           {
             "name": "Midnight-blue river-lizard hide boots",
             "slot": "Shoes"
+          },
+          {
+            "name": "Desert-Walker's Cooling Band",
+            "slot": "Wrist"
           }
         ]
       },
@@ -4006,6 +4010,11 @@
         "name": "Midnight-blue river-lizard hide boots",
         "note": "Iron rank, from Filbert's Fine Leather Emporium (trade hall arcade, day 104, 95 iron spirit coins with Jason's two-pair discount). Dyed midnight-blue hide with muted silver trim and buckles; waterproof, mud-shedding, self-cleaning, feather-light, silent grip on slick wood and wet moss.",
         "slot": "Shoes"
+      },
+      {
+        "name": "Desert-Walker's Cooling Band",
+        "note": "Iron rank, uncommon (Adventure Society Trade Hall, afternoon day 105, 400 iron with 1 spare Water Quintessence gem). Slim half-inch braided silver-white wire cuff worn flush under the leather bracer; three frost-glass beads (3/3 icy-blue charge, ~1 week hard desert sun or ~10 days Greenstone weather). Keeps whole body cool and refreshed; flares automatically to blunt minor fire or heat hits at faster charge drain. Recharges fully from 1 Water Quintessence gem.",
+        "slot": "Wrist"
       }
     ],
     "emptyLabels": {
@@ -4205,7 +4214,7 @@
   },
   "next": "Catch up and plan with Humphrey Geller and Jason today (day 105); depart day 106 after first bell from Magic Society south river pier on Mud and Teeth (with Clive, Jason, Humphrey); show Hollis Turning Millstone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1981 iron · 897 lesser",
+  "coins": "1 silver · 1581 iron · 897 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4285,21 +4294,21 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Rested and strong after a deep, quiet night's sleep.",
+      "note": "Rested and strong after an undisturbed night's sleep.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full. Soul tenderness faded to the faintest ghost of a memory; aftershocks still possible (days 102 to 132).",
+      "note": "Full after meditation and a full night's sleep. Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Fully rested; arms loose and strong after sleeping off day 103's drills.",
+      "note": "Fully rested and ready for the outer-delta contract.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4374,7 +4383,7 @@
     }
   ],
   "identity": {
-    "asOf": "Mid-morning, day 105 in this world, Adventure Society jobs hall",
+    "asOf": "Morning, day 106 in this world, Magic Society south river pier",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4402,7 +4411,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In the Adventure Society jobs hall on mid-morning of day 105 with Humphrey Geller, Jason Asano, and Clive Standish, after Humphrey signed onto the outer-delta contract.",
+  "location": "At Magic Society south river pier, berth three, just after first bell on day 106, boarding Clive Standish's four-seat airboat with Clive, Onslow, Humphrey Geller, and Jason Asano.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4413,7 +4422,7 @@
     {
       "kind": "CONTRACT",
       "name": "Outer delta mangrove snatcher",
-      "detail": "Assigned Adventure Society contract (Director Arella). Four outer-delta villages report an aggressive mangrove snatcher entering settlements; 100 iron spirit coins on main contract plus lingering village-board clearings over a 3–4 day loop. Team: Clive Standish, Jason Asano, Nate Maray, and Humphrey Geller (pending runner). Departing day 106 just after first bell from the Magic Society south river pier.",
+      "detail": "Assigned Adventure Society contract (Director Arella). Four outer-delta villages report an aggressive mangrove snatcher entering settlements; 100 iron spirit coins on main contract plus lingering village-board clearings over a 3–4 day loop. Team: Clive Standish, Jason Asano, Nate Maray, and Humphrey Geller (all stamped in). Departing day 106 just after first bell from the Magic Society south river pier, berth three, aboard Clive's four-seat Magic Society airboat.",
       "status": "ACTIVE"
     },
     {
@@ -4847,10 +4856,10 @@
     }
   ],
   "worldTime": {
-    "day": 105,
-    "time": "Mid-morning",
-    "detail": "Adventure Society jobs hall, with Humphrey, Jason, and Clive.",
-    "dayLabel": "105 days in this world"
+    "day": 106,
+    "time": "Morning",
+    "detail": "Boarding Clive's Magic Society airboat at berth three for the outer delta.",
+    "dayLabel": "106 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 3/5 · STAR 4/5 · WIND 4/5 · COMET 4/5 AWAKENED",
