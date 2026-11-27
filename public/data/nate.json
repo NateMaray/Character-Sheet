@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-496",
+  "rev": "2026-11-23-aether-498",
   "gear": {
     "doll": [
       [
@@ -3682,6 +3682,24 @@
         "qty": 2,
         "name": "Warm cinnamon-apple hand pies",
         "note": "Wrapped in brown paper. Gift from Old Marta after clearing her bakery cellar on Millers' Row, midday day 107.",
+        "slot": ""
+      },
+      {
+        "qty": 30,
+        "name": "Waxed 3-day desert ration pack",
+        "note": "Bought at Harbour Quarter outfitter stall (day 107, 450 lesser total) for desert travel.",
+        "slot": ""
+      },
+      {
+        "qty": 30,
+        "name": "Desert salt-root tablet pouch (10 tablets each)",
+        "note": "Bought at Harbour Quarter outfitter stall (day 107, 150 lesser total) for desert heat and hydration.",
+        "slot": ""
+      },
+      {
+        "qty": 6,
+        "name": "Enchanted chill-lined 1-gallon waterskin (filled)",
+        "note": "Bought at Harbour Quarter outfitter stall (day 107, 12 iron total); keeps water cool in desert heat.",
         "slot": ""
       }
     ],
@@ -4219,9 +4237,9 @@
       }
     ]
   },
-  "next": "Visit Haddon Pell's lemonade cart outside the Trade Hall and Jory's clinic in the Old City with Jason today (Day 107); Geller desert day-trip tomorrow (Day 108, first bell) with Humphrey, Jason, and Clive; show Hollis Turning Millstone; decide on Lightning Essence auction or buyout.",
+  "next": "Dinner at the harbour skewer-stalls with Jason Asano; Geller desert day-trip tomorrow (Day 108, first bell) with Danielle Geller, Humphrey, Clive, and Jason; show Hollis Turning Millstone; decide on Lightning Essence auction or buyout.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 2146 iron · 925 lesser",
+  "coins": "1 silver · 2134 iron · 325 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4301,21 +4319,21 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Full.",
+      "note": "Full after a full night's rest at Sailor's Watch.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full. Aftershocks still possible (days 102 to 132).",
+      "note": "Full after a full night's rest at Sailor's Watch. Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full.",
+      "note": "Full after a full night's rest at Sailor's Watch.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4390,7 +4408,7 @@
     }
   ],
   "identity": {
-    "asOf": "Noon, day 107 in this world, Sailor's Watch roof garden",
+    "asOf": "Dawn, day 108 in this world, Geller estate west gate",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4418,7 +4436,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "On the Sailor's Watch roof garden at midday on day 107 with Jason Asano, having just absorbed the Awakening Stone of the Surge to awaken Overcharge (slot 16/20).",
+  "location": "At the Geller estate west gate at dawn (first bell) on day 108, boarding the Geller family sand-skimmer for the desert day-trip with Lady Danielle Geller, Humphrey Geller, Clive Standish, Jason Asano, and two Geller retainers.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4880,10 +4898,10 @@
     }
   ],
   "worldTime": {
-    "day": 107,
-    "time": "Noon",
-    "detail": "Sailor's Watch roof garden with Jason Asano, just awakened Overcharge.",
-    "dayLabel": "107 days in this world"
+    "day": 108,
+    "time": "Dawn",
+    "detail": "Geller estate west gate, boarding the Geller family sand-skimmer for the desert day-trip.",
+    "dayLabel": "108 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 4/5 · STAR 4/5 · WIND 4/5 · COMET 4/5 AWAKENED",
