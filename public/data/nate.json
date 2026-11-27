@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-491",
+  "rev": "2026-11-23-aether-492",
   "gear": {
     "doll": [
       [
@@ -3625,21 +3625,21 @@
         "slot": ""
       },
       {
-        "qty": 3,
+        "qty": 4,
         "name": "Earth Quintessence",
-        "note": "1 from Putting a Lid on It, 1 from Cellar Dwellers bonus (day 94); 1 looted from the 9-foot Mire Snapper (noon day 106).",
+        "note": "Iron rank, common. 2 from day 94 rewards, 1 from 9-ft Mire Snapper (day 106), 1 from 14-ft Alpha Mangrove Snatcher (day 106).",
         "slot": ""
       },
       {
-        "qty": 1,
+        "qty": 2,
         "name": "Lightning Quintessence",
-        "note": "From Putting a Lid on It, mid-morning day 94.",
+        "note": "Iron rank, common. 1 from Putting a Lid on It (day 94), 1 from Mud and Teeth main reward (day 106).",
         "slot": ""
       },
       {
-        "qty": 3,
+        "qty": 7,
         "name": "Water Quintessence",
-        "note": "Iron rank, common. Crafting material: magic condensed into the essence of water; also recharges the Desert-Walker's Cooling Band. 1 bought from Odile's Curiosities (day 94); 1 with Cooling Band (day 105); 1 looted from the Bull Marsh Snatcher (mid-morning day 106).",
+        "note": "Iron rank, common. Crafting material; also recharges the Desert-Walker's Cooling Band. 1 Odile's (day 94), 1 Cooling Band (day 105), 4 looted on day 106 (Bull Marsh Snatcher, 2 Whip-Fin Eels, Alpha Mangrove Snatcher), 1 from Mud and Teeth bonus (day 106).",
         "slot": ""
       },
       {
@@ -3678,9 +3678,9 @@
         "slot": ""
       },
       {
-        "qty": 2,
+        "qty": 5,
         "name": "Monster Core (Iron)",
-        "note": "Iron rank. 1 from the 10-foot Bull Marsh Snatcher (mid-morning day 106); 1 from the 9-foot Mire Snapper (noon day 106).",
+        "note": "Iron rank. 5 looted on day 106 outer-delta loop: 10-ft Bull Marsh Snatcher, 9-ft Mire Snapper, Whip-Fin Eel #2, Lead Whip-Fin Eel, and 14-ft Alpha Mangrove Snatcher.",
         "slot": ""
       },
       {
@@ -3693,6 +3693,18 @@
         "qty": 1,
         "name": "Mire Snapper bark-plate",
         "note": "Iron rank monster part. Heavy slab of mossy bark-like armored carapace looted from the 9-foot Mire Snapper, noon day 106.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Whip-Fin Eel Razor Spine",
+        "note": "Iron rank crafting material. Looted from the Lead Whip-Fin Eel at Reed-Weir Ferry, afternoon day 106.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Alpha Mangrove Snatcher Hide-Plate",
+        "note": "Iron rank, uncommon crafting material. Looted from the 14-ft Alpha Mangrove Snatcher (2-star boss) at Mudbank Crossing, late afternoon day 106.",
         "slot": ""
       }
     ],
@@ -4232,7 +4244,7 @@
   },
   "next": "Catch up and plan with Humphrey Geller and Jason today (day 105); depart day 106 after first bell from Magic Society south river pier on Mud and Teeth (with Clive, Jason, Humphrey); show Hollis Turning Millstone.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 1608 iron · 897 lesser",
+  "coins": "1 silver · 1850 iron · 897 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4312,21 +4324,21 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Fully restored by Feast of the Falling Star kill surge.",
+      "note": "Full after Feast of the Falling Star kill surge, Constellations well, and smooth dusk ride back.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Full as the party walks back up the skidway to the timber camp dock. Aftershocks still possible (days 102 to 132).",
+      "note": "Full after returning to Greenstone at dusk. Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
       "value": "100%"
     },
     {
       "pct": 100,
-      "note": "Fully restored by Feast of the Falling Star kill surge.",
+      "note": "Full after returning to Greenstone at dusk.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4401,7 +4413,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 106 in this world, Reed-Weir Ferry",
+    "asOf": "Dusk, day 106 in this world, Magic Society south river pier",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4429,18 +4441,18 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Aboard Clive's airboat 150 feet shy of Reed-Weir Ferry (stop 3 of 4) on the early afternoon of day 106; three sinuous pale-finned water monsters are churning the lily-choked basin downstream of the ferry rope.",
+  "location": "At Magic Society south river pier, berth three, at dusk on day 106 with Clive Standish, Onslow, Humphrey Geller, and Jason Asano, just returned safely from the outer-delta loop.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Mud and Teeth",
-      "detail": "Landed noon day 104 in Rufus's suite after Nate signed on for Clive Standish's outer-delta loop. Objective: eliminate the aggressive mangrove snatcher threatening the outer-delta villages 0/1. Bonus: clear the lingering village-board postings along the delta loop (village 1 cleared: two Marsh Snatchers; village 2 timber camp cleared: 9-foot Mire Snapper, noon day 106). Optional: bring Clive Standish back to Greenstone in one piece 0/1. Rewards: 100 iron spirit coins, 1 Lightning Quintessence; bonus: 1 Water Quintessence; optional: 50 iron spirit coins (plus unlisted spirit coins). Can be rejected.",
-      "status": "ACTIVE"
+      "detail": "Landed noon day 104; completed dusk day 106. Main: eliminate the aggressive mangrove snatcher 1/1 (14-ft Alpha Mangrove Snatcher at Mudbank Crossing, Feast of the Falling Star kill). Bonus: clear all 4 outer-delta village-board postings 4/4 (Village 1 Marsh Snatchers, Timber Camp Mire Snapper, Reed-Weir Ferry Whip-Fin Eels, Mudbank Crossing Alpha Mangrove Snatcher). Optional: bring Clive Standish back to Greenstone in one piece 1/1. Paid on completion: 100 iron + 35 iron unlisted + 1 Lightning Quintessence (main); 1 Water Quintessence (bonus); 50 iron (optional).",
+      "status": "COMPLETE"
     },
     {
       "kind": "CONTRACT",
       "name": "Outer delta mangrove snatcher",
-      "detail": "Assigned Adventure Society contract (Director Arella). Four outer-delta villages report an aggressive mangrove snatcher entering settlements; 100 iron spirit coins on main contract plus lingering village-board clearings over a 3–4 day loop. Team: Clive Standish, Jason Asano, Nate Maray, and Humphrey Geller (all stamped in). Departing day 106 just after first bell from the Magic Society south river pier, berth three, aboard Clive's four-seat Magic Society airboat.",
+      "detail": "Assigned Adventure Society contract (Director Arella). All 4 outer-delta villages cleared on day 106 (100 iron main fee + 4 signed village slips in Humphrey's pouch, ready to turn in at the Adventure Society hall). Team: Clive Standish, Jason Asano, Nate Maray, and Humphrey Geller.",
       "status": "ACTIVE"
     },
     {
@@ -4875,8 +4887,8 @@
   ],
   "worldTime": {
     "day": 106,
-    "time": "Afternoon",
-    "detail": "Approaching Reed-Weir Ferry (stop 3 of 4) aboard Clive's airboat.",
+    "time": "Dusk",
+    "detail": "Back at Magic Society south river pier (berth 3) in Greenstone aboard Clive's airboat.",
     "dayLabel": "106 days in this world"
   },
   "abilityMeta": {
