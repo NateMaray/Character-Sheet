@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-463",
+  "rev": "2026-11-23-aether-464",
   "gear": {
     "doll": [
       [
@@ -4204,7 +4204,7 @@
       }
     ]
   },
-  "next": "Just awakened [Cloudburst] (Lightning, Iron 0) from the Awakening Stone of the Rain to test the astral being; felt a cool, weightless nudge smoothing the ability into place and a faint flicker of dry amusement, with no pain or glitch. Vance's guidance (notes in Rufus's folio): avoid loose open-ended agreements aloud while aura is flared or half-asleep; do 10 min gentle inward aura-holding morning and night; return to Room Four if anything aches, pulls, or feels like a command; optional re-check in 3 weeks. Astral Compass Shard checked: steady east, no change (keep secret from the Magic Society). Odile's tonic: morning day 104 dose taken (night dose tonight; jar, note, and unused green sleep vial on bedside table). Gauntlets on hold until aftershocks settle (Drowned Lantern bronze core tucked away). Open threads: visit Odile once back on his feet; show Hollis the Turning Millstone; collect Rufus's cut of the blood-cult payout; return Foreman's lamp; bricked archway (tell Arella first); north road hedgehog contract.",
+  "next": "Mid-afternoon today (in ~2 hours): training field with Rufus to test Cloudburst and the rebuilt kit in the open. Morning of day 106 (just after first bell, Magic Society south river pier): depart for 3–4 day outer-delta contract with Clive Standish, Jason Asano, and (pending Rufus's runner to the Geller estate) Humphrey Geller—aggressive mangrove snatcher plus village-board clearings (bring waterproof boots). Vance's guidance: avoid loose open-ended agreements aloud while aura is flared or half-asleep; 10 min gentle inward aura-holding morning and night; return to Room Four if anything aches, pulls, or feels like a command; optional re-check in 3 weeks. Odile's tonic: morning day 104 dose taken (night dose tonight; jar, note, and unused green sleep vial on bedside table). Gauntlets on hold until aftershocks settle (Drowned Lantern bronze core tucked away). Open threads: visit Odile once back on his feet; show Hollis the Turning Millstone; collect Rufus's cut of the blood-cult payout; return Foreman's lamp; bricked archway (tell Arella first); north road hedgehog contract.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 2097 iron · 897 lesser",
   "racial": [
@@ -4375,7 +4375,7 @@
     }
   ],
   "identity": {
-    "asOf": "Mid-morning, day 104 in this world, sitting room of Rufus's suite at Sailor's Watch",
+    "asOf": "Noon, day 104 in this world, sitting room of Rufus's suite at Sailor's Watch",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4403,8 +4403,20 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In the sitting room of Rufus's suite at Sailor's Watch on mid-morning of day 104, with Rufus, Farrah, Gary and Jason, having just absorbed the Awakening Stone of the Rain to awaken Cloudburst.",
+  "location": "In the sitting room of Rufus's suite at Sailor's Watch at noon on day 104, with Rufus, Farrah and Jason (Star Mark still on Jason), having just signed on for Clive Standish's outer-delta contract.",
   "missions": [
+    {
+      "kind": "SYSTEM",
+      "name": "Mud and Teeth",
+      "detail": "Landed noon day 104 in Rufus's suite after Nate signed on for Clive Standish's outer-delta loop. Objective: eliminate the aggressive mangrove snatcher threatening the outer-delta villages 0/1. Bonus: clear the lingering village-board postings along the delta loop. Optional: bring Clive Standish back to Greenstone in one piece 0/1. Rewards: 100 iron spirit coins, 1 Lightning Quintessence; bonus: 1 Water Quintessence; optional: 50 iron spirit coins (plus unlisted spirit coins). Can be rejected.",
+      "status": "ACTIVE"
+    },
+    {
+      "kind": "CONTRACT",
+      "name": "Outer delta mangrove snatcher",
+      "detail": "Assigned Adventure Society contract (Director Arella). Four outer-delta villages report an aggressive mangrove snatcher entering settlements; 100 iron spirit coins on main contract plus lingering village-board clearings over a 3–4 day loop. Team: Clive Standish, Jason Asano, Nate Maray, and Humphrey Geller (pending runner). Departing day 106 just after first bell from the Magic Society south river pier.",
+      "status": "ACTIVE"
+    },
     {
       "kind": "SYSTEM",
       "name": "Rearranged Furniture",
@@ -4837,8 +4849,8 @@
   ],
   "worldTime": {
     "day": 104,
-    "time": "Mid-morning",
-    "detail": "Rufus's suite sitting room at Sailor's Watch, back from the East Annex.",
+    "time": "Noon",
+    "detail": "Rufus's suite sitting room at Sailor's Watch; Clive just left.",
     "dayLabel": "104 days in this world"
   },
   "abilityMeta": {
