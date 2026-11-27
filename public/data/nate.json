@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-502",
+  "rev": "2026-11-23-aether-510",
   "gear": {
     "doll": [
       [
@@ -3649,9 +3649,9 @@
         "slot": ""
       },
       {
-        "qty": 5,
+        "qty": 6,
         "name": "Cleansing potion (iron rank)",
-        "note": "Iron rank. 4 from Jory Tillman / stock; +1 free from Jory Tillman on morning day 107.",
+        "note": "Iron rank. 4 from Jory Tillman / stock; +1 free from Jory Tillman on morning day 107. +1 from Under the Overhangs optional reward (day 108).",
         "slot": ""
       },
       {
@@ -3700,6 +3700,18 @@
         "qty": 6,
         "name": "Enchanted chill-lined 1-gallon waterskin (filled)",
         "note": "Bought at Harbour Quarter outfitter stall (day 107, 12 iron total); keeps water cool in desert heat.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Sand-Scorpion Venom Sac",
+        "note": "Iron rank. Looted from the Sand-Scorpion Nate killed by the ruin-stones, dry-wash canyon, day 108. Alchemy ingredient; sellable.",
+        "slot": ""
+      },
+      {
+        "qty": 3,
+        "name": "Sand-Scorpion Chitin Plate",
+        "note": "Iron rank. Pale-ochre chitin from the same Sand-Scorpion, day 108. Crafting material; sellable.",
         "slot": ""
       }
     ],
@@ -4239,7 +4251,7 @@
   },
   "next": "Dinner at the harbour skewer-stalls with Jason Asano; Geller desert day-trip tomorrow (Day 108, first bell) with Danielle Geller, Humphrey, Clive, and Jason; show Hollis Turning Millstone; decide on Lightning Essence auction or buyout.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 2134 iron · 325 lesser",
+  "coins": "1 silver · 2153 iron · 325 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4325,18 +4337,18 @@
       "value": "100%"
     },
     {
-      "pct": 84,
-      "note": "Mid-fight in the dry-wash canyon (full aura, two Arc Steps, Comet Strike). Aftershocks still possible (days 102 to 132).",
+      "pct": 45,
+      "note": "Sustaining a heavily loaded Abyssal Star in the sand elemental swarm (draining steadily). Stormveil re-forming. Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
-      "value": "84%"
+      "value": "45%"
     },
     {
-      "pct": 91,
-      "note": "Mid-fight in the dry-wash canyon (hammer throw, aerial catch-spin, Comet Strike finisher).",
+      "pct": 84,
+      "note": "Fighting sand elementals up-canyon.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "91%"
+      "value": "84%"
     }
   ],
   "profile": [
@@ -4436,12 +4448,12 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Inside the dry-wash canyon west of Greenstone, mid-morning day 108, crouched in a fresh crater after killing the second iron-rank Sand-Scorpion; Humphrey is pressing the last one as it tries to bolt for the overhang.",
+  "location": "On the rock jut at the bend of the dry-wash canyon west of Greenstone, mid-morning day 108, holding a swelling Abyssal Star in the middle of a sand elemental swarm while six runners break past toward Clive's circle and Jason holds the gap.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Under the Overhangs",
-      "detail": "Landed mid-morning day 108 at the dry-wash canyon west of Greenstone. Main: sweep the dry-wash canyon and keep Clive Standish safe while he finishes his readings (0/1). Optional: clear out any sand-scorpions nesting beneath the canyon overhangs (2/? — Nate killed the third Sand-Scorpion beside the ruin-stones and the second with a thrown-Invictus Arc Step Comet Strike). Bonus: finish the sweep without Danielle Geller or her retainers having to intervene from the ridge (0/1). Rewards: 120 iron spirit coins, 1 Water Quintessence (main); 1 Cleansing Potion (iron-rank) (optional); 50 iron spirit coins (bonus).",
+      "detail": "Landed mid-morning day 108 at the dry-wash canyon west of Greenstone. Main: sweep the dry-wash canyon and keep Clive Standish safe while he finishes his readings (0/1; readings started under the deepest overhang). Optional COMPLETE: clear the sand-scorpions nesting beneath the overhangs 3/3 (Nate 2, Humphrey 1); paid 1 Cleansing Potion (iron rank) + 15 iron unlisted. Bonus: finish the sweep without Danielle Geller or her retainers having to intervene from the ridge (holding so far). Remaining rewards: 120 iron spirit coins, 1 Water Quintessence (main); 50 iron spirit coins (bonus).",
       "status": "ACTIVE"
     },
     {
