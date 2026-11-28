@@ -788,6 +788,10 @@
         {
           "x": 396,
           "y": 384
+        },
+        {
+          "x": 412,
+          "y": 376
         }
       ],
       "labels": [
@@ -1054,6 +1058,15 @@
           "dy": 10,
           "name": "Levee road (east gate)",
           "anchor": "start",
+          "current": false
+        },
+        {
+          "x": 412,
+          "y": 376,
+          "dx": 10,
+          "dy": 12,
+          "name": "Osric Fenn's stilt hut (drainage cut)",
+          "anchor": "start",
           "current": true
         }
       ],
@@ -1067,60 +1080,87 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Sand shab dead against the wrecked coop. Arc Step + Comet Strike with Invictus.",
-      "title": "Dennick Hale's farm: chicken coop",
+      "note": "Nate Star Marked the frog, used Cloudburst, Arc Stepped behind it and landed a heavy Invictus hit; he's standing on its back. Frog badly hurt but alive. Overcharge active.",
+      "title": "Holloway's field drainage cut: sluice pool",
       "width": 600,
       "allies": [
         {
-          "x": 470,
-          "y": 200,
-          "name": "Dennick Hale"
+          "x": 240,
+          "y": 280,
+          "name": "Humphrey (with Stash)"
+        },
+        {
+          "x": 340,
+          "y": 285,
+          "name": "Jason"
+        },
+        {
+          "x": 300,
+          "y": 310,
+          "name": "Clive"
+        },
+        {
+          "x": 200,
+          "y": 230,
+          "name": "Colin"
+        },
+        {
+          "x": 250,
+          "y": 300,
+          "name": "Osric Fenn (injured, safe on the bank)"
         }
       ],
       "extras": [
         {
-          "h": 50,
-          "w": 120,
-          "x": 240,
-          "y": 95,
-          "fill": "stone",
-          "type": "rect"
+          "x": 330,
+          "y": 150,
+          "rx": 140,
+          "ry": 70,
+          "fill": "water",
+          "type": "ellipse"
         }
       ],
       "height": 420,
       "labels": [
         {
           "x": 300,
+          "y": 390,
+          "size": 11,
+          "text": "Drainage cut",
+          "tone": "muted"
+        },
+        {
+          "x": 330,
           "y": 120,
           "size": 11,
-          "text": "Chicken coop",
+          "text": "Sluice pool",
+          "tone": "muted"
+        },
+        {
+          "x": 420,
+          "y": 150,
+          "size": 10,
+          "text": "Sluice post",
+          "tone": "muted"
+        },
+        {
+          "x": 150,
+          "y": 150,
+          "size": 10,
+          "text": "Reeds",
           "tone": "muted"
         },
         {
           "x": 300,
-          "y": 80,
+          "y": 330,
           "size": 10,
-          "text": "Dug-up holes",
-          "tone": "muted"
-        },
-        {
-          "x": 480,
-          "y": 200,
-          "size": 11,
-          "text": "Red barn",
-          "tone": "muted"
-        },
-        {
-          "x": 300,
-          "y": 395,
-          "size": 10,
-          "text": "Hunter's Road",
+          "text": "Bank (to Osric's hut, ~150 ft)",
           "tone": "muted"
         }
       ],
       "player": {
-        "x": 320,
-        "y": 200,
+        "x": 322,
+        "y": 142,
         "label": "You"
       },
       "reveal": [
@@ -1141,17 +1181,16 @@
       "compass": "N ↑",
       "enemies": [
         {
-          "r": 16,
-          "x": 300,
+          "r": 18,
+          "x": 320,
           "y": 150,
-          "id": "sandshab",
-          "name": "Sand shab",
+          "id": "thornfrog",
+          "name": "Thorny-tongue frog",
           "rank": "Iron",
-          "size": "Much bigger than a river shab",
-          "tone": "dead",
-          "type": "Sandy-yellow, shark-like, shell-plated, crab legs, big pincers; drags prey under the ground (B1 l.18919-18936).",
-          "marker": "×",
-          "status": "Dead. Looted (dissolved into rainbow smoke)."
+          "size": "Large; belly-drag track nearly 4 ft wide",
+          "tone": "danger",
+          "type": "Huge frog with a fast barbed tongue that sheds black thorns; swallows prey whole (canon B1; Jason has fought one).",
+          "status": "Alive, badly hurt. Star Marked; Nate is on its back."
         }
       ],
       "fogOverlay": 0.3
@@ -1376,6 +1415,12 @@
       {
         "seen": "Left by the eastern gate early afternoon of day 109 with the party, heading along the levee road toward the drainage cuts past Holloway's field. Something in the Reeds job site.",
         "place": "Eastern gate and levee road",
+        "region": "Greenstone outskirts",
+        "current": false
+      },
+      {
+        "seen": "Levee road past the second culvert to Osric's stilt hut at the end of Holloway's field, beside the drainage cut, mid-afternoon day 109. Osric missing, hut door open, fresh flattened-reed swathe in the cut.",
+        "place": "Osric Fenn's stilt hut, Holloway's field",
         "region": "Greenstone outskirts",
         "current": true
       }
@@ -3530,10 +3575,100 @@
         "compass": "N ↑",
         "enemies": [],
         "fogOverlay": 0.1
+      },
+      {
+        "note": "Sand shab dead against the wrecked coop. Arc Step + Comet Strike with Invictus.",
+        "title": "Dennick Hale's farm: chicken coop",
+        "width": 600,
+        "allies": [
+          {
+            "x": 470,
+            "y": 200,
+            "name": "Dennick Hale"
+          }
+        ],
+        "extras": [
+          {
+            "h": 50,
+            "w": 120,
+            "x": 240,
+            "y": 95,
+            "fill": "stone",
+            "type": "rect"
+          }
+        ],
+        "height": 420,
+        "labels": [
+          {
+            "x": 300,
+            "y": 120,
+            "size": 11,
+            "text": "Chicken coop",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 80,
+            "size": 10,
+            "text": "Dug-up holes",
+            "tone": "muted"
+          },
+          {
+            "x": 480,
+            "y": 200,
+            "size": 11,
+            "text": "Red barn",
+            "tone": "muted"
+          },
+          {
+            "x": 300,
+            "y": 395,
+            "size": 10,
+            "text": "Hunter's Road",
+            "tone": "muted"
+          }
+        ],
+        "player": {
+          "x": 320,
+          "y": 200,
+          "label": "You"
+        },
+        "reveal": [
+          {
+            "x": 300,
+            "y": 210,
+            "rx": 260,
+            "ry": 170,
+            "type": "ellipse"
+          }
+        ],
+        "chamber": {
+          "x": 300,
+          "y": 210,
+          "rx": 260,
+          "ry": 170
+        },
+        "compass": "N ↑",
+        "enemies": [
+          {
+            "r": 16,
+            "x": 300,
+            "y": 150,
+            "id": "sandshab",
+            "name": "Sand shab",
+            "rank": "Iron",
+            "size": "Much bigger than a river shab",
+            "tone": "dead",
+            "type": "Sandy-yellow, shark-like, shell-plated, crab legs, big pincers; drags prey under the ground (B1 l.18919-18936).",
+            "marker": "×",
+            "status": "Dead. Looted (dissolved into rainbow smoke)."
+          }
+        ],
+        "fogOverlay": 0.3
       }
     ]
   },
-  "rev": "2026-11-23-aether-576",
+  "rev": "2026-11-23-aether-585",
   "gear": {
     "doll": [
       [
@@ -3683,7 +3818,8 @@
       {
         "qty": "",
         "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Bonded. Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style). Stored in Pocket Space after Arc Step back to Bram, early afternoon day 94."
+        "note": "War hammer (iron rank, rare). Bonded. Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style). Stored in Pocket Space after Arc Step back to Bram, early afternoon day 94.",
+        "slot": "Main hand"
       },
       {
         "qty": 1,
@@ -3852,10 +3988,10 @@
       },
       {
         "qty": "",
-        "name": "",
-        "note": "",
+        "name": "Invictus",
+        "note": "Drawn from Pocket Space at the sluice post, mid-fight with the thorny-tongue frog, afternoon day 109.",
         "slot": "Main hand",
-        "empty": "empty"
+        "empty": ""
       },
       {
         "qty": "",
@@ -4291,7 +4427,7 @@
       }
     ]
   },
-  "next": "Magic Society interview (letter folder in Pocket Space): present it to O. Vellacourt at the records wing, any day this week, second to fifth bell (Arella: go tomorrow, day 110, rested; say less than you know); Arella says go, and the Old City and the reason for the quiet cap stay secret (refer sewer, cistern, or seal questions to her). Something in the Reeds (party: Humphrey, Stash, Clive, Jason; out early along the levee road to see the ground in daylight); Osric Fenn's drainage cuts past Holloway's field (east gate, levee road, past second culvert); Osric pays 11 iron; Arella wants anything seen at the eastern farms reported to her personally (Humphrey found 11 farm reports in 6 days: flattened crops, 2 missing dogs, a goat taken, 3 naming the drainage cuts). Old City archway: stay away until Arella sends for Nate. Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Marit keeps a 2-iron tab to repay with interest on a future sale.",
+  "next": "Magic Society interview (letter folder in Pocket Space): present it to O. Vellacourt at the records wing, any day this week, second to fifth bell (Arella: go tomorrow, day 110, rested; say less than you know); Arella says go, and the Old City and the reason for the quiet cap stay secret (refer sewer, cistern, or seal questions to her). Something in the Reeds (party: Humphrey, Stash, Clive, Jason; at Osric's stilt hut in daylight; Osric is missing, door open, his coat and boots left in the hut, cracked sickle at the water's edge; tracks inspected; creature found: iron-rank thorny-tongue frog in the sluice pool 150 ft upstream; Osric alive but injured on a sluice post; fight imminent); Osric Fenn's drainage cuts past Holloway's field (east gate, levee road, past second culvert); Osric pays 11 iron; Arella wants anything seen at the eastern farms reported to her personally (Humphrey found 11 farm reports in 6 days: flattened crops, 3 missing dogs (the third taken from its kennel), 3 naming the drainage cuts). Old City archway: stay away until Arella sends for Nate. Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Marit keeps a 2-iron tab to repay with interest on a future sale.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 2084 iron · 330 lesser",
   "racial": [
@@ -4373,25 +4509,25 @@
   },
   "vitals": [
     {
-      "pct": 100,
-      "note": "Full.",
+      "pct": 88,
+      "note": "Thorns raked his forearm and bit through his coat when the frog's tongue caught his waist.",
       "tone": "health",
       "label": "HEALTH",
-      "value": "100%"
+      "value": "88%"
     },
     {
-      "pct": 100,
-      "note": "Full. Second Wind gives resting-rate recovery (~2%/min) even while moving, so worn Stormveil (1%/min) is a net gain of ~1%/min; only Shed or other sustained actives outpace regen. Aftershocks still possible (days 102 to 132).",
+      "pct": 70,
+      "note": "Star Mark (2%), Cloudburst (6%), Arc Step (4%) and Overcharge sustain (3% mana + 2% stamina per 10 s). Second Wind gives ~2%/min even while moving; worn Stormveil (1%/min) is a net gain. Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
-      "value": "100%"
+      "value": "70%"
     },
     {
-      "pct": 100,
-      "note": "Refilled in the starlit well at the trade hall arch.",
+      "pct": 94,
+      "note": "Overcharge sustain ticking (2% per 10 s).",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "100%"
+      "value": "94%"
     }
   ],
   "profile": [
@@ -4463,7 +4599,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 109 in this world, eastern gate levee road, Greenstone",
+    "asOf": "Afternoon, day 109 in this world, sluice pool, Holloway's field drainage cut, Greenstone",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4491,7 +4627,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "On the levee road just outside Greenstone's eastern gate with Humphrey, Clive and Jason (Stash nested in Nate's Stormveil cowl), early afternoon of day 109, about five hours before sundown.",
+  "location": "Standing on the back of the badly hurt thorny-tongue frog in the sluice pool after a heavy Invictus blow, Overcharge running, with Osric safe on the bank beside Humphrey, mid-afternoon of day 109.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4777,7 +4913,7 @@
     {
       "kind": "SYSTEM",
       "name": "Something in the Reeds",
-      "detail": "Landed morning day 109 at Corve's Materials when Nate agreed to look into reed-cutter Osric Fenn's report (private favour; Marit pointed him at Nate). Site: east gate, levee road, past the second culvert; Osric's stilt hut at the far end by the cut. Track nearly 4 ft wide, two nights running, closer to the levee each time; dog won't go near; extra mud-snail shells cracked from outside. Osric offers 11 iron (his savings) plus a dry place to wait for dark (paid by Osric, separate from Aether rewards). Objectives: inspect the flattened reed tracks along the drainage cuts past Holloway's field 0/1; find out what is making them 0/1. Bonus: deal with it before it reaches the levee 0/1. Optional (added late morning day 109, Director Arella's request): report what you find to Arella in person 0/1. Rewards: 80 iron spirit coins, 1 Water Quintessence. Bonus: 1 Earth Quintessence. Optional: 20 iron spirit coins. Party: Nate, Humphrey (with Stash), Clive Standish, Jason.",
+      "detail": "Landed morning day 109 at Corve's Materials when Nate agreed to look into reed-cutter Osric Fenn's report (private favour; Marit pointed him at Nate). Site: east gate, levee road, past the second culvert; Osric's stilt hut at the far end by the cut. Track nearly 4 ft wide, two nights running, closer to the levee each time; dog won't go near; extra mud-snail shells cracked from outside. Osric offers 11 iron (his savings) plus a dry place to wait for dark (paid by Osric, separate from Aether rewards). Objectives: inspect the flattened reed tracks along the drainage cuts past Holloway's field 1/1 (done mid-afternoon day 109: slime-slick belly-drag trough nearly 4 ft wide, big webbed prints, barbed black thorns in the reeds); find out what is making them 1/1 (an iron-rank thorny-tongue frog, surfaced mid-afternoon day 109; Jason recognised the thorns). Bonus: deal with it before it reaches the levee 0/1. Optional (added late morning day 109, Director Arella's request): report what you find to Arella in person 0/1. Rewards: 80 iron spirit coins, 1 Water Quintessence. Bonus: 1 Earth Quintessence. Optional: 20 iron spirit coins. Party: Nate, Humphrey (with Stash), Clive Standish, Jason.",
       "status": "ACTIVE"
     }
   ],
@@ -4967,7 +5103,7 @@
   "worldTime": {
     "day": 109,
     "time": "Afternoon",
-    "detail": "Early afternoon, eastern gate and levee road, heading out early to see the ground in daylight.",
+    "detail": "Mid-afternoon, sluice pool upstream of Osric's hut, Nate on the frog's back.",
     "dayLabel": "109 days in this world"
   },
   "abilityMeta": {
