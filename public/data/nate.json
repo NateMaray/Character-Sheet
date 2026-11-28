@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-516",
+  "rev": "2026-11-23-aether-523",
   "gear": {
     "doll": [
       [
@@ -4420,7 +4420,7 @@
     }
   ],
   "identity": {
-    "asOf": "Mid-morning, day 108 in this world, dry-wash canyon west of Greenstone",
+    "asOf": "Evening, day 108 in this world, Greenstone's western gate",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4448,7 +4448,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Standing in his starlit well with Humphrey and Jason under the overhang at the dry-wash canyon west of Greenstone, mid-morning day 108, as Danielle Geller comes down from the ridge.",
+  "location": "Gliding up to Greenstone's western gate on Danielle Geller's sand-skimmer, evening on day 108, about to head for the Magic Society with Jason, Humphrey and Clive before sundown.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4917,8 +4917,8 @@
   ],
   "worldTime": {
     "day": 108,
-    "time": "Mid-morning",
-    "detail": "Dry-wash canyon west of Greenstone; Geller sand-skimmer parked on the pale sandstone shelf fifty yards from the mouth.",
+    "time": "Evening",
+    "detail": "Low sun over Greenstone's western gate; the Magic Society records room closes at sundown.",
     "dayLabel": "108 days in this world"
   },
   "abilityMeta": {
