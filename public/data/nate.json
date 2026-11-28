@@ -130,6 +130,22 @@
         {
           "x": 640,
           "y": 413
+        },
+        {
+          "x": 126,
+          "y": 108
+        },
+        {
+          "x": 262,
+          "y": 272
+        },
+        {
+          "x": 520,
+          "y": 268
+        },
+        {
+          "x": 950,
+          "y": 300
         }
       ],
       "blocks": [
@@ -400,6 +416,14 @@
           "dx": -10,
           "dy": -8,
           "name": "South road → orchard lane",
+          "anchor": "end"
+        },
+        {
+          "x": 950,
+          "y": 300,
+          "dx": -10,
+          "dy": 0,
+          "name": "East gate → levee road",
           "anchor": "end"
         }
       ],
@@ -760,6 +784,10 @@
         {
           "x": 330,
           "y": 375
+        },
+        {
+          "x": 396,
+          "y": 384
         }
       ],
       "labels": [
@@ -909,7 +937,7 @@
           "dy": -6,
           "name": "The Island",
           "anchor": "end",
-          "current": true
+          "current": false
         },
         {
           "x": 425,
@@ -1018,6 +1046,15 @@
           "name": "Callow farm",
           "anchor": "end",
           "current": false
+        },
+        {
+          "x": 396,
+          "y": 384,
+          "dx": 10,
+          "dy": 10,
+          "name": "Levee road (east gate)",
+          "anchor": "start",
+          "current": true
         }
       ],
       "region": "M453.7,553.7 L429.3,534.2 L409.8,539.1 L392.7,512.2 L378.0,424.4 L382.9,380.5 L324.4,253.7 L326.8,231.7 L356.1,226.9 L375.6,241.5 L468.3,241.5 L519.5,258.6 L519.5,351.3 L495.1,370.8 L485.4,536.6 L453.7,553.7 Z",
@@ -1184,7 +1221,7 @@
         "seen": "Sailor's Watch (room 32, kitchen, roof garden, Rufus's suite) and the transit station.",
         "place": "The Island",
         "region": "Greenstone",
-        "current": true
+        "current": false
       },
       {
         "seen": "Administration lobby with the contract board, intake waiting room, and intake room.",
@@ -1335,6 +1372,12 @@
         "place": "Callow farm bean rows (south fields)",
         "region": "Greenstone outskirts",
         "current": false
+      },
+      {
+        "seen": "Left by the eastern gate early afternoon of day 109 with the party, heading along the levee road toward the drainage cuts past Holloway's field. Something in the Reeds job site.",
+        "place": "Eastern gate and levee road",
+        "region": "Greenstone outskirts",
+        "current": true
       }
     ],
     "battleArchive": [
@@ -3490,7 +3533,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-574",
+  "rev": "2026-11-23-aether-576",
   "gear": {
     "doll": [
       [
@@ -4248,7 +4291,7 @@
       }
     ]
   },
-  "next": "Magic Society interview (letter folder in hand): present it to O. Vellacourt at the records wing, any day this week, second to fifth bell (Arella: go tomorrow, day 110, rested; say less than you know); Arella says go, and the Old City and the reason for the quiet cap stay secret (refer sewer, cistern, or seal questions to her). Something in the Reeds (party: Humphrey, Stash, Clive; collecting Jason at Sailor's Watch, eastern gate an hour before sundown); Osric Fenn's drainage cuts past Holloway's field (east gate, levee road, past second culvert); Osric pays 11 iron; Arella wants anything seen at the eastern farms reported to her personally (Humphrey found 11 farm reports in 6 days: flattened crops, 2 missing dogs, a goat taken, 3 naming the drainage cuts). Old City archway: stay away until Arella sends for Nate. Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Marit keeps a 2-iron tab to repay with interest on a future sale.",
+  "next": "Magic Society interview (letter folder in Pocket Space): present it to O. Vellacourt at the records wing, any day this week, second to fifth bell (Arella: go tomorrow, day 110, rested; say less than you know); Arella says go, and the Old City and the reason for the quiet cap stay secret (refer sewer, cistern, or seal questions to her). Something in the Reeds (party: Humphrey, Stash, Clive, Jason; out early along the levee road to see the ground in daylight); Osric Fenn's drainage cuts past Holloway's field (east gate, levee road, past second culvert); Osric pays 11 iron; Arella wants anything seen at the eastern farms reported to her personally (Humphrey found 11 farm reports in 6 days: flattened crops, 2 missing dogs, a goat taken, 3 naming the drainage cuts). Old City archway: stay away until Arella sends for Nate. Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Marit keeps a 2-iron tab to repay with interest on a future sale.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 2084 iron · 330 lesser",
   "racial": [
@@ -4420,7 +4463,7 @@
     }
   ],
   "identity": {
-    "asOf": "Afternoon, day 109 in this world, Sailor's Watch, Greenstone",
+    "asOf": "Afternoon, day 109 in this world, eastern gate levee road, Greenstone",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4448,7 +4491,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "In the Sailor's Watch common room with Humphrey, Clive and Jason, Stash still a canary on his head, early afternoon of day 109.",
+  "location": "On the levee road just outside Greenstone's eastern gate with Humphrey, Clive and Jason (Stash nested in Nate's Stormveil cowl), early afternoon of day 109, about five hours before sundown.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4734,7 +4777,7 @@
     {
       "kind": "SYSTEM",
       "name": "Something in the Reeds",
-      "detail": "Landed morning day 109 at Corve's Materials when Nate agreed to look into reed-cutter Osric Fenn's report (private favour; Marit pointed him at Nate). Site: east gate, levee road, past the second culvert; Osric's stilt hut at the far end by the cut. Track nearly 4 ft wide, two nights running, closer to the levee each time; dog won't go near; extra mud-snail shells cracked from outside. Osric offers 11 iron (his savings) plus a dry place to wait for dark (paid by Osric, separate from Aether rewards). Objectives: inspect the flattened reed tracks along the drainage cuts past Holloway's field 0/1; find out what is making them 0/1. Bonus: deal with it before it reaches the levee 0/1. Optional (added late morning day 109, Director Arella's request): report what you find to Arella in person 0/1. Rewards: 80 iron spirit coins, 1 Water Quintessence. Bonus: 1 Earth Quintessence. Optional: 20 iron spirit coins. Party: Nate, Humphrey (with Stash), Clive Standish; Jason to join.",
+      "detail": "Landed morning day 109 at Corve's Materials when Nate agreed to look into reed-cutter Osric Fenn's report (private favour; Marit pointed him at Nate). Site: east gate, levee road, past the second culvert; Osric's stilt hut at the far end by the cut. Track nearly 4 ft wide, two nights running, closer to the levee each time; dog won't go near; extra mud-snail shells cracked from outside. Osric offers 11 iron (his savings) plus a dry place to wait for dark (paid by Osric, separate from Aether rewards). Objectives: inspect the flattened reed tracks along the drainage cuts past Holloway's field 0/1; find out what is making them 0/1. Bonus: deal with it before it reaches the levee 0/1. Optional (added late morning day 109, Director Arella's request): report what you find to Arella in person 0/1. Rewards: 80 iron spirit coins, 1 Water Quintessence. Bonus: 1 Earth Quintessence. Optional: 20 iron spirit coins. Party: Nate, Humphrey (with Stash), Clive Standish, Jason.",
       "status": "ACTIVE"
     }
   ],
@@ -4924,7 +4967,7 @@
   "worldTime": {
     "day": 109,
     "time": "Afternoon",
-    "detail": "Early afternoon, Sailor's Watch common room, collecting Jason.",
+    "detail": "Early afternoon, eastern gate and levee road, heading out early to see the ground in daylight.",
     "dayLabel": "109 days in this world"
   },
   "abilityMeta": {
