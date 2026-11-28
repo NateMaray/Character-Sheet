@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-510",
+  "rev": "2026-11-23-aether-516",
   "gear": {
     "doll": [
       [
@@ -3620,9 +3620,9 @@
         "slot": ""
       },
       {
-        "qty": 7,
+        "qty": 8,
         "name": "Water Quintessence",
-        "note": "Iron rank, common. Crafting material; also recharges the Desert-Walker's Cooling Band. 1 Odile's (day 94), 1 Cooling Band (day 105), 4 looted on day 106 (Bull Marsh Snatcher, 2 Whip-Fin Eels, Alpha Mangrove Snatcher), 1 from Mud and Teeth bonus (day 106).",
+        "note": "Iron rank, common. Crafting material; also recharges the Desert-Walker's Cooling Band. 1 Odile's (day 94), 1 Cooling Band (day 105), 4 looted on day 106 (Bull Marsh Snatcher, 2 Whip-Fin Eels, Alpha Mangrove Snatcher), 1 from Mud and Teeth bonus (day 106). +1 from Under the Overhangs reward (mid-morning day 108).",
         "slot": ""
       },
       {
@@ -4249,9 +4249,9 @@
       }
     ]
   },
-  "next": "Dinner at the harbour skewer-stalls with Jason Asano; Geller desert day-trip tomorrow (Day 108, first bell) with Danielle Geller, Humphrey, Clive, and Jason; show Hollis Turning Millstone; decide on Lightning Essence auction or buyout.",
+  "next": "File the flow map with Clive at the Magic Society tonight (Nate is witness for the eastern half). Dinner at the harbour skewer-stalls with Jason Asano; Geller desert day-trip tomorrow (Day 108, first bell) with Danielle Geller, Humphrey, Clive, and Jason; show Hollis Turning Millstone; decide on Lightning Essence auction or buyout.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 2153 iron · 325 lesser",
+  "coins": "1 silver · 2353 iron · 325 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4337,18 +4337,18 @@
       "value": "100%"
     },
     {
-      "pct": 45,
-      "note": "Sustaining a heavily loaded Abyssal Star in the sand elemental swarm (draining steadily). Stormveil re-forming. Aftershocks still possible (days 102 to 132).",
+      "pct": 30,
+      "note": "Spent 10% on Constellation, then grounded all three motes into the well and recovered it over the minute. Well on 3-min cooldown. Overcharge on 30-s cooldown. Stormveil re-forming. Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
-      "value": "45%"
+      "value": "30%"
     },
     {
-      "pct": 84,
-      "note": "Fighting sand elementals up-canyon.",
+      "pct": 97,
+      "note": "Recovered in the starlit well after the swarm.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "84%"
+      "value": "97%"
     }
   ],
   "profile": [
@@ -4448,13 +4448,13 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "On the rock jut at the bend of the dry-wash canyon west of Greenstone, mid-morning day 108, holding a swelling Abyssal Star in the middle of a sand elemental swarm while six runners break past toward Clive's circle and Jason holds the gap.",
+  "location": "Standing in his starlit well with Humphrey and Jason under the overhang at the dry-wash canyon west of Greenstone, mid-morning day 108, as Danielle Geller comes down from the ridge.",
   "missions": [
     {
       "kind": "SYSTEM",
       "name": "Under the Overhangs",
-      "detail": "Landed mid-morning day 108 at the dry-wash canyon west of Greenstone. Main: sweep the dry-wash canyon and keep Clive Standish safe while he finishes his readings (0/1; readings started under the deepest overhang). Optional COMPLETE: clear the sand-scorpions nesting beneath the overhangs 3/3 (Nate 2, Humphrey 1); paid 1 Cleansing Potion (iron rank) + 15 iron unlisted. Bonus: finish the sweep without Danielle Geller or her retainers having to intervene from the ridge (holding so far). Remaining rewards: 120 iron spirit coins, 1 Water Quintessence (main); 50 iron spirit coins (bonus).",
-      "status": "ACTIVE"
+      "detail": "Completed mid-morning day 108 at the dry-wash canyon west of Greenstone. Main COMPLETE: canyon swept and Clive Standish kept safe until his readings finished (the ruin-stone projected a flow map with distortions bending northeast toward Greenstone). Optional COMPLETE: sand-scorpions 3/3 (1 Cleansing Potion + 15 iron unlisted). Bonus COMPLETE: no intervention from Danielle Geller or her retainers. Paid: 120 iron + 1 Water Quintessence (main), 50 iron (bonus), 30 iron unlisted.",
+      "status": "COMPLETE"
     },
     {
       "kind": "SYSTEM",
