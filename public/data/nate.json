@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-538",
+  "rev": "2026-11-23-aether-547",
   "gear": {
     "doll": [
       [
@@ -3661,24 +3661,6 @@
         "slot": ""
       },
       {
-        "qty": 1,
-        "name": "Monster Core (Iron)",
-        "note": "Iron rank. Looted from the 7-foot Rat Gorger in Old Marta's bakery cellar, midday day 107 (previous 5 sold at Trade Hall).",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Lesser Monster Core",
-        "note": "Normal rank. Looted from a ratling in Old Marta's bakery cellar, midday day 107.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Rat Gorger Stone-Gnawer Claws",
-        "note": "Iron-rank crafting material. Looted from the 7-foot Rat Gorger in Old Marta's bakery cellar, midday day 107.",
-        "slot": ""
-      },
-      {
         "qty": 2,
         "name": "Warm cinnamon-apple hand pies",
         "note": "Wrapped in brown paper. Gift from Old Marta after clearing her bakery cellar on Millers' Row, midday day 107.",
@@ -3703,18 +3685,6 @@
         "slot": ""
       },
       {
-        "qty": 1,
-        "name": "Sand-Scorpion Venom Sac",
-        "note": "Iron rank. Looted from the Sand-Scorpion Nate killed by the ruin-stones, dry-wash canyon, day 108. Alchemy ingredient; sellable.",
-        "slot": ""
-      },
-      {
-        "qty": 3,
-        "name": "Sand-Scorpion Chitin Plate",
-        "note": "Iron rank. Pale-ochre chitin from the same Sand-Scorpion, day 108. Crafting material; sellable.",
-        "slot": ""
-      },
-      {
         "qty": 24,
         "name": "Squid skewers (harbour squid)",
         "note": "Fried, extra crispy, from Bette's stall on the harbour docks (dusk day 108). Stays hot in Pocket Space.",
@@ -3724,6 +3694,12 @@
         "qty": 24,
         "name": "Fish-and-onion skewers",
         "note": "From Bette's stall on the harbour docks (dusk day 108). Stays hot in Pocket Space.",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Marit Corve's consignment receipt",
+        "note": "Carbon slip from Corve's Materials, night day 108, 'received in trust': Monster Core (Iron) x1, Lesser Monster Core x1, Rat Gorger Stone-Gnawer Claws x1, Sand-Scorpion Venom Sac x1, Sand-Scorpion Chitin Plate x3. Present it to collect payment.",
         "slot": ""
       }
     ],
@@ -4269,7 +4245,7 @@
       }
     ]
   },
-  "next": "Flow map filed (witness: Nate Maray, iron); someone upstairs may want to see it, so stay findable. Director Arella will likely want to speak with Nate tomorrow. Old City archway still unexplored (tell Arella first). Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout.",
+  "next": "Flow map filed (witness: Nate Maray, iron); someone upstairs may want to see it, so stay findable. Director Arella may want a word today about the Old City. Old City archway still unexplored (tell Arella first). Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Collect payment from Marit Corve (Corve's Materials, trade hall) (open now); she grades the consigned goods overnight (receipt in Pocket Space). Humphrey pays for breakfast if Marit's number is good.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 2053 iron · 325 lesser",
   "racial": [
@@ -4351,21 +4327,21 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Full. No injuries since the dry-wash swarm.",
+      "note": "Full.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
-      "pct": 90,
-      "note": "Stormveil worn as a scarf while chatting with Marit Corve at Corve's Materials (5% raise, then about 1% per minute upkeep). Aftershocks still possible (days 102 to 132).",
+      "pct": 73,
+      "note": "After the race: Star Mark dropped; Constellation conjured (10%), all 3 motes grounded into the starlit well for a full minute (+20%). Well on 3-minute cooldown; motes re-form 20s after, 1% each, while Constellation is up. Stormveil worn, 1% per minute. Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
-      "value": "90%"
+      "value": "73%"
     },
     {
       "pct": 100,
-      "note": "Fully recovered since the dry-wash swarm.",
+      "note": "Refilled in the starlit well at the trade hall arch.",
       "tone": "stamina",
       "label": "STAMINA",
       "value": "100%"
@@ -4440,7 +4416,7 @@
     }
   ],
   "identity": {
-    "asOf": "Night, day 108 in this world, the trade hall, Greenstone",
+    "asOf": "Morning, day 109 in this world, Sailor's Watch, Greenstone",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4468,7 +4444,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Leaning on the counter at Corve's Materials in the Greenstone trade hall at night on day 108, talking with broker Marit Corve, Stormveil around his neck, Jason and Humphrey watching.",
+  "location": "Standing at the trade hall's main arch on the loop-line plaza with Jason and a newly arrived Humphrey, morning of day 109, about to go find Marit Corve.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4936,10 +4912,10 @@
     }
   ],
   "worldTime": {
-    "day": 108,
-    "time": "Night",
-    "detail": "First stars out; the trade hall arcades still lit gold, a few stalls packing up.",
-    "dayLabel": "108 days in this world"
+    "day": 109,
+    "time": "Morning",
+    "detail": "Morning bell over the harbour; won the race to the trade hall arch.",
+    "dayLabel": "109 days in this world"
   },
   "abilityMeta": {
     "slotsLabel": "LIGHTNING 4/5 · STAR 4/5 · WIND 4/5 · COMET 4/5 AWAKENED",
