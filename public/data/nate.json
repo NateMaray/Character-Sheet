@@ -1080,34 +1080,34 @@
       "mountains": "M 490 248 l 12 -20 l 12 20 M 512 252 l 10 -16 l 10 16 M 525 258 l 9 -14 l 9 14"
     },
     "battle": {
-      "note": "Fight over: frog dead and looted. The party carried Osric on a litter back to his stilt hut (~150 ft).",
+      "note": "Big frog examined by Clive (same species as the first, higher iron; he thinks something upstream is making them), then looted by touch and dissolved into rainbow smoke. Clive kept the severed tongue.",
       "title": "Holloway's field drainage cut: sluice pool",
       "width": 600,
       "allies": [
         {
-          "x": 240,
-          "y": 280,
+          "x": 260,
+          "y": 320,
           "name": "Humphrey (with Stash)"
         },
         {
-          "x": 340,
-          "y": 285,
+          "x": 330,
+          "y": 380,
           "name": "Jason"
         },
         {
-          "x": 300,
-          "y": 310,
-          "name": "Clive"
+          "x": 560,
+          "y": 400,
+          "name": "Clive (back with the cart, a Church of Healing healer and two guardsmen; holding the severed tongue)"
         },
         {
-          "x": 200,
-          "y": 230,
+          "x": 290,
+          "y": 400,
           "name": "Colin"
         },
         {
-          "x": 310,
-          "y": 370,
-          "name": "Osric Fenn (injured knee, at his hut)"
+          "x": 320,
+          "y": 405,
+          "name": "Osric Fenn and Bramble (in the hut)"
         }
       ],
       "extras": [
@@ -1159,8 +1159,8 @@
         }
       ],
       "player": {
-        "x": 300,
-        "y": 360,
+        "x": 280,
+        "y": 320,
         "label": "You"
       },
       "reveal": [
@@ -1181,16 +1181,16 @@
       "compass": "N ↑",
       "enemies": [
         {
-          "r": 18,
-          "x": 320,
-          "y": 150,
-          "id": "thornfrog",
-          "name": "Thorny-tongue frog",
-          "rank": "Iron",
-          "size": "Large; belly-drag track nearly 4 ft wide",
+          "r": 30,
+          "x": 310,
+          "y": 220,
+          "id": "bigfrog",
+          "name": "Thorny-tongue frog (huge)",
+          "rank": "Iron (high, near the top of the rank)",
+          "size": "~12 ft nose to rump; throat sac wider than a barrel",
           "tone": "dead",
-          "type": "Huge frog with a fast barbed tongue that sheds black thorns; swallows prey whole (canon B1; Jason has fought one).",
-          "status": "Dead. Killed by Nate (Jason assisting); looted, carcass dissolved."
+          "type": "Huge drumming frog with a harpoon tongue bristling with finger-length black thorns.",
+          "status": "DEAD and looted; dissolved into rainbow smoke."
         }
       ],
       "fogOverlay": 0.3
@@ -3668,7 +3668,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-600",
+  "rev": "2026-11-23-aether-616",
   "gear": {
     "doll": [
       [
@@ -3786,9 +3786,9 @@
         "slot": ""
       },
       {
-        "qty": 8,
+        "qty": 9,
         "name": "Earth Quintessence",
-        "note": "Iron rank, common. 4 prior + 1 from Something in the Cellar reward + 1 looted from the 7-foot Rat Gorger (midday day 107). +1 from Something in the Reeds bonus (mid-afternoon day 109). +1 Drum in the Tall Grass reward (day 109).",
+        "note": "Iron rank, common. 4 prior + 1 from Something in the Cellar reward + 1 looted from the 7-foot Rat Gorger (midday day 107). +1 from Something in the Reeds bonus (mid-afternoon day 109). +1 Drum in the Tall Grass reward (day 109). +1 Bigger Fish bonus (mid-afternoon day 109).",
         "slot": ""
       },
       {
@@ -3798,9 +3798,9 @@
         "slot": ""
       },
       {
-        "qty": 11,
+        "qty": 15,
         "name": "Water Quintessence",
-        "note": "Iron rank, common. Crafting material; also recharges the Desert-Walker's Cooling Band. 1 Odile's (day 94), 1 Cooling Band (day 105), 4 looted on day 106 (Bull Marsh Snatcher, 2 Whip-Fin Eels, Alpha Mangrove Snatcher), 1 from Mud and Teeth bonus (day 106). +1 from Under the Overhangs reward (mid-morning day 108). +1 from Something in the Reeds reward (mid-afternoon day 109). +1 looted from the thorny-tongue frog (mid-afternoon day 109). +1 Drum in the Tall Grass bonus (day 109).",
+        "note": "Iron rank, common. Crafting material; also recharges the Desert-Walker's Cooling Band. 1 Odile's (day 94), 1 Cooling Band (day 105), 4 looted on day 106 (Bull Marsh Snatcher, 2 Whip-Fin Eels, Alpha Mangrove Snatcher), 1 from Mud and Teeth bonus (day 106). +1 from Under the Overhangs reward (mid-morning day 108). +1 from Something in the Reeds reward (mid-afternoon day 109). +1 looted from the thorny-tongue frog (mid-afternoon day 109). +1 Drum in the Tall Grass bonus (day 109). +2 Bigger Fish reward (mid-afternoon day 109). +2 looted from the huge thorny-tongue frog (day 109).",
         "slot": ""
       },
       {
@@ -3814,12 +3814,6 @@
         "name": "Monster Core (Bronze)",
         "note": "From the Drowned Lantern (the Drowned Lamps creature), looted at the outer reef, end of dusk day 95. Nate's pick in the loot split; Gary says it could power a bronze-rank gauntlet (unusable until Nate is bronze). Nate is thinking it over.",
         "slot": ""
-      },
-      {
-        "qty": "",
-        "name": "Invictus",
-        "note": "War hammer (iron rank, rare). Bonded. Forged by Gary, with Nate helping, from a lightning-attuned bar, the rune tortoise core, and 5 Lightning Quintessence. Charged: each hit deals some extra lightning damage. Return: when thrown, it returns to the bonded wielder after a hit or at about 100 feet, free. Future: may gain an active power later as Nate's abilities grow. NON-CANON (Mjolnir-style). Stored in Pocket Space after Arc Step back to Bram, early afternoon day 94.",
-        "slot": "Main hand"
       },
       {
         "qty": 1,
@@ -3881,15 +3875,21 @@
         "note": "Slim folder, sealed cream paper. Interview request from O. Vellacourt, Senior Cartographer, Office of Survey and Records, to the field witness on the delta flow survey: present it at the Magic Society campus records wing any day this week, second to fifth bell. P.S. Mr Standish need not attend. Given by Arella, day 109."
       },
       {
-        "qty": 1,
+        "qty": 2,
         "name": "Monster Core (Iron)",
-        "note": "From the thorny-tongue frog in the sluice pool past Holloway's field, looted mid-afternoon day 109 (Something in the Reeds).",
+        "note": "From the thorny-tongue frog in the sluice pool past Holloway's field, looted mid-afternoon day 109 (Something in the Reeds). +1 looted from the huge thorny-tongue frog (mid-afternoon day 109).",
         "slot": ""
       },
       {
-        "qty": 5,
+        "qty": 17,
         "name": "Barbed Tongue Thorns",
-        "note": "Black barbed thorns from the thorny-tongue frog's tongue, looted mid-afternoon day 109. Crafting or alchemy material.",
+        "note": "Black barbed thorns from the thorny-tongue frog's tongue, looted mid-afternoon day 109. Crafting or alchemy material. +12 looted from the huge thorny-tongue frog (day 109).",
+        "slot": ""
+      },
+      {
+        "qty": 1,
+        "name": "Drumming throat sac",
+        "note": "Iron rank (high), uncommon crafting material. The huge thorny-tongue frog's resonant throat sac, wider than a barrel when inflated; carries its drumming. Useful to alchemists or for sound-related crafting. Looted on the bank below Osric Fenn's hut after Clive examined the carcass, mid-afternoon day 109.",
         "slot": ""
       }
     ],
@@ -4001,7 +4001,7 @@
       {
         "qty": "",
         "name": "Invictus",
-        "note": "Drawn from Pocket Space at the sluice post, mid-fight with the thorny-tongue frog, afternoon day 109.",
+        "note": "Back in main hand from Pocket Space for the Comet Strike and Gatling Hammer throws at the huge frog on the bank below Osric Fenn's hut, mid-afternoon day 109.",
         "slot": "Main hand",
         "empty": ""
       },
@@ -4439,9 +4439,9 @@
       }
     ]
   },
-  "next": "Magic Society interview (letter folder in Pocket Space): present it to O. Vellacourt at the records wing, any day this week, second to fifth bell (Arella: go tomorrow, day 110, rested; say less than you know); Arella says go, and the Old City and the reason for the quiet cap stay secret (refer sewer, cistern, or seal questions to her). Something in the Reeds (party: Humphrey, Stash, Clive, Jason; at Osric's stilt hut in daylight; Osric is missing, door open, his coat and boots left in the hut, cracked sickle at the water's edge; tracks inspected; thorny-tongue frog killed and looted; Osric safe with an injured leg; its trail runs one way, down from upstream (Clive); Osric needs a healer; report to Arella still open); Big frog: a cart-sized, high-iron thorny-tongue frog drumming in the flooded hollow ~300 ft past the bend; regroup at the hut with Jason, Clive and the gate help, and take it together before dark if at all; Osric Fenn's drainage cuts past Holloway's field (east gate, levee road, past second culvert); Osric pays 11 iron; Arella wants anything seen at the eastern farms reported to her personally (Humphrey found 11 farm reports in 6 days: flattened crops, 3 missing dogs (the third taken from its kennel), 3 naming the drainage cuts). Old City archway: stay away until Arella sends for Nate. Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Marit keeps a 2-iron tab to repay with interest on a future sale.",
+  "next": "Up the Cut: scout north up the drainage cut with Humphrey, Clive and Jason; turn back when the sun touches the reeds. Magic Society interview (letter folder in Pocket Space): present it to O. Vellacourt at the records wing, any day this week, second to fifth bell (Arella: go tomorrow, day 110, rested; say less than you know); Arella says go, and the Old City and the reason for the quiet cap stay secret (refer sewer, cistern, or seal questions to her). Something in the Reeds (party: Humphrey, Stash, Clive, Jason; at Osric's stilt hut in daylight; Osric is missing, door open, his coat and boots left in the hut, cracked sickle at the water's edge; tracks inspected; thorny-tongue frog killed and looted; Osric safe with an injured leg; its trail runs one way, down from upstream (Clive); Osric needs a healer; report to Arella still open); Big frog killed and looted (Bigger Fish complete); Clive suspects something up the cut is making the frogs; heal Humphrey's shoulder with the well; Humphrey wants a word about steps; Osric Fenn's drainage cuts past Holloway's field (east gate, levee road, past second culvert); Osric pays 11 iron; Arella wants anything seen at the eastern farms reported to her personally (Humphrey found 11 farm reports in 6 days: flattened crops, 3 missing dogs (the third taken from its kennel), 3 naming the drainage cuts). Old City archway: stay away until Arella sends for Nate. Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Marit keeps a 2-iron tab to repay with interest on a future sale.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 2245 iron · 330 lesser",
+  "coins": "1 silver · 2413 iron · 330 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4516,30 +4516,31 @@
       "Putting a Lid on It",
       "Grinding the Stone",
       "North road hedgehogs",
-      "Something in the Reeds"
+      "Something in the Reeds",
+      "Up the Cut"
     ]
   },
   "vitals": [
     {
       "pct": 100,
-      "note": "Healed in his Constellation well at the sluice pool.",
+      "note": "Ankle healed.",
       "tone": "health",
       "label": "HEALTH",
-      "value": "100%"
+      "value": 100
     },
     {
-      "pct": 92,
-      "note": "Constellation well grounded at Osric's hut (3 motes used; 1 minute; no new well for 3 minutes; motes gone until it ends): +1% every few seconds, 84 -> 92 so far, still rising toward 100. Mana potion drunk just before (44 -> 84); remnant ~10 min: no potions, no coins. Second Wind ~2%/min even while moving; worn Stormveil is a net gain. Aftershocks possible (days 102 to 132).",
+      "pct": 48,
+      "note": "Recovering after the frog fight (Second Wind, Stormveil worn).",
       "tone": "mana",
       "label": "MANA",
-      "value": 92
+      "value": 48
     },
     {
       "pct": 100,
-      "note": "Refilled in his Constellation well at the sluice pool.",
+      "note": "",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "100%"
+      "value": 100
     }
   ],
   "profile": [
@@ -4639,7 +4640,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "At Osric Fenn's stilt hut standing in his Constellation well with Osric, while the big frog waits at the 10 ft gap at the bend, mid-afternoon of day 109.",
+  "location": "On the bank below Osric Fenn's hut where the huge frog just dissolved, with Humphrey, Clive and two guardsmen while a healer tends Osric inside, mid-afternoon of day 109.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4937,7 +4938,13 @@
     {
       "kind": "SYSTEM",
       "name": "Bigger Fish",
-      "detail": "Landed mid-afternoon day 109 at Osric Fenn's stilt hut when Nate argued to go all out on offence and Humphrey agreed to fight the second frog on ground they choose. Target: a cart-sized (~12 ft), high-iron thorny-tongue frog from the flooded hollow ~300 ft past the bend; it is now drumming and coming down the cut toward the bend. The hollow drains into the cut only through a ~10 ft gap between two mud banks at the bend. Party: Nate, Humphrey (with Stash), Jason (with Colin); Clive gone to the gate for a cart, healer and guard. Objectives: kill the drumming thorny-tongue frog 0/1; keep Osric and Bramble safe 0/1. Bonus: fight it on ground of your choosing, out of deep water 0/1. Rewards: 120 iron spirit coins, 2 Water Quintessence. Bonus: 30 iron spirit coins, 1 Earth Quintessence.",
+      "detail": "Landed mid-afternoon day 109 at Osric Fenn's stilt hut when Nate argued to go all out on offence and Humphrey agreed to fight the second frog on ground they choose. Target: a cart-sized (~12 ft), high-iron thorny-tongue frog from the flooded hollow ~300 ft past the bend; it is now drumming and coming down the cut toward the bend. The hollow drains into the cut only through a ~10 ft gap between two mud banks at the bend. Party: Nate, Humphrey (with Stash), Jason (with Colin); Clive gone to the gate for a cart, healer and guard. Objectives: kill the drumming thorny-tongue frog 1/1 (Abyssal Star collapsed inside it on the bank); keep Osric and Bramble safe 1/1. Bonus: fight it on ground of your choosing, out of deep water 1/1 (frog dragged fully onto the bank). Rewards: 120 iron spirit coins, 2 Water Quintessence. Bonus: 30 iron spirit coins, 1 Earth Quintessence. COMPLETE mid-afternoon day 109: 120 iron, 2 Water Quintessence, bonus 30 iron and 1 Earth Quintessence auto-deposited.",
+      "status": "COMPLETE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Up the Cut",
+      "detail": "Landed mid-afternoon day 109 on the bank below Osric Fenn's hut when Nate proposed scouting north and Humphrey agreed: look, then decide. Clive believes something up the cut is making the thorny-tongue frogs. Party: Nate, Humphrey (with Stash), Clive, Jason (with Colin). Osric goes back on the cart with the healer and guards. Humphrey's rules: turn back when the sun touches the reeds; nobody fights unless he calls it or they are attacked. Objectives: follow the frog trail north past the bend 0/1; find what is making the thorny-tongue frogs 0/1; turn back by the time the sun touches the reeds 0/1. Bonus: everyone comes back on their own feet 0/1. Rewards: 100 iron spirit coins, 2 Water Quintessence. Bonus: 40 iron spirit coins, 1 Earth Quintessence.",
       "status": "ACTIVE"
     }
   ],
@@ -5127,7 +5134,7 @@
   "worldTime": {
     "day": 109,
     "time": "Afternoon",
-    "detail": "Mid-afternoon, back at Osric's stilt hut after scouting the big frog in the flooded hollow up the cut.",
+    "detail": "Mid-afternoon, the bank below Osric's hut; the huge frog has opened the fight from the pool.",
     "dayLabel": "109 days in this world"
   },
   "abilityMeta": {
