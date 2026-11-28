@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-547",
+  "rev": "2026-11-23-aether-562",
   "gear": {
     "doll": [
       [
@@ -3694,12 +3694,6 @@
         "qty": 24,
         "name": "Fish-and-onion skewers",
         "note": "From Bette's stall on the harbour docks (dusk day 108). Stays hot in Pocket Space.",
-        "slot": ""
-      },
-      {
-        "qty": 1,
-        "name": "Marit Corve's consignment receipt",
-        "note": "Carbon slip from Corve's Materials, night day 108, 'received in trust': Monster Core (Iron) x1, Lesser Monster Core x1, Rat Gorger Stone-Gnawer Claws x1, Sand-Scorpion Venom Sac x1, Sand-Scorpion Chitin Plate x3. Present it to collect payment.",
         "slot": ""
       }
     ],
@@ -4245,9 +4239,9 @@
       }
     ]
   },
-  "next": "Flow map filed (witness: Nate Maray, iron); someone upstairs may want to see it, so stay findable. Director Arella may want a word today about the Old City. Old City archway still unexplored (tell Arella first). Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Collect payment from Marit Corve (Corve's Materials, trade hall) (open now); she grades the consigned goods overnight (receipt in Pocket Space). Humphrey pays for breakfast if Marit's number is good.",
+  "next": "Magic Society requests an interview with field witness Nate Maray about the filed flow map (letter from Arella); Arella says go, and the Old City and the reason for the quiet cap stay secret (refer sewer, cistern, or seal questions to her). Something in the Reeds: meet Jason and Humphrey at the eastern gate an hour before sundown; Osric Fenn's drainage cuts past Holloway's field (east gate, levee road, past second culvert); Osric pays 11 iron; Arella wants anything seen at the eastern farms reported to her personally. Old City archway: stay away until Arella sends for Nate. Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Marit keeps a 2-iron tab to repay with interest on a future sale.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 2053 iron · 325 lesser",
+  "coins": "1 silver · 2084 iron · 330 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4267,7 +4261,7 @@
     },
     {
       "name": "Pocket Space",
-      "detail": "40-slot storage plus a coin counter. Only Nate can access it."
+      "detail": "48-slot storage plus a coin counter. Only Nate can access it."
     },
     {
       "name": "Star Chart",
@@ -4321,7 +4315,8 @@
       "The Drowned Lamps",
       "Putting a Lid on It",
       "Grinding the Stone",
-      "North road hedgehogs"
+      "North road hedgehogs",
+      "Something in the Reeds"
     ]
   },
   "vitals": [
@@ -4333,11 +4328,11 @@
       "value": "100%"
     },
     {
-      "pct": 73,
-      "note": "After the race: Star Mark dropped; Constellation conjured (10%), all 3 motes grounded into the starlit well for a full minute (+20%). Well on 3-minute cooldown; motes re-form 20s after, 1% each, while Constellation is up. Stormveil worn, 1% per minute. Aftershocks still possible (days 102 to 132).",
+      "pct": 100,
+      "note": "Full. Second Wind gives resting-rate recovery (~2%/min) even while moving, so worn Stormveil (1%/min) is a net gain of ~1%/min; only Shed or other sustained actives outpace regen. Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
-      "value": "73%"
+      "value": "100%"
     },
     {
       "pct": 100,
@@ -4416,7 +4411,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 109 in this world, Sailor's Watch, Greenstone",
+    "asOf": "Morning, day 109 in this world, Director Arella's office, Adventure Society, Greenstone",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4444,7 +4439,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Standing at the trade hall's main arch on the loop-line plaza with Jason and a newly arrived Humphrey, morning of day 109, about to go find Marit Corve.",
+  "location": "Alone in Director Arella's top-floor office at the Adventure Society campus, morning of day 109.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4726,6 +4721,12 @@
       "name": "Ratlings, south fields",
       "detail": "Society one-star closed contract, Callow farm bean rows. Turned in day 62 (cores checked, kept). Paid 35 iron.",
       "status": "COMPLETE"
+    },
+    {
+      "kind": "SYSTEM",
+      "name": "Something in the Reeds",
+      "detail": "Landed morning day 109 at Corve's Materials when Nate agreed to look into reed-cutter Osric Fenn's report (private favour; Marit pointed him at Nate). Site: east gate, levee road, past the second culvert; Osric's stilt hut at the far end by the cut. Track nearly 4 ft wide, two nights running, closer to the levee each time; dog won't go near; extra mud-snail shells cracked from outside. Osric offers 11 iron (his savings) plus a dry place to wait for dark (paid by Osric, separate from Aether rewards). Objectives: inspect the flattened reed tracks along the drainage cuts past Holloway's field 0/1; find out what is making them 0/1. Bonus: deal with it before it reaches the levee 0/1. Rewards: 80 iron spirit coins, 1 Water Quintessence. Bonus: 1 Earth Quintessence.",
+      "status": "ACTIVE"
     }
   ],
   "abilities": [
@@ -4914,7 +4915,7 @@
   "worldTime": {
     "day": 109,
     "time": "Morning",
-    "detail": "Morning bell over the harbour; won the race to the trade hall arch.",
+    "detail": "Morning in Director Arella's office, Adventure Society campus.",
     "dayLabel": "109 days in this world"
   },
   "abilityMeta": {
