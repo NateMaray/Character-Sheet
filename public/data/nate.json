@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-523",
+  "rev": "2026-11-23-aether-531",
   "gear": {
     "doll": [
       [
@@ -3712,6 +3712,18 @@
         "qty": 3,
         "name": "Sand-Scorpion Chitin Plate",
         "note": "Iron rank. Pale-ochre chitin from the same Sand-Scorpion, day 108. Crafting material; sellable.",
+        "slot": ""
+      },
+      {
+        "qty": 24,
+        "name": "Squid skewers (harbour squid)",
+        "note": "Fried, extra crispy, from Bette's stall on the harbour docks (dusk day 108). Stays hot in Pocket Space.",
+        "slot": ""
+      },
+      {
+        "qty": 24,
+        "name": "Fish-and-onion skewers",
+        "note": "From Bette's stall on the harbour docks (dusk day 108). Stays hot in Pocket Space.",
         "slot": ""
       }
     ],
@@ -4249,9 +4261,9 @@
       }
     ]
   },
-  "next": "File the flow map with Clive at the Magic Society tonight (Nate is witness for the eastern half). Dinner at the harbour skewer-stalls with Jason Asano; Geller desert day-trip tomorrow (Day 108, first bell) with Danielle Geller, Humphrey, Clive, and Jason; show Hollis Turning Millstone; decide on Lightning Essence auction or buyout.",
+  "next": "Flow map filed (witness: Nate Maray, iron); someone upstairs may want to see it, so stay findable. Director Arella will likely want to speak with Nate tomorrow. Old City archway still unexplored (tell Arella first). Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 2353 iron · 325 lesser",
+  "coins": "1 silver · 2303 iron · 325 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4420,7 +4432,7 @@
     }
   ],
   "identity": {
-    "asOf": "Evening, day 108 in this world, Greenstone's western gate",
+    "asOf": "Dusk, day 108 in this world, the harbour docks, Greenstone",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4448,7 +4460,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Gliding up to Greenstone's western gate on Danielle Geller's sand-skimmer, evening on day 108, about to head for the Magic Society with Jason, Humphrey and Clive before sundown.",
+  "location": "Sitting on the edge of the harbour dock near Bette's skewer stall in Greenstone, dusk on day 108, eating with Jason, Humphrey and Clive.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4917,8 +4929,8 @@
   ],
   "worldTime": {
     "day": 108,
-    "time": "Evening",
-    "detail": "Low sun over Greenstone's western gate; the Magic Society records room closes at sundown.",
+    "time": "Dusk",
+    "detail": "Sun down, lanterns lit along the harbour; salt, tar, and hot oil in the air.",
     "dayLabel": "108 days in this world"
   },
   "abilityMeta": {
