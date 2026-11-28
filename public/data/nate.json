@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-531",
+  "rev": "2026-11-23-aether-538",
   "gear": {
     "doll": [
       [
@@ -3776,6 +3776,14 @@
             "source": "gear"
           }
         ]
+      }
+    ],
+    "bagSlots": [
+      {
+        "qty": 1,
+        "name": "Dimensional Bag (mirage hound leather)",
+        "note": "Plain iron-rank dimensional bag, +8 Pocket Space slots. Bought from Filbert's Fine Leather Emporium, Greenstone trade hall, night day 108, for 250 iron.",
+        "slot": "Bag slot 1 of 1 (iron rank)"
       }
     ],
     "borrowed": [
@@ -4075,7 +4083,7 @@
       "Main hand": "empty",
       "Belt / sheath": "empty"
     },
-    "pocketSlots": 40,
+    "pocketSlots": 48,
     "equipTargets": {
       "Invictus": [
         "Main hand",
@@ -4263,7 +4271,7 @@
   },
   "next": "Flow map filed (witness: Nate Maray, iron); someone upstairs may want to see it, so stay findable. Director Arella will likely want to speak with Nate tomorrow. Old City archway still unexplored (tell Arella first). Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
-  "coins": "1 silver · 2303 iron · 325 lesser",
+  "coins": "1 silver · 2053 iron · 325 lesser",
   "racial": [
     {
       "name": "Momentum Affinity",
@@ -4343,24 +4351,24 @@
   "vitals": [
     {
       "pct": 100,
-      "note": "Full after a full night's rest at Sailor's Watch.",
+      "note": "Full. No injuries since the dry-wash swarm.",
       "tone": "health",
       "label": "HEALTH",
       "value": "100%"
     },
     {
-      "pct": 30,
-      "note": "Spent 10% on Constellation, then grounded all three motes into the well and recovered it over the minute. Well on 3-min cooldown. Overcharge on 30-s cooldown. Stormveil re-forming. Aftershocks still possible (days 102 to 132).",
+      "pct": 90,
+      "note": "Stormveil worn as a scarf while chatting with Marit Corve at Corve's Materials (5% raise, then about 1% per minute upkeep). Aftershocks still possible (days 102 to 132).",
       "tone": "mana",
       "label": "MANA",
-      "value": "30%"
+      "value": "90%"
     },
     {
-      "pct": 97,
-      "note": "Recovered in the starlit well after the swarm.",
+      "pct": 100,
+      "note": "Fully recovered since the dry-wash swarm.",
       "tone": "stamina",
       "label": "STAMINA",
-      "value": "97%"
+      "value": "100%"
     }
   ],
   "profile": [
@@ -4432,7 +4440,7 @@
     }
   ],
   "identity": {
-    "asOf": "Dusk, day 108 in this world, the harbour docks, Greenstone",
+    "asOf": "Night, day 108 in this world, the trade hall, Greenstone",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4460,7 +4468,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Sitting on the edge of the harbour dock near Bette's skewer stall in Greenstone, dusk on day 108, eating with Jason, Humphrey and Clive.",
+  "location": "Leaning on the counter at Corve's Materials in the Greenstone trade hall at night on day 108, talking with broker Marit Corve, Stormveil around his neck, Jason and Humphrey watching.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4929,8 +4937,8 @@
   ],
   "worldTime": {
     "day": 108,
-    "time": "Dusk",
-    "detail": "Sun down, lanterns lit along the harbour; salt, tar, and hot oil in the air.",
+    "time": "Night",
+    "detail": "First stars out; the trade hall arcades still lit gold, a few stalls packing up.",
     "dayLabel": "108 days in this world"
   },
   "abilityMeta": {
