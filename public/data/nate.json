@@ -3490,7 +3490,7 @@
       }
     ]
   },
-  "rev": "2026-11-23-aether-562",
+  "rev": "2026-11-23-aether-563",
   "gear": {
     "doll": [
       [
@@ -3804,8 +3804,8 @@
       },
       {
         "qty": "",
-        "name": "",
-        "note": "",
+        "name": "Magic Society letter folder",
+        "note": "Slim folder, sealed cream paper. Interview request from O. Vellacourt, Senior Cartographer, Office of Survey and Records, to the field witness on the delta flow survey: present it at the Magic Society campus records wing any day this week, second to fifth bell. P.S. Mr Standish need not attend. Given by Arella, day 109.",
         "slot": "Main hand",
         "empty": "empty"
       },
@@ -4094,6 +4094,10 @@
       "Light stone lantern": [
         "Off hand",
         "Main hand"
+      ],
+      "Magic Society letter folder": [
+        "Main hand",
+        "Off hand"
       ]
     },
     "appliedActions": [
@@ -4239,7 +4243,7 @@
       }
     ]
   },
-  "next": "Magic Society requests an interview with field witness Nate Maray about the filed flow map (letter from Arella); Arella says go, and the Old City and the reason for the quiet cap stay secret (refer sewer, cistern, or seal questions to her). Something in the Reeds: meet Jason and Humphrey at the eastern gate an hour before sundown; Osric Fenn's drainage cuts past Holloway's field (east gate, levee road, past second culvert); Osric pays 11 iron; Arella wants anything seen at the eastern farms reported to her personally. Old City archway: stay away until Arella sends for Nate. Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Marit keeps a 2-iron tab to repay with interest on a future sale.",
+  "next": "Magic Society interview (letter folder in hand): present it to O. Vellacourt at the records wing, any day this week, second to fifth bell; Arella says go, and the Old City and the reason for the quiet cap stay secret (refer sewer, cistern, or seal questions to her). Something in the Reeds: meet Jason and Humphrey at the eastern gate an hour before sundown; Osric Fenn's drainage cuts past Holloway's field (east gate, levee road, past second culvert); Osric pays 11 iron; Arella wants anything seen at the eastern farms reported to her personally. Old City archway: stay away until Arella sends for Nate. Show Hollis the Turning Millstone; decide on Lightning Essence auction or buyout. Marit keeps a 2-iron tab to repay with interest on a future sale.",
   "about": "Nate Maray's campaign sheet. Edit this file after each scene and set rev to a new string. Equip, loadouts, and pinned tabs stay on the phone. See DATA_SCHEMA.md.",
   "coins": "1 silver · 2084 iron · 330 lesser",
   "racial": [
@@ -4411,7 +4415,7 @@
     }
   ],
   "identity": {
-    "asOf": "Morning, day 109 in this world, Director Arella's office, Adventure Society, Greenstone",
+    "asOf": "Mid-morning, day 109 in this world, Director Arella's office, Adventure Society, Greenstone",
     "name": "Nate Maray",
     "rank": "Iron rank",
     "slots": [
@@ -4439,7 +4443,7 @@
     "kicker": "AETHER SYSTEM · OUTWORLDER",
     "essenceLine": "4 of 4 essences"
   },
-  "location": "Alone in Director Arella's top-floor office at the Adventure Society campus, morning of day 109.",
+  "location": "In Director Arella's top-floor office at the Adventure Society, holding the Magic Society letter folder, mid-morning of day 109.",
   "missions": [
     {
       "kind": "SYSTEM",
@@ -4914,8 +4918,8 @@
   ],
   "worldTime": {
     "day": 109,
-    "time": "Morning",
-    "detail": "Morning in Director Arella's office, Adventure Society campus.",
+    "time": "Mid-morning",
+    "detail": "Mid-morning in Director Arella's office, Adventure Society campus.",
     "dayLabel": "109 days in this world"
   },
   "abilityMeta": {
